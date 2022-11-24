@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 6.0.0">
+  <meta name="description" content="dero_rpc_api API docs, for the Dart programming language.">
+  <title>dero_rpc_api - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">dero_rpc_api package</li>
+  </ol>
+  <div class="self-name">dero_rpc_api</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <p><a href="https://dero.io/">Dero</a> RPC API in Dart to interact with Dero daemon and Dero wallet.</p>
+<h2 id="features">Features</h2>
+<p>The complete set of RPC methods offered by derod and wallet with their corresponding data transfer objects.</p>
+<p>See <a href="https://github.com/deroproject/derohe">https://github.com/deroproject/derohe</a>.</p>
+<h3 id="dero-daemon">Dero daemon</h3>
+<p><strong>DerodRepository</strong> gives you an event stream for each new block/height, and a RPC client with the following methods :</p>
+<ul>
+<li>Ping</li>
+<li>GetInfo</li>
+<li>GetHeight</li>
+<li>GetBlock</li>
+<li>GetBlockCount</li>
+<li>GetBlockHeaderByHash</li>
+<li>GetBlockHeaderByTopoHeight</li>
+<li>GetTxPool</li>
+<li>GetTransaction</li>
+<li>GetLastBlockHeader</li>
+<li>GetSC</li>
+<li>GetGasEstimate</li>
+<li>NameToAddress</li>
+<li>GetRandomAddress</li>
+<li>SendRawTransaction</li>
+<li>GetBlockTemplate</li>
+<li>SubmitBlock</li>
+<li>GetEncryptedBalance</li>
+</ul>
+<h3 id="wallet">Wallet</h3>
+<p><strong>WalletRepository</strong> gives you a RPC client with the following methods :</p>
+<ul>
+<li>Ping</li>
+<li>GetAddress</li>
+<li>GetBalance</li>
+<li>GetHeight</li>
+<li>GetTransferbyTXID</li>
+<li>GetTransfers</li>
+<li>MakeIntegratedAddress</li>
+<li>SplitIntegratedAddress</li>
+<li>QueryKey</li>
+<li>Transfer</li>
+<li>scinvoke</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>The way to query derod RPC server, here with the GetInfo method.</p>
+<pre class="language-dart"><code class="language-dart">import 'dart:io';
+
+import 'package:dero_rpc_api/dero_rpc_api.dart';
+
+const String derodMainnetAddr = '127.0.0.1:10102';
+
+Future&lt;void&gt; main() async {
+  
+  final DerodRepository derodRepository = DerodRepository(derodMainnetAddr);
+  derodRepository.start();
+
+  try {
+    var info = await derodRepository.getInfo();
+    print(info);
+  } catch (err) {
+    print(err);
+  }
+
+  await derodRepository.close();
+  exit(0);
+}
+</code></pre>
+<p>The way to query wallet RPC server, here with the GetAddress method.</p>
+<pre class="language-dart"><code class="language-dart">import 'dart:io';
+
+import 'package:dero_rpc_api/dero_rpc_api.dart';
+
+const String walletMainnetAddr = '127.0.0.1:10103';
+
+Future&lt;void&gt; main() async {
+  
+  final WalletRepository walletRepository = WalletRepository(walletMainnetAddr);
+  walletRepository.start();
+
+  try {
+    var address = await walletRepository.getAddress();
+    print(address);
+  } catch (err) {
+    print(err);
+  }
+
+  await walletRepository.close();
+  exit(0);
+}
+</code></pre>
+<h2 id="additional-information">Additional information</h2>
+<p>This library uses <a href="https://pub.dartlang.org/packages/freezed">freezed</a> package for all the data transfer objects.
+This avoids rewriting the boilerplate code like <code>toString</code>, <code>operator ==</code>, <code>hashCode</code> or <code>copyWith</code>,
+and makes available de/serialization for all DTOs.</p>
+<p>If you need it, after editing any of the DTOs, you should run the code generator :
+<code>dart run build_runner build --delete-conflicting-outputs</code></p>
+<p>Typical <a href="https://pub.dev/packages/build_runner">build_runner</a>/code-generator setup is required.</p>
+<h2 id="donations">Donations</h2>
+<p>If this package was useful to you and you want to support me :</p>
+<p>Send any amount to <code>dero1qy5a6wk2r9mq3e5kagku4kdrhq407qhvht8qke5sxpm9u8lqmph3vqgl3nz8t</code> or use my named address <code>Ez3kiel</code>.</p>
+<p>Thx!</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="dero_rpc_api">
+  <span class="name"><a href="dero_rpc_api/dero_rpc_api-library.html">dero_rpc_api</a></span> 
+
+</dt>
+<dd>Dart implementation of the Dero RPC API.
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li class="self-crumb">dero_rpc_api package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">dero_rpc_api</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="dero_rpc_api/dero_rpc_api-library.html">dero_rpc_api</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dero_rpc_api
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

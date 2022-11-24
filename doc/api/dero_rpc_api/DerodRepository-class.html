@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the DerodRepository class from the dero_rpc_api library, for the Dart programming language.">
+  <title>DerodRepository class - dero_rpc_api library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dero_rpc_api</a></li>
+    <li><a href="../dero_rpc_api/dero_rpc_api-library.html">dero_rpc_api</a></li>
+    <li class="self-crumb">DerodRepository class</li>
+  </ol>
+  <div class="self-name">DerodRepository</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">DerodRepository</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A repository that provides all the necessary to listen and communicate with derod (Dero daemon).</p>
+<p>You need to supply your derod rpc server address when instantiating <a href="../dero_rpc_api/DerodRepository-class.html">DerodRepository</a>.
+And before calling the available RPC methods, you also need to start the client :</p>
+<pre class="language-dart"><code class="language-dart">final DerodRepository derodRepository = DerodRepository('127.0.0.1:10102');
+
+derodRepository.start();
+</code></pre>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="DerodRepository" class="callable">
+          <span class="name"><a href="../dero_rpc_api/DerodRepository/DerodRepository.html">DerodRepository</a></span><span class="signature">(<span class="parameter" id="-param-rpcDerodAddress"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">rpcDerodAddress</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="derodEventStream" class="property">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/derodEventStream.html">derodEventStream</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a></span> 
+
+</dt>
+<dd>
+  Websocket stream from derod.
+Listen to this stream to receive an event for each new block/height.
+  <div class="features">read / write</div>
+
+</dd>
+
+        <dt id="eventStream" class="property">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/eventStream.html">eventStream</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a></span> 
+
+</dt>
+<dd>
+  <a href="../dero_rpc_api/DerodRepository/derodEventStream.html">derodEventStream</a> gives you a <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a> to listen to.
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="rpcDerodAddress" class="property">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/rpcDerodAddress.html">rpcDerodAddress</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  RPC server address of Dero daemon.
+  <div class="features">final</div>
+
+</dd>
+
+        <dt id="rpcDerodClient" class="property">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/rpcDerodClient.html">rpcDerodClient</a></span>
+  <span class="signature">&#8596; <a href="https://pub.dev/documentation/json_rpc_2/3.0.2/json_rpc_2/Client-class.html">Client</a></span> 
+
+</dt>
+<dd>
+  JSON-RPC client.
+  <div class="features">read / write</div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="close" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/close.html">close</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Closes the JSON-RPC client.
+Returns a <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a> that completes when all resources have been released.
+  
+
+</dd>
+
+        <dt id="getBlock" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getBlock.html">getBlock</a></span><span class="signature">(<wbr><span class="parameter" id="getBlock-param-getBlockParams"><span class="type-annotation"><a href="../dero_rpc_api/GetBlockParams-class.html">GetBlockParams</a></span> <span class="parameter-name">getBlockParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetBlockResult-class.html">GetBlockResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a block from its given hash or height.
+  
+
+</dd>
+
+        <dt id="getBlockByHash" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getBlockByHash.html">getBlockByHash</a></span><span class="signature">(<wbr><span class="parameter" id="getBlockByHash-param-getBlockByHashParams"><span class="type-annotation"><a href="../dero_rpc_api/GetBlockByHashParams-class.html">GetBlockByHashParams</a></span> <span class="parameter-name">getBlockByHashParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetBlockByResult-class.html">GetBlockByResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a block from its given hash.
+  
+
+</dd>
+
+        <dt id="getBlockByTopoHeight" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getBlockByTopoHeight.html">getBlockByTopoHeight</a></span><span class="signature">(<wbr><span class="parameter" id="getBlockByTopoHeight-param-getBlockByTopoHeightParams"><span class="type-annotation"><a href="../dero_rpc_api/GetBlockByTopoHeightParams-class.html">GetBlockByTopoHeightParams</a></span> <span class="parameter-name">getBlockByTopoHeightParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetBlockByResult-class.html">GetBlockByResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a block from its given height.
+  
+
+</dd>
+
+        <dt id="getBlockCount" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getBlockCount.html">getBlockCount</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetBlockCountResult-class.html">GetBlockCountResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the block count.
+  
+
+</dd>
+
+        <dt id="getBlockTemplate" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getBlockTemplate.html">getBlockTemplate</a></span><span class="signature">(<wbr><span class="parameter" id="getBlockTemplate-param-getBlockTemplateParams"><span class="type-annotation"><a href="../dero_rpc_api/GetBlockTemplateParams-class.html">GetBlockTemplateParams</a></span> <span class="parameter-name">getBlockTemplateParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetBlockTemplateResult-class.html">GetBlockTemplateResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a block template.
+  
+
+</dd>
+
+        <dt id="getEncryptedBalance" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getEncryptedBalance.html">getEncryptedBalance</a></span><span class="signature">(<wbr><span class="parameter" id="getEncryptedBalance-param-getEncryptedBalanceParams"><span class="type-annotation"><a href="../dero_rpc_api/GetEncryptedBalanceParams-class.html">GetEncryptedBalanceParams</a></span> <span class="parameter-name">getEncryptedBalanceParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetEncryptedBalanceResult-class.html">GetEncryptedBalanceResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the encrypted balance for a given address or smart contract.
+  
+
+</dd>
+
+        <dt id="getGasEstimate" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getGasEstimate.html">getGasEstimate</a></span><span class="signature">(<wbr><span class="parameter" id="getGasEstimate-param-getGasEstimateParams"><span class="type-annotation"><a href="../dero_rpc_api/TransferParams-class.html">TransferParams</a></span> <span class="parameter-name">getGasEstimateParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GasEstimateResult-class.html">GasEstimateResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the cost of gas (compute and storage).
+  
+
+</dd>
+
+        <dt id="getHeight" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getHeight.html">getHeight</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetHeightDerodResult-class.html">GetHeightDerodResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the currently synchronized height of the chain.
+  
+
+</dd>
+
+        <dt id="getInfo" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getInfo.html">getInfo</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetInfoResult-class.html">GetInfoResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns various information about the daemon and the network.
+  
+
+</dd>
+
+        <dt id="getLastBlockHeader" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getLastBlockHeader.html">getLastBlockHeader</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetBlockByResult-class.html">GetBlockByResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the latest <a href="../dero_rpc_api/BlockHeader-class.html">BlockHeader</a> of the currently synced height.
+  
+
+</dd>
+
+        <dt id="getNameToAddress" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getNameToAddress.html">getNameToAddress</a></span><span class="signature">(<wbr><span class="parameter" id="getNameToAddress-param-nameToAddressParams"><span class="type-annotation"><a href="../dero_rpc_api/NameToAddressParams-class.html">NameToAddressParams</a></span> <span class="parameter-name">nameToAddressParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/NameToAddressResult-class.html">NameToAddressResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the address behind a registered name.
+  
+
+</dd>
+
+        <dt id="getRandomAddress" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getRandomAddress.html">getRandomAddress</a></span><span class="signature">(<wbr><span class="parameter" id="getRandomAddress-param-getRandomAddressParams">{<span class="type-annotation"><a href="../dero_rpc_api/GetRandomAddressParams-class.html">GetRandomAddressParams</a>?</span> <span class="parameter-name">getRandomAddressParams</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetRandomAddressResult-class.html">GetRandomAddressResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns random addresses (max 100).
+  
+
+</dd>
+
+        <dt id="getSC" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getSC.html">getSC</a></span><span class="signature">(<wbr><span class="parameter" id="getSC-param-getSCParams"><span class="type-annotation"><a href="../dero_rpc_api/GetSCParams-class.html">GetSCParams</a></span> <span class="parameter-name">getSCParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetSCResult-class.html">GetSCResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the smart contract information for a given scid.
+  
+
+</dd>
+
+        <dt id="getTransaction" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getTransaction.html">getTransaction</a></span><span class="signature">(<wbr><span class="parameter" id="getTransaction-param-getTransactionParams"><span class="type-annotation"><a href="../dero_rpc_api/GetTransactionParams-class.html">GetTransactionParams</a></span> <span class="parameter-name">getTransactionParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetTransactionResult-class.html">GetTransactionResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the specified transactions information from either the blockchain or mempool.
+  
+
+</dd>
+
+        <dt id="getTxPool" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/getTxPool.html">getTxPool</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetTxPoolResult-class.html">GetTxPoolResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a list of all pending txHashes in the mempool.
+  
+
+</dd>
+
+        <dt id="newBlock" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/newBlock.html">newBlock</a></span><span class="signature">(<wbr><span class="parameter" id="newBlock-param-event"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Decode new block event when listening <a href="../dero_rpc_api/DerodRepository/derodEventStream.html">derodEventStream</a>.
+  
+
+</dd>
+
+        <dt id="newHeight" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/newHeight.html">newHeight</a></span><span class="signature">(<wbr><span class="parameter" id="newHeight-param-event"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Decode new height event when listening <a href="../dero_rpc_api/DerodRepository/derodEventStream.html">derodEventStream</a>.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="ping" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/ping.html">ping</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The traditional <a href="../dero_rpc_api/DerodRepository/ping.html">ping</a> method sends a 'Ping' and receives a 'Pong' if the connection is OK.
+  
+
+</dd>
+
+        <dt id="sendRawTransaction" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/sendRawTransaction.html">sendRawTransaction</a></span><span class="signature">(<wbr><span class="parameter" id="sendRawTransaction-param-sendRawTransactionParams"><span class="type-annotation"><a href="../dero_rpc_api/SendRawTransactionParams-class.html">SendRawTransactionParams</a></span> <span class="parameter-name">sendRawTransactionParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/SendRawTransactionResult-class.html">SendRawTransactionResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sends a raw transaction to the network.
+  
+
+</dd>
+
+        <dt id="start" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/start.html">start</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts the JSON-RPC client.
+  
+
+</dd>
+
+        <dt id="submitBlock" class="callable">
+  <span class="name"><a href="../dero_rpc_api/DerodRepository/submitBlock.html">submitBlock</a></span><span class="signature">(<wbr><span class="parameter" id="submitBlock-param-submitBlockParams"><span class="type-annotation"><a href="../dero_rpc_api/SubmitBlockParams-class.html">SubmitBlockParams</a></span> <span class="parameter-name">submitBlockParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/SubmitBlockResult-class.html">SubmitBlockResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Submit a block.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features">inherited</div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features">inherited</div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">dero_rpc_api</a></li>
+  <li><a href="../dero_rpc_api/dero_rpc_api-library.html">dero_rpc_api</a></li>
+  <li class="self-crumb">DerodRepository class</li>
+</ol>
+
+
+    <h5>dero_rpc_api library</h5>
+    <ol>
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#classes">Classes</a></li>
+  <li><a href="../dero_rpc_api/Argument-class.html">Argument</a></li>
+  <li><a href="../dero_rpc_api/Block-class.html">Block</a></li>
+  <li><a href="../dero_rpc_api/BlockHeader-class.html">BlockHeader</a></li>
+  <li><a href="../dero_rpc_api/DerodRepository-class.html">DerodRepository</a></li>
+  <li><a href="../dero_rpc_api/Entry-class.html">Entry</a></li>
+  <li><a href="../dero_rpc_api/GasEstimateResult-class.html">GasEstimateResult</a></li>
+  <li><a href="../dero_rpc_api/GetAddressResult-class.html">GetAddressResult</a></li>
+  <li><a href="../dero_rpc_api/GetBalanceParams-class.html">GetBalanceParams</a></li>
+  <li><a href="../dero_rpc_api/GetBalanceResult-class.html">GetBalanceResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByHashParams-class.html">GetBlockByHashParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByResult-class.html">GetBlockByResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByTopoHeightParams-class.html">GetBlockByTopoHeightParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockCountResult-class.html">GetBlockCountResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockParams-class.html">GetBlockParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockResult-class.html">GetBlockResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockTemplateParams-class.html">GetBlockTemplateParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockTemplateResult-class.html">GetBlockTemplateResult</a></li>
+  <li><a href="../dero_rpc_api/GetEncryptedBalanceParams-class.html">GetEncryptedBalanceParams</a></li>
+  <li><a href="../dero_rpc_api/GetEncryptedBalanceResult-class.html">GetEncryptedBalanceResult</a></li>
+  <li><a href="../dero_rpc_api/GetHeightDerodResult-class.html">GetHeightDerodResult</a></li>
+  <li><a href="../dero_rpc_api/GetHeightWalletResult-class.html">GetHeightWalletResult</a></li>
+  <li><a href="../dero_rpc_api/GetInfoResult-class.html">GetInfoResult</a></li>
+  <li><a href="../dero_rpc_api/GetRandomAddressParams-class.html">GetRandomAddressParams</a></li>
+  <li><a href="../dero_rpc_api/GetRandomAddressResult-class.html">GetRandomAddressResult</a></li>
+  <li><a href="../dero_rpc_api/GetSCParams-class.html">GetSCParams</a></li>
+  <li><a href="../dero_rpc_api/GetSCResult-class.html">GetSCResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransactionParams-class.html">GetTransactionParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransactionResult-class.html">GetTransactionResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransferByTxidParams-class.html">GetTransferByTxidParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransferByTxidResult-class.html">GetTransferByTxidResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransfersParams-class.html">GetTransfersParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransfersResult-class.html">GetTransfersResult</a></li>
+  <li><a href="../dero_rpc_api/GetTxPoolResult-class.html">GetTxPoolResult</a></li>
+  <li><a href="../dero_rpc_api/MakeIntegratedAddressParams-class.html">MakeIntegratedAddressParams</a></li>
+  <li><a href="../dero_rpc_api/MakeIntegratedAddressResult-class.html">MakeIntegratedAddressResult</a></li>
+  <li><a href="../dero_rpc_api/Miniblock-class.html">Miniblock</a></li>
+  <li><a href="../dero_rpc_api/NameToAddressParams-class.html">NameToAddressParams</a></li>
+  <li><a href="../dero_rpc_api/NameToAddressResult-class.html">NameToAddressResult</a></li>
+  <li><a href="../dero_rpc_api/QueryKeyParams-class.html">QueryKeyParams</a></li>
+  <li><a href="../dero_rpc_api/QueryKeyResult-class.html">QueryKeyResult</a></li>
+  <li><a href="../dero_rpc_api/ScInvokeParams-class.html">ScInvokeParams</a></li>
+  <li><a href="../dero_rpc_api/SendRawTransactionParams-class.html">SendRawTransactionParams</a></li>
+  <li><a href="../dero_rpc_api/SendRawTransactionResult-class.html">SendRawTransactionResult</a></li>
+  <li><a href="../dero_rpc_api/SplitIntegratedAddressParams-class.html">SplitIntegratedAddressParams</a></li>
+  <li><a href="../dero_rpc_api/SplitIntegratedAddressResult-class.html">SplitIntegratedAddressResult</a></li>
+  <li><a href="../dero_rpc_api/SubmitBlockParams-class.html">SubmitBlockParams</a></li>
+  <li><a href="../dero_rpc_api/SubmitBlockResult-class.html">SubmitBlockResult</a></li>
+  <li><a href="../dero_rpc_api/Transaction-class.html">Transaction</a></li>
+  <li><a href="../dero_rpc_api/Transfer-class.html">Transfer</a></li>
+  <li><a href="../dero_rpc_api/TransferParams-class.html">TransferParams</a></li>
+  <li><a href="../dero_rpc_api/TransferResult-class.html">TransferResult</a></li>
+  <li><a href="../dero_rpc_api/TxRelatedInfo-class.html">TxRelatedInfo</a></li>
+  <li><a href="../dero_rpc_api/WalletRepository-class.html">WalletRepository</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#functions">Functions</a></li>
+  <li><a href="../dero_rpc_api/bytesToHex.html">bytesToHex</a></li>
+  <li><a href="../dero_rpc_api/hexToBytes.html">hexToBytes</a></li>
+  <li><a href="../dero_rpc_api/hexToRawValue.html">hexToRawValue</a></li>
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#enums">Enums</a></li>
+  <li><a href="../dero_rpc_api/DataType.html">DataType</a></li>
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#typedefs">Typedefs</a></li>
+  <li><a href="../dero_rpc_api/Arguments.html">Arguments</a></li>
+  <li><a href="../dero_rpc_api/Hash.html">Hash</a></li>
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="../dero_rpc_api/DerodRepository-class.html#constructors">Constructors</a></li>
+          <li><a href="../dero_rpc_api/DerodRepository/DerodRepository.html">DerodRepository</a></li>
+
+
+    <li class="section-title">
+      <a href="../dero_rpc_api/DerodRepository-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../dero_rpc_api/DerodRepository/derodEventStream.html">derodEventStream</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/eventStream.html">eventStream</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/rpcDerodAddress.html">rpcDerodAddress</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/rpcDerodClient.html">rpcDerodClient</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title"><a href="../dero_rpc_api/DerodRepository-class.html#instance-methods">Methods</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/close.html">close</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getBlock.html">getBlock</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getBlockByHash.html">getBlockByHash</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getBlockByTopoHeight.html">getBlockByTopoHeight</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getBlockCount.html">getBlockCount</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getBlockTemplate.html">getBlockTemplate</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getEncryptedBalance.html">getEncryptedBalance</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getGasEstimate.html">getGasEstimate</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getHeight.html">getHeight</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getInfo.html">getInfo</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getLastBlockHeader.html">getLastBlockHeader</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getNameToAddress.html">getNameToAddress</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getRandomAddress.html">getRandomAddress</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getSC.html">getSC</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getTransaction.html">getTransaction</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/getTxPool.html">getTxPool</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/newBlock.html">newBlock</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/newHeight.html">newHeight</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/ping.html">ping</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/sendRawTransaction.html">sendRawTransaction</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/start.html">start</a></li>
+    <li><a href="../dero_rpc_api/DerodRepository/submitBlock.html">submitBlock</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../dero_rpc_api/DerodRepository-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dero_rpc_api
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

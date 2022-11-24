@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="dero_rpc_api library API docs, for the Dart programming language.">
+  <title>dero_rpc_api library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dero_rpc_api</a></li>
+    <li class="self-crumb">dero_rpc_api library</li>
+  </ol>
+  <div class="self-name">dero_rpc_api</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-library">dero_rpc_api</span> library 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Dart implementation of the Dero RPC API.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="Argument">
+  <span class="name "><a href="../dero_rpc_api/Argument-class.html">Argument</a></span> 
+
+</dt>
+<dd>
+  Argument for the RPC payload.
+</dd>
+
+        <dt id="Block">
+  <span class="name "><a href="../dero_rpc_api/Block-class.html">Block</a></span> 
+
+</dt>
+<dd>
+  A representation of a Dero block.
+</dd>
+
+        <dt id="BlockHeader">
+  <span class="name "><a href="../dero_rpc_api/BlockHeader-class.html">BlockHeader</a></span> 
+
+</dt>
+<dd>
+  A block header for RPC call.
+</dd>
+
+        <dt id="DerodRepository">
+  <span class="name "><a href="../dero_rpc_api/DerodRepository-class.html">DerodRepository</a></span> 
+
+</dt>
+<dd>
+  A repository that provides all the necessary to listen and communicate with derod (Dero daemon).
+</dd>
+
+        <dt id="Entry">
+  <span class="name "><a href="../dero_rpc_api/Entry-class.html">Entry</a></span> 
+
+</dt>
+<dd>
+  A representation of a wallet transaction history entry.
+</dd>
+
+        <dt id="GasEstimateResult">
+  <span class="name "><a href="../dero_rpc_api/GasEstimateResult-class.html">GasEstimateResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getGasEstimate.html">DerodRepository.getGasEstimate</a>.
+</dd>
+
+        <dt id="GetAddressResult">
+  <span class="name "><a href="../dero_rpc_api/GetAddressResult-class.html">GetAddressResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/getAddress.html">WalletRepository.getAddress</a>.
+</dd>
+
+        <dt id="GetBalanceParams">
+  <span class="name "><a href="../dero_rpc_api/GetBalanceParams-class.html">GetBalanceParams</a></span> 
+
+</dt>
+<dd>
+  Parameters (optional) to call <a href="../dero_rpc_api/WalletRepository/getBalance.html">WalletRepository.getBalance</a>.
+</dd>
+
+        <dt id="GetBalanceResult">
+  <span class="name "><a href="../dero_rpc_api/GetBalanceResult-class.html">GetBalanceResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/getBalance.html">WalletRepository.getBalance</a>.
+</dd>
+
+        <dt id="GetBlockByHashParams">
+  <span class="name "><a href="../dero_rpc_api/GetBlockByHashParams-class.html">GetBlockByHashParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getBlockByHash.html">DerodRepository.getBlockByHash</a>.
+</dd>
+
+        <dt id="GetBlockByResult">
+  <span class="name "><a href="../dero_rpc_api/GetBlockByResult-class.html">GetBlockByResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getBlockByHash.html">DerodRepository.getBlockByHash</a> or <a href="../dero_rpc_api/DerodRepository/getBlockByTopoHeight.html">DerodRepository.getBlockByTopoHeight</a>.
+</dd>
+
+        <dt id="GetBlockByTopoHeightParams">
+  <span class="name "><a href="../dero_rpc_api/GetBlockByTopoHeightParams-class.html">GetBlockByTopoHeightParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getBlockByTopoHeight.html">DerodRepository.getBlockByTopoHeight</a>.
+</dd>
+
+        <dt id="GetBlockCountResult">
+  <span class="name "><a href="../dero_rpc_api/GetBlockCountResult-class.html">GetBlockCountResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getBlockCount.html">DerodRepository.getBlockCount</a>.
+</dd>
+
+        <dt id="GetBlockParams">
+  <span class="name "><a href="../dero_rpc_api/GetBlockParams-class.html">GetBlockParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getBlock.html">DerodRepository.getBlock</a>.
+</dd>
+
+        <dt id="GetBlockResult">
+  <span class="name "><a href="../dero_rpc_api/GetBlockResult-class.html">GetBlockResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getBlock.html">DerodRepository.getBlock</a>.
+</dd>
+
+        <dt id="GetBlockTemplateParams">
+  <span class="name "><a href="../dero_rpc_api/GetBlockTemplateParams-class.html">GetBlockTemplateParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getBlockTemplate.html">DerodRepository.getBlockTemplate</a>.
+</dd>
+
+        <dt id="GetBlockTemplateResult">
+  <span class="name "><a href="../dero_rpc_api/GetBlockTemplateResult-class.html">GetBlockTemplateResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getBlockTemplate.html">DerodRepository.getBlockTemplate</a>.
+</dd>
+
+        <dt id="GetEncryptedBalanceParams">
+  <span class="name "><a href="../dero_rpc_api/GetEncryptedBalanceParams-class.html">GetEncryptedBalanceParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getEncryptedBalance.html">DerodRepository.getEncryptedBalance</a>.
+</dd>
+
+        <dt id="GetEncryptedBalanceResult">
+  <span class="name "><a href="../dero_rpc_api/GetEncryptedBalanceResult-class.html">GetEncryptedBalanceResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getEncryptedBalance.html">DerodRepository.getEncryptedBalance</a>.
+</dd>
+
+        <dt id="GetHeightDerodResult">
+  <span class="name "><a href="../dero_rpc_api/GetHeightDerodResult-class.html">GetHeightDerodResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getHeight.html">DerodRepository.getHeight</a>.
+</dd>
+
+        <dt id="GetHeightWalletResult">
+  <span class="name "><a href="../dero_rpc_api/GetHeightWalletResult-class.html">GetHeightWalletResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/getHeight.html">WalletRepository.getHeight</a>.
+</dd>
+
+        <dt id="GetInfoResult">
+  <span class="name "><a href="../dero_rpc_api/GetInfoResult-class.html">GetInfoResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getInfo.html">DerodRepository.getInfo</a>.
+</dd>
+
+        <dt id="GetRandomAddressParams">
+  <span class="name "><a href="../dero_rpc_api/GetRandomAddressParams-class.html">GetRandomAddressParams</a></span> 
+
+</dt>
+<dd>
+  Parameters (optional) to call <a href="../dero_rpc_api/DerodRepository/getRandomAddress.html">DerodRepository.getRandomAddress</a>.
+</dd>
+
+        <dt id="GetRandomAddressResult">
+  <span class="name "><a href="../dero_rpc_api/GetRandomAddressResult-class.html">GetRandomAddressResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getRandomAddress.html">DerodRepository.getRandomAddress</a>.
+</dd>
+
+        <dt id="GetSCParams">
+  <span class="name "><a href="../dero_rpc_api/GetSCParams-class.html">GetSCParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getSC.html">DerodRepository.getSC</a>.
+</dd>
+
+        <dt id="GetSCResult">
+  <span class="name "><a href="../dero_rpc_api/GetSCResult-class.html">GetSCResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getSC.html">DerodRepository.getSC</a>.
+</dd>
+
+        <dt id="GetTransactionParams">
+  <span class="name "><a href="../dero_rpc_api/GetTransactionParams-class.html">GetTransactionParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getTransaction.html">DerodRepository.getTransaction</a>.
+</dd>
+
+        <dt id="GetTransactionResult">
+  <span class="name "><a href="../dero_rpc_api/GetTransactionResult-class.html">GetTransactionResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getTransaction.html">DerodRepository.getTransaction</a>.
+</dd>
+
+        <dt id="GetTransferByTxidParams">
+  <span class="name "><a href="../dero_rpc_api/GetTransferByTxidParams-class.html">GetTransferByTxidParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/WalletRepository/getTransferByTXID.html">WalletRepository.getTransferByTXID</a>.
+</dd>
+
+        <dt id="GetTransferByTxidResult">
+  <span class="name "><a href="../dero_rpc_api/GetTransferByTxidResult-class.html">GetTransferByTxidResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/getTransferByTXID.html">WalletRepository.getTransferByTXID</a>.
+</dd>
+
+        <dt id="GetTransfersParams">
+  <span class="name "><a href="../dero_rpc_api/GetTransfersParams-class.html">GetTransfersParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/WalletRepository/getTransfers.html">WalletRepository.getTransfers</a>.
+</dd>
+
+        <dt id="GetTransfersResult">
+  <span class="name "><a href="../dero_rpc_api/GetTransfersResult-class.html">GetTransfersResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/getTransfers.html">WalletRepository.getTransfers</a>.
+</dd>
+
+        <dt id="GetTxPoolResult">
+  <span class="name "><a href="../dero_rpc_api/GetTxPoolResult-class.html">GetTxPoolResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getTxPool.html">DerodRepository.getTxPool</a>.
+</dd>
+
+        <dt id="MakeIntegratedAddressParams">
+  <span class="name "><a href="../dero_rpc_api/MakeIntegratedAddressParams-class.html">MakeIntegratedAddressParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/WalletRepository/makeIntegratedAddress.html">WalletRepository.makeIntegratedAddress</a>.
+</dd>
+
+        <dt id="MakeIntegratedAddressResult">
+  <span class="name "><a href="../dero_rpc_api/MakeIntegratedAddressResult-class.html">MakeIntegratedAddressResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/makeIntegratedAddress.html">WalletRepository.makeIntegratedAddress</a>.
+</dd>
+
+        <dt id="Miniblock">
+  <span class="name "><a href="../dero_rpc_api/Miniblock-class.html">Miniblock</a></span> 
+
+</dt>
+<dd>
+  A representation of a Dero miniblock.
+</dd>
+
+        <dt id="NameToAddressParams">
+  <span class="name "><a href="../dero_rpc_api/NameToAddressParams-class.html">NameToAddressParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/getNameToAddress.html">DerodRepository.getNameToAddress</a>.
+</dd>
+
+        <dt id="NameToAddressResult">
+  <span class="name "><a href="../dero_rpc_api/NameToAddressResult-class.html">NameToAddressResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/getNameToAddress.html">DerodRepository.getNameToAddress</a>.
+</dd>
+
+        <dt id="QueryKeyParams">
+  <span class="name "><a href="../dero_rpc_api/QueryKeyParams-class.html">QueryKeyParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/WalletRepository/queryKey.html">WalletRepository.queryKey</a>.
+</dd>
+
+        <dt id="QueryKeyResult">
+  <span class="name "><a href="../dero_rpc_api/QueryKeyResult-class.html">QueryKeyResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/queryKey.html">WalletRepository.queryKey</a>.
+</dd>
+
+        <dt id="ScInvokeParams">
+  <span class="name "><a href="../dero_rpc_api/ScInvokeParams-class.html">ScInvokeParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/WalletRepository/scInvoke.html">WalletRepository.scInvoke</a>.
+</dd>
+
+        <dt id="SendRawTransactionParams">
+  <span class="name "><a href="../dero_rpc_api/SendRawTransactionParams-class.html">SendRawTransactionParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/sendRawTransaction.html">DerodRepository.sendRawTransaction</a>.
+</dd>
+
+        <dt id="SendRawTransactionResult">
+  <span class="name "><a href="../dero_rpc_api/SendRawTransactionResult-class.html">SendRawTransactionResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/sendRawTransaction.html">DerodRepository.sendRawTransaction</a>.
+</dd>
+
+        <dt id="SplitIntegratedAddressParams">
+  <span class="name "><a href="../dero_rpc_api/SplitIntegratedAddressParams-class.html">SplitIntegratedAddressParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/WalletRepository/splitIntegratedAddress.html">WalletRepository.splitIntegratedAddress</a>.
+</dd>
+
+        <dt id="SplitIntegratedAddressResult">
+  <span class="name "><a href="../dero_rpc_api/SplitIntegratedAddressResult-class.html">SplitIntegratedAddressResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/splitIntegratedAddress.html">WalletRepository.splitIntegratedAddress</a>.
+</dd>
+
+        <dt id="SubmitBlockParams">
+  <span class="name "><a href="../dero_rpc_api/SubmitBlockParams-class.html">SubmitBlockParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/DerodRepository/submitBlock.html">DerodRepository.submitBlock</a>.
+</dd>
+
+        <dt id="SubmitBlockResult">
+  <span class="name "><a href="../dero_rpc_api/SubmitBlockResult-class.html">SubmitBlockResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/DerodRepository/submitBlock.html">DerodRepository.submitBlock</a>.
+</dd>
+
+        <dt id="Transaction">
+  <span class="name "><a href="../dero_rpc_api/Transaction-class.html">Transaction</a></span> 
+
+</dt>
+<dd>
+  A representation of a core Dero transaction.
+</dd>
+
+        <dt id="Transfer">
+  <span class="name "><a href="../dero_rpc_api/Transfer-class.html">Transfer</a></span> 
+
+</dt>
+<dd>
+  A representation of a wallet transfer.
+</dd>
+
+        <dt id="TransferParams">
+  <span class="name "><a href="../dero_rpc_api/TransferParams-class.html">TransferParams</a></span> 
+
+</dt>
+<dd>
+  Parameters required to call <a href="../dero_rpc_api/WalletRepository/transfer.html">WalletRepository.transfer</a> or <a href="../dero_rpc_api/DerodRepository/getGasEstimate.html">DerodRepository.getGasEstimate</a>.
+</dd>
+
+        <dt id="TransferResult">
+  <span class="name "><a href="../dero_rpc_api/TransferResult-class.html">TransferResult</a></span> 
+
+</dt>
+<dd>
+  The response returned by a call to <a href="../dero_rpc_api/WalletRepository/transfer.html">WalletRepository.transfer</a>.
+</dd>
+
+        <dt id="TxRelatedInfo">
+  <span class="name "><a href="../dero_rpc_api/TxRelatedInfo-class.html">TxRelatedInfo</a></span> 
+
+</dt>
+<dd>
+  A tx related information for RPC call.
+</dd>
+
+        <dt id="WalletRepository">
+  <span class="name "><a href="../dero_rpc_api/WalletRepository-class.html">WalletRepository</a></span> 
+
+</dt>
+<dd>
+  A repository that provides all the necessary to communicate with Dero wallet.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="bytesToHex" class="callable">
+  <span class="name"><a href="../dero_rpc_api/bytesToHex.html">bytesToHex</a></span><span class="signature">(<wbr><span class="parameter" id="bytesToHex-param-bytes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">bytes</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Convert bytes array to hexadecimal byte string.
+  
+
+</dd>
+
+        <dt id="hexToBytes" class="callable">
+  <span class="name"><a href="../dero_rpc_api/hexToBytes.html">hexToBytes</a></span><span class="signature">(<wbr><span class="parameter" id="hexToBytes-param-hexByteString"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">hexByteString</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Convert hexadecimal byte string to bytes array.
+  
+
+</dd>
+
+        <dt id="hexToRawValue" class="callable">
+  <span class="name"><a href="../dero_rpc_api/hexToRawValue.html">hexToRawValue</a></span><span class="signature">(<wbr><span class="parameter" id="hexToRawValue-param-hexByteString"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">hexByteString</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Converts a hexadecimal byte string back into its raw value.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+        <dt id="DataType">
+  <span class="name "><a href="../dero_rpc_api/DataType.html">DataType</a></span> 
+
+</dt>
+<dd>
+  Data type supported by Dero when sending <a href="../dero_rpc_api/Argument-class.html">Argument</a> in RPC-payload.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl>
+          
+  <dt id="Arguments" class="">
+  <span class="name"><a href="../dero_rpc_api/Arguments.html">Arguments</a></span>
+    = <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/Argument-class.html">Argument</a></span>&gt;</span>
+  </span>
+  
+
+</dt>
+<dd>
+  List of <a href="../dero_rpc_api/Argument-class.html">Argument</a>.
+  
+
+</dd>
+
+
+          
+  <dt id="Hash" class="">
+  <span class="name"><a href="../dero_rpc_api/Hash.html">Hash</a></span>
+    = <a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a>
+  </span>
+  
+
+</dt>
+<dd>
+  Dero Hash of 32 bytes as a <a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a>.
+  
+
+</dd>
+
+
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">dero_rpc_api</a></li>
+  <li class="self-crumb">dero_rpc_api library</li>
+</ol>
+
+
+    <h5><span class="package-name">dero_rpc_api</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../dero_rpc_api/dero_rpc_api-library.html">dero_rpc_api</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>dero_rpc_api library</h5>
+    <ol>
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#classes">Classes</a></li>
+  <li><a href="../dero_rpc_api/Argument-class.html">Argument</a></li>
+  <li><a href="../dero_rpc_api/Block-class.html">Block</a></li>
+  <li><a href="../dero_rpc_api/BlockHeader-class.html">BlockHeader</a></li>
+  <li><a href="../dero_rpc_api/DerodRepository-class.html">DerodRepository</a></li>
+  <li><a href="../dero_rpc_api/Entry-class.html">Entry</a></li>
+  <li><a href="../dero_rpc_api/GasEstimateResult-class.html">GasEstimateResult</a></li>
+  <li><a href="../dero_rpc_api/GetAddressResult-class.html">GetAddressResult</a></li>
+  <li><a href="../dero_rpc_api/GetBalanceParams-class.html">GetBalanceParams</a></li>
+  <li><a href="../dero_rpc_api/GetBalanceResult-class.html">GetBalanceResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByHashParams-class.html">GetBlockByHashParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByResult-class.html">GetBlockByResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByTopoHeightParams-class.html">GetBlockByTopoHeightParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockCountResult-class.html">GetBlockCountResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockParams-class.html">GetBlockParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockResult-class.html">GetBlockResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockTemplateParams-class.html">GetBlockTemplateParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockTemplateResult-class.html">GetBlockTemplateResult</a></li>
+  <li><a href="../dero_rpc_api/GetEncryptedBalanceParams-class.html">GetEncryptedBalanceParams</a></li>
+  <li><a href="../dero_rpc_api/GetEncryptedBalanceResult-class.html">GetEncryptedBalanceResult</a></li>
+  <li><a href="../dero_rpc_api/GetHeightDerodResult-class.html">GetHeightDerodResult</a></li>
+  <li><a href="../dero_rpc_api/GetHeightWalletResult-class.html">GetHeightWalletResult</a></li>
+  <li><a href="../dero_rpc_api/GetInfoResult-class.html">GetInfoResult</a></li>
+  <li><a href="../dero_rpc_api/GetRandomAddressParams-class.html">GetRandomAddressParams</a></li>
+  <li><a href="../dero_rpc_api/GetRandomAddressResult-class.html">GetRandomAddressResult</a></li>
+  <li><a href="../dero_rpc_api/GetSCParams-class.html">GetSCParams</a></li>
+  <li><a href="../dero_rpc_api/GetSCResult-class.html">GetSCResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransactionParams-class.html">GetTransactionParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransactionResult-class.html">GetTransactionResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransferByTxidParams-class.html">GetTransferByTxidParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransferByTxidResult-class.html">GetTransferByTxidResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransfersParams-class.html">GetTransfersParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransfersResult-class.html">GetTransfersResult</a></li>
+  <li><a href="../dero_rpc_api/GetTxPoolResult-class.html">GetTxPoolResult</a></li>
+  <li><a href="../dero_rpc_api/MakeIntegratedAddressParams-class.html">MakeIntegratedAddressParams</a></li>
+  <li><a href="../dero_rpc_api/MakeIntegratedAddressResult-class.html">MakeIntegratedAddressResult</a></li>
+  <li><a href="../dero_rpc_api/Miniblock-class.html">Miniblock</a></li>
+  <li><a href="../dero_rpc_api/NameToAddressParams-class.html">NameToAddressParams</a></li>
+  <li><a href="../dero_rpc_api/NameToAddressResult-class.html">NameToAddressResult</a></li>
+  <li><a href="../dero_rpc_api/QueryKeyParams-class.html">QueryKeyParams</a></li>
+  <li><a href="../dero_rpc_api/QueryKeyResult-class.html">QueryKeyResult</a></li>
+  <li><a href="../dero_rpc_api/ScInvokeParams-class.html">ScInvokeParams</a></li>
+  <li><a href="../dero_rpc_api/SendRawTransactionParams-class.html">SendRawTransactionParams</a></li>
+  <li><a href="../dero_rpc_api/SendRawTransactionResult-class.html">SendRawTransactionResult</a></li>
+  <li><a href="../dero_rpc_api/SplitIntegratedAddressParams-class.html">SplitIntegratedAddressParams</a></li>
+  <li><a href="../dero_rpc_api/SplitIntegratedAddressResult-class.html">SplitIntegratedAddressResult</a></li>
+  <li><a href="../dero_rpc_api/SubmitBlockParams-class.html">SubmitBlockParams</a></li>
+  <li><a href="../dero_rpc_api/SubmitBlockResult-class.html">SubmitBlockResult</a></li>
+  <li><a href="../dero_rpc_api/Transaction-class.html">Transaction</a></li>
+  <li><a href="../dero_rpc_api/Transfer-class.html">Transfer</a></li>
+  <li><a href="../dero_rpc_api/TransferParams-class.html">TransferParams</a></li>
+  <li><a href="../dero_rpc_api/TransferResult-class.html">TransferResult</a></li>
+  <li><a href="../dero_rpc_api/TxRelatedInfo-class.html">TxRelatedInfo</a></li>
+  <li><a href="../dero_rpc_api/WalletRepository-class.html">WalletRepository</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#functions">Functions</a></li>
+  <li><a href="../dero_rpc_api/bytesToHex.html">bytesToHex</a></li>
+  <li><a href="../dero_rpc_api/hexToBytes.html">hexToBytes</a></li>
+  <li><a href="../dero_rpc_api/hexToRawValue.html">hexToRawValue</a></li>
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#enums">Enums</a></li>
+  <li><a href="../dero_rpc_api/DataType.html">DataType</a></li>
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#typedefs">Typedefs</a></li>
+  <li><a href="../dero_rpc_api/Arguments.html">Arguments</a></li>
+  <li><a href="../dero_rpc_api/Hash.html">Hash</a></li>
+
+</ol>
+
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dero_rpc_api
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

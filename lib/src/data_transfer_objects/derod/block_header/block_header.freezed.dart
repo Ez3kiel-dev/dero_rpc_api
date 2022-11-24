@@ -1,0 +1,544 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+
+part of 'block_header.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+BlockHeader _$BlockHeaderFromJson(Map<String, dynamic> json) {
+  return _BlockHeader.fromJson(json);
+}
+
+/// @nodoc
+mixin _$BlockHeader {
+  @JsonKey(name: 'depth')
+  int? get depth => throw _privateConstructorUsedError;
+  @JsonKey(name: 'difficulty')
+  String? get difficulty => throw _privateConstructorUsedError;
+  @JsonKey(name: 'hash')
+  String? get hash => throw _privateConstructorUsedError;
+  @JsonKey(name: 'height')
+  int? get height => throw _privateConstructorUsedError;
+  @JsonKey(name: 'topoheight')
+  int? get topoHeight => throw _privateConstructorUsedError;
+  @JsonKey(name: 'major_version')
+  int? get majorVersion => throw _privateConstructorUsedError;
+  @JsonKey(name: 'minor_version')
+  int? get minorVersion => throw _privateConstructorUsedError;
+  @JsonKey(name: 'nonce')
+  int? get nonce => throw _privateConstructorUsedError;
+  @JsonKey(name: 'orphan_status')
+  bool? get orphanStatus => throw _privateConstructorUsedError;
+  @JsonKey(name: 'syncblock')
+  bool? get syncBlock => throw _privateConstructorUsedError;
+  @JsonKey(name: 'sideblock')
+  bool? get sideBlock => throw _privateConstructorUsedError;
+  @JsonKey(name: 'txcount')
+  int? get txCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'miners')
+  List<String>? get miners => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reward')
+  int? get reward => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tips')
+  List<String>? get tips => throw _privateConstructorUsedError;
+  @JsonKey(name: 'timestamp')
+  int? get timestamp => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BlockHeaderCopyWith<BlockHeader> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BlockHeaderCopyWith<$Res> {
+  factory $BlockHeaderCopyWith(
+          BlockHeader value, $Res Function(BlockHeader) then) =
+      _$BlockHeaderCopyWithImpl<$Res, BlockHeader>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'depth') int? depth,
+      @JsonKey(name: 'difficulty') String? difficulty,
+      @JsonKey(name: 'hash') String? hash,
+      @JsonKey(name: 'height') int? height,
+      @JsonKey(name: 'topoheight') int? topoHeight,
+      @JsonKey(name: 'major_version') int? majorVersion,
+      @JsonKey(name: 'minor_version') int? minorVersion,
+      @JsonKey(name: 'nonce') int? nonce,
+      @JsonKey(name: 'orphan_status') bool? orphanStatus,
+      @JsonKey(name: 'syncblock') bool? syncBlock,
+      @JsonKey(name: 'sideblock') bool? sideBlock,
+      @JsonKey(name: 'txcount') int? txCount,
+      @JsonKey(name: 'miners') List<String>? miners,
+      @JsonKey(name: 'reward') int? reward,
+      @JsonKey(name: 'tips') List<String>? tips,
+      @JsonKey(name: 'timestamp') int? timestamp});
+}
+
+/// @nodoc
+class _$BlockHeaderCopyWithImpl<$Res, $Val extends BlockHeader>
+    implements $BlockHeaderCopyWith<$Res> {
+  _$BlockHeaderCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? depth = freezed,
+    Object? difficulty = freezed,
+    Object? hash = freezed,
+    Object? height = freezed,
+    Object? topoHeight = freezed,
+    Object? majorVersion = freezed,
+    Object? minorVersion = freezed,
+    Object? nonce = freezed,
+    Object? orphanStatus = freezed,
+    Object? syncBlock = freezed,
+    Object? sideBlock = freezed,
+    Object? txCount = freezed,
+    Object? miners = freezed,
+    Object? reward = freezed,
+    Object? tips = freezed,
+    Object? timestamp = freezed,
+  }) {
+    return _then(_value.copyWith(
+      depth: freezed == depth
+          ? _value.depth
+          : depth // ignore: cast_nullable_to_non_nullable
+              as int?,
+      difficulty: freezed == difficulty
+          ? _value.difficulty
+          : difficulty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hash: freezed == hash
+          ? _value.hash
+          : hash // ignore: cast_nullable_to_non_nullable
+              as String?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int?,
+      topoHeight: freezed == topoHeight
+          ? _value.topoHeight
+          : topoHeight // ignore: cast_nullable_to_non_nullable
+              as int?,
+      majorVersion: freezed == majorVersion
+          ? _value.majorVersion
+          : majorVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minorVersion: freezed == minorVersion
+          ? _value.minorVersion
+          : minorVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      nonce: freezed == nonce
+          ? _value.nonce
+          : nonce // ignore: cast_nullable_to_non_nullable
+              as int?,
+      orphanStatus: freezed == orphanStatus
+          ? _value.orphanStatus
+          : orphanStatus // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      syncBlock: freezed == syncBlock
+          ? _value.syncBlock
+          : syncBlock // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      sideBlock: freezed == sideBlock
+          ? _value.sideBlock
+          : sideBlock // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      txCount: freezed == txCount
+          ? _value.txCount
+          : txCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      miners: freezed == miners
+          ? _value.miners
+          : miners // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      reward: freezed == reward
+          ? _value.reward
+          : reward // ignore: cast_nullable_to_non_nullable
+              as int?,
+      tips: freezed == tips
+          ? _value.tips
+          : tips // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      timestamp: freezed == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_BlockHeaderCopyWith<$Res>
+    implements $BlockHeaderCopyWith<$Res> {
+  factory _$$_BlockHeaderCopyWith(
+          _$_BlockHeader value, $Res Function(_$_BlockHeader) then) =
+      __$$_BlockHeaderCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'depth') int? depth,
+      @JsonKey(name: 'difficulty') String? difficulty,
+      @JsonKey(name: 'hash') String? hash,
+      @JsonKey(name: 'height') int? height,
+      @JsonKey(name: 'topoheight') int? topoHeight,
+      @JsonKey(name: 'major_version') int? majorVersion,
+      @JsonKey(name: 'minor_version') int? minorVersion,
+      @JsonKey(name: 'nonce') int? nonce,
+      @JsonKey(name: 'orphan_status') bool? orphanStatus,
+      @JsonKey(name: 'syncblock') bool? syncBlock,
+      @JsonKey(name: 'sideblock') bool? sideBlock,
+      @JsonKey(name: 'txcount') int? txCount,
+      @JsonKey(name: 'miners') List<String>? miners,
+      @JsonKey(name: 'reward') int? reward,
+      @JsonKey(name: 'tips') List<String>? tips,
+      @JsonKey(name: 'timestamp') int? timestamp});
+}
+
+/// @nodoc
+class __$$_BlockHeaderCopyWithImpl<$Res>
+    extends _$BlockHeaderCopyWithImpl<$Res, _$_BlockHeader>
+    implements _$$_BlockHeaderCopyWith<$Res> {
+  __$$_BlockHeaderCopyWithImpl(
+      _$_BlockHeader _value, $Res Function(_$_BlockHeader) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? depth = freezed,
+    Object? difficulty = freezed,
+    Object? hash = freezed,
+    Object? height = freezed,
+    Object? topoHeight = freezed,
+    Object? majorVersion = freezed,
+    Object? minorVersion = freezed,
+    Object? nonce = freezed,
+    Object? orphanStatus = freezed,
+    Object? syncBlock = freezed,
+    Object? sideBlock = freezed,
+    Object? txCount = freezed,
+    Object? miners = freezed,
+    Object? reward = freezed,
+    Object? tips = freezed,
+    Object? timestamp = freezed,
+  }) {
+    return _then(_$_BlockHeader(
+      depth: freezed == depth
+          ? _value.depth
+          : depth // ignore: cast_nullable_to_non_nullable
+              as int?,
+      difficulty: freezed == difficulty
+          ? _value.difficulty
+          : difficulty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hash: freezed == hash
+          ? _value.hash
+          : hash // ignore: cast_nullable_to_non_nullable
+              as String?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int?,
+      topoHeight: freezed == topoHeight
+          ? _value.topoHeight
+          : topoHeight // ignore: cast_nullable_to_non_nullable
+              as int?,
+      majorVersion: freezed == majorVersion
+          ? _value.majorVersion
+          : majorVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minorVersion: freezed == minorVersion
+          ? _value.minorVersion
+          : minorVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      nonce: freezed == nonce
+          ? _value.nonce
+          : nonce // ignore: cast_nullable_to_non_nullable
+              as int?,
+      orphanStatus: freezed == orphanStatus
+          ? _value.orphanStatus
+          : orphanStatus // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      syncBlock: freezed == syncBlock
+          ? _value.syncBlock
+          : syncBlock // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      sideBlock: freezed == sideBlock
+          ? _value.sideBlock
+          : sideBlock // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      txCount: freezed == txCount
+          ? _value.txCount
+          : txCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      miners: freezed == miners
+          ? _value._miners
+          : miners // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      reward: freezed == reward
+          ? _value.reward
+          : reward // ignore: cast_nullable_to_non_nullable
+              as int?,
+      tips: freezed == tips
+          ? _value._tips
+          : tips // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      timestamp: freezed == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_BlockHeader implements _BlockHeader {
+  _$_BlockHeader(
+      {@JsonKey(name: 'depth') this.depth,
+      @JsonKey(name: 'difficulty') this.difficulty,
+      @JsonKey(name: 'hash') this.hash,
+      @JsonKey(name: 'height') this.height,
+      @JsonKey(name: 'topoheight') this.topoHeight,
+      @JsonKey(name: 'major_version') this.majorVersion,
+      @JsonKey(name: 'minor_version') this.minorVersion,
+      @JsonKey(name: 'nonce') this.nonce,
+      @JsonKey(name: 'orphan_status') this.orphanStatus,
+      @JsonKey(name: 'syncblock') this.syncBlock,
+      @JsonKey(name: 'sideblock') this.sideBlock,
+      @JsonKey(name: 'txcount') this.txCount,
+      @JsonKey(name: 'miners') final List<String>? miners,
+      @JsonKey(name: 'reward') this.reward,
+      @JsonKey(name: 'tips') final List<String>? tips,
+      @JsonKey(name: 'timestamp') this.timestamp})
+      : _miners = miners,
+        _tips = tips;
+
+  factory _$_BlockHeader.fromJson(Map<String, dynamic> json) =>
+      _$$_BlockHeaderFromJson(json);
+
+  @override
+  @JsonKey(name: 'depth')
+  final int? depth;
+  @override
+  @JsonKey(name: 'difficulty')
+  final String? difficulty;
+  @override
+  @JsonKey(name: 'hash')
+  final String? hash;
+  @override
+  @JsonKey(name: 'height')
+  final int? height;
+  @override
+  @JsonKey(name: 'topoheight')
+  final int? topoHeight;
+  @override
+  @JsonKey(name: 'major_version')
+  final int? majorVersion;
+  @override
+  @JsonKey(name: 'minor_version')
+  final int? minorVersion;
+  @override
+  @JsonKey(name: 'nonce')
+  final int? nonce;
+  @override
+  @JsonKey(name: 'orphan_status')
+  final bool? orphanStatus;
+  @override
+  @JsonKey(name: 'syncblock')
+  final bool? syncBlock;
+  @override
+  @JsonKey(name: 'sideblock')
+  final bool? sideBlock;
+  @override
+  @JsonKey(name: 'txcount')
+  final int? txCount;
+  final List<String>? _miners;
+  @override
+  @JsonKey(name: 'miners')
+  List<String>? get miners {
+    final value = _miners;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  @JsonKey(name: 'reward')
+  final int? reward;
+  final List<String>? _tips;
+  @override
+  @JsonKey(name: 'tips')
+  List<String>? get tips {
+    final value = _tips;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  @JsonKey(name: 'timestamp')
+  final int? timestamp;
+
+  @override
+  String toString() {
+    return 'BlockHeader(depth: $depth, difficulty: $difficulty, hash: $hash, height: $height, topoHeight: $topoHeight, majorVersion: $majorVersion, minorVersion: $minorVersion, nonce: $nonce, orphanStatus: $orphanStatus, syncBlock: $syncBlock, sideBlock: $sideBlock, txCount: $txCount, miners: $miners, reward: $reward, tips: $tips, timestamp: $timestamp)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_BlockHeader &&
+            (identical(other.depth, depth) || other.depth == depth) &&
+            (identical(other.difficulty, difficulty) ||
+                other.difficulty == difficulty) &&
+            (identical(other.hash, hash) || other.hash == hash) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.topoHeight, topoHeight) ||
+                other.topoHeight == topoHeight) &&
+            (identical(other.majorVersion, majorVersion) ||
+                other.majorVersion == majorVersion) &&
+            (identical(other.minorVersion, minorVersion) ||
+                other.minorVersion == minorVersion) &&
+            (identical(other.nonce, nonce) || other.nonce == nonce) &&
+            (identical(other.orphanStatus, orphanStatus) ||
+                other.orphanStatus == orphanStatus) &&
+            (identical(other.syncBlock, syncBlock) ||
+                other.syncBlock == syncBlock) &&
+            (identical(other.sideBlock, sideBlock) ||
+                other.sideBlock == sideBlock) &&
+            (identical(other.txCount, txCount) || other.txCount == txCount) &&
+            const DeepCollectionEquality().equals(other._miners, _miners) &&
+            (identical(other.reward, reward) || other.reward == reward) &&
+            const DeepCollectionEquality().equals(other._tips, _tips) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      depth,
+      difficulty,
+      hash,
+      height,
+      topoHeight,
+      majorVersion,
+      minorVersion,
+      nonce,
+      orphanStatus,
+      syncBlock,
+      sideBlock,
+      txCount,
+      const DeepCollectionEquality().hash(_miners),
+      reward,
+      const DeepCollectionEquality().hash(_tips),
+      timestamp);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_BlockHeaderCopyWith<_$_BlockHeader> get copyWith =>
+      __$$_BlockHeaderCopyWithImpl<_$_BlockHeader>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_BlockHeaderToJson(
+      this,
+    );
+  }
+}
+
+abstract class _BlockHeader implements BlockHeader {
+  factory _BlockHeader(
+      {@JsonKey(name: 'depth') final int? depth,
+      @JsonKey(name: 'difficulty') final String? difficulty,
+      @JsonKey(name: 'hash') final String? hash,
+      @JsonKey(name: 'height') final int? height,
+      @JsonKey(name: 'topoheight') final int? topoHeight,
+      @JsonKey(name: 'major_version') final int? majorVersion,
+      @JsonKey(name: 'minor_version') final int? minorVersion,
+      @JsonKey(name: 'nonce') final int? nonce,
+      @JsonKey(name: 'orphan_status') final bool? orphanStatus,
+      @JsonKey(name: 'syncblock') final bool? syncBlock,
+      @JsonKey(name: 'sideblock') final bool? sideBlock,
+      @JsonKey(name: 'txcount') final int? txCount,
+      @JsonKey(name: 'miners') final List<String>? miners,
+      @JsonKey(name: 'reward') final int? reward,
+      @JsonKey(name: 'tips') final List<String>? tips,
+      @JsonKey(name: 'timestamp') final int? timestamp}) = _$_BlockHeader;
+
+  factory _BlockHeader.fromJson(Map<String, dynamic> json) =
+      _$_BlockHeader.fromJson;
+
+  @override
+  @JsonKey(name: 'depth')
+  int? get depth;
+  @override
+  @JsonKey(name: 'difficulty')
+  String? get difficulty;
+  @override
+  @JsonKey(name: 'hash')
+  String? get hash;
+  @override
+  @JsonKey(name: 'height')
+  int? get height;
+  @override
+  @JsonKey(name: 'topoheight')
+  int? get topoHeight;
+  @override
+  @JsonKey(name: 'major_version')
+  int? get majorVersion;
+  @override
+  @JsonKey(name: 'minor_version')
+  int? get minorVersion;
+  @override
+  @JsonKey(name: 'nonce')
+  int? get nonce;
+  @override
+  @JsonKey(name: 'orphan_status')
+  bool? get orphanStatus;
+  @override
+  @JsonKey(name: 'syncblock')
+  bool? get syncBlock;
+  @override
+  @JsonKey(name: 'sideblock')
+  bool? get sideBlock;
+  @override
+  @JsonKey(name: 'txcount')
+  int? get txCount;
+  @override
+  @JsonKey(name: 'miners')
+  List<String>? get miners;
+  @override
+  @JsonKey(name: 'reward')
+  int? get reward;
+  @override
+  @JsonKey(name: 'tips')
+  List<String>? get tips;
+  @override
+  @JsonKey(name: 'timestamp')
+  int? get timestamp;
+  @override
+  @JsonKey(ignore: true)
+  _$$_BlockHeaderCopyWith<_$_BlockHeader> get copyWith =>
+      throw _privateConstructorUsedError;
+}

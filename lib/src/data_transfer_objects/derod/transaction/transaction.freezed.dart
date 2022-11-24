@@ -1,0 +1,467 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+
+part of 'transaction.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+Transaction _$TransactionFromJson(Map<String, dynamic> json) {
+  return _Transaction.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Transaction {
+  @JsonKey(name: 'version')
+  int? get version => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_network')
+  int? get sourceNetwork => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_network')
+  int? get destinationNetwork => throw _privateConstructorUsedError;
+  @JsonKey(name: 'txtype')
+  int? get txType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'value')
+  int? get value => throw _privateConstructorUsedError;
+  @JsonKey(name: 'miner_address')
+  @Uint8ListConverter()
+  Uint8List? get minerAddress => throw _privateConstructorUsedError;
+  @JsonKey(name: 'c')
+  @Uint8ListConverter()
+  Uint8List? get c => throw _privateConstructorUsedError;
+  @JsonKey(name: 's')
+  @Uint8ListConverter()
+  Uint8List? get s => throw _privateConstructorUsedError;
+  @JsonKey(name: 'height')
+  int? get height => throw _privateConstructorUsedError;
+  @JsonKey(name: 'blid')
+  @Uint8ListConverter()
+  Uint8List? get blid => throw _privateConstructorUsedError;
+  @JsonKey(name: 'scdata')
+  List<Argument>? get scData => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransactionCopyWith<Transaction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TransactionCopyWith<$Res> {
+  factory $TransactionCopyWith(
+          Transaction value, $Res Function(Transaction) then) =
+      _$TransactionCopyWithImpl<$Res, Transaction>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'version')
+          int? version,
+      @JsonKey(name: 'source_network')
+          int? sourceNetwork,
+      @JsonKey(name: 'dest_network')
+          int? destinationNetwork,
+      @JsonKey(name: 'txtype')
+          int? txType,
+      @JsonKey(name: 'value')
+          int? value,
+      @JsonKey(name: 'miner_address')
+      @Uint8ListConverter()
+          Uint8List? minerAddress,
+      @JsonKey(name: 'c')
+      @Uint8ListConverter()
+          Uint8List? c,
+      @JsonKey(name: 's')
+      @Uint8ListConverter()
+          Uint8List? s,
+      @JsonKey(name: 'height')
+          int? height,
+      @JsonKey(name: 'blid')
+      @Uint8ListConverter()
+          Uint8List? blid,
+      @JsonKey(name: 'scdata')
+          List<Argument>? scData});
+}
+
+/// @nodoc
+class _$TransactionCopyWithImpl<$Res, $Val extends Transaction>
+    implements $TransactionCopyWith<$Res> {
+  _$TransactionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? version = freezed,
+    Object? sourceNetwork = freezed,
+    Object? destinationNetwork = freezed,
+    Object? txType = freezed,
+    Object? value = freezed,
+    Object? minerAddress = freezed,
+    Object? c = freezed,
+    Object? s = freezed,
+    Object? height = freezed,
+    Object? blid = freezed,
+    Object? scData = freezed,
+  }) {
+    return _then(_value.copyWith(
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sourceNetwork: freezed == sourceNetwork
+          ? _value.sourceNetwork
+          : sourceNetwork // ignore: cast_nullable_to_non_nullable
+              as int?,
+      destinationNetwork: freezed == destinationNetwork
+          ? _value.destinationNetwork
+          : destinationNetwork // ignore: cast_nullable_to_non_nullable
+              as int?,
+      txType: freezed == txType
+          ? _value.txType
+          : txType // ignore: cast_nullable_to_non_nullable
+              as int?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minerAddress: freezed == minerAddress
+          ? _value.minerAddress
+          : minerAddress // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      c: freezed == c
+          ? _value.c
+          : c // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      s: freezed == s
+          ? _value.s
+          : s // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int?,
+      blid: freezed == blid
+          ? _value.blid
+          : blid // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      scData: freezed == scData
+          ? _value.scData
+          : scData // ignore: cast_nullable_to_non_nullable
+              as List<Argument>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_TransactionCopyWith<$Res>
+    implements $TransactionCopyWith<$Res> {
+  factory _$$_TransactionCopyWith(
+          _$_Transaction value, $Res Function(_$_Transaction) then) =
+      __$$_TransactionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'version')
+          int? version,
+      @JsonKey(name: 'source_network')
+          int? sourceNetwork,
+      @JsonKey(name: 'dest_network')
+          int? destinationNetwork,
+      @JsonKey(name: 'txtype')
+          int? txType,
+      @JsonKey(name: 'value')
+          int? value,
+      @JsonKey(name: 'miner_address')
+      @Uint8ListConverter()
+          Uint8List? minerAddress,
+      @JsonKey(name: 'c')
+      @Uint8ListConverter()
+          Uint8List? c,
+      @JsonKey(name: 's')
+      @Uint8ListConverter()
+          Uint8List? s,
+      @JsonKey(name: 'height')
+          int? height,
+      @JsonKey(name: 'blid')
+      @Uint8ListConverter()
+          Uint8List? blid,
+      @JsonKey(name: 'scdata')
+          List<Argument>? scData});
+}
+
+/// @nodoc
+class __$$_TransactionCopyWithImpl<$Res>
+    extends _$TransactionCopyWithImpl<$Res, _$_Transaction>
+    implements _$$_TransactionCopyWith<$Res> {
+  __$$_TransactionCopyWithImpl(
+      _$_Transaction _value, $Res Function(_$_Transaction) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? version = freezed,
+    Object? sourceNetwork = freezed,
+    Object? destinationNetwork = freezed,
+    Object? txType = freezed,
+    Object? value = freezed,
+    Object? minerAddress = freezed,
+    Object? c = freezed,
+    Object? s = freezed,
+    Object? height = freezed,
+    Object? blid = freezed,
+    Object? scData = freezed,
+  }) {
+    return _then(_$_Transaction(
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sourceNetwork: freezed == sourceNetwork
+          ? _value.sourceNetwork
+          : sourceNetwork // ignore: cast_nullable_to_non_nullable
+              as int?,
+      destinationNetwork: freezed == destinationNetwork
+          ? _value.destinationNetwork
+          : destinationNetwork // ignore: cast_nullable_to_non_nullable
+              as int?,
+      txType: freezed == txType
+          ? _value.txType
+          : txType // ignore: cast_nullable_to_non_nullable
+              as int?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minerAddress: freezed == minerAddress
+          ? _value.minerAddress
+          : minerAddress // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      c: freezed == c
+          ? _value.c
+          : c // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      s: freezed == s
+          ? _value.s
+          : s // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int?,
+      blid: freezed == blid
+          ? _value.blid
+          : blid // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      scData: freezed == scData
+          ? _value._scData
+          : scData // ignore: cast_nullable_to_non_nullable
+              as List<Argument>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Transaction implements _Transaction {
+  _$_Transaction(
+      {@JsonKey(name: 'version') this.version,
+      @JsonKey(name: 'source_network') this.sourceNetwork,
+      @JsonKey(name: 'dest_network') this.destinationNetwork,
+      @JsonKey(name: 'txtype') this.txType,
+      @JsonKey(name: 'value') this.value,
+      @JsonKey(name: 'miner_address') @Uint8ListConverter() this.minerAddress,
+      @JsonKey(name: 'c') @Uint8ListConverter() this.c,
+      @JsonKey(name: 's') @Uint8ListConverter() this.s,
+      @JsonKey(name: 'height') this.height,
+      @JsonKey(name: 'blid') @Uint8ListConverter() this.blid,
+      @JsonKey(name: 'scdata') final List<Argument>? scData})
+      : _scData = scData;
+
+  factory _$_Transaction.fromJson(Map<String, dynamic> json) =>
+      _$$_TransactionFromJson(json);
+
+  @override
+  @JsonKey(name: 'version')
+  final int? version;
+  @override
+  @JsonKey(name: 'source_network')
+  final int? sourceNetwork;
+  @override
+  @JsonKey(name: 'dest_network')
+  final int? destinationNetwork;
+  @override
+  @JsonKey(name: 'txtype')
+  final int? txType;
+  @override
+  @JsonKey(name: 'value')
+  final int? value;
+  @override
+  @JsonKey(name: 'miner_address')
+  @Uint8ListConverter()
+  final Uint8List? minerAddress;
+  @override
+  @JsonKey(name: 'c')
+  @Uint8ListConverter()
+  final Uint8List? c;
+  @override
+  @JsonKey(name: 's')
+  @Uint8ListConverter()
+  final Uint8List? s;
+  @override
+  @JsonKey(name: 'height')
+  final int? height;
+  @override
+  @JsonKey(name: 'blid')
+  @Uint8ListConverter()
+  final Uint8List? blid;
+  final List<Argument>? _scData;
+  @override
+  @JsonKey(name: 'scdata')
+  List<Argument>? get scData {
+    final value = _scData;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'Transaction(version: $version, sourceNetwork: $sourceNetwork, destinationNetwork: $destinationNetwork, txType: $txType, value: $value, minerAddress: $minerAddress, c: $c, s: $s, height: $height, blid: $blid, scData: $scData)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Transaction &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.sourceNetwork, sourceNetwork) ||
+                other.sourceNetwork == sourceNetwork) &&
+            (identical(other.destinationNetwork, destinationNetwork) ||
+                other.destinationNetwork == destinationNetwork) &&
+            (identical(other.txType, txType) || other.txType == txType) &&
+            (identical(other.value, value) || other.value == value) &&
+            const DeepCollectionEquality()
+                .equals(other.minerAddress, minerAddress) &&
+            const DeepCollectionEquality().equals(other.c, c) &&
+            const DeepCollectionEquality().equals(other.s, s) &&
+            (identical(other.height, height) || other.height == height) &&
+            const DeepCollectionEquality().equals(other.blid, blid) &&
+            const DeepCollectionEquality().equals(other._scData, _scData));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      version,
+      sourceNetwork,
+      destinationNetwork,
+      txType,
+      value,
+      const DeepCollectionEquality().hash(minerAddress),
+      const DeepCollectionEquality().hash(c),
+      const DeepCollectionEquality().hash(s),
+      height,
+      const DeepCollectionEquality().hash(blid),
+      const DeepCollectionEquality().hash(_scData));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TransactionCopyWith<_$_Transaction> get copyWith =>
+      __$$_TransactionCopyWithImpl<_$_Transaction>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TransactionToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Transaction implements Transaction {
+  factory _Transaction(
+      {@JsonKey(name: 'version')
+          final int? version,
+      @JsonKey(name: 'source_network')
+          final int? sourceNetwork,
+      @JsonKey(name: 'dest_network')
+          final int? destinationNetwork,
+      @JsonKey(name: 'txtype')
+          final int? txType,
+      @JsonKey(name: 'value')
+          final int? value,
+      @JsonKey(name: 'miner_address')
+      @Uint8ListConverter()
+          final Uint8List? minerAddress,
+      @JsonKey(name: 'c')
+      @Uint8ListConverter()
+          final Uint8List? c,
+      @JsonKey(name: 's')
+      @Uint8ListConverter()
+          final Uint8List? s,
+      @JsonKey(name: 'height')
+          final int? height,
+      @JsonKey(name: 'blid')
+      @Uint8ListConverter()
+          final Uint8List? blid,
+      @JsonKey(name: 'scdata')
+          final List<Argument>? scData}) = _$_Transaction;
+
+  factory _Transaction.fromJson(Map<String, dynamic> json) =
+      _$_Transaction.fromJson;
+
+  @override
+  @JsonKey(name: 'version')
+  int? get version;
+  @override
+  @JsonKey(name: 'source_network')
+  int? get sourceNetwork;
+  @override
+  @JsonKey(name: 'dest_network')
+  int? get destinationNetwork;
+  @override
+  @JsonKey(name: 'txtype')
+  int? get txType;
+  @override
+  @JsonKey(name: 'value')
+  int? get value;
+  @override
+  @JsonKey(name: 'miner_address')
+  @Uint8ListConverter()
+  Uint8List? get minerAddress;
+  @override
+  @JsonKey(name: 'c')
+  @Uint8ListConverter()
+  Uint8List? get c;
+  @override
+  @JsonKey(name: 's')
+  @Uint8ListConverter()
+  Uint8List? get s;
+  @override
+  @JsonKey(name: 'height')
+  int? get height;
+  @override
+  @JsonKey(name: 'blid')
+  @Uint8ListConverter()
+  Uint8List? get blid;
+  @override
+  @JsonKey(name: 'scdata')
+  List<Argument>? get scData;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TransactionCopyWith<_$_Transaction> get copyWith =>
+      throw _privateConstructorUsedError;
+}

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the WalletRepository class from the dero_rpc_api library, for the Dart programming language.">
+  <title>WalletRepository class - dero_rpc_api library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dero_rpc_api</a></li>
+    <li><a href="../dero_rpc_api/dero_rpc_api-library.html">dero_rpc_api</a></li>
+    <li class="self-crumb">WalletRepository class</li>
+  </ol>
+  <div class="self-name">WalletRepository</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">WalletRepository</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A repository that provides all the necessary to communicate with Dero wallet.</p>
+<p>You need to supply your wallet rpc server address when instantiating <a href="../dero_rpc_api/WalletRepository-class.html">WalletRepository</a>.
+And before calling the available RPC methods, you also need to start the client :</p>
+<pre class="language-dart"><code class="language-dart">final WalletRepository walletRepository = WalletRepository('127.0.0.1:10103');
+
+walletRepository.start();
+</code></pre>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="WalletRepository" class="callable">
+          <span class="name"><a href="../dero_rpc_api/WalletRepository/WalletRepository.html">WalletRepository</a></span><span class="signature">(<span class="parameter" id="-param-rpcWalletAddress"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">rpcWalletAddress</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="rpcWalletAddress" class="property">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/rpcWalletAddress.html">rpcWalletAddress</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  RPC server address of Dero wallet.
+  <div class="features">final</div>
+
+</dd>
+
+        <dt id="rpcWalletClient" class="property">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/rpcWalletClient.html">rpcWalletClient</a></span>
+  <span class="signature">&#8596; <a href="https://pub.dev/documentation/json_rpc_2/3.0.2/json_rpc_2/Client-class.html">Client</a></span> 
+
+</dt>
+<dd>
+  JSON-RPC client.
+  <div class="features">read / write</div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="close" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/close.html">close</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Closes the JSON-RPC client.
+Returns a <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a> that completes when all resources have been released.
+  
+
+</dd>
+
+        <dt id="getAddress" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/getAddress.html">getAddress</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetAddressResult-class.html">GetAddressResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the dero address of the currently connected wallet.
+  
+
+</dd>
+
+        <dt id="getBalance" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/getBalance.html">getBalance</a></span><span class="signature">(<wbr><span class="parameter" id="getBalance-param-getBalanceParams">{<span class="type-annotation"><a href="../dero_rpc_api/GetBalanceParams-class.html">GetBalanceParams</a>?</span> <span class="parameter-name">getBalanceParams</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetBalanceResult-class.html">GetBalanceResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the dero balance of the currently connected wallet.
+  
+
+</dd>
+
+        <dt id="getHeight" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/getHeight.html">getHeight</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetHeightWalletResult-class.html">GetHeightWalletResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the currently synchronized height of the wallet.
+  
+
+</dd>
+
+        <dt id="getTransferByTXID" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/getTransferByTXID.html">getTransferByTXID</a></span><span class="signature">(<wbr><span class="parameter" id="getTransferByTXID-param-getTransferByTXIDParams"><span class="type-annotation"><a href="../dero_rpc_api/GetTransferByTxidParams-class.html">GetTransferByTxidParams</a></span> <span class="parameter-name">getTransferByTXIDParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetTransferByTxidResult-class.html">GetTransferByTxidResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the information of a transfer according to its txid.
+  
+
+</dd>
+
+        <dt id="getTransfers" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/getTransfers.html">getTransfers</a></span><span class="signature">(<wbr><span class="parameter" id="getTransfers-param-getTransfersParams"><span class="type-annotation"><a href="../dero_rpc_api/GetTransfersParams-class.html">GetTransfersParams</a></span> <span class="parameter-name">getTransfersParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/GetTransfersResult-class.html">GetTransfersResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns outgoing/ingoing/coinbase transactions from the currently connected wallet.
+  
+
+</dd>
+
+        <dt id="makeIntegratedAddress" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/makeIntegratedAddress.html">makeIntegratedAddress</a></span><span class="signature">(<wbr><span class="parameter" id="makeIntegratedAddress-param-makeIntegratedAddressParams"><span class="type-annotation"><a href="../dero_rpc_api/MakeIntegratedAddressParams-class.html">MakeIntegratedAddressParams</a></span> <span class="parameter-name">makeIntegratedAddressParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/MakeIntegratedAddressResult-class.html">MakeIntegratedAddressResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generate an integrated address with specific payment identifiers.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="ping" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/ping.html">ping</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The traditional <a href="../dero_rpc_api/WalletRepository/ping.html">ping</a> method sends a 'Ping' and receives a 'Pong' if the connection is OK.
+  
+
+</dd>
+
+        <dt id="queryKey" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/queryKey.html">queryKey</a></span><span class="signature">(<wbr><span class="parameter" id="queryKey-param-queryKeyParams"><span class="type-annotation"><a href="../dero_rpc_api/QueryKeyParams-class.html">QueryKeyParams</a></span> <span class="parameter-name">queryKeyParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/QueryKeyResult-class.html">QueryKeyResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns seed.
+  
+
+</dd>
+
+        <dt id="scInvoke" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/scInvoke.html">scInvoke</a></span><span class="signature">(<wbr><span class="parameter" id="scInvoke-param-scInvokeParams"><span class="type-annotation"><a href="../dero_rpc_api/ScInvokeParams-class.html">ScInvokeParams</a></span> <span class="parameter-name">scInvokeParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/TransferResult-class.html">TransferResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Interact with a smart contract.
+  
+
+</dd>
+
+        <dt id="splitIntegratedAddress" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/splitIntegratedAddress.html">splitIntegratedAddress</a></span><span class="signature">(<wbr><span class="parameter" id="splitIntegratedAddress-param-splitIntegratedAddressParams"><span class="type-annotation"><a href="../dero_rpc_api/SplitIntegratedAddressParams-class.html">SplitIntegratedAddressParams</a></span> <span class="parameter-name">splitIntegratedAddressParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/SplitIntegratedAddressResult-class.html">SplitIntegratedAddressResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Split integrated address into standard wallet address and payment identifier.
+  
+
+</dd>
+
+        <dt id="start" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/start.html">start</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts the JSON-RPC client.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="transfer" class="callable">
+  <span class="name"><a href="../dero_rpc_api/WalletRepository/transfer.html">transfer</a></span><span class="signature">(<wbr><span class="parameter" id="transfer-param-transferParams"><span class="type-annotation"><a href="../dero_rpc_api/TransferParams-class.html">TransferParams</a></span> <span class="parameter-name">transferParams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dero_rpc_api/TransferResult-class.html">TransferResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Send Dero or smart contract asset to another wallet.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features">inherited</div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">dero_rpc_api</a></li>
+  <li><a href="../dero_rpc_api/dero_rpc_api-library.html">dero_rpc_api</a></li>
+  <li class="self-crumb">WalletRepository class</li>
+</ol>
+
+
+    <h5>dero_rpc_api library</h5>
+    <ol>
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#classes">Classes</a></li>
+  <li><a href="../dero_rpc_api/Argument-class.html">Argument</a></li>
+  <li><a href="../dero_rpc_api/Block-class.html">Block</a></li>
+  <li><a href="../dero_rpc_api/BlockHeader-class.html">BlockHeader</a></li>
+  <li><a href="../dero_rpc_api/DerodRepository-class.html">DerodRepository</a></li>
+  <li><a href="../dero_rpc_api/Entry-class.html">Entry</a></li>
+  <li><a href="../dero_rpc_api/GasEstimateResult-class.html">GasEstimateResult</a></li>
+  <li><a href="../dero_rpc_api/GetAddressResult-class.html">GetAddressResult</a></li>
+  <li><a href="../dero_rpc_api/GetBalanceParams-class.html">GetBalanceParams</a></li>
+  <li><a href="../dero_rpc_api/GetBalanceResult-class.html">GetBalanceResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByHashParams-class.html">GetBlockByHashParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByResult-class.html">GetBlockByResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockByTopoHeightParams-class.html">GetBlockByTopoHeightParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockCountResult-class.html">GetBlockCountResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockParams-class.html">GetBlockParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockResult-class.html">GetBlockResult</a></li>
+  <li><a href="../dero_rpc_api/GetBlockTemplateParams-class.html">GetBlockTemplateParams</a></li>
+  <li><a href="../dero_rpc_api/GetBlockTemplateResult-class.html">GetBlockTemplateResult</a></li>
+  <li><a href="../dero_rpc_api/GetEncryptedBalanceParams-class.html">GetEncryptedBalanceParams</a></li>
+  <li><a href="../dero_rpc_api/GetEncryptedBalanceResult-class.html">GetEncryptedBalanceResult</a></li>
+  <li><a href="../dero_rpc_api/GetHeightDerodResult-class.html">GetHeightDerodResult</a></li>
+  <li><a href="../dero_rpc_api/GetHeightWalletResult-class.html">GetHeightWalletResult</a></li>
+  <li><a href="../dero_rpc_api/GetInfoResult-class.html">GetInfoResult</a></li>
+  <li><a href="../dero_rpc_api/GetRandomAddressParams-class.html">GetRandomAddressParams</a></li>
+  <li><a href="../dero_rpc_api/GetRandomAddressResult-class.html">GetRandomAddressResult</a></li>
+  <li><a href="../dero_rpc_api/GetSCParams-class.html">GetSCParams</a></li>
+  <li><a href="../dero_rpc_api/GetSCResult-class.html">GetSCResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransactionParams-class.html">GetTransactionParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransactionResult-class.html">GetTransactionResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransferByTxidParams-class.html">GetTransferByTxidParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransferByTxidResult-class.html">GetTransferByTxidResult</a></li>
+  <li><a href="../dero_rpc_api/GetTransfersParams-class.html">GetTransfersParams</a></li>
+  <li><a href="../dero_rpc_api/GetTransfersResult-class.html">GetTransfersResult</a></li>
+  <li><a href="../dero_rpc_api/GetTxPoolResult-class.html">GetTxPoolResult</a></li>
+  <li><a href="../dero_rpc_api/MakeIntegratedAddressParams-class.html">MakeIntegratedAddressParams</a></li>
+  <li><a href="../dero_rpc_api/MakeIntegratedAddressResult-class.html">MakeIntegratedAddressResult</a></li>
+  <li><a href="../dero_rpc_api/Miniblock-class.html">Miniblock</a></li>
+  <li><a href="../dero_rpc_api/NameToAddressParams-class.html">NameToAddressParams</a></li>
+  <li><a href="../dero_rpc_api/NameToAddressResult-class.html">NameToAddressResult</a></li>
+  <li><a href="../dero_rpc_api/QueryKeyParams-class.html">QueryKeyParams</a></li>
+  <li><a href="../dero_rpc_api/QueryKeyResult-class.html">QueryKeyResult</a></li>
+  <li><a href="../dero_rpc_api/ScInvokeParams-class.html">ScInvokeParams</a></li>
+  <li><a href="../dero_rpc_api/SendRawTransactionParams-class.html">SendRawTransactionParams</a></li>
+  <li><a href="../dero_rpc_api/SendRawTransactionResult-class.html">SendRawTransactionResult</a></li>
+  <li><a href="../dero_rpc_api/SplitIntegratedAddressParams-class.html">SplitIntegratedAddressParams</a></li>
+  <li><a href="../dero_rpc_api/SplitIntegratedAddressResult-class.html">SplitIntegratedAddressResult</a></li>
+  <li><a href="../dero_rpc_api/SubmitBlockParams-class.html">SubmitBlockParams</a></li>
+  <li><a href="../dero_rpc_api/SubmitBlockResult-class.html">SubmitBlockResult</a></li>
+  <li><a href="../dero_rpc_api/Transaction-class.html">Transaction</a></li>
+  <li><a href="../dero_rpc_api/Transfer-class.html">Transfer</a></li>
+  <li><a href="../dero_rpc_api/TransferParams-class.html">TransferParams</a></li>
+  <li><a href="../dero_rpc_api/TransferResult-class.html">TransferResult</a></li>
+  <li><a href="../dero_rpc_api/TxRelatedInfo-class.html">TxRelatedInfo</a></li>
+  <li><a href="../dero_rpc_api/WalletRepository-class.html">WalletRepository</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#functions">Functions</a></li>
+  <li><a href="../dero_rpc_api/bytesToHex.html">bytesToHex</a></li>
+  <li><a href="../dero_rpc_api/hexToBytes.html">hexToBytes</a></li>
+  <li><a href="../dero_rpc_api/hexToRawValue.html">hexToRawValue</a></li>
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#enums">Enums</a></li>
+  <li><a href="../dero_rpc_api/DataType.html">DataType</a></li>
+
+  <li class="section-title"><a href="../dero_rpc_api/dero_rpc_api-library.html#typedefs">Typedefs</a></li>
+  <li><a href="../dero_rpc_api/Arguments.html">Arguments</a></li>
+  <li><a href="../dero_rpc_api/Hash.html">Hash</a></li>
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="../dero_rpc_api/WalletRepository-class.html#constructors">Constructors</a></li>
+          <li><a href="../dero_rpc_api/WalletRepository/WalletRepository.html">WalletRepository</a></li>
+
+
+    <li class="section-title">
+      <a href="../dero_rpc_api/WalletRepository-class.html#instance-properties">Properties</a>
+    </li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/rpcWalletAddress.html">rpcWalletAddress</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/rpcWalletClient.html">rpcWalletClient</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title"><a href="../dero_rpc_api/WalletRepository-class.html#instance-methods">Methods</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/close.html">close</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/getAddress.html">getAddress</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/getBalance.html">getBalance</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/getHeight.html">getHeight</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/getTransferByTXID.html">getTransferByTXID</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/getTransfers.html">getTransfers</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/makeIntegratedAddress.html">makeIntegratedAddress</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/ping.html">ping</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/queryKey.html">queryKey</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/scInvoke.html">scInvoke</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/splitIntegratedAddress.html">splitIntegratedAddress</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/start.html">start</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+    <li><a href="../dero_rpc_api/WalletRepository/transfer.html">transfer</a></li>
+
+    <li class="section-title inherited"><a href="../dero_rpc_api/WalletRepository-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dero_rpc_api
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

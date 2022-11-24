@@ -1,0 +1,43 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_block_template_result.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_GetBlockTemplateResult _$$_GetBlockTemplateResultFromJson(
+        Map<String, dynamic> json) =>
+    _$_GetBlockTemplateResult(
+      jobId: json['jobid'] as String?,
+      blockTemplateBlob: json['blocktemplate_blob'] as String?,
+      blockHashingBlob: json['blockhashing_blob'] as String?,
+      difficulty: json['difficulty'] as String?,
+      difficultyInt: json['difficultyuint64'] as int?,
+      height: json['height'] as int?,
+      prevHash: json['prev_hash'] as String?,
+      epochMilli: json['epochmilli'] as int?,
+      blocks: json['blocks'] as int?,
+      miniblocks: json['miniblocks'] as int?,
+      rejected: json['rejected'] as int?,
+      lastError: json['lasterror'] as String?,
+      status: json['status'] as String?,
+    );
+
+Map<String, dynamic> _$$_GetBlockTemplateResultToJson(
+        _$_GetBlockTemplateResult instance) =>
+    <String, dynamic>{
+      'jobid': instance.jobId,
+      'blocktemplate_blob': instance.blockTemplateBlob,
+      'blockhashing_blob': instance.blockHashingBlob,
+      'difficulty': instance.difficulty,
+      'difficultyuint64': instance.difficultyInt,
+      'height': instance.height,
+      'prev_hash': instance.prevHash,
+      'epochmilli': instance.epochMilli,
+      'blocks': instance.blocks,
+      'miniblocks': instance.miniblocks,
+      'rejected': instance.rejected,
+      'lasterror': instance.lastError,
+      'status': instance.status,
+    };

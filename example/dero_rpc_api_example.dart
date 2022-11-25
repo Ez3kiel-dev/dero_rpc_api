@@ -21,14 +21,13 @@ Future<void> main() async {
   try {
     // Print Dero network information at each new height.
     derodRepository.derodEventStream.listen((event) async {
-      print(event);
       if (derodRepository.newHeight(event)) {
         var info = await derodRepository.getInfo();
         print(info);
       }
     });
 
-    // Get hardcoded smart contract NameService and print all registered names.
+    // Get the hard-coded NameService smart contract and print all registered names.
     var getSCParams = GetSCParams(scid: scidOfficialNameService);
     var getScResult = await derodRepository.getSC(getSCParams);
     print(getScResult.variableStringKeys);
@@ -54,11 +53,13 @@ Future<void> main() async {
           datatype: DataType.dataString,
           value: 'my_payment_identifier')
     ]);
+
     var makeIntegratedAddressResult =
         await walletRepository.makeIntegratedAddress(integratedAddressParams);
+
     print(makeIntegratedAddressResult.integratedAddress);
 
-    // Send 1 dero to another wallet with a message in the transaction.
+    // Send 1 dero to another wallet with a message in the transaction payload.
     // Remember, 1 dero = 100000 atomic units.
     var transferParams = TransferParams(transfers: [
       Transfer(destination: 'Ez3kiel', amount: 100000, payloadRPC: [
@@ -69,6 +70,7 @@ Future<void> main() async {
       ])
     ]);
     var transferResult = await walletRepository.transfer(transferParams);
+
     // Print the txid.
     print(transferResult.txid);
   } catch (err) {

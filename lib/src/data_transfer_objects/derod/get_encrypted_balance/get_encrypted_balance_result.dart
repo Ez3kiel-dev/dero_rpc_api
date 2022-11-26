@@ -1,7 +1,6 @@
-import 'dart:typed_data';
+// ignore_for_file: invalid_annotation_target
 
 import 'package:dero_rpc_api/dero_rpc_api.dart';
-import 'package:dero_rpc_api/src/utils/uint8list_json_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_encrypted_balance_result.freezed.dart';

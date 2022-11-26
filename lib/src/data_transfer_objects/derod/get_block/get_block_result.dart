@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:dero_rpc_api/dero_rpc_api.dart';
 import 'package:dero_rpc_api/src/utils/block_json_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

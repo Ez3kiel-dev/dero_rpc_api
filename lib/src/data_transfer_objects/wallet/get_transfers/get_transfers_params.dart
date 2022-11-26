@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'dart:typed_data';
 
 import 'package:dero_rpc_api/dero_rpc_api.dart';

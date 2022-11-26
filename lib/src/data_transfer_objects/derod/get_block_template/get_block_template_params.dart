@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:dero_rpc_api/dero_rpc_api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

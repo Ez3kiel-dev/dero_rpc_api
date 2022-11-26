@@ -143,7 +143,7 @@ class WalletRepository {
   ///       name: 'entrypoint', datatype: DataType.dataString, value: 'Register'),
   ///   Argument(name: 'name', datatype: DataType.dataString, value: 'YourName')
   /// ]);
-  /// 
+  ///
   /// await walletRepository.scInvoke(params);
   /// ```
   Future<TransferResult> scInvoke(ScInvokeParams scInvokeParams) async {

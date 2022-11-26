@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:dero_rpc_api/src/data_transfer_objects/wallet/argument/argument.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

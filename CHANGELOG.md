@@ -1,3 +1,7 @@
+## 0.1.3
+
+- dart format.
+
 ## 0.1.2
 
 - Add documentation on DTOs properties (WIP).

@@ -1,3 +1,7 @@
+## 0.1.4
+
+- docs: get_sc_params.dart and spelling in get_sc_result.dart
+
 ## 0.1.3
 
 - dart format.

@@ -20,40 +20,40 @@ GetSCResult _$GetSCResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetSCResult {
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'valuesuint64')
   List<String>? get valuesInt => throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'valuesstring')
   List<String>? get valuesString => throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'valuesbytes')
   List<String>? get valuesBytes => throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys =>
       throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'uint64keys')
   Map<int, dynamic>? get variableIntKeys => throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'balances')
   Map<String, int>? get balances => throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'balance')
   int? get balance => throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'code')
   String? get code => throw _privateConstructorUsedError;
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -259,10 +259,10 @@ class _$_GetSCResult implements _GetSCResult {
   factory _$_GetSCResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetSCResultFromJson(json);
 
-  /// @bodoc
+  /// @nodoc
   final List<String>? _valuesInt;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'valuesuint64')
   List<String>? get valuesInt {
@@ -272,10 +272,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableListView(value);
   }
 
-  /// @bodoc
+  /// @nodoc
   final List<String>? _valuesString;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'valuesstring')
   List<String>? get valuesString {
@@ -285,10 +285,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableListView(value);
   }
 
-  /// @bodoc
+  /// @nodoc
   final List<String>? _valuesBytes;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'valuesbytes')
   List<String>? get valuesBytes {
@@ -298,10 +298,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableListView(value);
   }
 
-  /// @bodoc
+  /// @nodoc
   final Map<String, dynamic>? _variableStringKeys;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys {
@@ -311,10 +311,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableMapView(value);
   }
 
-  /// @bodoc
+  /// @nodoc
   final Map<int, dynamic>? _variableIntKeys;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'uint64keys')
   Map<int, dynamic>? get variableIntKeys {
@@ -324,10 +324,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableMapView(value);
   }
 
-  /// @bodoc
+  /// @nodoc
   final Map<String, int>? _balances;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'balances')
   Map<String, int>? get balances {
@@ -337,17 +337,17 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableMapView(value);
   }
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'balance')
   final int? balance;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'code')
   final String? code;
 
-  /// @bodoc
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -432,47 +432,47 @@ abstract class _GetSCResult implements GetSCResult {
 
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'valuesuint64')
   List<String>? get valuesInt;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'valuesstring')
   List<String>? get valuesString;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'valuesbytes')
   List<String>? get valuesBytes;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'uint64keys')
   Map<int, dynamic>? get variableIntKeys;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'balances')
   Map<String, int>? get balances;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'balance')
   int? get balance;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'code')
   String? get code;
   @override
 
-  /// @bodoc
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

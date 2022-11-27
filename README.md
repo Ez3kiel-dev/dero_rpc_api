@@ -58,7 +58,7 @@ const String derodMainnetAddr = '127.0.0.1:10102';
 
 Future<void> main() async {
   final DerodRepository derodRepository = DerodRepository(derodMainnetAddr);
-  
+
   derodRepository.start();
 
   try {

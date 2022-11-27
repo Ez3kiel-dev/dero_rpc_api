@@ -11,31 +11,31 @@ part 'get_sc_result.g.dart';
 @freezed
 class GetSCResult with _$GetSCResult {
   factory GetSCResult({
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'valuesuint64') List<String>? valuesInt,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'valuesstring') List<String>? valuesString,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'valuesbytes') List<String>? valuesBytes,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'stringkeys') Map<String, dynamic>? variableStringKeys,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'uint64keys') Map<int, dynamic>? variableIntKeys,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'balances') Map<String, int>? balances,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'balance') int? balance,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'code') String? code,
 
-    /// @bodoc
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetSCResult;
 

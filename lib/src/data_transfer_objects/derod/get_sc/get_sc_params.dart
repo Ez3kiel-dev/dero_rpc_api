@@ -11,6 +11,8 @@ part 'get_sc_params.freezed.dart';
 part 'get_sc_params.g.dart';
 
 /// Parameters required to call [DerodRepository.getSC].
+///
+/// Default: [code] = true & [variables] = true.
 @freezed
 class GetSCParams with _$GetSCParams {
   factory GetSCParams({

@@ -21,7 +21,7 @@ GetRandomAddressParams _$GetRandomAddressParamsFromJson(
 
 /// @nodoc
 mixin _$GetRandomAddressParams {
-// @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid => throw _privateConstructorUsedError;
 
@@ -107,7 +107,7 @@ class _$_GetRandomAddressParams implements _GetRandomAddressParams {
   factory _$_GetRandomAddressParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetRandomAddressParamsFromJson(json);
 
-// @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   final String? scid;
@@ -151,7 +151,9 @@ abstract class _GetRandomAddressParams implements GetRandomAddressParams {
   factory _GetRandomAddressParams.fromJson(Map<String, dynamic> json) =
       _$_GetRandomAddressParams.fromJson;
 
-  @override // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  @override
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid;
   @override

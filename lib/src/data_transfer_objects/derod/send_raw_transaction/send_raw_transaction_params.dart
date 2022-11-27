@@ -11,6 +11,7 @@ part 'send_raw_transaction_params.g.dart';
 @freezed
 class SendRawTransactionParams with _$SendRawTransactionParams {
   factory SendRawTransactionParams({
+    /// @nodoc
     @JsonKey(name: 'tx_as_hex') required String txAsHex,
   }) = _SendRawTransactionParams;
 

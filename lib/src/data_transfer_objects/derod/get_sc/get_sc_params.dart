@@ -15,11 +15,27 @@ part 'get_sc_params.g.dart';
 class GetSCParams with _$GetSCParams {
   factory GetSCParams({
     @JsonKey(name: 'scid') required String scid,
+
+    /// Whether the source code of a smart contract is requested.
+    ///
+    /// true by default.
     @JsonKey(name: 'code') @Default(true) bool code,
+
+    /// Whether all the variables of the smart contract is requested.
+    ///
+    /// true by default.
     @JsonKey(name: 'variables') @Default(true) bool variables,
+
+    /// @nodoc
     @JsonKey(name: 'topoheight') int? topoHeight,
+
+    /// @nodoc
     @JsonKey(name: 'keysuint64') List<int>? keysInt,
+
+    /// @nodoc
     @JsonKey(name: 'keysstring') List<String>? keysString,
+
+    /// @nodoc
     @JsonKey(name: 'keysbytes')
     @Uint8ListConverter()
         List<Uint8List>? keysBytes,

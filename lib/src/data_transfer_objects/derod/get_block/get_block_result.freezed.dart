@@ -20,13 +20,20 @@ GetBlockResult _$GetBlockResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetBlockResult {
+  /// @nodoc
   @JsonKey(name: 'blob')
   String? get blob => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'json')
   @BlockConverter()
   Block? get block => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'block_header')
   BlockHeader? get blockHeader => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -184,16 +191,23 @@ class _$_GetBlockResult implements _GetBlockResult {
   factory _$_GetBlockResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetBlockResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'blob')
   final String? blob;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'json')
   @BlockConverter()
   final Block? block;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'block_header')
   final BlockHeader? blockHeader;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -245,16 +259,24 @@ abstract class _GetBlockResult implements GetBlockResult {
       _$_GetBlockResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blob')
   String? get blob;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'json')
   @BlockConverter()
   Block? get block;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'block_header')
   BlockHeader? get blockHeader;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

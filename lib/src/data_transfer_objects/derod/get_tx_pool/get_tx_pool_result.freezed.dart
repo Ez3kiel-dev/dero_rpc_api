@@ -20,8 +20,11 @@ GetTxPoolResult _$GetTxPoolResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetTxPoolResult {
+  /// @nodoc
   @JsonKey(name: 'txs')
   List<String>? get txs => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -122,7 +125,10 @@ class _$_GetTxPoolResult implements _GetTxPoolResult {
   factory _$_GetTxPoolResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetTxPoolResultFromJson(json);
 
+  /// @nodoc
   final List<String>? _txs;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txs')
   List<String>? get txs {
@@ -132,6 +138,7 @@ class _$_GetTxPoolResult implements _GetTxPoolResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -178,9 +185,13 @@ abstract class _GetTxPoolResult implements GetTxPoolResult {
       _$_GetTxPoolResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txs')
   List<String>? get txs;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

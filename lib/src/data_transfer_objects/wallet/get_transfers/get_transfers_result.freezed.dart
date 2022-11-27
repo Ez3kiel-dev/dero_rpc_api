@@ -20,6 +20,7 @@ GetTransfersResult _$GetTransfersResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetTransfersResult {
+  /// @nodoc
   @JsonKey(name: 'entries')
   List<Entry>? get entries => throw _privateConstructorUsedError;
 
@@ -104,7 +105,10 @@ class _$_GetTransfersResult implements _GetTransfersResult {
   factory _$_GetTransfersResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetTransfersResultFromJson(json);
 
+  /// @nodoc
   final List<Entry>? _entries;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'entries')
   List<Entry>? get entries {
@@ -156,6 +160,8 @@ abstract class _GetTransfersResult implements GetTransfersResult {
       _$_GetTransfersResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'entries')
   List<Entry>? get entries;
   @override

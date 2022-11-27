@@ -37,8 +37,13 @@ typedef Arguments = List<Argument>;
 @freezed
 class Argument with _$Argument {
   factory Argument({
+    /// @nodoc
     @JsonKey(name: 'name') required String name,
+
+    /// @nodoc
     @JsonKey(name: 'datatype') required DataType datatype,
+
+    /// @nodoc
     @JsonKey(name: 'value') required dynamic value,
   }) = _Argument;
 

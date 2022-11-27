@@ -21,30 +21,55 @@ GetBlockTemplateResult _$GetBlockTemplateResultFromJson(
 
 /// @nodoc
 mixin _$GetBlockTemplateResult {
+  /// @nodoc
   @JsonKey(name: 'jobid')
   String? get jobId => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blocktemplate_blob')
   String? get blockTemplateBlob => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blockhashing_blob')
   String? get blockHashingBlob => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'difficulty')
   String? get difficulty => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'difficultyuint64')
   int? get difficultyInt => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'prev_hash')
   String? get prevHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'epochmilli')
   int? get epochMilli => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blocks')
   int? get blocks => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks')
   int? get miniblocks => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'rejected')
   int? get rejected => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'lasterror')
   String? get lastError => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -289,42 +314,67 @@ class _$_GetBlockTemplateResult implements _GetBlockTemplateResult {
   factory _$_GetBlockTemplateResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetBlockTemplateResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'jobid')
   final String? jobId;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blocktemplate_blob')
   final String? blockTemplateBlob;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blockhashing_blob')
   final String? blockHashingBlob;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'difficulty')
   final String? difficulty;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'difficultyuint64')
   final int? difficultyInt;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'prev_hash')
   final String? prevHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'epochmilli')
   final int? epochMilli;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blocks')
   final int? blocks;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miniblocks')
   final int? miniblocks;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'rejected')
   final int? rejected;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'lasterror')
   final String? lastError;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -417,42 +467,68 @@ abstract class _GetBlockTemplateResult implements GetBlockTemplateResult {
       _$_GetBlockTemplateResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'jobid')
   String? get jobId;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blocktemplate_blob')
   String? get blockTemplateBlob;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blockhashing_blob')
   String? get blockHashingBlob;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'difficulty')
   String? get difficulty;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'difficultyuint64')
   int? get difficultyInt;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'prev_hash')
   String? get prevHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'epochmilli')
   int? get epochMilli;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blocks')
   int? get blocks;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks')
   int? get miniblocks;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'rejected')
   int? get rejected;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'lasterror')
   String? get lastError;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

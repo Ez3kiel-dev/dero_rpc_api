@@ -11,6 +11,7 @@ part 'get_block_by_topoheight_params.g.dart';
 @freezed
 class GetBlockByTopoHeightParams with _$GetBlockByTopoHeightParams {
   factory GetBlockByTopoHeightParams({
+    /// @nodoc
     @JsonKey(name: 'topoheight') required int topoHeight,
   }) = _GetBlockByTopoHeightParams;
 

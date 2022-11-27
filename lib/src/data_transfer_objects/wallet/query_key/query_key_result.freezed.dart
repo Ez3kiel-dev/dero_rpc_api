@@ -20,6 +20,7 @@ QueryKeyResult _$QueryKeyResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$QueryKeyResult {
+  /// @nodoc
   @JsonKey(name: 'key')
   String? get key => throw _privateConstructorUsedError;
 
@@ -103,6 +104,7 @@ class _$_QueryKeyResult implements _QueryKeyResult {
   factory _$_QueryKeyResult.fromJson(Map<String, dynamic> json) =>
       _$$_QueryKeyResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'key')
   final String? key;
@@ -146,6 +148,8 @@ abstract class _QueryKeyResult implements QueryKeyResult {
       _$_QueryKeyResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'key')
   String? get key;
   @override

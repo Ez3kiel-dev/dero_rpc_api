@@ -20,8 +20,11 @@ GetBlockParams _$GetBlockParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetBlockParams {
+  /// @nodoc
   @JsonKey(name: 'hash')
   String? get hash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
 
@@ -120,9 +123,12 @@ class _$_GetBlockParams implements _GetBlockParams {
   factory _$_GetBlockParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetBlockParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'hash')
   final String? hash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
@@ -168,9 +174,13 @@ abstract class _GetBlockParams implements GetBlockParams {
       _$_GetBlockParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'hash')
   String? get hash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override

@@ -20,36 +20,67 @@ TxRelatedInfo _$TxRelatedInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TxRelatedInfo {
+  /// @nodoc
   @JsonKey(name: 'as_hex')
   String? get asHex => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'as_json')
   String? get asJson => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'block_height')
   int? get blockHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'reward')
   int? get reward => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'ignored')
   bool? get ignored => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'in_pool')
   bool? get inPool => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'output_indices')
   List<int>? get outputIndices => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'tx_hash')
   String? get txHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'valid_block')
   String? get validBlock => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'invalid_block')
   List<String>? get invalidBlock => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'ring')
   List<List<String>>? get ring => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'signer')
   String? get signer => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'balance')
   int? get balance => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'code')
   String? get code => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'balancenow')
   int? get balanceNow => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'codenow')
   String? get codeNow => throw _privateConstructorUsedError;
 
@@ -334,25 +365,40 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
   factory _$_TxRelatedInfo.fromJson(Map<String, dynamic> json) =>
       _$$_TxRelatedInfoFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'as_hex')
   final String? asHex;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'as_json')
   final String? asJson;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'block_height')
   final int? blockHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'reward')
   final int? reward;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'ignored')
   final bool? ignored;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'in_pool')
   final bool? inPool;
+
+  /// @nodoc
   final List<int>? _outputIndices;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'output_indices')
   List<int>? get outputIndices {
@@ -362,13 +408,20 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'tx_hash')
   final String? txHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'valid_block')
   final String? validBlock;
+
+  /// @nodoc
   final List<String>? _invalidBlock;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'invalid_block')
   List<String>? get invalidBlock {
@@ -378,7 +431,10 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   final List<List<String>>? _ring;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'ring')
   List<List<String>>? get ring {
@@ -388,18 +444,27 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'signer')
   final String? signer;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'balance')
   final int? balance;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'code')
   final String? code;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'balancenow')
   final int? balanceNow;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'codenow')
   final String? codeNow;
@@ -495,51 +560,83 @@ abstract class _TxRelatedInfo implements TxRelatedInfo {
       _$_TxRelatedInfo.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'as_hex')
   String? get asHex;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'as_json')
   String? get asJson;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'block_height')
   int? get blockHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'reward')
   int? get reward;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'ignored')
   bool? get ignored;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'in_pool')
   bool? get inPool;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'output_indices')
   List<int>? get outputIndices;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'tx_hash')
   String? get txHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'valid_block')
   String? get validBlock;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'invalid_block')
   List<String>? get invalidBlock;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'ring')
   List<List<String>>? get ring;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'signer')
   String? get signer;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'balance')
   int? get balance;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'code')
   String? get code;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'balancenow')
   int? get balanceNow;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'codenow')
   String? get codeNow;
   @override

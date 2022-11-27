@@ -11,8 +11,13 @@ part 'send_raw_transaction_result.g.dart';
 @freezed
 class SendRawTransactionResult with _$SendRawTransactionResult {
   factory SendRawTransactionResult({
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
+
+    /// @nodoc
     @JsonKey(name: 'txid') String? txid,
+
+    /// @nodoc
     @JsonKey(name: 'string') String? reason,
   }) = _SendRawTransactionResult;
 

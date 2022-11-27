@@ -21,8 +21,11 @@ MakeIntegratedAddressResult _$MakeIntegratedAddressResultFromJson(
 
 /// @nodoc
 mixin _$MakeIntegratedAddressResult {
+  /// @nodoc
   @JsonKey(name: 'integrated_address')
   String? get integratedAddress => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC => throw _privateConstructorUsedError;
 
@@ -129,10 +132,15 @@ class _$_MakeIntegratedAddressResult implements _MakeIntegratedAddressResult {
   factory _$_MakeIntegratedAddressResult.fromJson(Map<String, dynamic> json) =>
       _$$_MakeIntegratedAddressResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'integrated_address')
   final String? integratedAddress;
+
+  /// @nodoc
   final List<Argument>? _payloadRPC;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC {
@@ -189,9 +197,13 @@ abstract class _MakeIntegratedAddressResult
       _$_MakeIntegratedAddressResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'integrated_address')
   String? get integratedAddress;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC;
   @override

@@ -21,6 +21,7 @@ SendRawTransactionParams _$SendRawTransactionParamsFromJson(
 
 /// @nodoc
 mixin _$SendRawTransactionParams {
+  /// @nodoc
   @JsonKey(name: 'tx_as_hex')
   String get txAsHex => throw _privateConstructorUsedError;
 
@@ -108,6 +109,7 @@ class _$_SendRawTransactionParams implements _SendRawTransactionParams {
   factory _$_SendRawTransactionParams.fromJson(Map<String, dynamic> json) =>
       _$$_SendRawTransactionParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'tx_as_hex')
   final String txAsHex;
@@ -153,6 +155,8 @@ abstract class _SendRawTransactionParams implements SendRawTransactionParams {
       _$_SendRawTransactionParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'tx_as_hex')
   String get txAsHex;
   @override

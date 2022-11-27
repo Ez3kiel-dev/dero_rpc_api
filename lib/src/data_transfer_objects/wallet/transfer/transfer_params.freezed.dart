@@ -20,20 +20,35 @@ TransferParams _$TransferParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TransferParams {
+  /// @nodoc
   @JsonKey(name: 'transfers')
   List<Transfer>? get transfers => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sc')
   String? get smartContractCode => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sc_value')
   int? get smartContractValue => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sc_rpc')
   List<Argument>? get scRPC => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'ringsize')
   int? get ringsize => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'fees')
   int? get fees => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'signer')
   String? get signer => throw _privateConstructorUsedError;
 
@@ -213,7 +228,10 @@ class _$_TransferParams implements _TransferParams {
   factory _$_TransferParams.fromJson(Map<String, dynamic> json) =>
       _$$_TransferParamsFromJson(json);
 
+  /// @nodoc
   final List<Transfer>? _transfers;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'transfers')
   List<Transfer>? get transfers {
@@ -223,16 +241,25 @@ class _$_TransferParams implements _TransferParams {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'sc')
   final String? smartContractCode;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'sc_value')
   final int? smartContractValue;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   final String? scid;
+
+  /// @nodoc
   final List<Argument>? _scRPC;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'sc_rpc')
   List<Argument>? get scRPC {
@@ -242,12 +269,17 @@ class _$_TransferParams implements _TransferParams {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'ringsize')
   final int? ringsize;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'fees')
   final int? fees;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'signer')
   final String? signer;
@@ -318,27 +350,43 @@ abstract class _TransferParams implements TransferParams {
       _$_TransferParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'transfers')
   List<Transfer>? get transfers;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sc')
   String? get smartContractCode;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sc_value')
   int? get smartContractValue;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sc_rpc')
   List<Argument>? get scRPC;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'ringsize')
   int? get ringsize;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'fees')
   int? get fees;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'signer')
   String? get signer;
   @override

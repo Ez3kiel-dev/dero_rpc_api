@@ -14,15 +14,32 @@ part 'block.g.dart';
 @freezed
 class Block with _$Block {
   factory Block({
+    /// @nodoc
     @JsonKey(name: 'major_version') int? majorVersion,
+
+    /// @nodoc
     @JsonKey(name: 'minor_version') int? minorVersion,
+
+    /// @nodoc
     @JsonKey(name: 'timestamp') DateTime? timestamp,
+
+    /// @nodoc
     @JsonKey(name: 'height') int? height,
+
+    /// @nodoc
     @JsonKey(name: 'miner_tx') Transaction? minerTx,
-    // @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+
+    /// @nodoc
     @JsonKey(name: '-') dynamic proof,
+    // @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+
+    /// @nodoc
     @JsonKey(name: 'tips') List<String>? tips,
+
+    /// @nodoc
     @JsonKey(name: 'miniblocks') List<Miniblock>? miniblocks,
+
+    /// @nodoc
     @JsonKey(name: 'tx_hashes') List<String>? txHashes,
   }) = _Block;
 

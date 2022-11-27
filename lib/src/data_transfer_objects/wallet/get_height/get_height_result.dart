@@ -10,6 +10,7 @@ part 'get_height_result.g.dart';
 @freezed
 class GetHeightWalletResult with _$GetHeightWalletResult {
   factory GetHeightWalletResult({
+    /// @nodoc
     @JsonKey(name: 'height') int? height,
   }) = _GetHeightWalletResult;
 

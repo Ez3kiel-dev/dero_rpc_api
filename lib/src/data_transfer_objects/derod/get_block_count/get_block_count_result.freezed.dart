@@ -20,8 +20,11 @@ GetBlockCountResult _$GetBlockCountResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetBlockCountResult {
+  /// @nodoc
   @JsonKey(name: 'count')
   int? get count => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -121,9 +124,12 @@ class _$_GetBlockCountResult implements _GetBlockCountResult {
   factory _$_GetBlockCountResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetBlockCountResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'count')
   final int? count;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -170,9 +176,13 @@ abstract class _GetBlockCountResult implements GetBlockCountResult {
       _$_GetBlockCountResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'count')
   int? get count;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

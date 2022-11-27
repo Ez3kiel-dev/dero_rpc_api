@@ -20,7 +20,7 @@ GetBalanceParams _$GetBalanceParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetBalanceParams {
-// @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @JsonKey(name: 'scid')
   String get scid => throw _privateConstructorUsedError;
 
@@ -104,7 +104,7 @@ class _$_GetBalanceParams implements _GetBalanceParams {
   factory _$_GetBalanceParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetBalanceParamsFromJson(json);
 
-// @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   final String scid;
@@ -148,7 +148,9 @@ abstract class _GetBalanceParams implements GetBalanceParams {
   factory _GetBalanceParams.fromJson(Map<String, dynamic> json) =
       _$_GetBalanceParams.fromJson;
 
-  @override // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  @override
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   String get scid;
   @override

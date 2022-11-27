@@ -20,57 +20,103 @@ Entry _$EntryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Entry {
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blockhash')
   String? get blockHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'minerreward')
   int? get minerReward => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'tpos')
   int? get tpos => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'pos')
   int? get pos => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'coinbase')
   bool? get coinbase => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'incoming')
   bool? get incoming => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'txid')
   String? get txid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'destination')
   String? get destination => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'burn')
   int? get burn => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'amount')
   int? get amount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'fees')
   int? get fees => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'proof')
   String? get proof => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   int? get status => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'time')
   DateTime? get time =>
       throw _privateConstructorUsedError; // @JsonKey(name: 'time') @DateTimeConverter() DateTime? time,
+  /// @nodoc
   @JsonKey(name: 'ewdata')
-  String? get encryptedWalletData =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'data') @Uint8ListConverter() Uint8List? data,
+  String? get encryptedWalletData => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'data')
-  String? get data => throw _privateConstructorUsedError;
+  String? get data =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'data') @Uint8ListConverter() Uint8List? data,
+  /// @nodoc
   @JsonKey(name: 'payloadtype')
-  int? get payloadType =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'payload') @Uint8ListConverter() Uint8List? payload,
+  int? get payloadType => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'payload')
-  String? get payload => throw _privateConstructorUsedError;
+  String? get payload =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'payload') @Uint8ListConverter() Uint8List? payload,
+  /// @nodoc
   @JsonKey(name: 'payloaderror')
   String? get payloadError => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRpc => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sender')
   String? get sender => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'dstport')
   int? get dstPort => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'srcport')
   int? get srcPort => throw _privateConstructorUsedError;
 
@@ -464,73 +510,115 @@ class _$_Entry implements _Entry {
   factory _$_Entry.fromJson(Map<String, dynamic> json) =>
       _$$_EntryFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blockhash')
   final String? blockHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'minerreward')
   final int? minerReward;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'tpos')
   final int? tpos;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'pos')
   final int? pos;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'coinbase')
   final bool? coinbase;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'incoming')
   final bool? incoming;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txid')
   final String? txid;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'destination')
   final String? destination;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'burn')
   final int? burn;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'amount')
   final int? amount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'fees')
   final int? fees;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'proof')
   final String? proof;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final int? status;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'time')
   final DateTime? time;
 // @JsonKey(name: 'time') @DateTimeConverter() DateTime? time,
+  /// @nodoc
   @override
   @JsonKey(name: 'ewdata')
   final String? encryptedWalletData;
-// @JsonKey(name: 'data') @Uint8ListConverter() Uint8List? data,
+
+  /// @nodoc
   @override
   @JsonKey(name: 'data')
   final String? data;
+// @JsonKey(name: 'data') @Uint8ListConverter() Uint8List? data,
+  /// @nodoc
   @override
   @JsonKey(name: 'payloadtype')
   final int? payloadType;
-// @JsonKey(name: 'payload') @Uint8ListConverter() Uint8List? payload,
+
+  /// @nodoc
   @override
   @JsonKey(name: 'payload')
   final String? payload;
+// @JsonKey(name: 'payload') @Uint8ListConverter() Uint8List? payload,
+  /// @nodoc
   @override
   @JsonKey(name: 'payloaderror')
   final String? payloadError;
+
+  /// @nodoc
   final List<Argument>? _payloadRpc;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRpc {
@@ -540,12 +628,17 @@ class _$_Entry implements _Entry {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'sender')
   final String? sender;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'dstport')
   final int? dstPort;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'srcport')
   final int? srcPort;
@@ -673,78 +766,125 @@ abstract class _Entry implements Entry {
   factory _Entry.fromJson(Map<String, dynamic> json) = _$_Entry.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blockhash')
   String? get blockHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'minerreward')
   int? get minerReward;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'tpos')
   int? get tpos;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'pos')
   int? get pos;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'coinbase')
   bool? get coinbase;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'incoming')
   bool? get incoming;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txid')
   String? get txid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'destination')
   String? get destination;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'burn')
   int? get burn;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'amount')
   int? get amount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'fees')
   int? get fees;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'proof')
   String? get proof;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   int? get status;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'time')
   DateTime? get time;
   @override // @JsonKey(name: 'time') @DateTimeConverter() DateTime? time,
+  /// @nodoc
   @JsonKey(name: 'ewdata')
   String? get encryptedWalletData;
-  @override // @JsonKey(name: 'data') @Uint8ListConverter() Uint8List? data,
+  @override
+
+  /// @nodoc
   @JsonKey(name: 'data')
   String? get data;
-  @override
+  @override // @JsonKey(name: 'data') @Uint8ListConverter() Uint8List? data,
+  /// @nodoc
   @JsonKey(name: 'payloadtype')
   int? get payloadType;
-  @override // @JsonKey(name: 'payload') @Uint8ListConverter() Uint8List? payload,
+  @override
+
+  /// @nodoc
   @JsonKey(name: 'payload')
   String? get payload;
-  @override
+  @override // @JsonKey(name: 'payload') @Uint8ListConverter() Uint8List? payload,
+  /// @nodoc
   @JsonKey(name: 'payloaderror')
   String? get payloadError;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRpc;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sender')
   String? get sender;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'dstport')
   int? get dstPort;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'srcport')
   int? get srcPort;
   @override

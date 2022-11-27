@@ -11,8 +11,9 @@ part 'get_random_address_params.g.dart';
 @freezed
 class GetRandomAddressParams with _$GetRandomAddressParams {
   factory GetRandomAddressParams({
-    // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+    /// @nodoc
     @JsonKey(name: 'scid') String? scid,
+    // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
   }) = _GetRandomAddressParams;
 
   factory GetRandomAddressParams.fromJson(Map<String, dynamic> json) =>

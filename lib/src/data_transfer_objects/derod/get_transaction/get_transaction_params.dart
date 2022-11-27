@@ -11,7 +11,10 @@ part 'get_transaction_params.g.dart';
 @freezed
 class GetTransactionParams with _$GetTransactionParams {
   factory GetTransactionParams({
+    /// @nodoc
     @JsonKey(name: 'txs_hashes') required List<String> txsHashes,
+
+    /// @nodoc
     @JsonKey(name: 'decode_as_json') int? decode,
   }) = _GetTransactionParams;
 

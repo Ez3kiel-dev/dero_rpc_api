@@ -11,7 +11,10 @@ part 'get_random_address_result.g.dart';
 @freezed
 class GetRandomAddressResult with _$GetRandomAddressResult {
   factory GetRandomAddressResult({
+    /// @nodoc
     @JsonKey(name: 'address') List<String>? address,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetRandomAddressResult;
 

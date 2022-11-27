@@ -20,12 +20,19 @@ GetHeightDerodResult _$GetHeightDerodResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetHeightDerodResult {
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'stableheight')
   int? get stableHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -152,15 +159,22 @@ class _$_GetHeightDerodResult implements _GetHeightDerodResult {
   factory _$_GetHeightDerodResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetHeightDerodResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'stableheight')
   final int? stableHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -214,15 +228,23 @@ abstract class _GetHeightDerodResult implements GetHeightDerodResult {
       _$_GetHeightDerodResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'stableheight')
   int? get stableHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

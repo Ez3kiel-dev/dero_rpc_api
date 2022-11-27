@@ -21,8 +21,11 @@ GetRandomAddressResult _$GetRandomAddressResultFromJson(
 
 /// @nodoc
 mixin _$GetRandomAddressResult {
+  /// @nodoc
   @JsonKey(name: 'address')
   List<String>? get address => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -125,7 +128,10 @@ class _$_GetRandomAddressResult implements _GetRandomAddressResult {
   factory _$_GetRandomAddressResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetRandomAddressResultFromJson(json);
 
+  /// @nodoc
   final List<String>? _address;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'address')
   List<String>? get address {
@@ -135,6 +141,7 @@ class _$_GetRandomAddressResult implements _GetRandomAddressResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -183,9 +190,13 @@ abstract class _GetRandomAddressResult implements GetRandomAddressResult {
       _$_GetRandomAddressResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'address')
   List<String>? get address;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

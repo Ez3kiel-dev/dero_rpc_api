@@ -21,8 +21,11 @@ SplitIntegratedAddressResult _$SplitIntegratedAddressResultFromJson(
 
 /// @nodoc
 mixin _$SplitIntegratedAddressResult {
+  /// @nodoc
   @JsonKey(name: 'address')
   String? get address => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC => throw _privateConstructorUsedError;
 
@@ -129,10 +132,15 @@ class _$_SplitIntegratedAddressResult implements _SplitIntegratedAddressResult {
   factory _$_SplitIntegratedAddressResult.fromJson(Map<String, dynamic> json) =>
       _$$_SplitIntegratedAddressResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'address')
   final String? address;
+
+  /// @nodoc
   final List<Argument>? _payloadRPC;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC {
@@ -188,9 +196,13 @@ abstract class _SplitIntegratedAddressResult
       _$_SplitIntegratedAddressResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'address')
   String? get address;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC;
   @override

@@ -15,6 +15,7 @@ part 'query_key_params.g.dart';
 @freezed
 class QueryKeyParams with _$QueryKeyParams {
   factory QueryKeyParams({
+    /// Key type: `mnemonic` by default.
     @JsonKey(name: 'key_type') @Default('mnemonic') String keyType,
   }) = _QueryKeyParams;
 

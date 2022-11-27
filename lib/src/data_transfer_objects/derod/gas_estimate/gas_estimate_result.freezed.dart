@@ -20,10 +20,15 @@ GasEstimateResult _$GasEstimateResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GasEstimateResult {
+  /// @nodoc
   @JsonKey(name: 'gascompute')
   int? get gasCompute => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'gasstorage')
   int? get gasStorage => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -136,12 +141,17 @@ class _$_GasEstimateResult implements _GasEstimateResult {
   factory _$_GasEstimateResult.fromJson(Map<String, dynamic> json) =>
       _$$_GasEstimateResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'gascompute')
   final int? gasCompute;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'gasstorage')
   final int? gasStorage;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -192,12 +202,18 @@ abstract class _GasEstimateResult implements GasEstimateResult {
       _$_GasEstimateResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'gascompute')
   int? get gasCompute;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'gasstorage')
   int? get gasStorage;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

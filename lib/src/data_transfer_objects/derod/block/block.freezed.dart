@@ -20,23 +20,39 @@ Block _$BlockFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Block {
+  /// @nodoc
   @JsonKey(name: 'major_version')
   int? get majorVersion => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'minor_version')
   int? get minorVersion => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'timestamp')
   DateTime? get timestamp => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miner_tx')
-  Transaction? get minerTx =>
-      throw _privateConstructorUsedError; // @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+  Transaction? get minerTx => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: '-')
-  dynamic get proof => throw _privateConstructorUsedError;
+  dynamic get proof =>
+      throw _privateConstructorUsedError; // @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+  /// @nodoc
   @JsonKey(name: 'tips')
   List<String>? get tips => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks')
   List<Miniblock>? get miniblocks => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'tx_hashes')
   List<String>? get txHashes => throw _privateConstructorUsedError;
 
@@ -241,26 +257,40 @@ class _$_Block implements _Block {
   factory _$_Block.fromJson(Map<String, dynamic> json) =>
       _$$_BlockFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'major_version')
   final int? majorVersion;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'minor_version')
   final int? minorVersion;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'timestamp')
   final DateTime? timestamp;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miner_tx')
   final Transaction? minerTx;
-// @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+
+  /// @nodoc
   @override
   @JsonKey(name: '-')
   final dynamic proof;
+// @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+  /// @nodoc
   final List<String>? _tips;
+// @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+  /// @nodoc
   @override
   @JsonKey(name: 'tips')
   List<String>? get tips {
@@ -270,7 +300,10 @@ class _$_Block implements _Block {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   final List<Miniblock>? _miniblocks;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miniblocks')
   List<Miniblock>? get miniblocks {
@@ -280,7 +313,10 @@ class _$_Block implements _Block {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   final List<String>? _txHashes;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'tx_hashes')
   List<String>? get txHashes {
@@ -358,30 +394,47 @@ abstract class _Block implements Block {
   factory _Block.fromJson(Map<String, dynamic> json) = _$_Block.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'major_version')
   int? get majorVersion;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'minor_version')
   int? get minorVersion;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'timestamp')
   DateTime? get timestamp;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miner_tx')
   Transaction? get minerTx;
-  @override // @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+  @override
+
+  /// @nodoc
   @JsonKey(name: '-')
   dynamic get proof;
-  @override
+  @override // @JsonKey(name: '-') @Uint8ListConverter() Uint8List? proof,
+  /// @nodoc
   @JsonKey(name: 'tips')
   List<String>? get tips;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks')
   List<Miniblock>? get miniblocks;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'tx_hashes')
   List<String>? get txHashes;
   @override

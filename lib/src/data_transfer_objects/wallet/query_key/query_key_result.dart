@@ -11,6 +11,7 @@ part 'query_key_result.g.dart';
 @freezed
 class QueryKeyResult with _$QueryKeyResult {
   factory QueryKeyResult({
+    /// @nodoc
     @JsonKey(name: 'key') String? key,
   }) = _QueryKeyResult;
 

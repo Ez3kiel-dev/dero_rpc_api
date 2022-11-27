@@ -15,11 +15,20 @@ part 'transfer.g.dart';
 @freezed
 class Transfer with _$Transfer {
   factory Transfer({
-    // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+    /// @nodoc
     @JsonKey(name: 'scid') String? scid,
+    // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+
+    /// @nodoc
     @JsonKey(name: 'destination') String? destination,
+
+    /// @nodoc
     @JsonKey(name: 'amount') int? amount,
+
+    /// @nodoc
     @JsonKey(name: 'burn') int? burn,
+
+    /// @nodoc
     @JsonKey(name: 'payload_rpc') Arguments? payloadRPC,
   }) = _Transfer;
 

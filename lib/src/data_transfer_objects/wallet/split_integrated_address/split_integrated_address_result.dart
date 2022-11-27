@@ -11,7 +11,10 @@ part 'split_integrated_address_result.g.dart';
 @freezed
 class SplitIntegratedAddressResult with _$SplitIntegratedAddressResult {
   factory SplitIntegratedAddressResult({
+    /// @nodoc
     @JsonKey(name: 'address') String? address,
+
+    /// @nodoc
     @JsonKey(name: 'payload_rpc') Arguments? payloadRPC,
   }) = _SplitIntegratedAddressResult;
 

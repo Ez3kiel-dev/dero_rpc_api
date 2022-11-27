@@ -22,16 +22,32 @@ GetSCParams _$GetSCParamsFromJson(Map<String, dynamic> json) {
 mixin _$GetSCParams {
   @JsonKey(name: 'scid')
   String get scid => throw _privateConstructorUsedError;
+
+  /// Whether the source code of a smart contract is requested.
+  ///
+  /// true by default.
   @JsonKey(name: 'code')
   bool get code => throw _privateConstructorUsedError;
+
+  /// Whether all the variables of the smart contract is requested.
+  ///
+  /// true by default.
   @JsonKey(name: 'variables')
   bool get variables => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'keysuint64')
   List<int>? get keysInt => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'keysstring')
   List<String>? get keysString => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'keysbytes')
   @Uint8ListConverter()
   List<Uint8List>? get keysBytes => throw _privateConstructorUsedError;
@@ -227,16 +243,30 @@ class _$_GetSCParams implements _GetSCParams {
   @override
   @JsonKey(name: 'scid')
   final String scid;
+
+  /// Whether the source code of a smart contract is requested.
+  ///
+  /// true by default.
   @override
   @JsonKey(name: 'code')
   final bool code;
+
+  /// Whether all the variables of the smart contract is requested.
+  ///
+  /// true by default.
   @override
   @JsonKey(name: 'variables')
   final bool variables;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
+
+  /// @nodoc
   final List<int>? _keysInt;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'keysuint64')
   List<int>? get keysInt {
@@ -246,7 +276,10 @@ class _$_GetSCParams implements _GetSCParams {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   final List<String>? _keysString;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'keysstring')
   List<String>? get keysString {
@@ -256,7 +289,10 @@ class _$_GetSCParams implements _GetSCParams {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   final List<Uint8List>? _keysBytes;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'keysbytes')
   @Uint8ListConverter()
@@ -341,21 +377,37 @@ abstract class _GetSCParams implements GetSCParams {
   @JsonKey(name: 'scid')
   String get scid;
   @override
+
+  /// Whether the source code of a smart contract is requested.
+  ///
+  /// true by default.
   @JsonKey(name: 'code')
   bool get code;
   @override
+
+  /// Whether all the variables of the smart contract is requested.
+  ///
+  /// true by default.
   @JsonKey(name: 'variables')
   bool get variables;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'keysuint64')
   List<int>? get keysInt;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'keysstring')
   List<String>? get keysString;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'keysbytes')
   @Uint8ListConverter()
   List<Uint8List>? get keysBytes;

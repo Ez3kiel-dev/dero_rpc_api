@@ -11,19 +11,42 @@ part 'get_encrypted_balance_result.g.dart';
 @freezed
 class GetEncryptedBalanceResult with _$GetEncryptedBalanceResult {
   factory GetEncryptedBalanceResult({
-    // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+    /// @nodoc
     @JsonKey(name: 'scid') String? scid,
+    // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+
+    /// @nodoc
     @JsonKey(name: 'data') String? data,
+
+    /// @nodoc
     @JsonKey(name: 'registration') int? registration,
+
+    /// @nodoc
     @JsonKey(name: 'bits') int? bits,
+
+    /// @nodoc
     @JsonKey(name: 'height') int? height,
+
+    /// @nodoc
     @JsonKey(name: 'topoheight') int? topoHeight,
-    // @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+
+    /// @nodoc
     @JsonKey(name: 'blockhash') String? blockHash,
+    // @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+
+    /// @nodoc
     @JsonKey(name: 'treehash') String? treeHash,
+
+    /// @nodoc
     @JsonKey(name: 'dheight') int? deamonHeight,
+
+    /// @nodoc
     @JsonKey(name: 'dtopoheight') int? deamonTopoHeight,
+
+    /// @nodoc
     @JsonKey(name: 'dtreehash') String? deamonTreeHash,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetEncryptedBalanceResult;
 

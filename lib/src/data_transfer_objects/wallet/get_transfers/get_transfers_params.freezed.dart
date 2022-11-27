@@ -20,25 +20,44 @@ GetTransfersParams _$GetTransfersParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetTransfersParams {
+  /// @nodoc
   @JsonKey(name: 'scid')
   @Uint8ListConverter()
   Uint8List? get scid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'coinbase')
   bool get coinbase => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'in')
   bool get incoming => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'out')
   bool get outgoing => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'min_height')
   int? get minHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'max_height')
   int? get maxHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sender')
   String? get sender => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'receiver')
   String? get receiver => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'dstport')
   int? get dstPort => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'srcport')
   int? get srcPort => throw _privateConstructorUsedError;
 
@@ -242,34 +261,53 @@ class _$_GetTransfersParams implements _GetTransfersParams {
   factory _$_GetTransfersParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetTransfersParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   @Uint8ListConverter()
   final Uint8List? scid;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'coinbase')
   final bool coinbase;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'in')
   final bool incoming;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'out')
   final bool outgoing;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'min_height')
   final int? minHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'max_height')
   final int? maxHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'sender')
   final String? sender;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'receiver')
   final String? receiver;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'dstport')
   final int? dstPort;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'srcport')
   final int? srcPort;
@@ -349,34 +387,54 @@ abstract class _GetTransfersParams implements GetTransfersParams {
       _$_GetTransfersParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   @Uint8ListConverter()
   Uint8List? get scid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'coinbase')
   bool get coinbase;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'in')
   bool get incoming;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'out')
   bool get outgoing;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'min_height')
   int? get minHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'max_height')
   int? get maxHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sender')
   String? get sender;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'receiver')
   String? get receiver;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'dstport')
   int? get dstPort;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'srcport')
   int? get srcPort;
   @override

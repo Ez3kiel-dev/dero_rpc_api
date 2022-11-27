@@ -21,30 +21,51 @@ GetEncryptedBalanceResult _$GetEncryptedBalanceResultFromJson(
 
 /// @nodoc
 mixin _$GetEncryptedBalanceResult {
-// @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @JsonKey(name: 'scid')
-  String? get scid => throw _privateConstructorUsedError;
+  String? get scid =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @JsonKey(name: 'data')
   String? get data => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'registration')
   int? get registration => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'bits')
   int? get bits => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
-  int? get topoHeight =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+  int? get topoHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blockhash')
-  String? get blockHash => throw _privateConstructorUsedError;
+  String? get blockHash =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+  /// @nodoc
   @JsonKey(name: 'treehash')
   String? get treeHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'dheight')
   int? get deamonHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'dtopoheight')
   int? get deamonTopoHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'dtreehash')
   String? get deamonTreeHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -278,41 +299,62 @@ class _$_GetEncryptedBalanceResult implements _GetEncryptedBalanceResult {
   factory _$_GetEncryptedBalanceResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetEncryptedBalanceResultFromJson(json);
 
-// @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   final String? scid;
+// @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @override
   @JsonKey(name: 'data')
   final String? data;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'registration')
   final int? registration;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'bits')
   final int? bits;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
-// @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blockhash')
   final String? blockHash;
+// @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+  /// @nodoc
   @override
   @JsonKey(name: 'treehash')
   final String? treeHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'dheight')
   final int? deamonHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'dtopoheight')
   final int? deamonTopoHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'dtreehash')
   final String? deamonTreeHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -399,40 +441,62 @@ abstract class _GetEncryptedBalanceResult implements GetEncryptedBalanceResult {
   factory _GetEncryptedBalanceResult.fromJson(Map<String, dynamic> json) =
       _$_GetEncryptedBalanceResult.fromJson;
 
-  @override // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  @override
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid;
-  @override
+  @override // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @JsonKey(name: 'data')
   String? get data;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'registration')
   int? get registration;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'bits')
   int? get bits;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
-  @override // @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+  @override
+
+  /// @nodoc
   @JsonKey(name: 'blockhash')
   String? get blockHash;
-  @override
+  @override // @JsonKey(name: 'blockhash') @Uint8ListConverter() Hash? blockHash,
+  /// @nodoc
   @JsonKey(name: 'treehash')
   String? get treeHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'dheight')
   int? get deamonHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'dtopoheight')
   int? get deamonTopoHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'dtreehash')
   String? get deamonTreeHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

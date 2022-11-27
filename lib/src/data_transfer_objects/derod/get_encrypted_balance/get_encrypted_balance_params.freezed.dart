@@ -21,13 +21,19 @@ GetEncryptedBalanceParams _$GetEncryptedBalanceParamsFromJson(
 
 /// @nodoc
 mixin _$GetEncryptedBalanceParams {
+  /// @nodoc
   @JsonKey(name: 'address')
   String get address =>
       throw _privateConstructorUsedError; // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'treehash')
   String? get treeHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight => throw _privateConstructorUsedError;
 
@@ -157,16 +163,22 @@ class _$_GetEncryptedBalanceParams implements _GetEncryptedBalanceParams {
   factory _$_GetEncryptedBalanceParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetEncryptedBalanceParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'address')
   final String address;
 // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   final String? scid;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'treehash')
   final String? treeHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
@@ -221,15 +233,22 @@ abstract class _GetEncryptedBalanceParams implements GetEncryptedBalanceParams {
       _$_GetEncryptedBalanceParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'address')
   String get address;
   @override // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'treehash')
   String? get treeHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
   @override

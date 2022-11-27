@@ -20,30 +20,51 @@ Transaction _$TransactionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Transaction {
+  /// @nodoc
   @JsonKey(name: 'version')
   int? get version => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'source_network')
   int? get sourceNetwork => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'dest_network')
   int? get destinationNetwork => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'txtype')
   int? get txType => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'value')
   int? get value => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miner_address')
   @Uint8ListConverter()
   Uint8List? get minerAddress => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'c')
   @Uint8ListConverter()
   Uint8List? get c => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 's')
   @Uint8ListConverter()
   Uint8List? get s => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blid')
   @Uint8ListConverter()
   Uint8List? get blid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'scdata')
   List<Argument>? get scData => throw _privateConstructorUsedError;
 
@@ -291,41 +312,64 @@ class _$_Transaction implements _Transaction {
   factory _$_Transaction.fromJson(Map<String, dynamic> json) =>
       _$$_TransactionFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'version')
   final int? version;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'source_network')
   final int? sourceNetwork;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'dest_network')
   final int? destinationNetwork;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txtype')
   final int? txType;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'value')
   final int? value;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miner_address')
   @Uint8ListConverter()
   final Uint8List? minerAddress;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'c')
   @Uint8ListConverter()
   final Uint8List? c;
+
+  /// @nodoc
   @override
   @JsonKey(name: 's')
   @Uint8ListConverter()
   final Uint8List? s;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blid')
   @Uint8ListConverter()
   final Uint8List? blid;
+
+  /// @nodoc
   final List<Argument>? _scData;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'scdata')
   List<Argument>? get scData {
@@ -424,40 +468,62 @@ abstract class _Transaction implements Transaction {
       _$_Transaction.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'version')
   int? get version;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'source_network')
   int? get sourceNetwork;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'dest_network')
   int? get destinationNetwork;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txtype')
   int? get txType;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'value')
   int? get value;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miner_address')
   @Uint8ListConverter()
   Uint8List? get minerAddress;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'c')
   @Uint8ListConverter()
   Uint8List? get c;
   @override
+
+  /// @nodoc
   @JsonKey(name: 's')
   @Uint8ListConverter()
   Uint8List? get s;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blid')
   @Uint8ListConverter()
   Uint8List? get blid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'scdata')
   List<Argument>? get scData;
   @override

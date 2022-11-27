@@ -21,8 +21,11 @@ NameToAddressParams _$NameToAddressParamsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NameToAddressParams {
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError; // Useless for now ...
-// See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
+  String get name => throw _privateConstructorUsedError;
+
+  /// Useless for now ...
+  ///
+  /// See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
   @JsonKey(name: 'topoheight')
   int? get topoHeight => throw _privateConstructorUsedError;
 
@@ -125,8 +128,10 @@ class _$_NameToAddressParams implements _NameToAddressParams {
   @override
   @JsonKey(name: 'name')
   final String name;
-// Useless for now ...
-// See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
+
+  /// Useless for now ...
+  ///
+  /// See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
@@ -177,8 +182,11 @@ abstract class _NameToAddressParams implements NameToAddressParams {
   @override
   @JsonKey(name: 'name')
   String get name;
-  @override // Useless for now ...
-// See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
+  @override
+
+  /// Useless for now ...
+  ///
+  /// See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
   @override

@@ -11,8 +11,13 @@ part 'gas_estimate_result.g.dart';
 @freezed
 class GasEstimateResult with _$GasEstimateResult {
   factory GasEstimateResult({
+    /// @nodoc
     @JsonKey(name: 'gascompute') int? gasCompute,
+
+    /// @nodoc
     @JsonKey(name: 'gasstorage') int? gasStorage,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GasEstimateResult;
 

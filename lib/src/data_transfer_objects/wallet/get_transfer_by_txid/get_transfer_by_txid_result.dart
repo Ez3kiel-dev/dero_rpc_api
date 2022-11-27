@@ -11,6 +11,7 @@ part 'get_transfer_by_txid_result.g.dart';
 @freezed
 class GetTransferByTxidResult with _$GetTransferByTxidResult {
   factory GetTransferByTxidResult({
+    /// @nodoc
     @JsonKey(name: 'entry') Entry? entry,
   }) = _GetTransferByTxidResult;
 

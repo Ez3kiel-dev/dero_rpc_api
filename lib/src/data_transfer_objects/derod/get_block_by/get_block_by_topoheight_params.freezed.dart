@@ -21,6 +21,7 @@ GetBlockByTopoHeightParams _$GetBlockByTopoHeightParamsFromJson(
 
 /// @nodoc
 mixin _$GetBlockByTopoHeightParams {
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int get topoHeight => throw _privateConstructorUsedError;
 
@@ -110,6 +111,7 @@ class _$_GetBlockByTopoHeightParams implements _GetBlockByTopoHeightParams {
   factory _$_GetBlockByTopoHeightParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetBlockByTopoHeightParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int topoHeight;
@@ -157,6 +159,8 @@ abstract class _GetBlockByTopoHeightParams
       _$_GetBlockByTopoHeightParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int get topoHeight;
   @override

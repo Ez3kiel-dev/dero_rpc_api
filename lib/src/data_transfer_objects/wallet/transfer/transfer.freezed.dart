@@ -20,15 +20,23 @@ Transfer _$TransferFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Transfer {
-// @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @JsonKey(name: 'scid')
-  String? get scid => throw _privateConstructorUsedError;
+  String? get scid =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @JsonKey(name: 'destination')
   String? get destination => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'amount')
   int? get amount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'burn')
   int? get burn => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC => throw _privateConstructorUsedError;
 
@@ -166,20 +174,30 @@ class _$_Transfer implements _Transfer {
   factory _$_Transfer.fromJson(Map<String, dynamic> json) =>
       _$$_TransferFromJson(json);
 
-// @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   final String? scid;
+// @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @override
   @JsonKey(name: 'destination')
   final String? destination;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'amount')
   final int? amount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'burn')
   final int? burn;
+
+  /// @nodoc
   final List<Argument>? _payloadRPC;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC {
@@ -238,19 +256,28 @@ abstract class _Transfer implements Transfer {
 
   factory _Transfer.fromJson(Map<String, dynamic> json) = _$_Transfer.fromJson;
 
-  @override // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  @override
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   String? get scid;
-  @override
+  @override // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+  /// @nodoc
   @JsonKey(name: 'destination')
   String? get destination;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'amount')
   int? get amount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'burn')
   int? get burn;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'payload_rpc')
   List<Argument>? get payloadRPC;
   @override

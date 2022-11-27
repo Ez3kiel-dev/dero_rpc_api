@@ -20,6 +20,7 @@ QueryKeyParams _$QueryKeyParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$QueryKeyParams {
+  /// Key type: `mnemonic` by default.
   @JsonKey(name: 'key_type')
   String get keyType => throw _privateConstructorUsedError;
 
@@ -103,6 +104,7 @@ class _$_QueryKeyParams implements _QueryKeyParams {
   factory _$_QueryKeyParams.fromJson(Map<String, dynamic> json) =>
       _$$_QueryKeyParamsFromJson(json);
 
+  /// Key type: `mnemonic` by default.
   @override
   @JsonKey(name: 'key_type')
   final String keyType;
@@ -146,6 +148,8 @@ abstract class _QueryKeyParams implements QueryKeyParams {
       _$_QueryKeyParams.fromJson;
 
   @override
+
+  /// Key type: `mnemonic` by default.
   @JsonKey(name: 'key_type')
   String get keyType;
   @override

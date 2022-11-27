@@ -20,10 +20,15 @@ NameToAddressResult _$NameToAddressResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NameToAddressResult {
+  /// @nodoc
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'address')
   String? get address => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -136,12 +141,17 @@ class _$_NameToAddressResult implements _NameToAddressResult {
   factory _$_NameToAddressResult.fromJson(Map<String, dynamic> json) =>
       _$$_NameToAddressResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'name')
   final String? name;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'address')
   final String? address;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -190,12 +200,18 @@ abstract class _NameToAddressResult implements NameToAddressResult {
       _$_NameToAddressResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'name')
   String? get name;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'address')
   String? get address;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

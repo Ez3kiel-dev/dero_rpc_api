@@ -21,6 +21,7 @@ SplitIntegratedAddressParams _$SplitIntegratedAddressParamsFromJson(
 
 /// @nodoc
 mixin _$SplitIntegratedAddressParams {
+  /// @nodoc
   @JsonKey(name: 'integrated_address')
   String get integratedAddress => throw _privateConstructorUsedError;
 
@@ -111,6 +112,7 @@ class _$_SplitIntegratedAddressParams implements _SplitIntegratedAddressParams {
   factory _$_SplitIntegratedAddressParams.fromJson(Map<String, dynamic> json) =>
       _$$_SplitIntegratedAddressParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'integrated_address')
   final String integratedAddress;
@@ -159,6 +161,8 @@ abstract class _SplitIntegratedAddressParams
       _$_SplitIntegratedAddressParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'integrated_address')
   String get integratedAddress;
   @override

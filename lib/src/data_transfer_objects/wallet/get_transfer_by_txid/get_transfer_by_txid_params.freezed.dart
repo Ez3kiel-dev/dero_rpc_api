@@ -21,6 +21,7 @@ GetTransferByTxidParams _$GetTransferByTxidParamsFromJson(
 
 /// @nodoc
 mixin _$GetTransferByTxidParams {
+  /// @nodoc
   @JsonKey(name: 'txid')
   String get txid => throw _privateConstructorUsedError;
 
@@ -106,6 +107,7 @@ class _$_GetTransferByTxidParams implements _GetTransferByTxidParams {
   factory _$_GetTransferByTxidParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetTransferByTxidParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'txid')
   final String txid;
@@ -152,6 +154,8 @@ abstract class _GetTransferByTxidParams implements GetTransferByTxidParams {
       _$_GetTransferByTxidParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txid')
   String get txid;
   @override

@@ -11,7 +11,10 @@ part 'get_tx_pool_result.g.dart';
 @freezed
 class GetTxPoolResult with _$GetTxPoolResult {
   factory GetTxPoolResult({
+    /// @nodoc
     @JsonKey(name: 'txs') List<String>? txs,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetTxPoolResult;
 

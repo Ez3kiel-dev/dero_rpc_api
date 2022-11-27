@@ -20,70 +20,135 @@ GetInfoResult _$GetInfoResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetInfoResult {
+  /// @nodoc
   @JsonKey(name: 'alt_blocks_count')
   int? get altBlocksCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'difficulty')
   int? get difficulty => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'grey_peerlist_size')
   int? get greyPeerListSize => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'stableheight')
   int? get stableHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'treehash')
   String? get merkleBalanceTreeHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'averageblocktime50')
   double? get averageBlockTime50 => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'incoming_connections_count')
   int? get incomingConnectionsCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'outgoing_connections_count')
   int? get outgoingConnectionsCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'target')
   int? get target => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'target_height')
   int? get targetHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'testnet')
   bool? get testnet => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'network')
   String? get network => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'top_block_hash')
   String? get topBlockHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'tx_count')
   int? get txCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'tx_pool_size')
   int? get txPoolSize => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'dynamic_fee_per_kb')
   int? get dynamicFeePerKb => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'total_supply')
   int? get totalSupply => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'median_block_size')
   int? get medianBlockSize => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'white_peerlist_size')
   int? get whitePeerListSize => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'version')
   String? get version => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'connected_miners')
   int? get connectedMiners => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks_in_memory')
   int? get miniblocksInMemory => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blocks_count')
   int? get blocksCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks_accepted_count')
   int? get miniblocksAcceptedCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks_rejected_count')
   int? get miniblocksRejectedCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'mining_velocity')
   double? get miningVelocity => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'uptime')
   int? get uptime => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'hashrate_1hr')
   int? get hashrate1hr => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'hashrate_1d')
   int? get hashrate1d => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'hashrate_7d')
   int? get hashrate7d => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -685,102 +750,167 @@ class _$_GetInfoResult implements _GetInfoResult {
   factory _$_GetInfoResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetInfoResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'alt_blocks_count')
   final int? altBlocksCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'difficulty')
   final int? difficulty;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'grey_peerlist_size')
   final int? greyPeerListSize;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'stableheight')
   final int? stableHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'treehash')
   final String? merkleBalanceTreeHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'averageblocktime50')
   final double? averageBlockTime50;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'incoming_connections_count')
   final int? incomingConnectionsCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'outgoing_connections_count')
   final int? outgoingConnectionsCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'target')
   final int? target;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'target_height')
   final int? targetHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'testnet')
   final bool? testnet;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'network')
   final String? network;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'top_block_hash')
   final String? topBlockHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'tx_count')
   final int? txCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'tx_pool_size')
   final int? txPoolSize;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'dynamic_fee_per_kb')
   final int? dynamicFeePerKb;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'total_supply')
   final int? totalSupply;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'median_block_size')
   final int? medianBlockSize;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'white_peerlist_size')
   final int? whitePeerListSize;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'version')
   final String? version;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'connected_miners')
   final int? connectedMiners;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miniblocks_in_memory')
   final int? miniblocksInMemory;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blocks_count')
   final int? blocksCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miniblocks_accepted_count')
   final int? miniblocksAcceptedCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miniblocks_rejected_count')
   final int? miniblocksRejectedCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'mining_velocity')
   final double? miningVelocity;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'uptime')
   final int? uptime;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'hashrate_1hr')
   final int? hashrate1hr;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'hashrate_1d')
   final int? hashrate1d;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'hashrate_7d')
   final int? hashrate7d;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -984,102 +1114,168 @@ abstract class _GetInfoResult implements GetInfoResult {
       _$_GetInfoResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'alt_blocks_count')
   int? get altBlocksCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'difficulty')
   int? get difficulty;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'grey_peerlist_size')
   int? get greyPeerListSize;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'stableheight')
   int? get stableHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'treehash')
   String? get merkleBalanceTreeHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'averageblocktime50')
   double? get averageBlockTime50;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'incoming_connections_count')
   int? get incomingConnectionsCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'outgoing_connections_count')
   int? get outgoingConnectionsCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'target')
   int? get target;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'target_height')
   int? get targetHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'testnet')
   bool? get testnet;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'network')
   String? get network;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'top_block_hash')
   String? get topBlockHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'tx_count')
   int? get txCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'tx_pool_size')
   int? get txPoolSize;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'dynamic_fee_per_kb')
   int? get dynamicFeePerKb;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'total_supply')
   int? get totalSupply;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'median_block_size')
   int? get medianBlockSize;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'white_peerlist_size')
   int? get whitePeerListSize;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'version')
   String? get version;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'connected_miners')
   int? get connectedMiners;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks_in_memory')
   int? get miniblocksInMemory;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blocks_count')
   int? get blocksCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks_accepted_count')
   int? get miniblocksAcceptedCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miniblocks_rejected_count')
   int? get miniblocksRejectedCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'mining_velocity')
   double? get miningVelocity;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'uptime')
   int? get uptime;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'hashrate_1hr')
   int? get hashrate1hr;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'hashrate_1d')
   int? get hashrate1d;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'hashrate_7d')
   int? get hashrate7d;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

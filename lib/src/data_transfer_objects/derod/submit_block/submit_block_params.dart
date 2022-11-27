@@ -11,7 +11,10 @@ part 'submit_block_params.g.dart';
 @freezed
 class SubmitBlockParams with _$SubmitBlockParams {
   factory SubmitBlockParams({
+    /// @nodoc
     @JsonKey(name: 'jobid') required String jobId,
+
+    /// @nodoc
     @JsonKey(name: 'mbl_blob') required String miniblockHashingBlob,
   }) = _SubmitBlockParams;
 

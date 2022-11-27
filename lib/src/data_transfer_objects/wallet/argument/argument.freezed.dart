@@ -20,10 +20,15 @@ Argument _$ArgumentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Argument {
+  /// @nodoc
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'datatype')
   DataType get datatype => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'value')
   dynamic get value => throw _privateConstructorUsedError;
 
@@ -134,12 +139,17 @@ class _$_Argument implements _Argument {
   factory _$_Argument.fromJson(Map<String, dynamic> json) =>
       _$$_ArgumentFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'name')
   final String name;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'datatype')
   final DataType datatype;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'value')
   final dynamic value;
@@ -188,12 +198,18 @@ abstract class _Argument implements Argument {
   factory _Argument.fromJson(Map<String, dynamic> json) = _$_Argument.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'name')
   String get name;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'datatype')
   DataType get datatype;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'value')
   dynamic get value;
   @override

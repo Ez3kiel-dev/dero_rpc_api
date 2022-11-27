@@ -11,6 +11,7 @@ part 'transfer_result.g.dart';
 @freezed
 class TransferResult with _$TransferResult {
   factory TransferResult({
+    /// @nodoc
     @JsonKey(name: 'txid') String? txid,
   }) = _TransferResult;
 

@@ -20,14 +20,23 @@ ScInvokeParams _$ScInvokeParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ScInvokeParams {
+  /// @nodoc
   @JsonKey(name: 'scid')
   String get scid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sc_rpc')
   List<Argument>? get scRPC => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sc_dero_deposit')
   int? get deroDeposit => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sc_token_deposit')
   int? get tokenDeposit => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'ringsize')
   int? get ringsize => throw _privateConstructorUsedError;
 
@@ -167,10 +176,15 @@ class _$_ScInvokeParams implements _ScInvokeParams {
   factory _$_ScInvokeParams.fromJson(Map<String, dynamic> json) =>
       _$$_ScInvokeParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'scid')
   final String scid;
+
+  /// @nodoc
   final List<Argument>? _scRPC;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'sc_rpc')
   List<Argument>? get scRPC {
@@ -180,12 +194,17 @@ class _$_ScInvokeParams implements _ScInvokeParams {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'sc_dero_deposit')
   final int? deroDeposit;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'sc_token_deposit')
   final int? tokenDeposit;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'ringsize')
   final int? ringsize;
@@ -246,18 +265,28 @@ abstract class _ScInvokeParams implements ScInvokeParams {
       _$_ScInvokeParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'scid')
   String get scid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sc_rpc')
   List<Argument>? get scRPC;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sc_dero_deposit')
   int? get deroDeposit;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sc_token_deposit')
   int? get tokenDeposit;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'ringsize')
   int? get ringsize;
   @override

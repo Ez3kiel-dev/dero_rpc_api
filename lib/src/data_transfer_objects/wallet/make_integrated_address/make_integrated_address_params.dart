@@ -11,7 +11,10 @@ part 'make_integrated_address_params.g.dart';
 @freezed
 class MakeIntegratedAddressParams with _$MakeIntegratedAddressParams {
   factory MakeIntegratedAddressParams({
+    /// @nodoc
     @JsonKey(name: 'address') String? address,
+
+    /// @nodoc
     @JsonKey(name: 'payload_rpc') required Arguments payloadRPC,
   }) = _MakeIntegratedAddressParams;
 

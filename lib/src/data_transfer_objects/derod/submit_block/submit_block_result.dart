@@ -11,10 +11,19 @@ part 'submit_block_result.g.dart';
 @freezed
 class SubmitBlockResult with _$SubmitBlockResult {
   factory SubmitBlockResult({
+    /// @nodoc
     @JsonKey(name: 'jobid') String? jobId,
+
+    /// @nodoc
     @JsonKey(name: 'mblid') String? mblid,
+
+    /// @nodoc
     @JsonKey(name: 'blid') String? blid,
+
+    /// @nodoc
     @JsonKey(name: 'mini') bool? miniblock,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _SubmitBlockResult;
 

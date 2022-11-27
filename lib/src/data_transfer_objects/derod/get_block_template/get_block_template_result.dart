@@ -11,18 +11,43 @@ part 'get_block_template_result.g.dart';
 @freezed
 class GetBlockTemplateResult with _$GetBlockTemplateResult {
   factory GetBlockTemplateResult({
+    /// @nodoc
     @JsonKey(name: 'jobid') String? jobId,
+
+    /// @nodoc
     @JsonKey(name: 'blocktemplate_blob') String? blockTemplateBlob,
+
+    /// @nodoc
     @JsonKey(name: 'blockhashing_blob') String? blockHashingBlob,
+
+    /// @nodoc
     @JsonKey(name: 'difficulty') String? difficulty,
+
+    /// @nodoc
     @JsonKey(name: 'difficultyuint64') int? difficultyInt,
+
+    /// @nodoc
     @JsonKey(name: 'height') int? height,
+
+    /// @nodoc
     @JsonKey(name: 'prev_hash') String? prevHash,
+
+    /// @nodoc
     @JsonKey(name: 'epochmilli') int? epochMilli,
+
+    /// @nodoc
     @JsonKey(name: 'blocks') int? blocks,
+
+    /// @nodoc
     @JsonKey(name: 'miniblocks') int? miniblocks,
+
+    /// @nodoc
     @JsonKey(name: 'rejected') int? rejected,
+
+    /// @nodoc
     @JsonKey(name: 'lasterror') String? lastError,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetBlockTemplateResult;
 

@@ -20,24 +20,43 @@ Miniblock _$MiniblockFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Miniblock {
+  /// @nodoc
   @JsonKey(name: 'Version')
   int? get version => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'HighDiff')
   bool? get highDiff => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'Final')
   bool? get isFinal => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'PastCount')
   int? get pastCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'Timestamp')
   int? get timestamp => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'Height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'Past')
   List<int>? get past => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'KeyHash')
   String? get keyHash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'Flags')
   int? get flags => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'Nonce')
   List<int>? get nonce => throw _privateConstructorUsedError;
 
@@ -241,25 +260,40 @@ class _$_Miniblock implements _Miniblock {
   factory _$_Miniblock.fromJson(Map<String, dynamic> json) =>
       _$$_MiniblockFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'Version')
   final int? version;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'HighDiff')
   final bool? highDiff;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'Final')
   final bool? isFinal;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'PastCount')
   final int? pastCount;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'Timestamp')
   final int? timestamp;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'Height')
   final int? height;
+
+  /// @nodoc
   final List<int>? _past;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'Past')
   List<int>? get past {
@@ -269,13 +303,20 @@ class _$_Miniblock implements _Miniblock {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'KeyHash')
   final String? keyHash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'Flags')
   final int? flags;
+
+  /// @nodoc
   final List<int>? _nonce;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'Nonce')
   List<int>? get nonce {
@@ -356,33 +397,53 @@ abstract class _Miniblock implements Miniblock {
       _$_Miniblock.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'Version')
   int? get version;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'HighDiff')
   bool? get highDiff;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'Final')
   bool? get isFinal;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'PastCount')
   int? get pastCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'Timestamp')
   int? get timestamp;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'Height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'Past')
   List<int>? get past;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'KeyHash')
   String? get keyHash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'Flags')
   int? get flags;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'Nonce')
   List<int>? get nonce;
   @override

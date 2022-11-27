@@ -11,7 +11,10 @@ part 'get_balance_result.g.dart';
 @freezed
 class GetBalanceResult with _$GetBalanceResult {
   factory GetBalanceResult({
+    /// @nodoc
     @JsonKey(name: 'balance') int? balance,
+
+    /// @nodoc
     @JsonKey(name: 'unlocked_balance') int? unlockedBalance,
   }) = _GetBalanceResult;
 

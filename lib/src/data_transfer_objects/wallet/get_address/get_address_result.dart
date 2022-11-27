@@ -11,6 +11,7 @@ part 'get_address_result.g.dart';
 @freezed
 class GetAddressResult with _$GetAddressResult {
   factory GetAddressResult({
+    /// @nodoc
     @JsonKey(name: 'address') String? address,
   }) = _GetAddressResult;
 

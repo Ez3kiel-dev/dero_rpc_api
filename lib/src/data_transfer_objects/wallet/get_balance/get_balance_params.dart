@@ -11,8 +11,9 @@ part 'get_balance_params.g.dart';
 @freezed
 class GetBalanceParams with _$GetBalanceParams {
   factory GetBalanceParams({
-    // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
+    /// @nodoc
     @JsonKey(name: 'scid') required String scid,
+    // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
   }) = _GetBalanceParams;
 
   factory GetBalanceParams.fromJson(Map<String, dynamic> json) =>

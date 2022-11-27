@@ -20,36 +20,67 @@ BlockHeader _$BlockHeaderFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BlockHeader {
+  /// @nodoc
   @JsonKey(name: 'depth')
   int? get depth => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'difficulty')
   String? get difficulty => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'hash')
   String? get hash => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'major_version')
   int? get majorVersion => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'minor_version')
   int? get minorVersion => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'nonce')
   int? get nonce => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'orphan_status')
   bool? get orphanStatus => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'syncblock')
   bool? get syncBlock => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'sideblock')
   bool? get sideBlock => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'txcount')
   int? get txCount => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miners')
   List<String>? get miners => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'reward')
   int? get reward => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'tips')
   List<String>? get tips => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'timestamp')
   int? get timestamp => throw _privateConstructorUsedError;
 
@@ -333,43 +364,70 @@ class _$_BlockHeader implements _BlockHeader {
   factory _$_BlockHeader.fromJson(Map<String, dynamic> json) =>
       _$$_BlockHeaderFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'depth')
   final int? depth;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'difficulty')
   final String? difficulty;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'hash')
   final String? hash;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'topoheight')
   final int? topoHeight;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'major_version')
   final int? majorVersion;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'minor_version')
   final int? minorVersion;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'nonce')
   final int? nonce;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'orphan_status')
   final bool? orphanStatus;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'syncblock')
   final bool? syncBlock;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'sideblock')
   final bool? sideBlock;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txcount')
   final int? txCount;
+
+  /// @nodoc
   final List<String>? _miners;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miners')
   List<String>? get miners {
@@ -379,10 +437,15 @@ class _$_BlockHeader implements _BlockHeader {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'reward')
   final int? reward;
+
+  /// @nodoc
   final List<String>? _tips;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'tips')
   List<String>? get tips {
@@ -392,6 +455,7 @@ class _$_BlockHeader implements _BlockHeader {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'timestamp')
   final int? timestamp;
@@ -490,51 +554,83 @@ abstract class _BlockHeader implements BlockHeader {
       _$_BlockHeader.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'depth')
   int? get depth;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'difficulty')
   String? get difficulty;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'hash')
   String? get hash;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'topoheight')
   int? get topoHeight;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'major_version')
   int? get majorVersion;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'minor_version')
   int? get minorVersion;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'nonce')
   int? get nonce;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'orphan_status')
   bool? get orphanStatus;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'syncblock')
   bool? get syncBlock;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'sideblock')
   bool? get sideBlock;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txcount')
   int? get txCount;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miners')
   List<String>? get miners;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'reward')
   int? get reward;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'tips')
   List<String>? get tips;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'timestamp')
   int? get timestamp;
   @override

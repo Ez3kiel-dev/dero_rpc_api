@@ -11,6 +11,7 @@ part 'get_block_by_hash_params.g.dart';
 @freezed
 class GetBlockByHashParams with _$GetBlockByHashParams {
   factory GetBlockByHashParams({
+    /// @nodoc
     @JsonKey(name: 'hash') required String hash,
   }) = _GetBlockByHashParams;
 

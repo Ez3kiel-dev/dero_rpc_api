@@ -21,6 +21,7 @@ GetTransferByTxidResult _$GetTransferByTxidResultFromJson(
 
 /// @nodoc
 mixin _$GetTransferByTxidResult {
+  /// @nodoc
   @JsonKey(name: 'entry')
   Entry? get entry => throw _privateConstructorUsedError;
 
@@ -123,6 +124,7 @@ class _$_GetTransferByTxidResult implements _GetTransferByTxidResult {
   factory _$_GetTransferByTxidResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetTransferByTxidResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'entry')
   final Entry? entry;
@@ -169,6 +171,8 @@ abstract class _GetTransferByTxidResult implements GetTransferByTxidResult {
       _$_GetTransferByTxidResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'entry')
   Entry? get entry;
   @override

@@ -20,6 +20,7 @@ GetAddressResult _$GetAddressResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetAddressResult {
+  /// @nodoc
   @JsonKey(name: 'address')
   String? get address => throw _privateConstructorUsedError;
 
@@ -103,6 +104,7 @@ class _$_GetAddressResult implements _GetAddressResult {
   factory _$_GetAddressResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetAddressResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'address')
   final String? address;
@@ -146,6 +148,8 @@ abstract class _GetAddressResult implements GetAddressResult {
       _$_GetAddressResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'address')
   String? get address;
   @override

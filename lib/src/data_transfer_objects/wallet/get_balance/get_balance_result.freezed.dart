@@ -20,8 +20,11 @@ GetBalanceResult _$GetBalanceResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetBalanceResult {
+  /// @nodoc
   @JsonKey(name: 'balance')
   int? get balance => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'unlocked_balance')
   int? get unlockedBalance => throw _privateConstructorUsedError;
 
@@ -121,9 +124,12 @@ class _$_GetBalanceResult implements _GetBalanceResult {
   factory _$_GetBalanceResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetBalanceResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'balance')
   final int? balance;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'unlocked_balance')
   final int? unlockedBalance;
@@ -171,9 +177,13 @@ abstract class _GetBalanceResult implements GetBalanceResult {
       _$_GetBalanceResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'balance')
   int? get balance;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'unlocked_balance')
   int? get unlockedBalance;
   @override

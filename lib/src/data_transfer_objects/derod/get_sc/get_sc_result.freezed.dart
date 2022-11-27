@@ -20,23 +20,40 @@ GetSCResult _$GetSCResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetSCResult {
+  /// @bodoc
   @JsonKey(name: 'valuesuint64')
   List<String>? get valuesInt => throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'valuesstring')
   List<String>? get valuesString => throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'valuesbytes')
   List<String>? get valuesBytes => throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys =>
       throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'uint64keys')
   Map<int, dynamic>? get variableIntKeys => throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'balances')
   Map<String, int>? get balances => throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'balance')
   int? get balance => throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'code')
   String? get code => throw _privateConstructorUsedError;
+
+  /// @bodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -242,7 +259,10 @@ class _$_GetSCResult implements _GetSCResult {
   factory _$_GetSCResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetSCResultFromJson(json);
 
+  /// @bodoc
   final List<String>? _valuesInt;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'valuesuint64')
   List<String>? get valuesInt {
@@ -252,7 +272,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @bodoc
   final List<String>? _valuesString;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'valuesstring')
   List<String>? get valuesString {
@@ -262,7 +285,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @bodoc
   final List<String>? _valuesBytes;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'valuesbytes')
   List<String>? get valuesBytes {
@@ -272,7 +298,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @bodoc
   final Map<String, dynamic>? _variableStringKeys;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys {
@@ -282,7 +311,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableMapView(value);
   }
 
+  /// @bodoc
   final Map<int, dynamic>? _variableIntKeys;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'uint64keys')
   Map<int, dynamic>? get variableIntKeys {
@@ -292,7 +324,10 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableMapView(value);
   }
 
+  /// @bodoc
   final Map<String, int>? _balances;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'balances')
   Map<String, int>? get balances {
@@ -302,12 +337,17 @@ class _$_GetSCResult implements _GetSCResult {
     return EqualUnmodifiableMapView(value);
   }
 
+  /// @bodoc
   @override
   @JsonKey(name: 'balance')
   final int? balance;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'code')
   final String? code;
+
+  /// @bodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -391,30 +431,48 @@ abstract class _GetSCResult implements GetSCResult {
       _$_GetSCResult.fromJson;
 
   @override
+
+  /// @bodoc
   @JsonKey(name: 'valuesuint64')
   List<String>? get valuesInt;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'valuesstring')
   List<String>? get valuesString;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'valuesbytes')
   List<String>? get valuesBytes;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'uint64keys')
   Map<int, dynamic>? get variableIntKeys;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'balances')
   Map<String, int>? get balances;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'balance')
   int? get balance;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'code')
   String? get code;
   @override
+
+  /// @bodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

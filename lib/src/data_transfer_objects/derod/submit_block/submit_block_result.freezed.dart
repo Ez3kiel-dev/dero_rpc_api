@@ -20,14 +20,23 @@ SubmitBlockResult _$SubmitBlockResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubmitBlockResult {
+  /// @nodoc
   @JsonKey(name: 'jobid')
   String? get jobId => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'mblid')
   String? get mblid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'blid')
   String? get blid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'mini')
   bool? get miniblock => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -166,18 +175,27 @@ class _$_SubmitBlockResult implements _SubmitBlockResult {
   factory _$_SubmitBlockResult.fromJson(Map<String, dynamic> json) =>
       _$$_SubmitBlockResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'jobid')
   final String? jobId;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'mblid')
   final String? mblid;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'blid')
   final String? blid;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'mini')
   final bool? miniblock;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -232,18 +250,28 @@ abstract class _SubmitBlockResult implements SubmitBlockResult {
       _$_SubmitBlockResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'jobid')
   String? get jobId;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'mblid')
   String? get mblid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'blid')
   String? get blid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'mini')
   bool? get miniblock;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

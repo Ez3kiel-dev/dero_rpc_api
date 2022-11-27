@@ -20,6 +20,7 @@ TransferResult _$TransferResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TransferResult {
+  /// @nodoc
   @JsonKey(name: 'txid')
   String? get txid => throw _privateConstructorUsedError;
 
@@ -103,6 +104,7 @@ class _$_TransferResult implements _TransferResult {
   factory _$_TransferResult.fromJson(Map<String, dynamic> json) =>
       _$$_TransferResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'txid')
   final String? txid;
@@ -146,6 +148,8 @@ abstract class _TransferResult implements TransferResult {
       _$_TransferResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txid')
   String? get txid;
   @override

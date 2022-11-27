@@ -20,8 +20,11 @@ GetBlockByResult _$GetBlockByResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetBlockByResult {
+  /// @nodoc
   @JsonKey(name: 'block_header')
   BlockHeader? get blockHeader => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -138,9 +141,12 @@ class _$_GetBlockByResult implements _GetBlockByResult {
   factory _$_GetBlockByResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetBlockByResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'block_header')
   final BlockHeader? blockHeader;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -187,9 +193,13 @@ abstract class _GetBlockByResult implements GetBlockByResult {
       _$_GetBlockByResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'block_header')
   BlockHeader? get blockHeader;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

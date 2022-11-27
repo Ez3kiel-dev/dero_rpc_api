@@ -20,12 +20,19 @@ GetTransactionResult _$GetTransactionResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetTransactionResult {
+  /// @nodoc
   @JsonKey(name: 'txs_as_hex')
   List<String>? get txsAsHex => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'txs_as_json')
   List<String>? get txsAsJson => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'txs')
   List<TxRelatedInfo>? get txs => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
 
@@ -155,7 +162,10 @@ class _$_GetTransactionResult implements _GetTransactionResult {
   factory _$_GetTransactionResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetTransactionResultFromJson(json);
 
+  /// @nodoc
   final List<String>? _txsAsHex;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txs_as_hex')
   List<String>? get txsAsHex {
@@ -165,7 +175,10 @@ class _$_GetTransactionResult implements _GetTransactionResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   final List<String>? _txsAsJson;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txs_as_json')
   List<String>? get txsAsJson {
@@ -175,7 +188,10 @@ class _$_GetTransactionResult implements _GetTransactionResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   final List<TxRelatedInfo>? _txs;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txs')
   List<TxRelatedInfo>? get txs {
@@ -185,6 +201,7 @@ class _$_GetTransactionResult implements _GetTransactionResult {
     return EqualUnmodifiableListView(value);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
@@ -241,15 +258,23 @@ abstract class _GetTransactionResult implements GetTransactionResult {
       _$_GetTransactionResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txs_as_hex')
   List<String>? get txsAsHex;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txs_as_json')
   List<String>? get txsAsJson;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txs')
   List<TxRelatedInfo>? get txs;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override

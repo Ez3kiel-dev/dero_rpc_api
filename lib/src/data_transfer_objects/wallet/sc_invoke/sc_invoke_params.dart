@@ -11,10 +11,19 @@ part 'sc_invoke_params.g.dart';
 @freezed
 class ScInvokeParams with _$ScInvokeParams {
   factory ScInvokeParams({
+    /// @nodoc
     @JsonKey(name: 'scid') required String scid,
+
+    /// @nodoc
     @JsonKey(name: 'sc_rpc') Arguments? scRPC,
+
+    /// @nodoc
     @JsonKey(name: 'sc_dero_deposit') int? deroDeposit,
+
+    /// @nodoc
     @JsonKey(name: 'sc_token_deposit') int? tokenDeposit,
+
+    /// @nodoc
     @JsonKey(name: 'ringsize') int? ringsize,
   }) = _ScInvokeParams;
 

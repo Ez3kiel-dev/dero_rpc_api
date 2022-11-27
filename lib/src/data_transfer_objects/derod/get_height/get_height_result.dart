@@ -11,9 +11,16 @@ part 'get_height_result.g.dart';
 @freezed
 class GetHeightDerodResult with _$GetHeightDerodResult {
   factory GetHeightDerodResult({
+    /// @nodoc
     @JsonKey(name: 'height') int? height,
+
+    /// @nodoc
     @JsonKey(name: 'stableheight') int? stableHeight,
+
+    /// @nodoc
     @JsonKey(name: 'topoheight') int? topoHeight,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetHeightDerodResult;
 

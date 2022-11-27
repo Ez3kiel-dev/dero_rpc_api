@@ -21,10 +21,15 @@ GetBlockTemplateParams _$GetBlockTemplateParamsFromJson(
 
 /// @nodoc
 mixin _$GetBlockTemplateParams {
+  /// @nodoc
   @JsonKey(name: 'wallet_address')
   String get walletAddress => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'block')
   bool? get block => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'miner')
   String? get miner => throw _privateConstructorUsedError;
 
@@ -139,12 +144,17 @@ class _$_GetBlockTemplateParams implements _GetBlockTemplateParams {
   factory _$_GetBlockTemplateParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetBlockTemplateParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'wallet_address')
   final String walletAddress;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'block')
   final bool? block;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'miner')
   final String? miner;
@@ -194,12 +204,18 @@ abstract class _GetBlockTemplateParams implements GetBlockTemplateParams {
       _$_GetBlockTemplateParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'wallet_address')
   String get walletAddress;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'block')
   bool? get block;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'miner')
   String? get miner;
   @override

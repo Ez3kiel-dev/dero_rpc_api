@@ -11,7 +11,10 @@ part 'get_block_by_result.g.dart';
 @freezed
 class GetBlockByResult with _$GetBlockByResult {
   factory GetBlockByResult({
+    /// @nodoc
     @JsonKey(name: 'block_header') BlockHeader? blockHeader,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetBlockByResult;
 

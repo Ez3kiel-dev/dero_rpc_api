@@ -11,9 +11,16 @@ part 'get_transaction_result.g.dart';
 @freezed
 class GetTransactionResult with _$GetTransactionResult {
   factory GetTransactionResult({
+    /// @nodoc
     @JsonKey(name: 'txs_as_hex') List<String>? txsAsHex,
+
+    /// @nodoc
     @JsonKey(name: 'txs_as_json') List<String>? txsAsJson,
+
+    /// @nodoc
     @JsonKey(name: 'txs') List<TxRelatedInfo>? txs,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetTransactionResult;
 

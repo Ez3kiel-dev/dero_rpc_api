@@ -11,10 +11,17 @@ part 'get_encrypted_balance_params.g.dart';
 @freezed
 class GetEncryptedBalanceParams with _$GetEncryptedBalanceParams {
   factory GetEncryptedBalanceParams({
+    /// @nodoc
     @JsonKey(name: 'address') required String address,
     // @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+
+    /// @nodoc
     @JsonKey(name: 'scid') String? scid,
+
+    /// @nodoc
     @JsonKey(name: 'treehash') String? treeHash,
+
+    /// @nodoc
     @JsonKey(name: 'topoheight') int? topoHeight,
   }) = _GetEncryptedBalanceParams;
 

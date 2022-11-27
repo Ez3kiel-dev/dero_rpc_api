@@ -11,8 +11,13 @@ part 'name_to_address_result.g.dart';
 @freezed
 class NameToAddressResult with _$NameToAddressResult {
   factory NameToAddressResult({
+    /// @nodoc
     @JsonKey(name: 'name') String? name,
+
+    /// @nodoc
     @JsonKey(name: 'address') String? address,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _NameToAddressResult;
 

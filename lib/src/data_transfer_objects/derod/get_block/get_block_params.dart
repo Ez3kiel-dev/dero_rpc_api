@@ -11,7 +11,10 @@ part 'get_block_params.g.dart';
 @freezed
 class GetBlockParams with _$GetBlockParams {
   factory GetBlockParams({
+    /// @nodoc
     @JsonKey(name: 'hash') String? hash,
+
+    /// @nodoc
     @JsonKey(name: 'height') int? height,
   }) = _GetBlockParams;
 

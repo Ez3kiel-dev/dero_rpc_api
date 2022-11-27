@@ -21,6 +21,7 @@ GetHeightWalletResult _$GetHeightWalletResultFromJson(
 
 /// @nodoc
 mixin _$GetHeightWalletResult {
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height => throw _privateConstructorUsedError;
 
@@ -105,6 +106,7 @@ class _$_GetHeightWalletResult implements _GetHeightWalletResult {
   factory _$_GetHeightWalletResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetHeightWalletResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'height')
   final int? height;
@@ -149,6 +151,8 @@ abstract class _GetHeightWalletResult implements GetHeightWalletResult {
       _$_GetHeightWalletResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'height')
   int? get height;
   @override

@@ -21,10 +21,15 @@ SendRawTransactionResult _$SendRawTransactionResultFromJson(
 
 /// @nodoc
 mixin _$SendRawTransactionResult {
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'txid')
   String? get txid => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'string')
   String? get reason => throw _privateConstructorUsedError;
 
@@ -140,12 +145,17 @@ class _$_SendRawTransactionResult implements _SendRawTransactionResult {
   factory _$_SendRawTransactionResult.fromJson(Map<String, dynamic> json) =>
       _$$_SendRawTransactionResultFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'status')
   final String? status;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txid')
   final String? txid;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'string')
   final String? reason;
@@ -195,12 +205,18 @@ abstract class _SendRawTransactionResult implements SendRawTransactionResult {
       _$_SendRawTransactionResult.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'status')
   String? get status;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txid')
   String? get txid;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'string')
   String? get reason;
   @override

@@ -11,6 +11,7 @@ part 'get_transfers_result.g.dart';
 @freezed
 class GetTransfersResult with _$GetTransfersResult {
   factory GetTransfersResult({
+    /// @nodoc
     @JsonKey(name: 'entries') List<Entry>? entries,
   }) = _GetTransfersResult;
 

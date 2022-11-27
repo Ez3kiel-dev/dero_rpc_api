@@ -20,8 +20,11 @@ SubmitBlockParams _$SubmitBlockParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubmitBlockParams {
+  /// @nodoc
   @JsonKey(name: 'jobid')
   String get jobId => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'mbl_blob')
   String get miniblockHashingBlob => throw _privateConstructorUsedError;
 
@@ -121,9 +124,12 @@ class _$_SubmitBlockParams implements _SubmitBlockParams {
   factory _$_SubmitBlockParams.fromJson(Map<String, dynamic> json) =>
       _$$_SubmitBlockParamsFromJson(json);
 
+  /// @nodoc
   @override
   @JsonKey(name: 'jobid')
   final String jobId;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'mbl_blob')
   final String miniblockHashingBlob;
@@ -173,9 +179,13 @@ abstract class _SubmitBlockParams implements SubmitBlockParams {
       _$_SubmitBlockParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'jobid')
   String get jobId;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'mbl_blob')
   String get miniblockHashingBlob;
   @override

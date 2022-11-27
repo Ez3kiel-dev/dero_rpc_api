@@ -11,6 +11,7 @@ part 'split_integrated_address_params.g.dart';
 @freezed
 class SplitIntegratedAddressParams with _$SplitIntegratedAddressParams {
   factory SplitIntegratedAddressParams({
+    /// @nodoc
     @JsonKey(name: 'integrated_address') required String integratedAddress,
   }) = _SplitIntegratedAddressParams;
 

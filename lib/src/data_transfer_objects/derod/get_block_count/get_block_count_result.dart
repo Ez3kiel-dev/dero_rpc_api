@@ -11,7 +11,10 @@ part 'get_block_count_result.g.dart';
 @freezed
 class GetBlockCountResult with _$GetBlockCountResult {
   factory GetBlockCountResult({
+    /// @nodoc
     @JsonKey(name: 'count') int? count,
+
+    /// @nodoc
     @JsonKey(name: 'status') String? status,
   }) = _GetBlockCountResult;
 

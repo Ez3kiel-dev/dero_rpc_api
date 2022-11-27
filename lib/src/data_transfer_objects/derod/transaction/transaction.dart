@@ -17,16 +17,37 @@ part 'transaction.g.dart';
 @freezed
 class Transaction with _$Transaction {
   factory Transaction({
+    /// @nodoc
     @JsonKey(name: 'version') int? version,
+
+    /// @nodoc
     @JsonKey(name: 'source_network') int? sourceNetwork,
+
+    /// @nodoc
     @JsonKey(name: 'dest_network') int? destinationNetwork,
+
+    /// @nodoc
     @JsonKey(name: 'txtype') int? txType,
+
+    /// @nodoc
     @JsonKey(name: 'value') int? value,
+
+    /// @nodoc
     @JsonKey(name: 'miner_address') @Uint8ListConverter() Hash? minerAddress,
+
+    /// @nodoc
     @JsonKey(name: 'c') @Uint8ListConverter() Hash? c,
+
+    /// @nodoc
     @JsonKey(name: 's') @Uint8ListConverter() Hash? s,
+
+    /// @nodoc
     @JsonKey(name: 'height') int? height,
+
+    /// @nodoc
     @JsonKey(name: 'blid') @Uint8ListConverter() Hash? blid,
+
+    /// @nodoc
     @JsonKey(name: 'scdata') Arguments? scData,
   }) = _Transaction;
 

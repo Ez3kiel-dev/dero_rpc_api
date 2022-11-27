@@ -13,8 +13,9 @@ class NameToAddressParams with _$NameToAddressParams {
   factory NameToAddressParams({
     @JsonKey(name: 'name') required String name,
 
-    // Useless for now ...
-    // See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
+    /// Useless for now ...
+    ///
+    /// See https://github.com/deroproject/derohe/blob/main/cmd/derod/rpc/rpc_dero_nametoaddress.go#L29.
     @JsonKey(name: 'topoheight') int? topoHeight,
   }) = _NameToAddressParams;
 

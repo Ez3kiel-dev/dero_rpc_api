@@ -20,8 +20,11 @@ GetTransactionParams _$GetTransactionParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetTransactionParams {
+  /// @nodoc
   @JsonKey(name: 'txs_hashes')
   List<String> get txsHashes => throw _privateConstructorUsedError;
+
+  /// @nodoc
   @JsonKey(name: 'decode_as_json')
   int? get decode => throw _privateConstructorUsedError;
 
@@ -123,7 +126,10 @@ class _$_GetTransactionParams implements _GetTransactionParams {
   factory _$_GetTransactionParams.fromJson(Map<String, dynamic> json) =>
       _$$_GetTransactionParamsFromJson(json);
 
+  /// @nodoc
   final List<String> _txsHashes;
+
+  /// @nodoc
   @override
   @JsonKey(name: 'txs_hashes')
   List<String> get txsHashes {
@@ -131,6 +137,7 @@ class _$_GetTransactionParams implements _GetTransactionParams {
     return EqualUnmodifiableListView(_txsHashes);
   }
 
+  /// @nodoc
   @override
   @JsonKey(name: 'decode_as_json')
   final int? decode;
@@ -180,9 +187,13 @@ abstract class _GetTransactionParams implements GetTransactionParams {
       _$_GetTransactionParams.fromJson;
 
   @override
+
+  /// @nodoc
   @JsonKey(name: 'txs_hashes')
   List<String> get txsHashes;
   @override
+
+  /// @nodoc
   @JsonKey(name: 'decode_as_json')
   int? get decode;
   @override

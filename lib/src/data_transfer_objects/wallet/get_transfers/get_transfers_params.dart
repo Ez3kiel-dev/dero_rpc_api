@@ -14,15 +14,34 @@ part 'get_transfers_params.g.dart';
 @freezed
 class GetTransfersParams with _$GetTransfersParams {
   factory GetTransfersParams({
+    /// @nodoc
     @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
+
+    /// @nodoc
     @JsonKey(name: 'coinbase') @Default(true) bool coinbase,
+
+    /// @nodoc
     @JsonKey(name: 'in') @Default(true) bool incoming,
+
+    /// @nodoc
     @JsonKey(name: 'out') @Default(true) bool outgoing,
+
+    /// @nodoc
     @JsonKey(name: 'min_height') int? minHeight,
+
+    /// @nodoc
     @JsonKey(name: 'max_height') int? maxHeight,
+
+    /// @nodoc
     @JsonKey(name: 'sender') String? sender,
+
+    /// @nodoc
     @JsonKey(name: 'receiver') String? receiver,
+
+    /// @nodoc
     @JsonKey(name: 'dstport') int? dstPort,
+
+    /// @nodoc
     @JsonKey(name: 'srcport') int? srcPort,
   }) = _GetTransfersParams;
 

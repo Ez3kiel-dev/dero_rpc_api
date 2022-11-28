@@ -20,11 +20,9 @@ Future<void> main() async {
 
   try {
     // Print Dero network information at each new height.
-    derodRepository.derodEventStream.listen((event) async {
-      if (derodRepository.newHeight(event)) {
-        var info = await derodRepository.getInfo();
-        print(info);
-      }
+    derodRepository.listenDerodEvent(onNewHeightEvent: () async {
+      var info = await derodRepository.getInfo();
+      print(info);
     });
 
     // Get the hard-coded NameService smart contract and print all registered names.

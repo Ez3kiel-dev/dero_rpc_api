@@ -68,13 +68,35 @@ class DerodRepository {
   Stream get eventStream => derodEventStream;
 
   /// Decode new height event when listening [derodEventStream].
-  bool newHeight(String event) {
+  bool _newHeight(String event) {
     return jsonDecode(event)['method'] == 'Height';
   }
 
   /// Decode new block event when listening [derodEventStream].
-  bool newBlock(String event) {
+  bool _newBlock(String event) {
     return jsonDecode(event)['method'] == 'Block';
+  }
+
+  /// Wrapper around [derodEventStream] listener.
+  ///
+  /// Which offer two handlers based on event type.
+  ///
+  /// It's possible to subscribe a callback for new height and/or new block events.
+  StreamSubscription listenDerodEvent({
+    void Function()? onNewBlockEvent,
+    void Function()? onNewHeightEvent,
+    Function? onError,
+    void Function()? onDone,
+    bool? cancelOnError,
+  }) {
+    return derodEventStream.listen((event) {
+      if (_newBlock(event)) {
+        onNewBlockEvent?.call();
+      }
+      if (_newHeight(event)) {
+        onNewHeightEvent?.call();
+      }
+    }, onError: onError, onDone: onDone, cancelOnError: cancelOnError);
   }
 
   /// The traditional [ping] method sends a 'Ping' and receives a 'Pong' if the connection is OK.

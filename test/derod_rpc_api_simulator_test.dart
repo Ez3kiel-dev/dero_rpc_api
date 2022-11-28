@@ -26,9 +26,7 @@ Future<void> main() async {
   final DerodRepository derodRepository = DerodRepository(derodSimulatorAddr);
   derodRepository.start();
 
-  GetBlockResult blockResult;
-
-  test('newHeight Derod', () {
+  /*test('newHeight Derod', () {
     expect(derodRepository.newHeight('{"jsonrpc":"2.0","method":"Height"}'),
         equals(true));
   });
@@ -36,6 +34,23 @@ Future<void> main() async {
   test('newBlock Derod', () {
     expect(derodRepository.newBlock('{"jsonrpc":"2.0","method":"Block"}'),
         equals(true));
+  });*/
+
+  test('listenDerodEvent Derod', () {
+    derodRepository.listenDerodEvent(
+      onNewHeightEvent: expectAsync0(
+        () {
+          // print('height');
+          completes;
+        },
+      ),
+      onNewBlockEvent: expectAsync0(
+        () {
+          // print('block');
+          completes;
+        },
+      ),
+    );
   });
 
   test('ping Derod', () async {
@@ -58,7 +73,8 @@ Future<void> main() async {
     expect(res, isA<GetHeightDerodResult>());
   });
 
-  blockResult = await derodRepository.getBlock(GetBlockParams(height: 1));
+  GetBlockResult blockResult =
+      await derodRepository.getBlock(GetBlockParams(height: 1));
 
   // print(blockResult.block);
 

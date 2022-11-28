@@ -1,3 +1,7 @@
+## 0.2.4
+
+- feat(DerodRepository): add wrapper for Derod event stream listener.
+
 ## 0.1.4
 
 - docs: get_sc_params.dart and spelling in get_sc_result.dart

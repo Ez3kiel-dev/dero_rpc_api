@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'get_sc_result.dart';
 
@@ -268,6 +268,7 @@ class _$_GetSCResult implements _GetSCResult {
   List<String>? get valuesInt {
     final value = _valuesInt;
     if (value == null) return null;
+    if (_valuesInt is EqualUnmodifiableListView) return _valuesInt;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -281,6 +282,7 @@ class _$_GetSCResult implements _GetSCResult {
   List<String>? get valuesString {
     final value = _valuesString;
     if (value == null) return null;
+    if (_valuesString is EqualUnmodifiableListView) return _valuesString;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -294,6 +296,7 @@ class _$_GetSCResult implements _GetSCResult {
   List<String>? get valuesBytes {
     final value = _valuesBytes;
     if (value == null) return null;
+    if (_valuesBytes is EqualUnmodifiableListView) return _valuesBytes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -307,6 +310,8 @@ class _$_GetSCResult implements _GetSCResult {
   Map<String, dynamic>? get variableStringKeys {
     final value = _variableStringKeys;
     if (value == null) return null;
+    if (_variableStringKeys is EqualUnmodifiableMapView)
+      return _variableStringKeys;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -320,6 +325,7 @@ class _$_GetSCResult implements _GetSCResult {
   Map<int, dynamic>? get variableIntKeys {
     final value = _variableIntKeys;
     if (value == null) return null;
+    if (_variableIntKeys is EqualUnmodifiableMapView) return _variableIntKeys;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -333,6 +339,7 @@ class _$_GetSCResult implements _GetSCResult {
   Map<String, int>? get balances {
     final value = _balances;
     if (value == null) return null;
+    if (_balances is EqualUnmodifiableMapView) return _balances;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }

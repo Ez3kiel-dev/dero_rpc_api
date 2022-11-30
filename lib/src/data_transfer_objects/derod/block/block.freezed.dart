@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'block.dart';
 
@@ -98,7 +98,7 @@ class _$BlockCopyWithImpl<$Res, $Val extends Block>
     Object? timestamp = freezed,
     Object? height = freezed,
     Object? minerTx = freezed,
-    Object? proof = null,
+    Object? proof = freezed,
     Object? tips = freezed,
     Object? miniblocks = freezed,
     Object? txHashes = freezed,
@@ -124,7 +124,7 @@ class _$BlockCopyWithImpl<$Res, $Val extends Block>
           ? _value.minerTx
           : minerTx // ignore: cast_nullable_to_non_nullable
               as Transaction?,
-      proof: null == proof
+      proof: freezed == proof
           ? _value.proof
           : proof // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -191,7 +191,7 @@ class __$$_BlockCopyWithImpl<$Res> extends _$BlockCopyWithImpl<$Res, _$_Block>
     Object? timestamp = freezed,
     Object? height = freezed,
     Object? minerTx = freezed,
-    Object? proof = null,
+    Object? proof = freezed,
     Object? tips = freezed,
     Object? miniblocks = freezed,
     Object? txHashes = freezed,
@@ -217,7 +217,7 @@ class __$$_BlockCopyWithImpl<$Res> extends _$BlockCopyWithImpl<$Res, _$_Block>
           ? _value.minerTx
           : minerTx // ignore: cast_nullable_to_non_nullable
               as Transaction?,
-      proof: null == proof
+      proof: freezed == proof
           ? _value.proof
           : proof // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -296,6 +296,7 @@ class _$_Block implements _Block {
   List<String>? get tips {
     final value = _tips;
     if (value == null) return null;
+    if (_tips is EqualUnmodifiableListView) return _tips;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -309,6 +310,7 @@ class _$_Block implements _Block {
   List<Miniblock>? get miniblocks {
     final value = _miniblocks;
     if (value == null) return null;
+    if (_miniblocks is EqualUnmodifiableListView) return _miniblocks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -322,6 +324,7 @@ class _$_Block implements _Block {
   List<String>? get txHashes {
     final value = _txHashes;
     if (value == null) return null;
+    if (_txHashes is EqualUnmodifiableListView) return _txHashes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

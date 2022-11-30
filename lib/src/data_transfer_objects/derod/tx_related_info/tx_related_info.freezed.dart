@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'tx_related_info.dart';
 
@@ -404,6 +404,7 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
   List<int>? get outputIndices {
     final value = _outputIndices;
     if (value == null) return null;
+    if (_outputIndices is EqualUnmodifiableListView) return _outputIndices;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -427,6 +428,7 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
   List<String>? get invalidBlock {
     final value = _invalidBlock;
     if (value == null) return null;
+    if (_invalidBlock is EqualUnmodifiableListView) return _invalidBlock;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -440,6 +442,7 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
   List<List<String>>? get ring {
     final value = _ring;
     if (value == null) return null;
+    if (_ring is EqualUnmodifiableListView) return _ring;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

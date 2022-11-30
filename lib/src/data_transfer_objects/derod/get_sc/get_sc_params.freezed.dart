@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'get_sc_params.dart';
 
@@ -272,6 +272,7 @@ class _$_GetSCParams implements _GetSCParams {
   List<int>? get keysInt {
     final value = _keysInt;
     if (value == null) return null;
+    if (_keysInt is EqualUnmodifiableListView) return _keysInt;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -285,6 +286,7 @@ class _$_GetSCParams implements _GetSCParams {
   List<String>? get keysString {
     final value = _keysString;
     if (value == null) return null;
+    if (_keysString is EqualUnmodifiableListView) return _keysString;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -299,6 +301,7 @@ class _$_GetSCParams implements _GetSCParams {
   List<Uint8List>? get keysBytes {
     final value = _keysBytes;
     if (value == null) return null;
+    if (_keysBytes is EqualUnmodifiableListView) return _keysBytes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

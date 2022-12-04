@@ -1,3 +1,7 @@
+## 0.3.4
+
+- feat: add custom exceptions.
+
 ## 0.2.4
 
 - feat(DerodRepository): add wrapper for Derod event stream listener.

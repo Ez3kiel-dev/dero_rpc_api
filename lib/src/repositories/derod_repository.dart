@@ -101,107 +101,177 @@ class DerodRepository {
 
   /// The traditional [ping] method sends a 'Ping' and receives a 'Pong' if the connection is OK.
   Future<String> ping() async {
-    var res = await rpcDerodClient.sendRequest(_ping);
-    return res.toString().trim();
+    try {
+      var res = await rpcDerodClient.sendRequest(_ping);
+      return res.toString().trim();
+    }
+    /*on RpcException catch (error) {
+      // throw DerodRepositoryException(
+      //     'Ping failed - RPC error ${name(error.code) ?? error.code}\nmessage: ${error.message}');
+      throw DerodRepositoryException('Ping', error);
+    } on StateError catch (error) {
+      // throw DerodRepositoryException(
+      //     'Ping failed - State error\nmessage: ${error.message}');
+      throw DerodRepositoryException('Ping', error);
+    }*/
+    catch (error) {
+      throw DerodRepositoryException('Ping', error);
+    }
   }
 
   /// Returns various information about the daemon and the network.
   Future<GetInfoResult> getInfo() async {
-    var res = await rpcDerodClient.sendRequest(_getInfo);
-    return GetInfoResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(_getInfo);
+      return GetInfoResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getInfo', error);
+    }
   }
 
   /// Returns the currently synchronized height of the chain.
   Future<GetHeightDerodResult> getHeight() async {
-    var res = await rpcDerodClient.sendRequest(_getHeight);
-    return GetHeightDerodResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(_getHeight);
+      return GetHeightDerodResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getHeight', error);
+    }
   }
 
   /// Returns a block from its given hash or height.
   Future<GetBlockResult> getBlock(GetBlockParams getBlockParams) async {
-    var res =
-        await rpcDerodClient.sendRequest(_getBlock, getBlockParams.toJson());
-    return GetBlockResult.fromJson(res);
+    try {
+      var res =
+          await rpcDerodClient.sendRequest(_getBlock, getBlockParams.toJson());
+      return GetBlockResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getBlock', error);
+    }
   }
 
   /// Returns the block count.
   Future<GetBlockCountResult> getBlockCount() async {
-    var res = await rpcDerodClient.sendRequest(_getBlockCount);
-    return GetBlockCountResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(_getBlockCount);
+      return GetBlockCountResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getBlockCount', error);
+    }
   }
 
   /// Returns a block from its given hash.
   Future<GetBlockByResult> getBlockByHash(
       GetBlockByHashParams getBlockByHashParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _getBlockHeaderByHash, getBlockByHashParams.toJson());
-    return GetBlockByResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _getBlockHeaderByHash, getBlockByHashParams.toJson());
+      return GetBlockByResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getBlockByHash', error);
+    }
   }
 
   /// Returns a block from its given height.
   Future<GetBlockByResult> getBlockByTopoHeight(
       GetBlockByTopoHeightParams getBlockByTopoHeightParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _getBlockHeaderByTopoHeight, getBlockByTopoHeightParams.toJson());
-    return GetBlockByResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _getBlockHeaderByTopoHeight, getBlockByTopoHeightParams.toJson());
+      return GetBlockByResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getBlockByTopoHeight', error);
+    }
   }
 
   /// Returns a list of all pending txHashes in the mempool.
   Future<GetTxPoolResult> getTxPool() async {
-    var res = await rpcDerodClient.sendRequest(_getTxPool);
-    return GetTxPoolResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(_getTxPool);
+      return GetTxPoolResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getTxPool', error);
+    }
   }
 
   /// Returns the specified transactions information from either the blockchain or mempool.
   Future<GetTransactionResult> getTransaction(
       GetTransactionParams getTransactionParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _getTransaction, getTransactionParams.toJson());
-    return GetTransactionResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _getTransaction, getTransactionParams.toJson());
+      return GetTransactionResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getTransaction', error);
+    }
   }
 
   /// Returns the latest [BlockHeader] of the currently synced height.
   Future<GetBlockByResult> getLastBlockHeader() async {
-    var res = await rpcDerodClient.sendRequest(_getLastBlockHeader);
-    return GetBlockByResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(_getLastBlockHeader);
+      return GetBlockByResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getLastBlockHeader', error);
+    }
   }
 
   /// Returns the smart contract information for a given scid.
   Future<GetSCResult> getSC(GetSCParams getSCParams) async {
-    var res = await rpcDerodClient.sendRequest(_getSC, getSCParams.toJson());
-    return GetSCResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(_getSC, getSCParams.toJson());
+      return GetSCResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getSC', error);
+    }
   }
 
   /// Returns the cost of gas (compute and storage).
   Future<GasEstimateResult> getGasEstimate(
       TransferParams getGasEstimateParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _getGasEstimate, getGasEstimateParams.toJson());
-    return GasEstimateResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _getGasEstimate, getGasEstimateParams.toJson());
+      return GasEstimateResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getGasEstimate', error);
+    }
   }
 
   /// Returns the address behind a registered name.
   Future<NameToAddressResult> getNameToAddress(
       NameToAddressParams nameToAddressParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _nameToAddress, nameToAddressParams.toJson());
-    return NameToAddressResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _nameToAddress, nameToAddressParams.toJson());
+      return NameToAddressResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getNameToAddress', error);
+    }
   }
 
   /// Returns random addresses (max 100).
   Future<GetRandomAddressResult> getRandomAddress(
       {GetRandomAddressParams? getRandomAddressParams}) async {
-    var res = await rpcDerodClient.sendRequest(
-        _getRandomAddress, getRandomAddressParams?.toJson());
-    return GetRandomAddressResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _getRandomAddress, getRandomAddressParams?.toJson());
+      return GetRandomAddressResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getRandomAddress', error);
+    }
   }
 
   /// Sends a raw transaction to the network.
   Future<SendRawTransactionResult> sendRawTransaction(
       SendRawTransactionParams sendRawTransactionParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _sendRawTransaction, sendRawTransactionParams.toJson());
-    return SendRawTransactionResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _sendRawTransaction, sendRawTransactionParams.toJson());
+      return SendRawTransactionResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('sendRawTransaction', error);
+    }
   }
 
   /// Returns a block template.
@@ -209,9 +279,13 @@ class DerodRepository {
   /// Useful for mining purposes.
   Future<GetBlockTemplateResult> getBlockTemplate(
       GetBlockTemplateParams getBlockTemplateParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _getBlockTemplate, getBlockTemplateParams.toJson());
-    return GetBlockTemplateResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _getBlockTemplate, getBlockTemplateParams.toJson());
+      return GetBlockTemplateResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getBlockTemplate', error);
+    }
   }
 
   /// Submit a block.
@@ -219,16 +293,24 @@ class DerodRepository {
   /// Useful for mining purposes.
   Future<SubmitBlockResult> submitBlock(
       SubmitBlockParams submitBlockParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _submitBlock, submitBlockParams.toJson());
-    return SubmitBlockResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _submitBlock, submitBlockParams.toJson());
+      return SubmitBlockResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('submitBlock', error);
+    }
   }
 
   /// Returns the encrypted balance for a given address or smart contract.
   Future<GetEncryptedBalanceResult> getEncryptedBalance(
       GetEncryptedBalanceParams getEncryptedBalanceParams) async {
-    var res = await rpcDerodClient.sendRequest(
-        _getEncryptedBalance, getEncryptedBalanceParams.toJson());
-    return GetEncryptedBalanceResult.fromJson(res);
+    try {
+      var res = await rpcDerodClient.sendRequest(
+          _getEncryptedBalance, getEncryptedBalanceParams.toJson());
+      return GetEncryptedBalanceResult.fromJson(res);
+    } catch (error) {
+      throw DerodRepositoryException('getEncryptedBalance', error);
+    }
   }
 }

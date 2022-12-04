@@ -49,14 +49,22 @@ class WalletRepository {
 
   /// The traditional [ping] method sends a 'Ping' and receives a 'Pong' if the connection is OK.
   Future<String> ping() async {
-    var res = await rpcWalletClient.sendRequest(_ping);
-    return res.toString().trim();
+    try {
+      var res = await rpcWalletClient.sendRequest(_ping);
+      return res.toString().trim();
+    } catch (error) {
+      throw WalletRepositoryException('Ping', error);
+    }
   }
 
   /// Returns the dero address of the currently connected wallet.
   Future<GetAddressResult> getAddress() async {
-    var res = await rpcWalletClient.sendRequest(_getAddress);
-    return GetAddressResult.fromJson(res);
+    try {
+      var res = await rpcWalletClient.sendRequest(_getAddress);
+      return GetAddressResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('getAddress', error);
+    }
   }
 
   /// Returns the dero balance of the currently connected wallet.
@@ -64,23 +72,35 @@ class WalletRepository {
   /// Provide a [GetBalanceParams] parameter if you want the balance of a different asset than Dero.
   Future<GetBalanceResult> getBalance(
       {GetBalanceParams? getBalanceParams}) async {
-    var res = await rpcWalletClient.sendRequest(
-        _getBalance, getBalanceParams?.toJson());
-    return GetBalanceResult.fromJson(res);
+    try {
+      var res = await rpcWalletClient.sendRequest(
+          _getBalance, getBalanceParams?.toJson());
+      return GetBalanceResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('getBalance', error);
+    }
   }
 
   /// Returns the currently synchronized height of the wallet.
   Future<GetHeightWalletResult> getHeight() async {
-    var res = await rpcWalletClient.sendRequest(_getHeight);
-    return GetHeightWalletResult.fromJson(res);
+    try {
+      var res = await rpcWalletClient.sendRequest(_getHeight);
+      return GetHeightWalletResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('getHeight', error);
+    }
   }
 
   /// Returns the information of a transfer according to its txid.
   Future<GetTransferByTxidResult> getTransferByTXID(
       GetTransferByTxidParams getTransferByTXIDParams) async {
-    var res = await rpcWalletClient.sendRequest(
-        _getTransferByTXID, getTransferByTXIDParams.toJson());
-    return GetTransferByTxidResult.fromJson(res);
+    try {
+      var res = await rpcWalletClient.sendRequest(
+          _getTransferByTXID, getTransferByTXIDParams.toJson());
+      return GetTransferByTxidResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('getTransferByTXID', error);
+    }
   }
 
   /// Returns outgoing/ingoing/coinbase transactions from the currently connected wallet.
@@ -88,32 +108,48 @@ class WalletRepository {
   /// With `var params = GetTransfersParams();`, get all transactions by default.
   Future<GetTransfersResult> getTransfers(
       GetTransfersParams getTransfersParams) async {
-    var res = await rpcWalletClient.sendRequest(
-        _getTransfers, getTransfersParams.toJson());
-    return GetTransfersResult.fromJson(res);
+    try {
+      var res = await rpcWalletClient.sendRequest(
+          _getTransfers, getTransfersParams.toJson());
+      return GetTransfersResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('getTransfers', error);
+    }
   }
 
   /// Generate an integrated address with specific payment identifiers.
   Future<MakeIntegratedAddressResult> makeIntegratedAddress(
       MakeIntegratedAddressParams makeIntegratedAddressParams) async {
-    var res = await rpcWalletClient.sendRequest(
-        _makeIntegratedAddress, makeIntegratedAddressParams.toJson());
-    return MakeIntegratedAddressResult.fromJson(res);
+    try {
+      var res = await rpcWalletClient.sendRequest(
+          _makeIntegratedAddress, makeIntegratedAddressParams.toJson());
+      return MakeIntegratedAddressResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('makeIntegratedAddress', error);
+    }
   }
 
   /// Split integrated address into standard wallet address and payment identifier.
   Future<SplitIntegratedAddressResult> splitIntegratedAddress(
       SplitIntegratedAddressParams splitIntegratedAddressParams) async {
-    var res = await rpcWalletClient.sendRequest(
-        _splitIntegratedAddress, splitIntegratedAddressParams.toJson());
-    return SplitIntegratedAddressResult.fromJson(res);
+    try {
+      var res = await rpcWalletClient.sendRequest(
+          _splitIntegratedAddress, splitIntegratedAddressParams.toJson());
+      return SplitIntegratedAddressResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('splitIntegratedAddress', error);
+    }
   }
 
   /// Returns seed.
   Future<QueryKeyResult> queryKey(QueryKeyParams queryKeyParams) async {
-    var res =
-        await rpcWalletClient.sendRequest(_queryKey, queryKeyParams.toJson());
-    return QueryKeyResult.fromJson(res);
+    try {
+      var res =
+          await rpcWalletClient.sendRequest(_queryKey, queryKeyParams.toJson());
+      return QueryKeyResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('queryKey', error);
+    }
   }
 
   /// Send Dero or smart contract asset to another wallet.
@@ -129,9 +165,13 @@ class WalletRepository {
   /// await walletRepository.transfer(params);
   /// ```
   Future<TransferResult> transfer(TransferParams transferParams) async {
-    var res =
-        await rpcWalletClient.sendRequest(_transfer, transferParams.toJson());
-    return TransferResult.fromJson(res);
+    try {
+      var res =
+          await rpcWalletClient.sendRequest(_transfer, transferParams.toJson());
+      return TransferResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('transfer', error);
+    }
   }
 
   /// Interact with a smart contract.
@@ -147,8 +187,12 @@ class WalletRepository {
   /// await walletRepository.scInvoke(params);
   /// ```
   Future<TransferResult> scInvoke(ScInvokeParams scInvokeParams) async {
-    var res =
-        await rpcWalletClient.sendRequest(_scInvoke, scInvokeParams.toJson());
-    return TransferResult.fromJson(res);
+    try {
+      var res =
+          await rpcWalletClient.sendRequest(_scInvoke, scInvokeParams.toJson());
+      return TransferResult.fromJson(res);
+    } catch (error) {
+      throw WalletRepositoryException('scInvoke', error);
+    }
   }
 }

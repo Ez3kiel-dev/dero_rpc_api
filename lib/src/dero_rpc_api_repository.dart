@@ -47,6 +47,9 @@ import 'package:dero_rpc_api/src/data_transfer_objects/wallet/transfer/transfer_
 import 'package:json_rpc_2/json_rpc_2.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
+import 'exceptions/derod_exception.dart';
+import 'exceptions/wallet_exception.dart';
+
 export 'utils/data_format.dart';
 
 part 'repositories/derod_repository.dart';

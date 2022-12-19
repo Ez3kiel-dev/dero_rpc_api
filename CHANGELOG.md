@@ -1,3 +1,7 @@
+## 0.3.6
+
+- chore: change to BSD 3-Clause License.
+
 ## 0.3.5
 
 - fix: avoid switch-case on state.runtimeType.

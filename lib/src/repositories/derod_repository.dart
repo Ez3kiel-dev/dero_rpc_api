@@ -104,18 +104,8 @@ class DerodRepository {
     try {
       var res = await rpcDerodClient.sendRequest(_ping);
       return res.toString().trim();
-    }
-    /*on RpcException catch (error) {
-      // throw DerodRepositoryException(
-      //     'Ping failed - RPC error ${name(error.code) ?? error.code}\nmessage: ${error.message}');
-      throw DerodRepositoryException('Ping', error);
-    } on StateError catch (error) {
-      // throw DerodRepositoryException(
-      //     'Ping failed - State error\nmessage: ${error.message}');
-      throw DerodRepositoryException('Ping', error);
-    }*/
-    catch (error) {
-      throw DerodRepositoryException('Ping', error);
+    } catch (e) {
+      throw DerodRepositoryException('Ping', e);
     }
   }
 
@@ -124,8 +114,8 @@ class DerodRepository {
     try {
       var res = await rpcDerodClient.sendRequest(_getInfo);
       return GetInfoResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getInfo', error);
+    } catch (e) {
+      throw DerodRepositoryException('getInfo', e);
     }
   }
 
@@ -134,8 +124,8 @@ class DerodRepository {
     try {
       var res = await rpcDerodClient.sendRequest(_getHeight);
       return GetHeightDerodResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getHeight', error);
+    } catch (e) {
+      throw DerodRepositoryException('getHeight', e);
     }
   }
 
@@ -145,8 +135,8 @@ class DerodRepository {
       var res =
           await rpcDerodClient.sendRequest(_getBlock, getBlockParams.toJson());
       return GetBlockResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getBlock', error);
+    } catch (e) {
+      throw DerodRepositoryException('getBlock', e);
     }
   }
 
@@ -155,8 +145,8 @@ class DerodRepository {
     try {
       var res = await rpcDerodClient.sendRequest(_getBlockCount);
       return GetBlockCountResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getBlockCount', error);
+    } catch (e) {
+      throw DerodRepositoryException('getBlockCount', e);
     }
   }
 
@@ -167,8 +157,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _getBlockHeaderByHash, getBlockByHashParams.toJson());
       return GetBlockByResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getBlockByHash', error);
+    } catch (e) {
+      throw DerodRepositoryException('getBlockByHash', e);
     }
   }
 
@@ -179,8 +169,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _getBlockHeaderByTopoHeight, getBlockByTopoHeightParams.toJson());
       return GetBlockByResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getBlockByTopoHeight', error);
+    } catch (e) {
+      throw DerodRepositoryException('getBlockByTopoHeight', e);
     }
   }
 
@@ -189,8 +179,8 @@ class DerodRepository {
     try {
       var res = await rpcDerodClient.sendRequest(_getTxPool);
       return GetTxPoolResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getTxPool', error);
+    } catch (e) {
+      throw DerodRepositoryException('getTxPool', e);
     }
   }
 
@@ -201,8 +191,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _getTransaction, getTransactionParams.toJson());
       return GetTransactionResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getTransaction', error);
+    } catch (e) {
+      throw DerodRepositoryException('getTransaction', e);
     }
   }
 
@@ -211,8 +201,8 @@ class DerodRepository {
     try {
       var res = await rpcDerodClient.sendRequest(_getLastBlockHeader);
       return GetBlockByResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getLastBlockHeader', error);
+    } catch (e) {
+      throw DerodRepositoryException('getLastBlockHeader', e);
     }
   }
 
@@ -221,8 +211,8 @@ class DerodRepository {
     try {
       var res = await rpcDerodClient.sendRequest(_getSC, getSCParams.toJson());
       return GetSCResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getSC', error);
+    } catch (e) {
+      throw DerodRepositoryException('getSC', e);
     }
   }
 
@@ -233,8 +223,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _getGasEstimate, getGasEstimateParams.toJson());
       return GasEstimateResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getGasEstimate', error);
+    } catch (e) {
+      throw DerodRepositoryException('getGasEstimate', e);
     }
   }
 
@@ -245,8 +235,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _nameToAddress, nameToAddressParams.toJson());
       return NameToAddressResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getNameToAddress', error);
+    } catch (e) {
+      throw DerodRepositoryException('getNameToAddress', e);
     }
   }
 
@@ -257,8 +247,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _getRandomAddress, getRandomAddressParams?.toJson());
       return GetRandomAddressResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getRandomAddress', error);
+    } catch (e) {
+      throw DerodRepositoryException('getRandomAddress', e);
     }
   }
 
@@ -269,8 +259,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _sendRawTransaction, sendRawTransactionParams.toJson());
       return SendRawTransactionResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('sendRawTransaction', error);
+    } catch (e) {
+      throw DerodRepositoryException('sendRawTransaction', e);
     }
   }
 
@@ -283,8 +273,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _getBlockTemplate, getBlockTemplateParams.toJson());
       return GetBlockTemplateResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getBlockTemplate', error);
+    } catch (e) {
+      throw DerodRepositoryException('getBlockTemplate', e);
     }
   }
 
@@ -297,8 +287,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _submitBlock, submitBlockParams.toJson());
       return SubmitBlockResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('submitBlock', error);
+    } catch (e) {
+      throw DerodRepositoryException('submitBlock', e);
     }
   }
 
@@ -309,8 +299,8 @@ class DerodRepository {
       var res = await rpcDerodClient.sendRequest(
           _getEncryptedBalance, getEncryptedBalanceParams.toJson());
       return GetEncryptedBalanceResult.fromJson(res);
-    } catch (error) {
-      throw DerodRepositoryException('getEncryptedBalance', error);
+    } catch (e) {
+      throw DerodRepositoryException('getEncryptedBalance', e);
     }
   }
 }

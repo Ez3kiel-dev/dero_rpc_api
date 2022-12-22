@@ -1,3 +1,7 @@
+## 0.4.6
+
+- feat: add utility function `stringToHex`.
+
 ## 0.3.6
 
 - chore: change to BSD 3-Clause License.

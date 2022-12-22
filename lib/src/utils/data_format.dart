@@ -8,7 +8,7 @@ import 'package:convert/convert.dart';
 // scid : 32 bytes size required
 typedef Hash = Uint8List;
 
-// var zeroHash = Hash(32);
+var zeroHash = Hash(32);
 
 /// Convert hexadecimal byte string to bytes array.
 Uint8List hexToBytes(String hexByteString) {
@@ -26,4 +26,10 @@ String bytesToHex(Uint8List bytes) {
 String hexToRawValue(String hexByteString) {
   var bytes = hexToBytes(hexByteString);
   return utf8.decode(bytes);
+}
+
+/// Converts a character string into a hexadecimal string.
+String stringToHex(String input) {
+  var bytes = utf8.encode(input);
+  return bytesToHex(Uint8List.fromList(bytes));
 }

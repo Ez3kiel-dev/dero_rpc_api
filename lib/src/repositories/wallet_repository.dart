@@ -52,8 +52,8 @@ class WalletRepository {
     try {
       var res = await rpcWalletClient.sendRequest(_ping);
       return res.toString().trim();
-    } catch (error) {
-      throw WalletRepositoryException('Ping', error);
+    } catch (e) {
+      throw WalletRepositoryException('Ping', e);
     }
   }
 
@@ -62,8 +62,8 @@ class WalletRepository {
     try {
       var res = await rpcWalletClient.sendRequest(_getAddress);
       return GetAddressResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('getAddress', error);
+    } catch (e) {
+      throw WalletRepositoryException('getAddress', e);
     }
   }
 
@@ -76,8 +76,8 @@ class WalletRepository {
       var res = await rpcWalletClient.sendRequest(
           _getBalance, getBalanceParams?.toJson());
       return GetBalanceResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('getBalance', error);
+    } catch (e) {
+      throw WalletRepositoryException('getBalance', e);
     }
   }
 
@@ -86,8 +86,8 @@ class WalletRepository {
     try {
       var res = await rpcWalletClient.sendRequest(_getHeight);
       return GetHeightWalletResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('getHeight', error);
+    } catch (e) {
+      throw WalletRepositoryException('getHeight', e);
     }
   }
 
@@ -98,8 +98,8 @@ class WalletRepository {
       var res = await rpcWalletClient.sendRequest(
           _getTransferByTXID, getTransferByTXIDParams.toJson());
       return GetTransferByTxidResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('getTransferByTXID', error);
+    } catch (e) {
+      throw WalletRepositoryException('getTransferByTXID', e);
     }
   }
 
@@ -112,8 +112,8 @@ class WalletRepository {
       var res = await rpcWalletClient.sendRequest(
           _getTransfers, getTransfersParams.toJson());
       return GetTransfersResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('getTransfers', error);
+    } catch (e) {
+      throw WalletRepositoryException('getTransfers', e);
     }
   }
 
@@ -124,8 +124,8 @@ class WalletRepository {
       var res = await rpcWalletClient.sendRequest(
           _makeIntegratedAddress, makeIntegratedAddressParams.toJson());
       return MakeIntegratedAddressResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('makeIntegratedAddress', error);
+    } catch (e) {
+      throw WalletRepositoryException('makeIntegratedAddress', e);
     }
   }
 
@@ -136,8 +136,8 @@ class WalletRepository {
       var res = await rpcWalletClient.sendRequest(
           _splitIntegratedAddress, splitIntegratedAddressParams.toJson());
       return SplitIntegratedAddressResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('splitIntegratedAddress', error);
+    } catch (e) {
+      throw WalletRepositoryException('splitIntegratedAddress', e);
     }
   }
 
@@ -147,8 +147,8 @@ class WalletRepository {
       var res =
           await rpcWalletClient.sendRequest(_queryKey, queryKeyParams.toJson());
       return QueryKeyResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('queryKey', error);
+    } catch (e) {
+      throw WalletRepositoryException('queryKey', e);
     }
   }
 
@@ -169,8 +169,8 @@ class WalletRepository {
       var res =
           await rpcWalletClient.sendRequest(_transfer, transferParams.toJson());
       return TransferResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('transfer', error);
+    } catch (e) {
+      throw WalletRepositoryException('transfer', e);
     }
   }
 
@@ -191,8 +191,8 @@ class WalletRepository {
       var res =
           await rpcWalletClient.sendRequest(_scInvoke, scInvokeParams.toJson());
       return TransferResult.fromJson(res);
-    } catch (error) {
-      throw WalletRepositoryException('scInvoke', error);
+    } catch (e) {
+      throw WalletRepositoryException('scInvoke', e);
     }
   }
 }

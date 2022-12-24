@@ -10,15 +10,9 @@ part of 'get_sc_result.dart';
 
 _$_GetSCResult _$$_GetSCResultFromJson(Map<String, dynamic> json) =>
     _$_GetSCResult(
-      valuesInt: (json['valuesuint64'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      valuesString: (json['valuesstring'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      valuesBytes: (json['valuesbytes'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+      valuesInt: json['valuesuint64'] as List<dynamic>?,
+      valuesString: json['valuesstring'] as List<dynamic>?,
+      valuesBytes: json['valuesbytes'] as List<dynamic>?,
       variableStringKeys: json['stringkeys'] as Map<String, dynamic>?,
       variableIntKeys: (json['uint64keys'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(int.parse(k), e),

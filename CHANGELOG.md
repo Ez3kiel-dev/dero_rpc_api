@@ -1,3 +1,7 @@
+## 0.4.7
+
+- fix: GetSCResult.
+
 ## 0.4.6
 
 - feat: add utility function `stringToHex`.

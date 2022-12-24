@@ -12,13 +12,13 @@ part 'get_sc_result.g.dart';
 class GetSCResult with _$GetSCResult {
   factory GetSCResult({
     /// @nodoc
-    @JsonKey(name: 'valuesuint64') List<String>? valuesInt,
+    @JsonKey(name: 'valuesuint64') List<dynamic>? valuesInt,
 
     /// @nodoc
-    @JsonKey(name: 'valuesstring') List<String>? valuesString,
+    @JsonKey(name: 'valuesstring') List<dynamic>? valuesString,
 
     /// @nodoc
-    @JsonKey(name: 'valuesbytes') List<String>? valuesBytes,
+    @JsonKey(name: 'valuesbytes') List<dynamic>? valuesBytes,
 
     /// @nodoc
     @JsonKey(name: 'stringkeys') Map<String, dynamic>? variableStringKeys,

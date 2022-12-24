@@ -22,15 +22,15 @@ GetSCResult _$GetSCResultFromJson(Map<String, dynamic> json) {
 mixin _$GetSCResult {
   /// @nodoc
   @JsonKey(name: 'valuesuint64')
-  List<String>? get valuesInt => throw _privateConstructorUsedError;
+  List<dynamic>? get valuesInt => throw _privateConstructorUsedError;
 
   /// @nodoc
   @JsonKey(name: 'valuesstring')
-  List<String>? get valuesString => throw _privateConstructorUsedError;
+  List<dynamic>? get valuesString => throw _privateConstructorUsedError;
 
   /// @nodoc
   @JsonKey(name: 'valuesbytes')
-  List<String>? get valuesBytes => throw _privateConstructorUsedError;
+  List<dynamic>? get valuesBytes => throw _privateConstructorUsedError;
 
   /// @nodoc
   @JsonKey(name: 'stringkeys')
@@ -70,9 +70,9 @@ abstract class $GetSCResultCopyWith<$Res> {
       _$GetSCResultCopyWithImpl<$Res, GetSCResult>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'valuesuint64') List<String>? valuesInt,
-      @JsonKey(name: 'valuesstring') List<String>? valuesString,
-      @JsonKey(name: 'valuesbytes') List<String>? valuesBytes,
+      {@JsonKey(name: 'valuesuint64') List<dynamic>? valuesInt,
+      @JsonKey(name: 'valuesstring') List<dynamic>? valuesString,
+      @JsonKey(name: 'valuesbytes') List<dynamic>? valuesBytes,
       @JsonKey(name: 'stringkeys') Map<String, dynamic>? variableStringKeys,
       @JsonKey(name: 'uint64keys') Map<int, dynamic>? variableIntKeys,
       @JsonKey(name: 'balances') Map<String, int>? balances,
@@ -108,15 +108,15 @@ class _$GetSCResultCopyWithImpl<$Res, $Val extends GetSCResult>
       valuesInt: freezed == valuesInt
           ? _value.valuesInt
           : valuesInt // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<dynamic>?,
       valuesString: freezed == valuesString
           ? _value.valuesString
           : valuesString // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<dynamic>?,
       valuesBytes: freezed == valuesBytes
           ? _value.valuesBytes
           : valuesBytes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<dynamic>?,
       variableStringKeys: freezed == variableStringKeys
           ? _value.variableStringKeys
           : variableStringKeys // ignore: cast_nullable_to_non_nullable
@@ -154,9 +154,9 @@ abstract class _$$_GetSCResultCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'valuesuint64') List<String>? valuesInt,
-      @JsonKey(name: 'valuesstring') List<String>? valuesString,
-      @JsonKey(name: 'valuesbytes') List<String>? valuesBytes,
+      {@JsonKey(name: 'valuesuint64') List<dynamic>? valuesInt,
+      @JsonKey(name: 'valuesstring') List<dynamic>? valuesString,
+      @JsonKey(name: 'valuesbytes') List<dynamic>? valuesBytes,
       @JsonKey(name: 'stringkeys') Map<String, dynamic>? variableStringKeys,
       @JsonKey(name: 'uint64keys') Map<int, dynamic>? variableIntKeys,
       @JsonKey(name: 'balances') Map<String, int>? balances,
@@ -190,15 +190,15 @@ class __$$_GetSCResultCopyWithImpl<$Res>
       valuesInt: freezed == valuesInt
           ? _value._valuesInt
           : valuesInt // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<dynamic>?,
       valuesString: freezed == valuesString
           ? _value._valuesString
           : valuesString // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<dynamic>?,
       valuesBytes: freezed == valuesBytes
           ? _value._valuesBytes
           : valuesBytes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<dynamic>?,
       variableStringKeys: freezed == variableStringKeys
           ? _value._variableStringKeys
           : variableStringKeys // ignore: cast_nullable_to_non_nullable
@@ -232,11 +232,11 @@ class __$$_GetSCResultCopyWithImpl<$Res>
 class _$_GetSCResult implements _GetSCResult {
   _$_GetSCResult(
       {@JsonKey(name: 'valuesuint64')
-          final List<String>? valuesInt,
+          final List<dynamic>? valuesInt,
       @JsonKey(name: 'valuesstring')
-          final List<String>? valuesString,
+          final List<dynamic>? valuesString,
       @JsonKey(name: 'valuesbytes')
-          final List<String>? valuesBytes,
+          final List<dynamic>? valuesBytes,
       @JsonKey(name: 'stringkeys')
           final Map<String, dynamic>? variableStringKeys,
       @JsonKey(name: 'uint64keys')
@@ -260,12 +260,12 @@ class _$_GetSCResult implements _GetSCResult {
       _$$_GetSCResultFromJson(json);
 
   /// @nodoc
-  final List<String>? _valuesInt;
+  final List<dynamic>? _valuesInt;
 
   /// @nodoc
   @override
   @JsonKey(name: 'valuesuint64')
-  List<String>? get valuesInt {
+  List<dynamic>? get valuesInt {
     final value = _valuesInt;
     if (value == null) return null;
     if (_valuesInt is EqualUnmodifiableListView) return _valuesInt;
@@ -274,12 +274,12 @@ class _$_GetSCResult implements _GetSCResult {
   }
 
   /// @nodoc
-  final List<String>? _valuesString;
+  final List<dynamic>? _valuesString;
 
   /// @nodoc
   @override
   @JsonKey(name: 'valuesstring')
-  List<String>? get valuesString {
+  List<dynamic>? get valuesString {
     final value = _valuesString;
     if (value == null) return null;
     if (_valuesString is EqualUnmodifiableListView) return _valuesString;
@@ -288,12 +288,12 @@ class _$_GetSCResult implements _GetSCResult {
   }
 
   /// @nodoc
-  final List<String>? _valuesBytes;
+  final List<dynamic>? _valuesBytes;
 
   /// @nodoc
   @override
   @JsonKey(name: 'valuesbytes')
-  List<String>? get valuesBytes {
+  List<dynamic>? get valuesBytes {
     final value = _valuesBytes;
     if (value == null) return null;
     if (_valuesBytes is EqualUnmodifiableListView) return _valuesBytes;
@@ -416,11 +416,11 @@ class _$_GetSCResult implements _GetSCResult {
 abstract class _GetSCResult implements GetSCResult {
   factory _GetSCResult(
       {@JsonKey(name: 'valuesuint64')
-          final List<String>? valuesInt,
+          final List<dynamic>? valuesInt,
       @JsonKey(name: 'valuesstring')
-          final List<String>? valuesString,
+          final List<dynamic>? valuesString,
       @JsonKey(name: 'valuesbytes')
-          final List<String>? valuesBytes,
+          final List<dynamic>? valuesBytes,
       @JsonKey(name: 'stringkeys')
           final Map<String, dynamic>? variableStringKeys,
       @JsonKey(name: 'uint64keys')
@@ -431,32 +431,35 @@ abstract class _GetSCResult implements GetSCResult {
           final int? balance,
       @JsonKey(name: 'code')
           final String? code,
-      @JsonKey(name: 'status')
-          final String? status}) = _$_GetSCResult;
+      @JsonKey(name: 'status') final String? status}) = _$_GetSCResult;
 
   factory _GetSCResult.fromJson(Map<String, dynamic> json) =
-      _$_GetSCResult.fromJson;
+  _$_GetSCResult.fromJson;
 
   @override
 
   /// @nodoc
   @JsonKey(name: 'valuesuint64')
-  List<String>? get valuesInt;
+  List<dynamic>? get valuesInt;
+
   @override
 
   /// @nodoc
   @JsonKey(name: 'valuesstring')
-  List<String>? get valuesString;
+  List<dynamic>? get valuesString;
+
   @override
 
   /// @nodoc
   @JsonKey(name: 'valuesbytes')
-  List<String>? get valuesBytes;
+  List<dynamic>? get valuesBytes;
+
   @override
 
   /// @nodoc
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys;
+
   @override
 
   /// @nodoc

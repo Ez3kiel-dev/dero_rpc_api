@@ -1,3 +1,7 @@
+## 0.6.7
+
+- feat(builtin_names.dart): Enum with value.
+
 ## 0.5.7
 
 - feat: add Dero built-in argument names.

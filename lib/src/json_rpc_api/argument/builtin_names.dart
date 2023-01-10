@@ -1,52 +1,47 @@
 import 'package:dero_rpc_api/dero_rpc_api.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 /// Smart contract actions.
 ///
 /// See https://github.com/deroproject/derohe/blob/main/rpc/rpc_sc.go.
 enum SmartContractAction {
-  @JsonValue(0)
-  call,
-  @JsonValue(1)
-  install,
+  call(0),
+  install(1);
+
+  const SmartContractAction(this.value);
+
+  final int value;
 }
 
 /// [Argument.name] related to smart contracts.
 ///
 /// See https://github.com/deroproject/derohe/blob/main/rpc/rpc_sc.go.
 enum SmartContractRPC {
-  @JsonValue('SC_ACTION')
-  action,
-  @JsonValue('SC_CODE')
-  code,
-  @JsonValue('SC_SIGNER')
-  signer,
-  @JsonValue('SC_SIGNC')
-  signC,
-  @JsonValue('SC_SIGNS')
-  signS,
-  @JsonValue('SC_ID')
-  scid,
-  @JsonValue('entrypoint')
-  entrypoint,
+  action('SC_ACTION'),
+  code('SC_CODE'),
+  signer('SC_SIGNER'),
+  signC('SC_SIGNC'),
+  signS('SC_SIGNS'),
+  scid('SC_ID'),
+  entrypoint('entrypoint');
+
+  const SmartContractRPC(this.value);
+
+  final String value;
 }
 
 /// [Argument.name] already define in Dero source code.
 ///
 /// See https://github.com/deroproject/derohe/blob/main/rpc/rpc.go#L358.
 enum RPC {
-  @JsonValue('D')
-  destinationPort,
-  @JsonValue('S')
-  sourcePort,
-  @JsonValue('V')
-  valueTransfer,
-  @JsonValue('C')
-  comment,
-  @JsonValue('E')
-  expiry,
-  @JsonValue('R')
-  replyBackAddress,
-  @JsonValue('N')
-  needsReplyBackAddress,
+  destinationPort('D'),
+  sourcePort('S'),
+  valueTransfer('V'),
+  comment('C'),
+  expiry('E'),
+  replyBackAddress('R'),
+  needsReplyBackAddress('N');
+
+  const RPC(this.value);
+
+  final String value;
 }

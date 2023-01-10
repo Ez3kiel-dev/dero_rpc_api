@@ -431,35 +431,32 @@ abstract class _GetSCResult implements GetSCResult {
           final int? balance,
       @JsonKey(name: 'code')
           final String? code,
-      @JsonKey(name: 'status') final String? status}) = _$_GetSCResult;
+      @JsonKey(name: 'status')
+          final String? status}) = _$_GetSCResult;
 
   factory _GetSCResult.fromJson(Map<String, dynamic> json) =
-  _$_GetSCResult.fromJson;
+      _$_GetSCResult.fromJson;
 
   @override
 
   /// @nodoc
   @JsonKey(name: 'valuesuint64')
   List<dynamic>? get valuesInt;
-
   @override
 
   /// @nodoc
   @JsonKey(name: 'valuesstring')
   List<dynamic>? get valuesString;
-
   @override
 
   /// @nodoc
   @JsonKey(name: 'valuesbytes')
   List<dynamic>? get valuesBytes;
-
   @override
 
   /// @nodoc
   @JsonKey(name: 'stringkeys')
   Map<String, dynamic>? get variableStringKeys;
-
   @override
 
   /// @nodoc

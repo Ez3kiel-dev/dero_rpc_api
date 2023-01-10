@@ -1,3 +1,9 @@
+## 0.5.7
+
+- feat: add Dero built-in argument names.
+- fix: strong types in repositories.
+- chore: refactor.
+
 ## 0.4.7
 
 - fix: GetSCResult.

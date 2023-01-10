@@ -2,5 +2,5 @@
 ///
 library dero_rpc_api;
 
-export 'src/dero_rpc_api_dto.dart';
-export 'src/dero_rpc_api_repository.dart';
+export 'src/json_rpc_api.dart';
+export 'src/rpc_repository.dart';

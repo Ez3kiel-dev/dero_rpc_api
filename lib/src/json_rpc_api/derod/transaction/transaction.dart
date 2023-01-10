@@ -2,8 +2,7 @@
 
 import 'dart:typed_data';
 
-import 'package:dero_rpc_api/src/data_transfer_objects/wallet/argument/argument.dart';
-import 'package:dero_rpc_api/src/utils/data_format.dart';
+import 'package:dero_rpc_api/dero_rpc_api.dart';
 import 'package:dero_rpc_api/src/utils/uint8list_json_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

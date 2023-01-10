@@ -1,7 +1,6 @@
 // ignore_for_file: invalid_annotation_target
 
-import 'package:dero_rpc_api/src/data_transfer_objects/derod/miniblock/miniblock.dart';
-import 'package:dero_rpc_api/src/data_transfer_objects/derod/transaction/transaction.dart';
+import 'package:dero_rpc_api/dero_rpc_api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'block.freezed.dart';

@@ -1,3 +1,7 @@
+## 0.7.7
+
+- feat(builtin_names.dart): Drop Enums for abstract classes.
+
 ## 0.6.7
 
 - feat(builtin_names.dart): Enum with value.

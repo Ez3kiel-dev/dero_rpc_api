@@ -2,13 +2,15 @@
 
 ## Features
 
-The complete set of RPC methods offered by derod and wallet with their corresponding data transfer objects.
+The complete set of RPC methods offered by derod and wallet with their corresponding JSON-RPC
+objects defined in Dero API.
 
 See [https://github.com/deroproject/derohe](https://github.com/deroproject/derohe).
 
 ### Dero daemon
 
-**DerodRepository** gives you an event stream for each new block/height, and a RPC client with the following methods :
+**DerodRepository** gives you an event stream for each new block/height, and an RPC client with the
+following methods :
 
 * Ping
 * GetInfo
@@ -31,7 +33,7 @@ See [https://github.com/deroproject/derohe](https://github.com/deroproject/deroh
 
 ### Wallet
 
-**WalletRepository** gives you a RPC client with the following methods :
+**WalletRepository** gives you an RPC client with the following methods :
 
 * Ping
 * GetAddress
@@ -101,20 +103,21 @@ Future<void> main() async {
 
 ## Additional information
 
-This library uses [freezed] package for all the data transfer objects.
-This avoids rewriting the boilerplate code like ``toString``, ``operator ==``, ``hashCode`` or ``copyWith``,
-and makes available de/serialization for all DTOs.
+This library uses [freezed] package for all the JSON-RPC objects. This avoids rewriting the
+boilerplate code like ``toString``, ``operator ==``, ``hashCode`` or ``copyWith``. All objects are
+also de/serializable.
 
-If you need it, after editing any of the DTOs, you should run the code generator :
+If you need it, after editing any of the JSON-RPC objects, you should run the code generator :
 ``dart run build_runner build --delete-conflicting-outputs``
 
 Typical [build_runner]/code-generator setup is required.
 
 ## Donations
 
-If this package was useful to you and you want to support me :
+If this package was useful to you, and you want to support me :
 
-Send any amount to `dero1qy5a6wk2r9mq3e5kagku4kdrhq407qhvht8qke5sxpm9u8lqmph3vqgl3nz8t` or use my named address `Ez3kiel`.
+Send any amount to `dero1qy5a6wk2r9mq3e5kagku4kdrhq407qhvht8qke5sxpm9u8lqmph3vqgl3nz8t` or use my
+named address `Ez3kiel`.
 
 Thx!
 

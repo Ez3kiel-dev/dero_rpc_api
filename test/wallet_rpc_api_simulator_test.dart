@@ -8,7 +8,7 @@ const String walletSimulatorAddr1 = '127.0.0.1:30001';
 
 void main() {
   final WalletRepository walletRepository =
-      WalletRepository(walletSimulatorAddr0);
+      WalletRepository(rpcAddress: walletSimulatorAddr0);
   walletRepository.start();
 
   test('ping wallet', () async {
@@ -94,7 +94,7 @@ void main() {
   });
 
   test('transfer wallet', () async {
-    var tempRepository = WalletRepository(walletSimulatorAddr1);
+    var tempRepository = WalletRepository(rpcAddress: walletSimulatorAddr1);
     tempRepository.start();
 
     var destinationAddress = await tempRepository.getAddress();

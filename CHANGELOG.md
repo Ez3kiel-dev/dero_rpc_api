@@ -1,3 +1,7 @@
+## 0.8.7
+
+- refactor: add getters and named parameters to repositories.
+
 ## 0.7.7
 
 - feat(builtin_names.dart): Drop Enums for abstract classes.

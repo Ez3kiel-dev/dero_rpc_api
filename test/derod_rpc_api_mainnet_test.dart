@@ -23,7 +23,8 @@ const String scidOfficialNameService =
 const String derodMainnetAddr = '127.0.0.1:10102';
 
 Future<void> main() async {
-  final DerodRepository derodRepository = DerodRepository(derodMainnetAddr);
+  final DerodRepository derodRepository =
+      DerodRepository(rpcAddress: derodMainnetAddr);
   derodRepository.start();
 
   GetBlockResult blockResult;

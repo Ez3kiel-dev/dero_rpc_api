@@ -23,7 +23,8 @@ const String scidOfficialNameService =
 const String derodSimulatorAddr = '127.0.0.1:20000';
 
 Future<void> main() async {
-  final DerodRepository derodRepository = DerodRepository(derodSimulatorAddr);
+  final DerodRepository derodRepository =
+      DerodRepository(rpcAddress: derodSimulatorAddr);
   derodRepository.start();
 
   /*test('newHeight Derod', () {

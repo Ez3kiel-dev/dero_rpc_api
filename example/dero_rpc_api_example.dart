@@ -14,7 +14,8 @@ Future<void> main() async {
   // DEROD REPOSITORY
   //----------------------------------------------------------------------------
 
-  final DerodRepository derodRepository = DerodRepository(derodSimulatorAddr);
+  final DerodRepository derodRepository =
+      DerodRepository(rpcAddress: derodSimulatorAddr);
 
   derodRepository.start();
 
@@ -29,8 +30,8 @@ Future<void> main() async {
     var getSCParams = GetSCParams(scid: scidOfficialNameService);
     var getScResult = await derodRepository.getSC(getSCParams);
     print(getScResult.variableStringKeys);
-  } catch (err) {
-    print(err);
+  } catch (e) {
+    print(e);
   }
   // await derodRepository.close();
 
@@ -39,7 +40,7 @@ Future<void> main() async {
   //----------------------------------------------------------------------------
 
   final WalletRepository walletRepository =
-      WalletRepository(walletSimulatorAddr);
+      WalletRepository(rpcAddress: walletSimulatorAddr);
 
   walletRepository.start();
 
@@ -71,8 +72,8 @@ Future<void> main() async {
 
     // Print the txid.
     print(transferResult.txid);
-  } catch (err) {
-    print(err);
+  } catch (e) {
+    print(e);
   }
 
   await walletRepository.close();

@@ -1,3 +1,7 @@
+## 0.8.8
+
+- fix: disable pubspec.yaml 'funding' due to pubScore bug.
+
 ## 0.8.7
 
 - refactor: add getters and named parameters to repositories.

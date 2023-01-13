@@ -14,8 +14,7 @@ Future<void> main() async {
   // DEROD REPOSITORY
   //----------------------------------------------------------------------------
 
-  final DerodRepository derodRepository =
-      DerodRepository(rpcAddress: derodSimulatorAddr);
+  var derodRepository = DerodRepository(rpcAddress: derodSimulatorAddr);
 
   derodRepository.start();
 
@@ -39,8 +38,7 @@ Future<void> main() async {
   // WALLET REPOSITORY
   //----------------------------------------------------------------------------
 
-  final WalletRepository walletRepository =
-      WalletRepository(rpcAddress: walletSimulatorAddr);
+  var walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr);
 
   walletRepository.start();
 

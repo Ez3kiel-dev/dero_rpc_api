@@ -59,8 +59,7 @@ import 'package:dero_rpc_api/dero_rpc_api.dart';
 const String derodMainnetAddr = '127.0.0.1:10102';
 
 Future<void> main() async {
-  final DerodRepository derodRepository =
-  DerodRepository(rpcAddress: derodSimulatorAddr);
+  var derodRepository = DerodRepository(rpcAddress: derodSimulatorAddr);
 
   derodRepository.start();
 
@@ -86,8 +85,7 @@ import 'package:dero_rpc_api/dero_rpc_api.dart';
 const String walletMainnetAddr = '127.0.0.1:10103';
 
 Future<void> main() async {
-  final WalletRepository walletRepository =
-  WalletRepository(rpcAddress: walletSimulatorAddr);
+  var walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr);
 
   walletRepository.start();
 

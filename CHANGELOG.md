@@ -1,3 +1,7 @@
+## 0.8.10
+
+- docs: README, example etc.
+
 ## 0.8.9
 
 - refactor: follow Effective Dart's Style Guide.

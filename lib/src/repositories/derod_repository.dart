@@ -6,7 +6,7 @@ part of 'package:dero_rpc_api/src/rpc_repository.dart';
 /// And before calling the available RPC methods, you also need to start the client :
 ///
 /// ```dart
-///final DerodRepository derodRepository = DerodRepository(rpcAddress: '127.0.0.1:10102');
+///var derodRepository = DerodRepository(rpcAddress: '127.0.0.1:10102');
 ///
 ///derodRepository.start();
 /// ```

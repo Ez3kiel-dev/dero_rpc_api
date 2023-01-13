@@ -13,7 +13,8 @@ part of 'package:dero_rpc_api/src/rpc_repository.dart';
 ///
 class DerodRepository extends ClientRepository {
   /// Websocket [Stream] from derod.
-  final Stream _derodEventStream;
+  /// Listen to this stream to receive an event for each new block/height.
+  final Stream eventStream;
 
   static const String _ping = 'DERO.Ping';
   static const String _getInfo = 'DERO.GetInfo';
@@ -36,28 +37,24 @@ class DerodRepository extends ClientRepository {
   static const String _getEncryptedBalance = 'DERO.GetEncryptedBalance';
 
   DerodRepository({required String rpcAddress})
-      : _derodEventStream = _setUpStream(rpcAddress),
+      : eventStream = _setUpStream(rpcAddress),
         super(rpcAddress);
 
   /// Used to set up the websocket stream.
   static Stream _setUpStream(String rpcAddress) =>
       WebSocketChannel.connect(Uri.parse('ws://$rpcAddress/ws')).stream;
 
-  /// Websocket [Stream] from derod.
-  /// Listen to this stream to receive an event for each new block/height.
-  Stream get eventStream => _derodEventStream;
-
-  /// Decode new height event when listening [_derodEventStream].
+  /// Decode new height event when listening [eventStream].
   bool _isNewHeight(String event) {
     return jsonDecode(event)['method'] == 'Height';
   }
 
-  /// Decode new block event when listening [_derodEventStream].
+  /// Decode new block event when listening [eventStream].
   bool _isNewBlock(String event) {
     return jsonDecode(event)['method'] == 'Block';
   }
 
-  /// Wrapper around [_derodEventStream] listener.
+  /// Wrapper around [eventStream] listener.
   ///
   /// Which offer two handlers based on event type.
   ///
@@ -69,7 +66,7 @@ class DerodRepository extends ClientRepository {
     void Function()? onDone,
     bool? cancelOnError,
   }) {
-    return _derodEventStream.listen((event) {
+    return eventStream.listen((event) {
       if (_isNewBlock(event)) {
         onNewBlockEvent?.call();
       }
@@ -92,7 +89,7 @@ class DerodRepository extends ClientRepository {
   /// Returns various information about the daemon and the network.
   Future<GetInfoResult> getInfo() async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(_getInfo);
+      var res = await rpcClient.sendRequest(_getInfo);
       return GetInfoResult.fromJson(res);
     } catch (e) {
       throw DerodRepositoryException('getInfo', e);
@@ -102,7 +99,7 @@ class DerodRepository extends ClientRepository {
   /// Returns the currently synchronized height of the chain.
   Future<GetHeightDerodResult> getHeight() async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(_getHeight);
+      var res = await rpcClient.sendRequest(_getHeight);
       return GetHeightDerodResult.fromJson(res);
     } catch (e) {
       throw DerodRepositoryException('getHeight', e);
@@ -112,8 +109,7 @@ class DerodRepository extends ClientRepository {
   /// Returns a block from its given hash or height.
   Future<GetBlockResult> getBlock(GetBlockParams getBlockParams) async {
     try {
-      Map<String, dynamic> res =
-          await rpcClient.sendRequest(_getBlock, getBlockParams.toJson());
+      var res = await rpcClient.sendRequest(_getBlock, getBlockParams.toJson());
       return GetBlockResult.fromJson(res);
     } catch (e) {
       throw DerodRepositoryException('getBlock', e);
@@ -123,7 +119,7 @@ class DerodRepository extends ClientRepository {
   /// Returns the block count.
   Future<GetBlockCountResult> getBlockCount() async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(_getBlockCount);
+      var res = await rpcClient.sendRequest(_getBlockCount);
       return GetBlockCountResult.fromJson(res);
     } catch (e) {
       throw DerodRepositoryException('getBlockCount', e);
@@ -134,7 +130,7 @@ class DerodRepository extends ClientRepository {
   Future<GetBlockByResult> getBlockByHash(
       GetBlockByHashParams getBlockByHashParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getBlockHeaderByHash, getBlockByHashParams.toJson());
       return GetBlockByResult.fromJson(res);
     } catch (e) {
@@ -146,7 +142,7 @@ class DerodRepository extends ClientRepository {
   Future<GetBlockByResult> getBlockByTopoHeight(
       GetBlockByTopoHeightParams getBlockByTopoHeightParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getBlockHeaderByTopoHeight, getBlockByTopoHeightParams.toJson());
       return GetBlockByResult.fromJson(res);
     } catch (e) {
@@ -157,7 +153,7 @@ class DerodRepository extends ClientRepository {
   /// Returns a list of all pending txHashes in the mempool.
   Future<GetTxPoolResult> getTxPool() async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(_getTxPool);
+      var res = await rpcClient.sendRequest(_getTxPool);
       return GetTxPoolResult.fromJson(res);
     } catch (e) {
       throw DerodRepositoryException('getTxPool', e);
@@ -168,7 +164,7 @@ class DerodRepository extends ClientRepository {
   Future<GetTransactionResult> getTransaction(
       GetTransactionParams getTransactionParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getTransaction, getTransactionParams.toJson());
       return GetTransactionResult.fromJson(res);
     } catch (e) {
@@ -179,8 +175,7 @@ class DerodRepository extends ClientRepository {
   /// Returns the latest [BlockHeader] of the currently synced height.
   Future<GetBlockByResult> getLastBlockHeader() async {
     try {
-      Map<String, dynamic> res =
-          await rpcClient.sendRequest(_getLastBlockHeader);
+      var res = await rpcClient.sendRequest(_getLastBlockHeader);
       return GetBlockByResult.fromJson(res);
     } catch (e) {
       throw DerodRepositoryException('getLastBlockHeader', e);
@@ -190,8 +185,7 @@ class DerodRepository extends ClientRepository {
   /// Returns the smart contract information for a given scid.
   Future<GetSCResult> getSC(GetSCParams getSCParams) async {
     try {
-      Map<String, dynamic> res =
-          await rpcClient.sendRequest(_getSC, getSCParams.toJson());
+      var res = await rpcClient.sendRequest(_getSC, getSCParams.toJson());
       return GetSCResult.fromJson(res);
     } catch (e) {
       throw DerodRepositoryException('getSC', e);
@@ -202,7 +196,7 @@ class DerodRepository extends ClientRepository {
   Future<GasEstimateResult> getGasEstimate(
       TransferParams getGasEstimateParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getGasEstimate, getGasEstimateParams.toJson());
       return GasEstimateResult.fromJson(res);
     } catch (e) {
@@ -214,7 +208,7 @@ class DerodRepository extends ClientRepository {
   Future<NameToAddressResult> getNameToAddress(
       NameToAddressParams nameToAddressParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _nameToAddress, nameToAddressParams.toJson());
       return NameToAddressResult.fromJson(res);
     } catch (e) {
@@ -226,7 +220,7 @@ class DerodRepository extends ClientRepository {
   Future<GetRandomAddressResult> getRandomAddress(
       {GetRandomAddressParams? getRandomAddressParams}) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getRandomAddress, getRandomAddressParams?.toJson());
       return GetRandomAddressResult.fromJson(res);
     } catch (e) {
@@ -238,7 +232,7 @@ class DerodRepository extends ClientRepository {
   Future<SendRawTransactionResult> sendRawTransaction(
       SendRawTransactionParams sendRawTransactionParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _sendRawTransaction, sendRawTransactionParams.toJson());
       return SendRawTransactionResult.fromJson(res);
     } catch (e) {
@@ -252,7 +246,7 @@ class DerodRepository extends ClientRepository {
   Future<GetBlockTemplateResult> getBlockTemplate(
       GetBlockTemplateParams getBlockTemplateParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getBlockTemplate, getBlockTemplateParams.toJson());
       return GetBlockTemplateResult.fromJson(res);
     } catch (e) {
@@ -266,7 +260,7 @@ class DerodRepository extends ClientRepository {
   Future<SubmitBlockResult> submitBlock(
       SubmitBlockParams submitBlockParams) async {
     try {
-      Map<String, dynamic> res =
+      var res =
           await rpcClient.sendRequest(_submitBlock, submitBlockParams.toJson());
       return SubmitBlockResult.fromJson(res);
     } catch (e) {
@@ -278,7 +272,7 @@ class DerodRepository extends ClientRepository {
   Future<GetEncryptedBalanceResult> getEncryptedBalance(
       GetEncryptedBalanceParams getEncryptedBalanceParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getEncryptedBalance, getEncryptedBalanceParams.toJson());
       return GetEncryptedBalanceResult.fromJson(res);
     } catch (e) {

@@ -1,3 +1,7 @@
+## 0.8.9
+
+- refactor: follow Effective Dart's Style Guide.
+
 ## 0.8.8
 
 - fix: disable pubspec.yaml 'funding' due to pubScore bug.

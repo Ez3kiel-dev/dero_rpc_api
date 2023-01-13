@@ -39,7 +39,7 @@ class WalletRepository extends ClientRepository {
   /// Returns the dero address of the currently connected wallet.
   Future<GetAddressResult> getAddress() async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(_getAddress);
+      var res = await rpcClient.sendRequest(_getAddress);
       return GetAddressResult.fromJson(res);
     } catch (e) {
       throw WalletRepositoryException('getAddress', e);
@@ -52,7 +52,7 @@ class WalletRepository extends ClientRepository {
   Future<GetBalanceResult> getBalance(
       {GetBalanceParams? getBalanceParams}) async {
     try {
-      Map<String, dynamic> res =
+      var res =
           await rpcClient.sendRequest(_getBalance, getBalanceParams?.toJson());
       return GetBalanceResult.fromJson(res);
     } catch (e) {
@@ -63,7 +63,7 @@ class WalletRepository extends ClientRepository {
   /// Returns the currently synchronized height of the wallet.
   Future<GetHeightWalletResult> getHeight() async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(_getHeight);
+      var res = await rpcClient.sendRequest(_getHeight);
       return GetHeightWalletResult.fromJson(res);
     } catch (e) {
       throw WalletRepositoryException('getHeight', e);
@@ -74,7 +74,7 @@ class WalletRepository extends ClientRepository {
   Future<GetTransferByTxidResult> getTransferByTXID(
       GetTransferByTxidParams getTransferByTXIDParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getTransferByTXID, getTransferByTXIDParams.toJson());
       return GetTransferByTxidResult.fromJson(res);
     } catch (e) {
@@ -88,7 +88,7 @@ class WalletRepository extends ClientRepository {
   Future<GetTransfersResult> getTransfers(
       GetTransfersParams getTransfersParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _getTransfers, getTransfersParams.toJson());
       return GetTransfersResult.fromJson(res);
     } catch (e) {
@@ -100,7 +100,7 @@ class WalletRepository extends ClientRepository {
   Future<MakeIntegratedAddressResult> makeIntegratedAddress(
       MakeIntegratedAddressParams makeIntegratedAddressParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _makeIntegratedAddress, makeIntegratedAddressParams.toJson());
       return MakeIntegratedAddressResult.fromJson(res);
     } catch (e) {
@@ -112,7 +112,7 @@ class WalletRepository extends ClientRepository {
   Future<SplitIntegratedAddressResult> splitIntegratedAddress(
       SplitIntegratedAddressParams splitIntegratedAddressParams) async {
     try {
-      Map<String, dynamic> res = await rpcClient.sendRequest(
+      var res = await rpcClient.sendRequest(
           _splitIntegratedAddress, splitIntegratedAddressParams.toJson());
       return SplitIntegratedAddressResult.fromJson(res);
     } catch (e) {
@@ -123,8 +123,7 @@ class WalletRepository extends ClientRepository {
   /// Returns seed.
   Future<QueryKeyResult> queryKey(QueryKeyParams queryKeyParams) async {
     try {
-      Map<String, dynamic> res =
-          await rpcClient.sendRequest(_queryKey, queryKeyParams.toJson());
+      var res = await rpcClient.sendRequest(_queryKey, queryKeyParams.toJson());
       return QueryKeyResult.fromJson(res);
     } catch (e) {
       throw WalletRepositoryException('queryKey', e);
@@ -145,8 +144,7 @@ class WalletRepository extends ClientRepository {
   /// ```
   Future<TransferResult> transfer(TransferParams transferParams) async {
     try {
-      Map<String, dynamic> res =
-          await rpcClient.sendRequest(_transfer, transferParams.toJson());
+      var res = await rpcClient.sendRequest(_transfer, transferParams.toJson());
       return TransferResult.fromJson(res);
     } catch (e) {
       throw WalletRepositoryException('transfer', e);
@@ -167,8 +165,7 @@ class WalletRepository extends ClientRepository {
   /// ```
   Future<TransferResult> scInvoke(ScInvokeParams scInvokeParams) async {
     try {
-      Map<String, dynamic> res =
-          await rpcClient.sendRequest(_scInvoke, scInvokeParams.toJson());
+      var res = await rpcClient.sendRequest(_scInvoke, scInvokeParams.toJson());
       return TransferResult.fromJson(res);
     } catch (e) {
       throw WalletRepositoryException('scInvoke', e);

@@ -60,18 +60,18 @@ class DerodRepository extends ClientRepository {
   ///
   /// It's possible to subscribe a callback for new height and/or new block events.
   StreamSubscription listenDerodEvent({
-    void Function()? onNewBlockEvent,
-    void Function()? onNewHeightEvent,
+    void Function()? onNewBlock,
+    void Function()? onNewHeight,
     Function? onError,
     void Function()? onDone,
     bool? cancelOnError,
   }) {
     return eventStream.listen((event) {
       if (_isNewBlock(event)) {
-        onNewBlockEvent?.call();
+        onNewBlock?.call();
       }
       if (_isNewHeight(event)) {
-        onNewHeightEvent?.call();
+        onNewHeight?.call();
       }
     }, onError: onError, onDone: onDone, cancelOnError: cancelOnError);
   }

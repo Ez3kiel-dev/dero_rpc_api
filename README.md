@@ -101,25 +101,27 @@ Future<void> main() async {
 }
 ```
 
+Other examples are available in the `Example` folder.
+
 ## Additional information
 
 This library uses [freezed] package for all the JSON-RPC objects. This avoids rewriting the
-boilerplate code like ``toString``, ``operator ==``, ``hashCode`` or ``copyWith``. All objects are
+boilerplate code like `toString`, `operator ==`, `hashCode` or `copyWith`. All objects are
 also de/serializable.
 
 If you need it, after editing any of the JSON-RPC objects, you should run the code generator :
-``dart run build_runner build --delete-conflicting-outputs``
+`dart run build_runner build --delete-conflicting-outputs`
 
 Typical [build_runner]/code-generator setup is required.
 
 ## Donations
 
-If this package was useful to you, and you want to support me :
+If you found this package useful :)
 
 Send any amount to `dero1qy5a6wk2r9mq3e5kagku4kdrhq407qhvht8qke5sxpm9u8lqmph3vqgl3nz8t` or use my
 named address `Ez3kiel`.
 
-Thx!
+Thanks!
 
 [Dero]: https://dero.io/
 [build_runner]: https://pub.dev/packages/build_runner

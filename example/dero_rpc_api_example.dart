@@ -20,7 +20,7 @@ Future<void> main() async {
 
   try {
     // Print Dero network information at each new height.
-    derodRepository.listenDerodEvent(onNewHeightEvent: () async {
+    derodRepository.listenDerodEvent(onNewHeight: () async {
       var info = await derodRepository.getInfo();
       print(info);
     });
@@ -46,7 +46,7 @@ Future<void> main() async {
     // Create a integrated address with a payment ID and print it.
     var integratedAddressParams = MakeIntegratedAddressParams(payloadRPC: [
       Argument(
-          name: 'integratedData',
+          name: 'identifier',
           datatype: DataType.dataString,
           value: 'my_payment_identifier')
     ]);
@@ -61,7 +61,7 @@ Future<void> main() async {
     var transferParams = TransferParams(transfers: [
       Transfer(destination: 'Ez3kiel', amount: 100000, payloadRPC: [
         Argument(
-            name: 'C',
+            name: RPC.comment,
             datatype: DataType.dataString,
             value: 'my secret message ...')
       ])

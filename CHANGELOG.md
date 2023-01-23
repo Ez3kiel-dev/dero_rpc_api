@@ -1,3 +1,8 @@
+## 0.8.11
+
+- fix: Name redundancy in DerodRepository.
+- docs: README, example etc.
+
 ## 0.8.10
 
 - docs: README, example etc.

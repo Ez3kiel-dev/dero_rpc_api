@@ -1,3 +1,7 @@
+## 0.9.11
+
+- feat: Wallet authentication support.
+
 ## 0.8.11
 
 - fix: Name redundancy in DerodRepository.

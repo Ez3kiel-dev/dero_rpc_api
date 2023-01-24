@@ -86,6 +86,8 @@ const String walletMainnetAddr = '127.0.0.1:10103';
 
 Future<void> main() async {
   var walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr);
+  // Or, if the Wallet RPC server is configured for authentication with `--rpc-login` :
+  // var walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr, user: 'Ez3kiel' password: 'test');
 
   walletRepository.start();
 
@@ -101,7 +103,7 @@ Future<void> main() async {
 }
 ```
 
-Other examples are available in the `Example` folder.
+Other examples are available in the `example` folder.
 
 ## Additional information
 

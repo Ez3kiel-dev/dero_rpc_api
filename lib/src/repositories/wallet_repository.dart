@@ -11,6 +11,13 @@ part of 'package:dero_rpc_api/src/rpc_repository.dart';
 ///walletRepository.start();
 /// ```
 ///
+/// If the Wallet RPC server is configured for authentication with `--rpc-login` :
+///
+/// ```dart
+///var walletRepository = WalletRepository(rpcAddress: '127.0.0.1:10103', user: 'my_name', password: 'my_pwrd');
+///
+///walletRepository.start();
+/// ```
 class WalletRepository extends ClientRepository {
   static const String _ping = 'DERO.Ping';
   static const String _getAddress = 'WALLET.GetAddress';
@@ -24,7 +31,17 @@ class WalletRepository extends ClientRepository {
   static const String _transfer = 'WALLET.Transfer';
   static const String _scInvoke = 'WALLET.scinvoke';
 
-  WalletRepository({required String rpcAddress}) : super(rpcAddress);
+  WalletRepository({required String rpcAddress, String? user, String? password})
+      : super(_setUpUri(rpcAddress, user, password));
+
+  // Used to set up the Uri object.
+  static Uri _setUpUri(String rpcAddress, [String? user, String? password]) {
+    var credentials = '';
+    if (user != null && password != null) {
+      credentials = '$user:$password@';
+    }
+    return Uri.parse('ws://$credentials$rpcAddress/ws');
+  }
 
   /// The traditional [ping] method sends a 'Ping' and receives a 'Pong' if the connection is OK.
   Future<String> ping() async {

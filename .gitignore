@@ -18,4 +18,5 @@ pubspec.lock
 # Misc
 coverage/html/
 doc/
+playground/
 TODO.txt

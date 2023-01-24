@@ -11,9 +11,9 @@ class WalletRepositoryException implements Exception {
   @override
   String toString() {
     if (error is RpcException) {
-      return 'WalletRepositoryException - $method method failed: RPC error ${name(error.code) ?? error.code}\nmessage: ${error.message}\ndata: ${error.data ?? '/'}';
+      return 'WalletRepository Exception - $method method failed: RPC error ${name(error.code) ?? error.code}\ninfo: ${error.message}\ndata: ${error.data ?? '/'}';
     } else if (error is StateError) {
-      return 'WalletRepositoryException - $method method failed: State error\nmessage: ${error.message}';
+      return 'WalletRepository Error - $method method failed: State error\ninfo: ${error.message}';
     } else {
       return 'WalletRepositoryException - $method method failed: Unknown error\ninfo: ${error.toString()}';
     }

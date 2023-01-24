@@ -38,11 +38,14 @@ class DerodRepository extends ClientRepository {
 
   DerodRepository({required String rpcAddress})
       : eventStream = _setUpStream(rpcAddress),
-        super(rpcAddress);
+        super(_setUpUri(rpcAddress));
 
-  /// Used to set up the websocket stream.
+  // Used to set up the Uri object.
+  static Uri _setUpUri(String rpcAddress) => Uri.parse('ws://$rpcAddress/ws');
+
+  // Used to set up the websocket stream.
   static Stream _setUpStream(String rpcAddress) =>
-      WebSocketChannel.connect(Uri.parse('ws://$rpcAddress/ws')).stream;
+      WebSocketChannel.connect(_setUpUri(rpcAddress)).stream;
 
   /// Decode new height event when listening [eventStream].
   bool _isNewHeight(String event) {

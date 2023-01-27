@@ -1,3 +1,7 @@
+## 0.10.12
+
+- fix: validateArguments method (Arguments Extension).
+
 ## 0.10.11
 
 - feat: Extension (utility methods) on Arguments typedef.

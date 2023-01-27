@@ -59,13 +59,13 @@ extension ArgumentsUtilityMethods on Arguments {
         case DataType.dataInt64:
           if (argument.value is! int) {
             throw Exception('"${argument.name}" should be of type int');
-          } else if (argument.value is int && argument.value < 0) {
-            throw Exception('"${argument.name}" should be greater than 0');
           }
           break;
         case DataType.dataUint64:
           if (argument.value is! int) {
             throw Exception('"${argument.name}" should be of type int');
+          } else if (argument.value is int && argument.value < 0) {
+            throw Exception('"${argument.name}" should be greater than 0');
           }
           break;
         case DataType.dataFloat64:

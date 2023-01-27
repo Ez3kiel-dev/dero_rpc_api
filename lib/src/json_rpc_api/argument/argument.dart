@@ -7,9 +7,6 @@ part 'argument.freezed.dart';
 
 part 'argument.g.dart';
 
-/// List of [Argument].
-typedef Arguments = List<Argument>;
-
 /// Argument for the RPC payload.
 @freezed
 class Argument with _$Argument {

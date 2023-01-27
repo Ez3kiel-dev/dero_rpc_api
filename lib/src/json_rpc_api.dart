@@ -30,6 +30,7 @@ export 'json_rpc_api/derod/submit_block/submit_block_result.dart';
 export 'json_rpc_api/derod/transaction/transaction.dart';
 export 'json_rpc_api/derod/tx_related_info/tx_related_info.dart';
 export 'json_rpc_api/argument/argument.dart';
+export 'json_rpc_api/argument/arguments.dart';
 export 'json_rpc_api/argument/data_types.dart';
 export 'json_rpc_api/argument/builtin_names.dart';
 export 'json_rpc_api/wallet/entry/wallet_entry.dart';

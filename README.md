@@ -47,9 +47,15 @@ following methods :
 * Transfer
 * scinvoke
 
+### RPC payload Arguments
+
+* enum `DataType` supported by Dero RPC payload
+* builtin `Argument` names
+* `Arguments` typedef with utility methods Extension
+
 ## Usage
 
-The way to query derod RPC server, here with the GetInfo method. 
+The way to query derod RPC server, here with the GetInfo method.
 
 ```dart
 import 'dart:io';

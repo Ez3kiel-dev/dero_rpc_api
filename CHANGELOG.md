@@ -1,3 +1,7 @@
+## 0.10.11
+
+- feat: Extension (utility methods) on Arguments typedef.
+
 ## 0.9.11
 
 - feat: Wallet authentication support.

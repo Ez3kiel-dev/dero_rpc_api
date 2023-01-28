@@ -1,6 +1,6 @@
 name: dero_rpc_api
 description: Dero RPC API (derod and wallet) to interact with Dero network.
-version: 0.10.12
+version: 0.10.13
 
 repository: https://github.com/Ez3kiel-dev/dero_rpc_api
 

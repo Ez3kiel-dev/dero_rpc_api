@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:dero_rpc_api/dero_rpc_api.dart';
+import 'package:dero_rpc_api/src/utils/argument_json_converter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'argument.freezed.dart';
@@ -18,7 +19,7 @@ class Argument with _$Argument {
     @JsonKey(name: 'datatype') required DataType datatype,
 
     /// @nodoc
-    @JsonKey(name: 'value') required dynamic value,
+    @JsonKey(name: 'value') @ArgumentValueConverter() required dynamic value,
   }) = _Argument;
 
   factory Argument.fromJson(Map<String, dynamic> json) =>

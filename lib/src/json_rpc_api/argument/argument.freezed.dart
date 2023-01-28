@@ -30,6 +30,7 @@ mixin _$Argument {
 
   /// @nodoc
   @JsonKey(name: 'value')
+  @ArgumentValueConverter()
   dynamic get value => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,11 +43,12 @@ mixin _$Argument {
 abstract class $ArgumentCopyWith<$Res> {
   factory $ArgumentCopyWith(Argument value, $Res Function(Argument) then) =
       _$ArgumentCopyWithImpl<$Res, Argument>;
+
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
       @JsonKey(name: 'datatype') DataType datatype,
-      @JsonKey(name: 'value') dynamic value});
+      @JsonKey(name: 'value') @ArgumentValueConverter() dynamic value});
 }
 
 /// @nodoc
@@ -88,12 +90,13 @@ abstract class _$$_ArgumentCopyWith<$Res> implements $ArgumentCopyWith<$Res> {
   factory _$$_ArgumentCopyWith(
           _$_Argument value, $Res Function(_$_Argument) then) =
       __$$_ArgumentCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
       @JsonKey(name: 'datatype') DataType datatype,
-      @JsonKey(name: 'value') dynamic value});
+      @JsonKey(name: 'value') @ArgumentValueConverter() dynamic value});
 }
 
 /// @nodoc
@@ -134,7 +137,7 @@ class _$_Argument implements _Argument {
   _$_Argument(
       {@JsonKey(name: 'name') required this.name,
       @JsonKey(name: 'datatype') required this.datatype,
-      @JsonKey(name: 'value') required this.value});
+      @JsonKey(name: 'value') @ArgumentValueConverter() required this.value});
 
   factory _$_Argument.fromJson(Map<String, dynamic> json) =>
       _$$_ArgumentFromJson(json);
@@ -152,6 +155,7 @@ class _$_Argument implements _Argument {
   /// @nodoc
   @override
   @JsonKey(name: 'value')
+  @ArgumentValueConverter()
   final dynamic value;
 
   @override
@@ -191,9 +195,13 @@ class _$_Argument implements _Argument {
 
 abstract class _Argument implements Argument {
   factory _Argument(
-      {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'datatype') required final DataType datatype,
-      @JsonKey(name: 'value') required final dynamic value}) = _$_Argument;
+      {@JsonKey(name: 'name')
+          required final String name,
+      @JsonKey(name: 'datatype')
+          required final DataType datatype,
+      @JsonKey(name: 'value')
+      @ArgumentValueConverter()
+          required final dynamic value}) = _$_Argument;
 
   factory _Argument.fromJson(Map<String, dynamic> json) = _$_Argument.fromJson;
 
@@ -211,6 +219,7 @@ abstract class _Argument implements Argument {
 
   /// @nodoc
   @JsonKey(name: 'value')
+  @ArgumentValueConverter()
   dynamic get value;
   @override
   @JsonKey(ignore: true)

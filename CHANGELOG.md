@@ -1,3 +1,7 @@
+## 0.10.13
+
+- fix: JSON converter for Argument.value.
+
 ## 0.10.12
 
 - fix: validateArguments method (Arguments Extension).

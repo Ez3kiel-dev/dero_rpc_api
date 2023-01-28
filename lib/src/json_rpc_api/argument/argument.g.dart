@@ -11,14 +11,14 @@ part of 'argument.dart';
 _$_Argument _$$_ArgumentFromJson(Map<String, dynamic> json) => _$_Argument(
       name: json['name'] as String,
       datatype: $enumDecode(_$DataTypeEnumMap, json['datatype']),
-      value: json['value'],
+      value: const ArgumentValueConverter().fromJson(json['value']),
     );
 
 Map<String, dynamic> _$$_ArgumentToJson(_$_Argument instance) =>
     <String, dynamic>{
       'name': instance.name,
       'datatype': _$DataTypeEnumMap[instance.datatype]!,
-      'value': instance.value,
+      'value': const ArgumentValueConverter().toJson(instance.value),
     };
 
 const _$DataTypeEnumMap = {

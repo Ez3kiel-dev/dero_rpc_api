@@ -18,7 +18,7 @@ class Argument with _$Argument {
     /// @nodoc
     @JsonKey(name: 'datatype') required DataType datatype,
 
-    /// @nodoc
+    /// For [DateTime], use DateTime.utc() only (!)
     @JsonKey(name: 'value') @ArgumentValueConverter() required dynamic value,
   }) = _Argument;
 

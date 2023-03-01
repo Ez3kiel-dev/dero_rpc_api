@@ -91,7 +91,7 @@ import 'package:dero_rpc_api/dero_rpc_api.dart';
 const String walletMainnetAddr = '127.0.0.1:10103';
 
 Future<void> main() async {
-  var walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr);
+  var walletRepository = WalletRepository(rpcAddress: walletMainnetAddr);
   // Or, if the Wallet RPC server is configured for authentication with `--rpc-login` :
   // var walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr, user: 'Ez3kiel' password: 'test');
 

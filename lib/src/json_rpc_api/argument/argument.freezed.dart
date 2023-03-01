@@ -28,7 +28,7 @@ mixin _$Argument {
   @JsonKey(name: 'datatype')
   DataType get datatype => throw _privateConstructorUsedError;
 
-  /// @nodoc
+  /// For [DateTime], use DateTime.utc() only (!)
   @JsonKey(name: 'value')
   @ArgumentValueConverter()
   dynamic get value => throw _privateConstructorUsedError;
@@ -43,7 +43,6 @@ mixin _$Argument {
 abstract class $ArgumentCopyWith<$Res> {
   factory $ArgumentCopyWith(Argument value, $Res Function(Argument) then) =
       _$ArgumentCopyWithImpl<$Res, Argument>;
-
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
@@ -90,7 +89,6 @@ abstract class _$$_ArgumentCopyWith<$Res> implements $ArgumentCopyWith<$Res> {
   factory _$$_ArgumentCopyWith(
           _$_Argument value, $Res Function(_$_Argument) then) =
       __$$_ArgumentCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call(
@@ -152,7 +150,7 @@ class _$_Argument implements _Argument {
   @JsonKey(name: 'datatype')
   final DataType datatype;
 
-  /// @nodoc
+  /// For [DateTime], use DateTime.utc() only (!)
   @override
   @JsonKey(name: 'value')
   @ArgumentValueConverter()
@@ -217,7 +215,7 @@ abstract class _Argument implements Argument {
   DataType get datatype;
   @override
 
-  /// @nodoc
+  /// For [DateTime], use DateTime.utc() only (!)
   @JsonKey(name: 'value')
   @ArgumentValueConverter()
   dynamic get value;

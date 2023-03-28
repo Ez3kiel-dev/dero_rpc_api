@@ -31,5 +31,5 @@ String hexToRawValue(String hexByteString) {
 /// Converts a character string into a hexadecimal string.
 String stringToHex(String input) {
   var bytes = utf8.encode(input);
-  return bytesToHex(Uint8List.fromList(bytes));
+  return hex.encode(bytes);
 }

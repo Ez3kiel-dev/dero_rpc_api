@@ -1,3 +1,7 @@
+## 0.11.0
+
+- feat: broadcast stream in DerodRepository.
+
 ## 0.10.13
 
 - fix: JSON converter for Argument.value.

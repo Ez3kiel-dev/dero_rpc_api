@@ -45,7 +45,9 @@ class DerodRepository extends ClientRepository {
 
   // Used to set up the websocket stream.
   static Stream _setUpStream(String rpcAddress) =>
-      WebSocketChannel.connect(_setUpUri(rpcAddress)).stream;
+      WebSocketChannel.connect(_setUpUri(rpcAddress))
+          .stream
+          .asBroadcastStream();
 
   /// Decode new height event when listening [eventStream].
   bool _isNewHeight(String event) {

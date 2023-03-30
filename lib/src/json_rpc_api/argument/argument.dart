@@ -11,6 +11,7 @@ part 'argument.g.dart';
 /// Argument for the RPC payload.
 @freezed
 class Argument with _$Argument {
+  /// @nodoc
   factory Argument({
     /// @nodoc
     @JsonKey(name: 'name') required String name,
@@ -22,6 +23,7 @@ class Argument with _$Argument {
     @JsonKey(name: 'value') @ArgumentValueConverter() required dynamic value,
   }) = _Argument;
 
+  /// @nodoc
   factory Argument.fromJson(Map<String, dynamic> json) =>
       _$ArgumentFromJson(json);
 }

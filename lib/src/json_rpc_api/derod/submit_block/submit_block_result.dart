@@ -10,6 +10,7 @@ part 'submit_block_result.g.dart';
 /// The response returned by a call to [DerodRepository.submitBlock].
 @freezed
 class SubmitBlockResult with _$SubmitBlockResult {
+  /// @nodoc
   factory SubmitBlockResult({
     /// @nodoc
     @JsonKey(name: 'jobid') String? jobId,
@@ -27,6 +28,7 @@ class SubmitBlockResult with _$SubmitBlockResult {
     @JsonKey(name: 'status') String? status,
   }) = _SubmitBlockResult;
 
+  /// @nodoc
   factory SubmitBlockResult.fromJson(Map<String, dynamic> json) =>
       _$SubmitBlockResultFromJson(json);
 }

@@ -15,6 +15,7 @@ part 'transaction.g.dart';
 /// Based on https://github.com/deroproject/derohe/blob/main/transaction/transaction.go#L69.
 @freezed
 class Transaction with _$Transaction {
+  /// @nodoc
   factory Transaction({
     /// @nodoc
     @JsonKey(name: 'version') int? version,
@@ -50,6 +51,7 @@ class Transaction with _$Transaction {
     @JsonKey(name: 'scdata') Arguments? scData,
   }) = _Transaction;
 
+  /// @nodoc
   factory Transaction.fromJson(Map<String, dynamic> json) =>
       _$TransactionFromJson(json);
 }

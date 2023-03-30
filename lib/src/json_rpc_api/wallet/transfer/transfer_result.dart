@@ -10,11 +10,13 @@ part 'transfer_result.g.dart';
 /// The response returned by a call to [WalletRepository.transfer].
 @freezed
 class TransferResult with _$TransferResult {
+  /// @nodoc
   factory TransferResult({
     /// @nodoc
     @JsonKey(name: 'txid') String? txid,
   }) = _TransferResult;
 
+  /// @nodoc
   factory TransferResult.fromJson(Map<String, dynamic> json) =>
       _$TransferResultFromJson(json);
 }

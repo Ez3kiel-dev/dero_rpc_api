@@ -9,6 +9,7 @@ part 'block_header.g.dart';
 /// A block header for RPC call.
 @freezed
 class BlockHeader with _$BlockHeader {
+  /// @nodoc
   factory BlockHeader({
     /// @nodoc
     @JsonKey(name: 'depth') int? depth,
@@ -59,6 +60,7 @@ class BlockHeader with _$BlockHeader {
     @JsonKey(name: 'timestamp') int? timestamp,
   }) = _BlockHeader;
 
+  /// @nodoc
   factory BlockHeader.fromJson(Map<String, dynamic> json) =>
       _$BlockHeaderFromJson(json);
 }

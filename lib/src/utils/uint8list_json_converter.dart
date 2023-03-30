@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 /// [Uint8List] Json Converter
 class Uint8ListConverter implements JsonConverter<Uint8List, List<dynamic>> {
+  /// @nodoc
   const Uint8ListConverter();
 
   @override

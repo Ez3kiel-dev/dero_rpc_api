@@ -7,7 +7,7 @@ typedef Arguments = List<Argument>;
 extension ArgumentsUtilityMethods on Arguments {
   /// Check if this argument exists in the list.
   bool hasArgument(String name, DataType dataType) {
-    for (var argument in this) {
+    for (final argument in this) {
       if (argument.name == name && argument.datatype == dataType) {
         return true;
       }
@@ -17,7 +17,7 @@ extension ArgumentsUtilityMethods on Arguments {
 
   /// Check if this argument has a value.
   bool argumentHasValue(String name, DataType dataType) {
-    for (var argument in this) {
+    for (final argument in this) {
       if (argument.name == name &&
           argument.datatype == dataType &&
           argument.value != null) {
@@ -39,7 +39,7 @@ extension ArgumentsUtilityMethods on Arguments {
 
   /// Returns the value of this argument if it exists, null else.
   dynamic valueOfArgument(String name, DataType dataType) {
-    for (var argument in this) {
+    for (final argument in this) {
       if (argument.name == name && argument.datatype == dataType) {
         return argument.value;
       }
@@ -49,7 +49,7 @@ extension ArgumentsUtilityMethods on Arguments {
 
   /// Throws an [Exception] if one of the arguments is not valid.
   void validateArguments() {
-    for (var argument in this) {
+    for (final argument in this) {
       switch (argument.datatype) {
         case DataType.dataString:
           if (argument.value is! String) {
@@ -64,7 +64,7 @@ extension ArgumentsUtilityMethods on Arguments {
         case DataType.dataUint64:
           if (argument.value is! int) {
             throw Exception('"${argument.name}" should be of type int');
-          } else if (argument.value is int && argument.value < 0) {
+          } else if (argument.value is int && (argument.value as int) < 0) {
             throw Exception('"${argument.name}" should be greater than 0');
           }
           break;
@@ -88,7 +88,8 @@ extension ArgumentsUtilityMethods on Arguments {
               !(argument.value as String).startsWith('detoi') &&
               !(argument.value as String).startsWith('deroproof')) {
             throw Exception(
-                '"${argument.name}" : human readable part of the address is not correct');
+                '"${argument.name}" : human readable part of the address is '
+                'not correct');
           }
           break;
         case DataType.dataTime:

@@ -3,12 +3,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 /// [Argument.value] Json Converter
 class ArgumentValueConverter implements JsonConverter<dynamic, dynamic> {
+  /// @nodoc
   const ArgumentValueConverter();
 
   @override
   dynamic fromJson(dynamic value) {
     if (value is String) {
-      var dt = DateTime.tryParse(value);
+      final dt = DateTime.tryParse(value);
       if (dt != null) {
         return dt;
       }

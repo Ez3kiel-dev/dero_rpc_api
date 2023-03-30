@@ -10,6 +10,7 @@ part 'get_height_result.g.dart';
 /// The response returned by a call to [DerodRepository.getHeight].
 @freezed
 class GetHeightDerodResult with _$GetHeightDerodResult {
+  /// @nodoc
   factory GetHeightDerodResult({
     /// @nodoc
     @JsonKey(name: 'height') int? height,
@@ -24,6 +25,7 @@ class GetHeightDerodResult with _$GetHeightDerodResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetHeightDerodResult;
 
+  /// @nodoc
   factory GetHeightDerodResult.fromJson(Map<String, dynamic> json) =>
       _$GetHeightDerodResultFromJson(json);
 }

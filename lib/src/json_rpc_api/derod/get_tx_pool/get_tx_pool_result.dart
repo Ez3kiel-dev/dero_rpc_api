@@ -10,6 +10,7 @@ part 'get_tx_pool_result.g.dart';
 /// The response returned by a call to [DerodRepository.getTxPool].
 @freezed
 class GetTxPoolResult with _$GetTxPoolResult {
+  /// @nodoc
   factory GetTxPoolResult({
     /// @nodoc
     @JsonKey(name: 'txs') List<String>? txs,
@@ -18,6 +19,7 @@ class GetTxPoolResult with _$GetTxPoolResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetTxPoolResult;
 
+  /// @nodoc
   factory GetTxPoolResult.fromJson(Map<String, dynamic> json) =>
       _$GetTxPoolResultFromJson(json);
 }

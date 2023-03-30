@@ -10,6 +10,7 @@ part 'get_encrypted_balance_result.g.dart';
 /// The response returned by a call to [DerodRepository.getEncryptedBalance].
 @freezed
 class GetEncryptedBalanceResult with _$GetEncryptedBalanceResult {
+  /// @nodoc
   factory GetEncryptedBalanceResult({
     /// @nodoc
     @JsonKey(name: 'scid') String? scid,
@@ -50,6 +51,7 @@ class GetEncryptedBalanceResult with _$GetEncryptedBalanceResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetEncryptedBalanceResult;
 
+  /// @nodoc
   factory GetEncryptedBalanceResult.fromJson(Map<String, dynamic> json) =>
       _$GetEncryptedBalanceResultFromJson(json);
 }

@@ -39,14 +39,14 @@ Future<void> main() async {
 
   test('listenDerodEvent Derod', () {
     derodRepository.listenDerodEvent(
-      onNewHeight: expectAsync0(
-        () {
+      onNewHeight: expectAsync1(
+        (event) {
           // print('height');
           completes;
         },
       ),
-      onNewBlock: expectAsync0(
-        () {
+      onNewBlock: expectAsync1(
+        (event) {
           // print('block');
           completes;
         },

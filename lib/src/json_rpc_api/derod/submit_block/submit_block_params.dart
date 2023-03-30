@@ -10,6 +10,7 @@ part 'submit_block_params.g.dart';
 /// Parameters required to call [DerodRepository.submitBlock].
 @freezed
 class SubmitBlockParams with _$SubmitBlockParams {
+  /// @nodoc
   factory SubmitBlockParams({
     /// @nodoc
     @JsonKey(name: 'jobid') required String jobId,
@@ -18,6 +19,7 @@ class SubmitBlockParams with _$SubmitBlockParams {
     @JsonKey(name: 'mbl_blob') required String miniblockHashingBlob,
   }) = _SubmitBlockParams;
 
+  /// @nodoc
   factory SubmitBlockParams.fromJson(Map<String, dynamic> json) =>
       _$SubmitBlockParamsFromJson(json);
 }

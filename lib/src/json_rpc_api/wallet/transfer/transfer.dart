@@ -14,6 +14,7 @@ part 'transfer.g.dart';
 /// Based on https://github.com/deroproject/derohe/blob/main/rpc/wallet_rpc.go#L192.
 @freezed
 class Transfer with _$Transfer {
+  /// @nodoc
   factory Transfer({
     /// @nodoc
     @JsonKey(name: 'scid') String? scid,
@@ -32,6 +33,7 @@ class Transfer with _$Transfer {
     @JsonKey(name: 'payload_rpc') Arguments? payloadRPC,
   }) = _Transfer;
 
+  /// @nodoc
   factory Transfer.fromJson(Map<String, dynamic> json) =>
       _$TransferFromJson(json);
 }

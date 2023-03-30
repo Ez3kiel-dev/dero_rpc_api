@@ -10,11 +10,13 @@ part 'get_block_by_topoheight_params.g.dart';
 /// Parameters required to call [DerodRepository.getBlockByTopoHeight].
 @freezed
 class GetBlockByTopoHeightParams with _$GetBlockByTopoHeightParams {
+  /// @nodoc
   factory GetBlockByTopoHeightParams({
     /// @nodoc
     @JsonKey(name: 'topoheight') required int topoHeight,
   }) = _GetBlockByTopoHeightParams;
 
+  /// @nodoc
   factory GetBlockByTopoHeightParams.fromJson(Map<String, dynamic> json) =>
       _$GetBlockByTopoHeightParamsFromJson(json);
 }

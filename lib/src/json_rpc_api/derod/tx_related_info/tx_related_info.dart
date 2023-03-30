@@ -9,6 +9,7 @@ part 'tx_related_info.g.dart';
 /// A tx related information for RPC call.
 @freezed
 class TxRelatedInfo with _$TxRelatedInfo {
+  /// @nodoc
   factory TxRelatedInfo({
     /// @nodoc
     @JsonKey(name: 'as_hex') String? asHex,
@@ -59,6 +60,7 @@ class TxRelatedInfo with _$TxRelatedInfo {
     @JsonKey(name: 'codenow') String? codeNow,
   }) = _TxRelatedInfo;
 
+  /// @nodoc
   factory TxRelatedInfo.fromJson(Map<String, dynamic> json) =>
       _$TxRelatedInfoFromJson(json);
 }

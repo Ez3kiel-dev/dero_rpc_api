@@ -11,6 +11,7 @@ part 'miniblock.g.dart';
 /// Based on https://github.com/deroproject/derohe/blob/main/block/miniblock.go#L41.
 @freezed
 class Miniblock with _$Miniblock {
+  /// @nodoc
   factory Miniblock({
     /// @nodoc
     @JsonKey(name: 'Version') int? version,
@@ -43,6 +44,7 @@ class Miniblock with _$Miniblock {
     @JsonKey(name: 'Nonce') List<int>? nonce,
   }) = _Miniblock;
 
+  /// @nodoc
   factory Miniblock.fromJson(Map<String, dynamic> json) =>
       _$MiniblockFromJson(json);
 }

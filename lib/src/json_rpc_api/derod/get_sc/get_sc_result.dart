@@ -10,6 +10,7 @@ part 'get_sc_result.g.dart';
 /// The response returned by a call to [DerodRepository.getSC].
 @freezed
 class GetSCResult with _$GetSCResult {
+  /// @nodoc
   factory GetSCResult({
     /// @nodoc
     @JsonKey(name: 'valuesuint64') List<dynamic>? valuesInt,
@@ -39,6 +40,7 @@ class GetSCResult with _$GetSCResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetSCResult;
 
+  /// @nodoc
   factory GetSCResult.fromJson(Map<String, dynamic> json) =>
       _$GetSCResultFromJson(json);
 }

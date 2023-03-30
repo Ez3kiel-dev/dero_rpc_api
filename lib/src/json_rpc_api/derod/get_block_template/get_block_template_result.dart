@@ -10,6 +10,7 @@ part 'get_block_template_result.g.dart';
 /// The response returned by a call to [DerodRepository.getBlockTemplate].
 @freezed
 class GetBlockTemplateResult with _$GetBlockTemplateResult {
+  /// @nodoc
   factory GetBlockTemplateResult({
     /// @nodoc
     @JsonKey(name: 'jobid') String? jobId,
@@ -51,6 +52,7 @@ class GetBlockTemplateResult with _$GetBlockTemplateResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetBlockTemplateResult;
 
+  /// @nodoc
   factory GetBlockTemplateResult.fromJson(Map<String, dynamic> json) =>
       _$GetBlockTemplateResultFromJson(json);
 }

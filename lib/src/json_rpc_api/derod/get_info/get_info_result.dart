@@ -10,6 +10,7 @@ part 'get_info_result.g.dart';
 /// The response returned by a call to [DerodRepository.getInfo].
 @freezed
 class GetInfoResult with _$GetInfoResult {
+  /// @nodoc
   factory GetInfoResult({
     /// @nodoc
     @JsonKey(name: 'alt_blocks_count') int? altBlocksCount,
@@ -111,6 +112,7 @@ class GetInfoResult with _$GetInfoResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetInfoResult;
 
+  /// @nodoc
   factory GetInfoResult.fromJson(Map<String, dynamic> json) =>
       _$GetInfoResultFromJson(json);
 }

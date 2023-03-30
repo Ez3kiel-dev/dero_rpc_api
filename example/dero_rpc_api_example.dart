@@ -14,20 +14,22 @@ Future<void> main() async {
   // DEROD REPOSITORY
   //----------------------------------------------------------------------------
 
-  var derodRepository = DerodRepository(rpcAddress: derodSimulatorAddr);
-
-  derodRepository.start();
+  final derodRepository = DerodRepository(rpcAddress: derodSimulatorAddr)
+    ..start();
 
   try {
     // Print Dero network information at each new height.
-    derodRepository.listenDerodEvent(onNewHeight: () async {
-      var info = await derodRepository.getInfo();
-      print(info);
-    });
+    derodRepository.listenDerodEvent(
+      onNewHeight: (event) async {
+        final info = await derodRepository.getInfo();
+        print(info);
+      },
+    );
 
-    // Get the hard-coded NameService smart contract and print all registered names.
-    var getSCParams = GetSCParams(scid: scidOfficialNameService);
-    var getScResult = await derodRepository.getSC(getSCParams);
+    // Get the hard-coded NameService smart contract
+    // and print all registered names.
+    final getSCParams = GetSCParams(scid: scidOfficialNameService);
+    final getScResult = await derodRepository.getSC(getSCParams);
     print(getScResult.variableStringKeys);
   } catch (e) {
     print(e);
@@ -38,35 +40,44 @@ Future<void> main() async {
   // WALLET REPOSITORY
   //----------------------------------------------------------------------------
 
-  var walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr);
-
-  walletRepository.start();
+  final walletRepository = WalletRepository(rpcAddress: walletSimulatorAddr)
+    ..start();
 
   try {
     // Create a integrated address with a payment ID and print it.
-    var integratedAddressParams = MakeIntegratedAddressParams(payloadRPC: [
-      Argument(
+    final integratedAddressParams = MakeIntegratedAddressParams(
+      payloadRPC: [
+        Argument(
           name: 'identifier',
           datatype: DataType.dataString,
-          value: 'my_payment_identifier')
-    ]);
+          value: 'my_payment_identifier',
+        )
+      ],
+    );
 
-    var makeIntegratedAddressResult =
+    final makeIntegratedAddressResult =
         await walletRepository.makeIntegratedAddress(integratedAddressParams);
 
     print(makeIntegratedAddressResult.integratedAddress);
 
     // Send 1 dero to another wallet with a message in the transaction payload.
     // Remember, 1 dero = 100000 atomic units.
-    var transferParams = TransferParams(transfers: [
-      Transfer(destination: 'Ez3kiel', amount: 100000, payloadRPC: [
-        Argument(
-            name: RPC.comment,
-            datatype: DataType.dataString,
-            value: 'my secret message ...')
-      ])
-    ]);
-    var transferResult = await walletRepository.transfer(transferParams);
+    final transferParams = TransferParams(
+      transfers: [
+        Transfer(
+          destination: 'Ez3kiel',
+          amount: 100000,
+          payloadRPC: [
+            Argument(
+              name: RPC.comment,
+              datatype: DataType.dataString,
+              value: 'my secret message ...',
+            )
+          ],
+        )
+      ],
+    );
+    final transferResult = await walletRepository.transfer(transferParams);
 
     // Print the txid.
     print(transferResult.txid);

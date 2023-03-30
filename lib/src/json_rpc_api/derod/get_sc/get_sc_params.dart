@@ -15,6 +15,7 @@ part 'get_sc_params.g.dart';
 /// Default: [code] = true & [variables] = true.
 @freezed
 class GetSCParams with _$GetSCParams {
+  /// @nodoc
   factory GetSCParams({
     @JsonKey(name: 'scid') required String scid,
 
@@ -43,6 +44,7 @@ class GetSCParams with _$GetSCParams {
         List<Uint8List>? keysBytes,
   }) = _GetSCParams;
 
+  /// @nodoc
   factory GetSCParams.fromJson(Map<String, dynamic> json) =>
       _$GetSCParamsFromJson(json);
 }

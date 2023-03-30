@@ -10,11 +10,13 @@ part 'get_block_by_hash_params.g.dart';
 /// Parameters required to call [DerodRepository.getBlockByHash].
 @freezed
 class GetBlockByHashParams with _$GetBlockByHashParams {
+  /// @nodoc
   factory GetBlockByHashParams({
     /// @nodoc
     @JsonKey(name: 'hash') required String hash,
   }) = _GetBlockByHashParams;
 
+  /// @nodoc
   factory GetBlockByHashParams.fromJson(Map<String, dynamic> json) =>
       _$GetBlockByHashParamsFromJson(json);
 }

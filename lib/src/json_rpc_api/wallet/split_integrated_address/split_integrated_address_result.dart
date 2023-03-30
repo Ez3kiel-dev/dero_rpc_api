@@ -10,6 +10,7 @@ part 'split_integrated_address_result.g.dart';
 /// The response returned by a call to [WalletRepository.splitIntegratedAddress].
 @freezed
 class SplitIntegratedAddressResult with _$SplitIntegratedAddressResult {
+  /// @nodoc
   factory SplitIntegratedAddressResult({
     /// @nodoc
     @JsonKey(name: 'address') String? address,
@@ -18,6 +19,7 @@ class SplitIntegratedAddressResult with _$SplitIntegratedAddressResult {
     @JsonKey(name: 'payload_rpc') Arguments? payloadRPC,
   }) = _SplitIntegratedAddressResult;
 
+  /// @nodoc
   factory SplitIntegratedAddressResult.fromJson(Map<String, dynamic> json) =>
       _$SplitIntegratedAddressResultFromJson(json);
 }

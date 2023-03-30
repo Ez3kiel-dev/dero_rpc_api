@@ -10,6 +10,7 @@ part 'send_raw_transaction_result.g.dart';
 /// The response returned by a call to [DerodRepository.sendRawTransaction].
 @freezed
 class SendRawTransactionResult with _$SendRawTransactionResult {
+  /// @nodoc
   factory SendRawTransactionResult({
     /// @nodoc
     @JsonKey(name: 'status') String? status,
@@ -21,6 +22,7 @@ class SendRawTransactionResult with _$SendRawTransactionResult {
     @JsonKey(name: 'string') String? reason,
   }) = _SendRawTransactionResult;
 
+  /// @nodoc
   factory SendRawTransactionResult.fromJson(Map<String, dynamic> json) =>
       _$SendRawTransactionResultFromJson(json);
 }

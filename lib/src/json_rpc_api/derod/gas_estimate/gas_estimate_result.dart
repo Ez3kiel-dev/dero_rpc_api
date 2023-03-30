@@ -10,6 +10,7 @@ part 'gas_estimate_result.g.dart';
 /// The response returned by a call to [DerodRepository.getGasEstimate].
 @freezed
 class GasEstimateResult with _$GasEstimateResult {
+  /// @nodoc
   factory GasEstimateResult({
     /// @nodoc
     @JsonKey(name: 'gascompute') int? gasCompute,
@@ -21,6 +22,7 @@ class GasEstimateResult with _$GasEstimateResult {
     @JsonKey(name: 'status') String? status,
   }) = _GasEstimateResult;
 
+  /// @nodoc
   factory GasEstimateResult.fromJson(Map<String, dynamic> json) =>
       _$GasEstimateResultFromJson(json);
 }

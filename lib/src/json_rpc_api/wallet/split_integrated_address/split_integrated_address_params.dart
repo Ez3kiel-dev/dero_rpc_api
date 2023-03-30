@@ -10,11 +10,13 @@ part 'split_integrated_address_params.g.dart';
 /// Parameters required to call [WalletRepository.splitIntegratedAddress].
 @freezed
 class SplitIntegratedAddressParams with _$SplitIntegratedAddressParams {
+  /// @nodoc
   factory SplitIntegratedAddressParams({
     /// @nodoc
     @JsonKey(name: 'integrated_address') required String integratedAddress,
   }) = _SplitIntegratedAddressParams;
 
+  /// @nodoc
   factory SplitIntegratedAddressParams.fromJson(Map<String, dynamic> json) =>
       _$SplitIntegratedAddressParamsFromJson(json);
 }

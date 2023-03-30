@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 /// [DateTime] Json Converter
 class DateTimeConverter implements JsonConverter<DateTime, String> {
+  /// @nodoc
   const DateTimeConverter();
 
   @override

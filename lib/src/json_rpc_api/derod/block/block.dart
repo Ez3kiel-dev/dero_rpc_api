@@ -12,6 +12,7 @@ part 'block.g.dart';
 /// Based on https://github.com/deroproject/derohe/blob/main/block/block.go#L35.
 @freezed
 class Block with _$Block {
+  /// @nodoc
   factory Block({
     /// @nodoc
     @JsonKey(name: 'major_version') int? majorVersion,
@@ -42,5 +43,6 @@ class Block with _$Block {
     @JsonKey(name: 'tx_hashes') List<String>? txHashes,
   }) = _Block;
 
+  /// @nodoc
   factory Block.fromJson(Map<String, dynamic> json) => _$BlockFromJson(json);
 }

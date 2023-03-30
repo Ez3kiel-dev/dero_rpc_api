@@ -12,6 +12,7 @@ part 'wallet_entry.g.dart';
 /// Based on https://github.com/deroproject/derohe/blob/main/rpc/wallet_rpc.go#L34.
 @freezed
 class Entry with _$Entry {
+  /// @nodoc
   factory Entry({
     /// @nodoc
     @JsonKey(name: 'height') int? height,
@@ -92,5 +93,6 @@ class Entry with _$Entry {
     @JsonKey(name: 'srcport') int? srcPort,
   }) = _Entry;
 
+  /// @nodoc
   factory Entry.fromJson(Map<String, dynamic> json) => _$EntryFromJson(json);
 }

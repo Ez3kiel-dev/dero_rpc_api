@@ -19,6 +19,10 @@ part of 'package:dero_rpc_api/src/rpc_repository.dart';
 ///walletRepository.start();
 /// ```
 class WalletRepository extends ClientRepository {
+  /// @nodoc
+  WalletRepository({required String rpcAddress, String? user, String? password})
+      : super(_setUpUri(rpcAddress, user, password));
+
   static const String _ping = 'DERO.Ping';
   static const String _getAddress = 'WALLET.GetAddress';
   static const String _getBalance = 'WALLET.GetBalance';
@@ -31,9 +35,6 @@ class WalletRepository extends ClientRepository {
   static const String _transfer = 'WALLET.Transfer';
   static const String _scInvoke = 'WALLET.scinvoke';
 
-  WalletRepository({required String rpcAddress, String? user, String? password})
-      : super(_setUpUri(rpcAddress, user, password));
-
   // Used to set up the Uri object.
   static Uri _setUpUri(String rpcAddress, [String? user, String? password]) {
     var credentials = '';
@@ -43,10 +44,11 @@ class WalletRepository extends ClientRepository {
     return Uri.parse('ws://$credentials$rpcAddress/ws');
   }
 
-  /// The traditional [ping] method sends a 'Ping' and receives a 'Pong' if the connection is OK.
+  /// The traditional [ping] method sends a 'Ping'
+  /// and receives a 'Pong' if the connection is OK.
   Future<String> ping() async {
     try {
-      var res = await rpcClient.sendRequest(_ping);
+      final res = await rpcClient.sendRequest(_ping);
       return res.toString().trim();
     } catch (e) {
       throw WalletRepositoryException('Ping', e);
@@ -56,8 +58,8 @@ class WalletRepository extends ClientRepository {
   /// Returns the dero address of the currently connected wallet.
   Future<GetAddressResult> getAddress() async {
     try {
-      var res = await rpcClient.sendRequest(_getAddress);
-      return GetAddressResult.fromJson(res);
+      final res = await rpcClient.sendRequest(_getAddress);
+      return GetAddressResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('getAddress', e);
     }
@@ -65,13 +67,15 @@ class WalletRepository extends ClientRepository {
 
   /// Returns the dero balance of the currently connected wallet.
   ///
-  /// Provide a [GetBalanceParams] parameter if you want the balance of a different asset than Dero.
-  Future<GetBalanceResult> getBalance(
-      {GetBalanceParams? getBalanceParams}) async {
+  /// Provide a [GetBalanceParams] parameter if you want the balance
+  /// of a different asset than Dero.
+  Future<GetBalanceResult> getBalance({
+    GetBalanceParams? getBalanceParams,
+  }) async {
     try {
-      var res =
+      final res =
           await rpcClient.sendRequest(_getBalance, getBalanceParams?.toJson());
-      return GetBalanceResult.fromJson(res);
+      return GetBalanceResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('getBalance', e);
     }
@@ -80,8 +84,8 @@ class WalletRepository extends ClientRepository {
   /// Returns the currently synchronized height of the wallet.
   Future<GetHeightWalletResult> getHeight() async {
     try {
-      var res = await rpcClient.sendRequest(_getHeight);
-      return GetHeightWalletResult.fromJson(res);
+      final res = await rpcClient.sendRequest(_getHeight);
+      return GetHeightWalletResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('getHeight', e);
     }
@@ -89,25 +93,33 @@ class WalletRepository extends ClientRepository {
 
   /// Returns the information of a transfer according to its txid.
   Future<GetTransferByTxidResult> getTransferByTXID(
-      GetTransferByTxidParams getTransferByTXIDParams) async {
+    GetTransferByTxidParams getTransferByTXIDParams,
+  ) async {
     try {
-      var res = await rpcClient.sendRequest(
-          _getTransferByTXID, getTransferByTXIDParams.toJson());
-      return GetTransferByTxidResult.fromJson(res);
+      final res = await rpcClient.sendRequest(
+        _getTransferByTXID,
+        getTransferByTXIDParams.toJson(),
+      );
+      return GetTransferByTxidResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('getTransferByTXID', e);
     }
   }
 
-  /// Returns outgoing/ingoing/coinbase transactions from the currently connected wallet.
+  /// Returns outgoing/ingoing/coinbase transactions
+  /// from the currently connected wallet.
   ///
-  /// With `var params = GetTransfersParams();`, get all transactions by default.
+  /// With `var params = GetTransfersParams();`,
+  /// get all transactions by default.
   Future<GetTransfersResult> getTransfers(
-      GetTransfersParams getTransfersParams) async {
+    GetTransfersParams getTransfersParams,
+  ) async {
     try {
-      var res = await rpcClient.sendRequest(
-          _getTransfers, getTransfersParams.toJson());
-      return GetTransfersResult.fromJson(res);
+      final res = await rpcClient.sendRequest(
+        _getTransfers,
+        getTransfersParams.toJson(),
+      );
+      return GetTransfersResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('getTransfers', e);
     }
@@ -115,23 +127,30 @@ class WalletRepository extends ClientRepository {
 
   /// Generate an integrated address with specific payment identifiers.
   Future<MakeIntegratedAddressResult> makeIntegratedAddress(
-      MakeIntegratedAddressParams makeIntegratedAddressParams) async {
+    MakeIntegratedAddressParams makeIntegratedAddressParams,
+  ) async {
     try {
-      var res = await rpcClient.sendRequest(
-          _makeIntegratedAddress, makeIntegratedAddressParams.toJson());
-      return MakeIntegratedAddressResult.fromJson(res);
+      final res = await rpcClient.sendRequest(
+        _makeIntegratedAddress,
+        makeIntegratedAddressParams.toJson(),
+      );
+      return MakeIntegratedAddressResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('makeIntegratedAddress', e);
     }
   }
 
-  /// Split integrated address into standard wallet address and payment identifier.
+  /// Split integrated address into standard wallet address
+  /// and payment identifier.
   Future<SplitIntegratedAddressResult> splitIntegratedAddress(
-      SplitIntegratedAddressParams splitIntegratedAddressParams) async {
+    SplitIntegratedAddressParams splitIntegratedAddressParams,
+  ) async {
     try {
-      var res = await rpcClient.sendRequest(
-          _splitIntegratedAddress, splitIntegratedAddressParams.toJson());
-      return SplitIntegratedAddressResult.fromJson(res);
+      final res = await rpcClient.sendRequest(
+        _splitIntegratedAddress,
+        splitIntegratedAddressParams.toJson(),
+      );
+      return SplitIntegratedAddressResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('splitIntegratedAddress', e);
     }
@@ -140,8 +159,9 @@ class WalletRepository extends ClientRepository {
   /// Returns seed.
   Future<QueryKeyResult> queryKey(QueryKeyParams queryKeyParams) async {
     try {
-      var res = await rpcClient.sendRequest(_queryKey, queryKeyParams.toJson());
-      return QueryKeyResult.fromJson(res);
+      final res =
+          await rpcClient.sendRequest(_queryKey, queryKeyParams.toJson());
+      return QueryKeyResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('queryKey', e);
     }
@@ -161,8 +181,9 @@ class WalletRepository extends ClientRepository {
   /// ```
   Future<TransferResult> transfer(TransferParams transferParams) async {
     try {
-      var res = await rpcClient.sendRequest(_transfer, transferParams.toJson());
-      return TransferResult.fromJson(res);
+      final res =
+          await rpcClient.sendRequest(_transfer, transferParams.toJson());
+      return TransferResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('transfer', e);
     }
@@ -182,8 +203,9 @@ class WalletRepository extends ClientRepository {
   /// ```
   Future<TransferResult> scInvoke(ScInvokeParams scInvokeParams) async {
     try {
-      var res = await rpcClient.sendRequest(_scInvoke, scInvokeParams.toJson());
-      return TransferResult.fromJson(res);
+      final res =
+          await rpcClient.sendRequest(_scInvoke, scInvokeParams.toJson());
+      return TransferResult.fromJson(res as Map<String, dynamic>);
     } catch (e) {
       throw WalletRepositoryException('scInvoke', e);
     }

@@ -1,3 +1,7 @@
+## 0.12.0
+
+- feat: NewBlock and NewHeight event streams.
+
 ## 0.11.0
 
 - feat: broadcast stream in DerodRepository.

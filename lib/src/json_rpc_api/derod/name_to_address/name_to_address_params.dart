@@ -10,6 +10,7 @@ part 'name_to_address_params.g.dart';
 /// Parameters required to call [DerodRepository.getNameToAddress].
 @freezed
 class NameToAddressParams with _$NameToAddressParams {
+  /// @nodoc
   factory NameToAddressParams({
     @JsonKey(name: 'name') required String name,
 
@@ -19,6 +20,7 @@ class NameToAddressParams with _$NameToAddressParams {
     @JsonKey(name: 'topoheight') int? topoHeight,
   }) = _NameToAddressParams;
 
+  /// @nodoc
   factory NameToAddressParams.fromJson(Map<String, dynamic> json) =>
       _$NameToAddressParamsFromJson(json);
 }

@@ -10,6 +10,7 @@ part 'name_to_address_result.g.dart';
 /// The response returned by a call to [DerodRepository.getNameToAddress].
 @freezed
 class NameToAddressResult with _$NameToAddressResult {
+  /// @nodoc
   factory NameToAddressResult({
     /// @nodoc
     @JsonKey(name: 'name') String? name,
@@ -21,6 +22,7 @@ class NameToAddressResult with _$NameToAddressResult {
     @JsonKey(name: 'status') String? status,
   }) = _NameToAddressResult;
 
+  /// @nodoc
   factory NameToAddressResult.fromJson(Map<String, dynamic> json) =>
       _$NameToAddressResultFromJson(json);
 }

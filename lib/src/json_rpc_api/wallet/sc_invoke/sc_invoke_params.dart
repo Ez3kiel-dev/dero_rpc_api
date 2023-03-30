@@ -10,6 +10,7 @@ part 'sc_invoke_params.g.dart';
 /// Parameters required to call [WalletRepository.scInvoke].
 @freezed
 class ScInvokeParams with _$ScInvokeParams {
+  /// @nodoc
   factory ScInvokeParams({
     /// @nodoc
     @JsonKey(name: 'scid') required String scid,
@@ -27,6 +28,7 @@ class ScInvokeParams with _$ScInvokeParams {
     @JsonKey(name: 'ringsize') int? ringsize,
   }) = _ScInvokeParams;
 
+  /// @nodoc
   factory ScInvokeParams.fromJson(Map<String, dynamic> json) =>
       _$ScInvokeParamsFromJson(json);
 }

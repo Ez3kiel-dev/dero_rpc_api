@@ -10,6 +10,7 @@ part 'get_transaction_result.g.dart';
 /// The response returned by a call to [DerodRepository.getTransaction].
 @freezed
 class GetTransactionResult with _$GetTransactionResult {
+  /// @nodoc
   factory GetTransactionResult({
     /// @nodoc
     @JsonKey(name: 'txs_as_hex') List<String>? txsAsHex,
@@ -24,6 +25,7 @@ class GetTransactionResult with _$GetTransactionResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetTransactionResult;
 
+  /// @nodoc
   factory GetTransactionResult.fromJson(Map<String, dynamic> json) =>
       _$GetTransactionResultFromJson(json);
 }

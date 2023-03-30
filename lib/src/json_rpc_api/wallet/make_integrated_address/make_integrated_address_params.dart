@@ -10,6 +10,7 @@ part 'make_integrated_address_params.g.dart';
 /// Parameters required to call [WalletRepository.makeIntegratedAddress].
 @freezed
 class MakeIntegratedAddressParams with _$MakeIntegratedAddressParams {
+  /// @nodoc
   factory MakeIntegratedAddressParams({
     /// @nodoc
     @JsonKey(name: 'address') String? address,
@@ -18,6 +19,7 @@ class MakeIntegratedAddressParams with _$MakeIntegratedAddressParams {
     @JsonKey(name: 'payload_rpc') required Arguments payloadRPC,
   }) = _MakeIntegratedAddressParams;
 
+  /// @nodoc
   factory MakeIntegratedAddressParams.fromJson(Map<String, dynamic> json) =>
       _$MakeIntegratedAddressParamsFromJson(json);
 }

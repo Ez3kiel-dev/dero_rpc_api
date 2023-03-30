@@ -10,12 +10,14 @@ part 'get_random_address_params.g.dart';
 /// Parameters (optional) to call [DerodRepository.getRandomAddress].
 @freezed
 class GetRandomAddressParams with _$GetRandomAddressParams {
+  /// @nodoc
   factory GetRandomAddressParams({
     /// @nodoc
     @JsonKey(name: 'scid') String? scid,
     // @JsonKey(name: 'scid') @Uint8ListConverter() required Hash scid,
   }) = _GetRandomAddressParams;
 
+  /// @nodoc
   factory GetRandomAddressParams.fromJson(Map<String, dynamic> json) =>
       _$GetRandomAddressParamsFromJson(json);
 }

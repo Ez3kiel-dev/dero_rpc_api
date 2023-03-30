@@ -10,11 +10,13 @@ part 'query_key_result.g.dart';
 /// The response returned by a call to [WalletRepository.queryKey].
 @freezed
 class QueryKeyResult with _$QueryKeyResult {
+  /// @nodoc
   factory QueryKeyResult({
     /// @nodoc
     @JsonKey(name: 'key') String? key,
   }) = _QueryKeyResult;
 
+  /// @nodoc
   factory QueryKeyResult.fromJson(Map<String, dynamic> json) =>
       _$QueryKeyResultFromJson(json);
 }

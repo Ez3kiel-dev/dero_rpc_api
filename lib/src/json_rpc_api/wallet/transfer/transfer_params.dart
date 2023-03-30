@@ -7,9 +7,11 @@ part 'transfer_params.freezed.dart';
 
 part 'transfer_params.g.dart';
 
-/// Parameters required to call [WalletRepository.transfer] or [DerodRepository.getGasEstimate].
+/// Parameters required to call [WalletRepository.transfer]
+/// or [DerodRepository.getGasEstimate].
 @freezed
 class TransferParams with _$TransferParams {
+  /// @nodoc
   factory TransferParams({
     /// @nodoc
     @JsonKey(name: 'transfers') List<Transfer>? transfers,
@@ -36,6 +38,7 @@ class TransferParams with _$TransferParams {
     @JsonKey(name: 'signer') String? signer,
   }) = _TransferParams;
 
+  /// @nodoc
   factory TransferParams.fromJson(Map<String, dynamic> json) =>
       _$TransferParamsFromJson(json);
 }

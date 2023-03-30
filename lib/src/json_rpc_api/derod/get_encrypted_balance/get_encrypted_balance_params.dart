@@ -10,6 +10,7 @@ part 'get_encrypted_balance_params.g.dart';
 /// Parameters required to call [DerodRepository.getEncryptedBalance].
 @freezed
 class GetEncryptedBalanceParams with _$GetEncryptedBalanceParams {
+  /// @nodoc
   factory GetEncryptedBalanceParams({
     /// @nodoc
     @JsonKey(name: 'address') required String address,
@@ -25,6 +26,7 @@ class GetEncryptedBalanceParams with _$GetEncryptedBalanceParams {
     @JsonKey(name: 'topoheight') int? topoHeight,
   }) = _GetEncryptedBalanceParams;
 
+  /// @nodoc
   factory GetEncryptedBalanceParams.fromJson(Map<String, dynamic> json) =>
       _$GetEncryptedBalanceParamsFromJson(json);
 }

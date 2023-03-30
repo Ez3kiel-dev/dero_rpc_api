@@ -10,6 +10,7 @@ part 'get_balance_result.g.dart';
 /// The response returned by a call to [WalletRepository.getBalance].
 @freezed
 class GetBalanceResult with _$GetBalanceResult {
+  /// @nodoc
   factory GetBalanceResult({
     /// @nodoc
     @JsonKey(name: 'balance') int? balance,
@@ -18,6 +19,7 @@ class GetBalanceResult with _$GetBalanceResult {
     @JsonKey(name: 'unlocked_balance') int? unlockedBalance,
   }) = _GetBalanceResult;
 
+  /// @nodoc
   factory GetBalanceResult.fromJson(Map<String, dynamic> json) =>
       _$GetBalanceResultFromJson(json);
 }

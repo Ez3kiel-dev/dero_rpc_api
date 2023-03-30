@@ -10,6 +10,7 @@ part 'get_transaction_params.g.dart';
 /// Parameters required to call [DerodRepository.getTransaction].
 @freezed
 class GetTransactionParams with _$GetTransactionParams {
+  /// @nodoc
   factory GetTransactionParams({
     /// @nodoc
     @JsonKey(name: 'txs_hashes') required List<String> txsHashes,
@@ -18,6 +19,7 @@ class GetTransactionParams with _$GetTransactionParams {
     @JsonKey(name: 'decode_as_json') int? decode,
   }) = _GetTransactionParams;
 
+  /// @nodoc
   factory GetTransactionParams.fromJson(Map<String, dynamic> json) =>
       _$GetTransactionParamsFromJson(json);
 }

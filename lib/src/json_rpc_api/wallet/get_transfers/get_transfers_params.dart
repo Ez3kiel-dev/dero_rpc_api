@@ -13,6 +13,7 @@ part 'get_transfers_params.g.dart';
 /// Parameters required to call [WalletRepository.getTransfers].
 @freezed
 class GetTransfersParams with _$GetTransfersParams {
+  /// @nodoc
   factory GetTransfersParams({
     /// @nodoc
     @JsonKey(name: 'scid') @Uint8ListConverter() Hash? scid,
@@ -45,6 +46,7 @@ class GetTransfersParams with _$GetTransfersParams {
     @JsonKey(name: 'srcport') int? srcPort,
   }) = _GetTransfersParams;
 
+  /// @nodoc
   factory GetTransfersParams.fromJson(Map<String, dynamic> json) =>
       _$GetTransfersParamsFromJson(json);
 }

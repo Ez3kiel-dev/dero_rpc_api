@@ -10,6 +10,7 @@ part 'get_block_count_result.g.dart';
 /// The response returned by a call to [DerodRepository.getBlockCount].
 @freezed
 class GetBlockCountResult with _$GetBlockCountResult {
+  /// @nodoc
   factory GetBlockCountResult({
     /// @nodoc
     @JsonKey(name: 'count') int? count,
@@ -18,6 +19,7 @@ class GetBlockCountResult with _$GetBlockCountResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetBlockCountResult;
 
+  /// @nodoc
   factory GetBlockCountResult.fromJson(Map<String, dynamic> json) =>
       _$GetBlockCountResultFromJson(json);
 }

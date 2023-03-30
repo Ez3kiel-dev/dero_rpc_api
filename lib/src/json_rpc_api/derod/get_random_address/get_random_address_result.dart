@@ -10,6 +10,7 @@ part 'get_random_address_result.g.dart';
 /// The response returned by a call to [DerodRepository.getRandomAddress].
 @freezed
 class GetRandomAddressResult with _$GetRandomAddressResult {
+  /// @nodoc
   factory GetRandomAddressResult({
     /// @nodoc
     @JsonKey(name: 'address') List<String>? address,
@@ -18,6 +19,7 @@ class GetRandomAddressResult with _$GetRandomAddressResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetRandomAddressResult;
 
+  /// @nodoc
   factory GetRandomAddressResult.fromJson(Map<String, dynamic> json) =>
       _$GetRandomAddressResultFromJson(json);
 }

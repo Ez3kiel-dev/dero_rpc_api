@@ -10,6 +10,7 @@ part 'get_block_params.g.dart';
 /// Parameters required to call [DerodRepository.getBlock].
 @freezed
 class GetBlockParams with _$GetBlockParams {
+  /// @nodoc
   factory GetBlockParams({
     /// @nodoc
     @JsonKey(name: 'hash') String? hash,
@@ -18,6 +19,7 @@ class GetBlockParams with _$GetBlockParams {
     @JsonKey(name: 'height') int? height,
   }) = _GetBlockParams;
 
+  /// @nodoc
   factory GetBlockParams.fromJson(Map<String, dynamic> json) =>
       _$GetBlockParamsFromJson(json);
 }

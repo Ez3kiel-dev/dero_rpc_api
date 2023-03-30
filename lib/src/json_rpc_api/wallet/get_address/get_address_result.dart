@@ -10,11 +10,13 @@ part 'get_address_result.g.dart';
 /// The response returned by a call to [WalletRepository.getAddress].
 @freezed
 class GetAddressResult with _$GetAddressResult {
+  /// @nodoc
   factory GetAddressResult({
     /// @nodoc
     @JsonKey(name: 'address') String? address,
   }) = _GetAddressResult;
 
+  /// @nodoc
   factory GetAddressResult.fromJson(Map<String, dynamic> json) =>
       _$GetAddressResultFromJson(json);
 }

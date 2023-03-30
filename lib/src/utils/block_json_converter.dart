@@ -9,9 +9,9 @@ class BlockConverter implements JsonConverter<Block, String> {
 
   @override
   Block fromJson(String json) {
-    Map<String, dynamic> jsonDecoded = jsonDecode(json);
+    final jsonDecoded = jsonDecode(json) as Map<String, dynamic>;
 
-    int timestamp = jsonDecoded['timestamp'] ?? 0;
+    final timestamp = jsonDecoded['timestamp'] as int? ?? 0;
 
     jsonDecoded['timestamp'] =
         DateTime.fromMillisecondsSinceEpoch(timestamp).toIso8601String();

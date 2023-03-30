@@ -10,6 +10,7 @@ part 'get_block_template_params.g.dart';
 /// Parameters required to call [DerodRepository.getBlockTemplate].
 @freezed
 class GetBlockTemplateParams with _$GetBlockTemplateParams {
+  /// @nodoc
   factory GetBlockTemplateParams({
     /// @nodoc
     @JsonKey(name: 'wallet_address') required String walletAddress,
@@ -21,6 +22,7 @@ class GetBlockTemplateParams with _$GetBlockTemplateParams {
     @JsonKey(name: 'miner') String? miner,
   }) = _GetBlockTemplateParams;
 
+  /// @nodoc
   factory GetBlockTemplateParams.fromJson(Map<String, dynamic> json) =>
       _$GetBlockTemplateParamsFromJson(json);
 }

@@ -11,6 +11,7 @@ part 'get_block_result.g.dart';
 /// The response returned by a call to [DerodRepository.getBlock].
 @freezed
 class GetBlockResult with _$GetBlockResult {
+  /// @nodoc
   factory GetBlockResult({
     /// @nodoc
     @JsonKey(name: 'blob') String? blob,
@@ -25,6 +26,7 @@ class GetBlockResult with _$GetBlockResult {
     @JsonKey(name: 'status') String? status,
   }) = _GetBlockResult;
 
+  /// @nodoc
   factory GetBlockResult.fromJson(Map<String, dynamic> json) =>
       _$GetBlockResultFromJson(json);
 }

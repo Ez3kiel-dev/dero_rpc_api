@@ -10,11 +10,13 @@ part 'get_transfer_by_txid_params.g.dart';
 /// Parameters required to call [WalletRepository.getTransferByTXID].
 @freezed
 class GetTransferByTxidParams with _$GetTransferByTxidParams {
+  /// @nodoc
   factory GetTransferByTxidParams({
     /// @nodoc
     @JsonKey(name: 'txid') required String txid,
   }) = _GetTransferByTxidParams;
 
+  /// @nodoc
   factory GetTransferByTxidParams.fromJson(Map<String, dynamic> json) =>
       _$GetTransferByTxidParamsFromJson(json);
 }

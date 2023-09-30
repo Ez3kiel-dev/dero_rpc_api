@@ -1,3 +1,7 @@
+## 0.12.1
+
+- fix: Bump dependencies and format.
+
 ## 0.12.0
 
 - feat: NewBlock and NewHeight event streams.

@@ -170,10 +170,9 @@ class _$_SubmitBlockParams implements _SubmitBlockParams {
 
 abstract class _SubmitBlockParams implements SubmitBlockParams {
   factory _SubmitBlockParams(
-      {@JsonKey(name: 'jobid')
-          required final String jobId,
+      {@JsonKey(name: 'jobid') required final String jobId,
       @JsonKey(name: 'mbl_blob')
-          required final String miniblockHashingBlob}) = _$_SubmitBlockParams;
+      required final String miniblockHashingBlob}) = _$_SubmitBlockParams;
 
   factory _SubmitBlockParams.fromJson(Map<String, dynamic> json) =
       _$_SubmitBlockParams.fromJson;

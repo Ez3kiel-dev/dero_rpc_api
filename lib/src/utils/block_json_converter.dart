@@ -5,6 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 /// [Block] Json Converter
 class BlockConverter implements JsonConverter<Block, String> {
+  ///  @nodoc
   const BlockConverter();
 
   @override

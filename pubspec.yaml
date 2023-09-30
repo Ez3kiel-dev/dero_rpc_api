@@ -1,6 +1,6 @@
 name: dero_rpc_api
 description: Dero RPC API (derod and wallet) to interact with Dero network.
-version: 0.12.0
+version: 0.12.1
 
 repository: https://github.com/Ez3kiel-dev/dero_rpc_api
 
@@ -9,15 +9,15 @@ environment:
 
 dependencies:
   convert: ^3.1.1
-  freezed_annotation: ^2.2.0
-  json_annotation: ^4.8.0
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
   json_rpc_2: ^3.0.2
-  very_good_analysis: ^4.0.0+1
-  web_socket_channel: ^2.3.0
+  very_good_analysis: ^5.1.0
+  web_socket_channel: ^2.4.0
 
 dev_dependencies:
-  build_runner: ^2.3.3
-  freezed: ^2.3.2
-  json_serializable: ^6.6.1
-  lints: ^2.0.1
-  test: ^1.24.0
+  build_runner: ^2.4.6
+  freezed: ^2.4.3
+  json_serializable: ^6.7.1
+  lints: ^2.1.1
+  test: ^1.24.6

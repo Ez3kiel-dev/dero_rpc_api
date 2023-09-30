@@ -42,7 +42,7 @@ void main() {
           name: 'integratedData',
           datatype: DataType.dataString,
           value: 'my_payment_identifier',
-        )
+        ),
       ],
     );
 
@@ -63,7 +63,7 @@ void main() {
           name: 'integratedData',
           datatype: DataType.dataString,
           value: 'my_payment_identifier',
-        )
+        ),
       ],
     );
 
@@ -112,9 +112,10 @@ void main() {
           destination: destinationAddress.address,
           amount: 1,
           payloadRPC: [
-            Argument(name: 'C', datatype: DataType.dataString, value: 'comment')
+            Argument(
+                name: 'C', datatype: DataType.dataString, value: 'comment'),
           ],
-        )
+        ),
       ],
     );
 
@@ -135,7 +136,7 @@ void main() {
           datatype: DataType.dataString,
           value: 'Register',
         ),
-        Argument(name: 'name', datatype: DataType.dataString, value: 'Ez3kiel')
+        Argument(name: 'name', datatype: DataType.dataString, value: 'Ez3kiel'),
       ],
     );
 

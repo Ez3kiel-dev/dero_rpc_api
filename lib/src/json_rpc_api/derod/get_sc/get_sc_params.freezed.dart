@@ -65,21 +65,15 @@ abstract class $GetSCParamsCopyWith<$Res> {
       _$GetSCParamsCopyWithImpl<$Res, GetSCParams>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'scid')
-          String scid,
-      @JsonKey(name: 'code')
-          bool code,
-      @JsonKey(name: 'variables')
-          bool variables,
-      @JsonKey(name: 'topoheight')
-          int? topoHeight,
-      @JsonKey(name: 'keysuint64')
-          List<int>? keysInt,
-      @JsonKey(name: 'keysstring')
-          List<String>? keysString,
+      {@JsonKey(name: 'scid') String scid,
+      @JsonKey(name: 'code') bool code,
+      @JsonKey(name: 'variables') bool variables,
+      @JsonKey(name: 'topoheight') int? topoHeight,
+      @JsonKey(name: 'keysuint64') List<int>? keysInt,
+      @JsonKey(name: 'keysstring') List<String>? keysString,
       @JsonKey(name: 'keysbytes')
       @Uint8ListConverter()
-          List<Uint8List>? keysBytes});
+      List<Uint8List>? keysBytes});
 }
 
 /// @nodoc
@@ -145,21 +139,15 @@ abstract class _$$_GetSCParamsCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'scid')
-          String scid,
-      @JsonKey(name: 'code')
-          bool code,
-      @JsonKey(name: 'variables')
-          bool variables,
-      @JsonKey(name: 'topoheight')
-          int? topoHeight,
-      @JsonKey(name: 'keysuint64')
-          List<int>? keysInt,
-      @JsonKey(name: 'keysstring')
-          List<String>? keysString,
+      {@JsonKey(name: 'scid') String scid,
+      @JsonKey(name: 'code') bool code,
+      @JsonKey(name: 'variables') bool variables,
+      @JsonKey(name: 'topoheight') int? topoHeight,
+      @JsonKey(name: 'keysuint64') List<int>? keysInt,
+      @JsonKey(name: 'keysstring') List<String>? keysString,
       @JsonKey(name: 'keysbytes')
       @Uint8ListConverter()
-          List<Uint8List>? keysBytes});
+      List<Uint8List>? keysBytes});
 }
 
 /// @nodoc
@@ -218,21 +206,15 @@ class __$$_GetSCParamsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GetSCParams implements _GetSCParams {
   _$_GetSCParams(
-      {@JsonKey(name: 'scid')
-          required this.scid,
-      @JsonKey(name: 'code')
-          this.code = true,
-      @JsonKey(name: 'variables')
-          this.variables = true,
-      @JsonKey(name: 'topoheight')
-          this.topoHeight,
-      @JsonKey(name: 'keysuint64')
-          final List<int>? keysInt,
-      @JsonKey(name: 'keysstring')
-          final List<String>? keysString,
+      {@JsonKey(name: 'scid') required this.scid,
+      @JsonKey(name: 'code') this.code = true,
+      @JsonKey(name: 'variables') this.variables = true,
+      @JsonKey(name: 'topoheight') this.topoHeight,
+      @JsonKey(name: 'keysuint64') final List<int>? keysInt,
+      @JsonKey(name: 'keysstring') final List<String>? keysString,
       @JsonKey(name: 'keysbytes')
       @Uint8ListConverter()
-          final List<Uint8List>? keysBytes})
+      final List<Uint8List>? keysBytes})
       : _keysInt = keysInt,
         _keysString = keysString,
         _keysBytes = keysBytes;
@@ -357,21 +339,15 @@ class _$_GetSCParams implements _GetSCParams {
 
 abstract class _GetSCParams implements GetSCParams {
   factory _GetSCParams(
-      {@JsonKey(name: 'scid')
-          required final String scid,
-      @JsonKey(name: 'code')
-          final bool code,
-      @JsonKey(name: 'variables')
-          final bool variables,
-      @JsonKey(name: 'topoheight')
-          final int? topoHeight,
-      @JsonKey(name: 'keysuint64')
-          final List<int>? keysInt,
-      @JsonKey(name: 'keysstring')
-          final List<String>? keysString,
+      {@JsonKey(name: 'scid') required final String scid,
+      @JsonKey(name: 'code') final bool code,
+      @JsonKey(name: 'variables') final bool variables,
+      @JsonKey(name: 'topoheight') final int? topoHeight,
+      @JsonKey(name: 'keysuint64') final List<int>? keysInt,
+      @JsonKey(name: 'keysstring') final List<String>? keysString,
       @JsonKey(name: 'keysbytes')
       @Uint8ListConverter()
-          final List<Uint8List>? keysBytes}) = _$_GetSCParams;
+      final List<Uint8List>? keysBytes}) = _$_GetSCParams;
 
   factory _GetSCParams.fromJson(Map<String, dynamic> json) =
       _$_GetSCParams.fromJson;

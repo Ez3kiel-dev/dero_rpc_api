@@ -5,22 +5,24 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 
 /// @nodoc
 class ClientRepository {
+  /// @nodoc
+  ClientRepository(this.uri) : rpcClient = _setUpClient(uri);
+
   /// JSON-RPC server Uri address.
   final Uri uri;
 
   /// JSON-RPC [Client].
   final Client rpcClient;
 
-  ClientRepository(this.uri) : rpcClient = _setUpClient(uri);
-
   // Used to set up the JSON-RPC client.
   static Client _setUpClient(Uri uri) {
-    var socket = WebSocketChannel.connect(uri);
+    final socket = WebSocketChannel.connect(uri);
     return Client(socket.cast<String>());
   }
 
-  /// Returns a Future that will complete when the connection is closed or when it has an error.
-  Future get done async => await rpcClient.done;
+  /// Returns a Future that will complete when the connection is closed
+  /// or when it has an error.
+  Future<dynamic> get done async => rpcClient.done;
 
   /// Starts the JSON-RPC client.
   void start() => unawaited(rpcClient.listen());

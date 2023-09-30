@@ -23,9 +23,8 @@ const String scidOfficialNameService =
 const String derodMainnetAddr = '127.0.0.1:10102';
 
 Future<void> main() async {
-  final DerodRepository derodRepository =
-      DerodRepository(rpcAddress: derodMainnetAddr);
-  derodRepository.start();
+  final derodRepository = DerodRepository(rpcAddress: derodMainnetAddr)
+    ..start();
 
   GetBlockResult blockResult;
 
@@ -36,12 +35,12 @@ Future<void> main() async {
   test('GetInfo Derod', () async {
     await expectLater(derodRepository.getInfo(), completes);
 
-    var res = await derodRepository.getInfo();
+    final res = await derodRepository.getInfo();
     // print(res);
     expect(res, isA<GetInfoResult>());
   });
 
-  var getHeightDerodResult = await derodRepository.getHeight();
+  final getHeightDerodResult = await derodRepository.getHeight();
   // print(getHeightDerodResult);
 
   test('getHeight Derod', () async {
@@ -56,51 +55,63 @@ Future<void> main() async {
 
   test('getBlock Derod', () async {
     await expectLater(
-        derodRepository
-            .getBlock(GetBlockParams(height: getHeightDerodResult.height)),
-        completes);
+      derodRepository
+          .getBlock(GetBlockParams(height: getHeightDerodResult.height)),
+      completes,
+    );
 
     expect(blockResult, isA<GetBlockResult>());
 
     await expectLater(
-        derodRepository
-            .getBlock(GetBlockParams(hash: blockResult.blockHeader?.hash)),
-        completes);
+      derodRepository
+          .getBlock(GetBlockParams(hash: blockResult.blockHeader?.hash)),
+      completes,
+    );
     expect(
-        await derodRepository
-            .getBlock(GetBlockParams(hash: blockResult.blockHeader?.hash)),
-        isA<GetBlockResult>());
+      await derodRepository
+          .getBlock(GetBlockParams(hash: blockResult.blockHeader?.hash)),
+      isA<GetBlockResult>(),
+    );
   });
 
   test('getBlockCount Derod', () async {
     await expectLater(derodRepository.getBlockCount(), completes);
 
-    var res = await derodRepository.getBlockCount();
+    final res = await derodRepository.getBlockCount();
     // print(res);
     expect(res, isA<GetBlockCountResult>());
   });
 
   test('getBlockByHash Derod', () async {
     await expectLater(
-        derodRepository.getBlockByHash(
-            GetBlockByHashParams(hash: blockResult.blockHeader?.hash ?? '')),
-        completes);
+      derodRepository.getBlockByHash(
+        GetBlockByHashParams(hash: blockResult.blockHeader?.hash ?? ''),
+      ),
+      completes,
+    );
 
-    var res = await derodRepository.getBlockByHash(
-        GetBlockByHashParams(hash: blockResult.blockHeader?.hash ?? ''));
+    final res = await derodRepository.getBlockByHash(
+      GetBlockByHashParams(hash: blockResult.blockHeader?.hash ?? ''),
+    );
     // print(res);
     expect(res, isA<GetBlockByResult>());
   });
 
   test('getBlockByTopoHeight Derod', () async {
     await expectLater(
-        derodRepository.getBlockByTopoHeight(GetBlockByTopoHeightParams(
-            topoHeight: getHeightDerodResult.height ?? 1)),
-        completes);
-
-    var res = await derodRepository.getBlockByTopoHeight(
+      derodRepository.getBlockByTopoHeight(
         GetBlockByTopoHeightParams(
-            topoHeight: getHeightDerodResult.height ?? 1));
+          topoHeight: getHeightDerodResult.height ?? 1,
+        ),
+      ),
+      completes,
+    );
+
+    final res = await derodRepository.getBlockByTopoHeight(
+      GetBlockByTopoHeightParams(
+        topoHeight: getHeightDerodResult.height ?? 1,
+      ),
+    );
     // print(res);
     expect(res, isA<GetBlockByResult>());
   });
@@ -108,26 +119,34 @@ Future<void> main() async {
   test('getTxPool Derod', () async {
     await expectLater(derodRepository.getTxPool(), completes);
 
-    var res = await derodRepository.getTxPool();
+    final res = await derodRepository.getTxPool();
     // print(res);
     expect(res, isA<GetTxPoolResult>());
   });
 
   test('getTransaction Derod', () async {
-    String txHash = blockResult.block?.txHashes?.isNotEmpty ?? false
+    final txHash = blockResult.block?.txHashes?.isNotEmpty ?? false
         ? blockResult.block!.txHashes![0]
         : '';
 
     await expectLater(
-        derodRepository.getTransaction(GetTransactionParams(txsHashes: [
-          txHash,
-        ])),
-        completes);
+      derodRepository.getTransaction(
+        GetTransactionParams(
+          txsHashes: [
+            txHash,
+          ],
+        ),
+      ),
+      completes,
+    );
 
-    var res =
-        await derodRepository.getTransaction(GetTransactionParams(txsHashes: [
-      txHash,
-    ]));
+    final res = await derodRepository.getTransaction(
+      GetTransactionParams(
+        txsHashes: [
+          txHash,
+        ],
+      ),
+    );
     // print(res);
     expect(res, isA<GetTransactionResult>());
   });
@@ -135,39 +154,39 @@ Future<void> main() async {
   test('getLastBlockHeader Derod', () async {
     await expectLater(derodRepository.getLastBlockHeader(), completes);
 
-    var res = await derodRepository.getLastBlockHeader();
+    final res = await derodRepository.getLastBlockHeader();
     // print(res);
     expect(res, isA<GetBlockByResult>());
   });
 
   test('getSC Derod', () async {
-    var params = GetSCParams(scid: scidOfficialNameService, variables: false);
+    final params = GetSCParams(scid: scidOfficialNameService, variables: false);
 
     await expectLater(derodRepository.getSC(params), completes);
 
-    var res = await derodRepository.getSC(params);
+    final res = await derodRepository.getSC(params);
     // print(res);
     expect(res, isA<GetSCResult>());
   });
 
   test('getGasEstimate Derod', () async {
-    var params = TransferParams(
+    final params = TransferParams(
       smartContractCode: testSC,
     );
 
     await expectLater(derodRepository.getGasEstimate(params), completes);
 
-    var res = await derodRepository.getGasEstimate(params);
+    final res = await derodRepository.getGasEstimate(params);
     // print(res);
     expect(res, isA<GasEstimateResult>());
   });
 
   test('getNameToAddress Derod', () async {
-    var params = NameToAddressParams(name: 'Ez3kiel');
+    final params = NameToAddressParams(name: 'Ez3kiel');
 
     await expectLater(derodRepository.getNameToAddress(params), completes);
 
-    var res = await derodRepository.getNameToAddress(params);
+    final res = await derodRepository.getNameToAddress(params);
     // print(res);
     expect(res, isA<NameToAddressResult>());
   });
@@ -175,29 +194,29 @@ Future<void> main() async {
   test('getRandomAddress Derod', () async {
     await expectLater(derodRepository.getRandomAddress(), completes);
 
-    var res = await derodRepository.getRandomAddress();
+    final res = await derodRepository.getRandomAddress();
     // print(res);
     expect(res, isA<GetRandomAddressResult>());
   });
 
   test('sendRawTransaction Derod', () async {
-    var params = SendRawTransactionParams(txAsHex: '');
+    final params = SendRawTransactionParams(txAsHex: '');
 
     await expectLater(derodRepository.sendRawTransaction(params), completes);
 
-    var res = await derodRepository.sendRawTransaction(params);
+    final res = await derodRepository.sendRawTransaction(params);
     // print(res);
     expect(res, isA<SendRawTransactionResult>());
   });
 
   test('getBlockTemplate Derod', () async {
-    var addresses = await derodRepository.getRandomAddress();
+    final addresses = await derodRepository.getRandomAddress();
 
-    var params = GetBlockTemplateParams(walletAddress: addresses.address![0]);
+    final params = GetBlockTemplateParams(walletAddress: addresses.address![0]);
 
     await expectLater(derodRepository.getBlockTemplate(params), completes);
 
-    var res = await derodRepository.getBlockTemplate(params);
+    final res = await derodRepository.getBlockTemplate(params);
     // print(res);
     expect(res, isA<GetBlockTemplateResult>());
   });
@@ -213,15 +232,16 @@ Future<void> main() async {
   });*/
 
   test('getEncryptedBalance Derod', () async {
-    var addresses = await derodRepository.getRandomAddress();
+    final addresses = await derodRepository.getRandomAddress();
 
-    var params = GetEncryptedBalanceParams(
-        address: addresses.address![0],
-        topoHeight: getHeightDerodResult.height);
+    final params = GetEncryptedBalanceParams(
+      address: addresses.address![0],
+      topoHeight: getHeightDerodResult.height,
+    );
 
     await expectLater(derodRepository.getEncryptedBalance(params), completes);
 
-    var res = await derodRepository.getEncryptedBalance(params);
+    final res = await derodRepository.getEncryptedBalance(params);
     // print(res);
     expect(res, isA<GetEncryptedBalanceResult>());
   });

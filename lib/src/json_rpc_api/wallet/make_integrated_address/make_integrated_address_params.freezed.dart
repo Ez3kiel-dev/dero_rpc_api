@@ -187,10 +187,9 @@ class _$_MakeIntegratedAddressParams implements _MakeIntegratedAddressParams {
 abstract class _MakeIntegratedAddressParams
     implements MakeIntegratedAddressParams {
   factory _MakeIntegratedAddressParams(
-          {@JsonKey(name: 'address')
-              final String? address,
+          {@JsonKey(name: 'address') final String? address,
           @JsonKey(name: 'payload_rpc')
-              required final List<Argument> payloadRPC}) =
+          required final List<Argument> payloadRPC}) =
       _$_MakeIntegratedAddressParams;
 
   factory _MakeIntegratedAddressParams.fromJson(Map<String, dynamic> json) =

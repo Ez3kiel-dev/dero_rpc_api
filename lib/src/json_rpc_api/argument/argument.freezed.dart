@@ -193,13 +193,11 @@ class _$_Argument implements _Argument {
 
 abstract class _Argument implements Argument {
   factory _Argument(
-      {@JsonKey(name: 'name')
-          required final String name,
-      @JsonKey(name: 'datatype')
-          required final DataType datatype,
+      {@JsonKey(name: 'name') required final String name,
+      @JsonKey(name: 'datatype') required final DataType datatype,
       @JsonKey(name: 'value')
       @ArgumentValueConverter()
-          required final dynamic value}) = _$_Argument;
+      required final dynamic value}) = _$_Argument;
 
   factory _Argument.fromJson(Map<String, dynamic> json) = _$_Argument.fromJson;
 

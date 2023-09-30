@@ -9,7 +9,7 @@ import 'package:convert/convert.dart';
 typedef Hash = Uint8List;
 
 /// @nodoc
-var zeroHash = Hash(32);
+Uint8List zeroHash = Hash(32);
 
 /// Convert hexadecimal byte string to bytes array.
 Uint8List hexToBytes(String hexByteString) {

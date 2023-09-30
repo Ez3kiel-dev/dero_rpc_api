@@ -165,72 +165,41 @@ abstract class $GetInfoResultCopyWith<$Res> {
       _$GetInfoResultCopyWithImpl<$Res, GetInfoResult>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'alt_blocks_count')
-          int? altBlocksCount,
-      @JsonKey(name: 'difficulty')
-          int? difficulty,
-      @JsonKey(name: 'grey_peerlist_size')
-          int? greyPeerListSize,
-      @JsonKey(name: 'height')
-          int? height,
-      @JsonKey(name: 'stableheight')
-          int? stableHeight,
-      @JsonKey(name: 'topoheight')
-          int? topoHeight,
-      @JsonKey(name: 'treehash')
-          String? merkleBalanceTreeHash,
-      @JsonKey(name: 'averageblocktime50')
-          double? averageBlockTime50,
+      {@JsonKey(name: 'alt_blocks_count') int? altBlocksCount,
+      @JsonKey(name: 'difficulty') int? difficulty,
+      @JsonKey(name: 'grey_peerlist_size') int? greyPeerListSize,
+      @JsonKey(name: 'height') int? height,
+      @JsonKey(name: 'stableheight') int? stableHeight,
+      @JsonKey(name: 'topoheight') int? topoHeight,
+      @JsonKey(name: 'treehash') String? merkleBalanceTreeHash,
+      @JsonKey(name: 'averageblocktime50') double? averageBlockTime50,
       @JsonKey(name: 'incoming_connections_count')
-          int? incomingConnectionsCount,
+      int? incomingConnectionsCount,
       @JsonKey(name: 'outgoing_connections_count')
-          int? outgoingConnectionsCount,
-      @JsonKey(name: 'target')
-          int? target,
-      @JsonKey(name: 'target_height')
-          int? targetHeight,
-      @JsonKey(name: 'testnet')
-          bool? testnet,
-      @JsonKey(name: 'network')
-          String? network,
-      @JsonKey(name: 'top_block_hash')
-          String? topBlockHash,
-      @JsonKey(name: 'tx_count')
-          int? txCount,
-      @JsonKey(name: 'tx_pool_size')
-          int? txPoolSize,
-      @JsonKey(name: 'dynamic_fee_per_kb')
-          int? dynamicFeePerKb,
-      @JsonKey(name: 'total_supply')
-          int? totalSupply,
-      @JsonKey(name: 'median_block_size')
-          int? medianBlockSize,
-      @JsonKey(name: 'white_peerlist_size')
-          int? whitePeerListSize,
-      @JsonKey(name: 'version')
-          String? version,
-      @JsonKey(name: 'connected_miners')
-          int? connectedMiners,
-      @JsonKey(name: 'miniblocks_in_memory')
-          int? miniblocksInMemory,
-      @JsonKey(name: 'blocks_count')
-          int? blocksCount,
-      @JsonKey(name: 'miniblocks_accepted_count')
-          int? miniblocksAcceptedCount,
-      @JsonKey(name: 'miniblocks_rejected_count')
-          int? miniblocksRejectedCount,
-      @JsonKey(name: 'mining_velocity')
-          double? miningVelocity,
-      @JsonKey(name: 'uptime')
-          int? uptime,
-      @JsonKey(name: 'hashrate_1hr')
-          int? hashrate1hr,
-      @JsonKey(name: 'hashrate_1d')
-          int? hashrate1d,
-      @JsonKey(name: 'hashrate_7d')
-          int? hashrate7d,
-      @JsonKey(name: 'status')
-          String? status});
+      int? outgoingConnectionsCount,
+      @JsonKey(name: 'target') int? target,
+      @JsonKey(name: 'target_height') int? targetHeight,
+      @JsonKey(name: 'testnet') bool? testnet,
+      @JsonKey(name: 'network') String? network,
+      @JsonKey(name: 'top_block_hash') String? topBlockHash,
+      @JsonKey(name: 'tx_count') int? txCount,
+      @JsonKey(name: 'tx_pool_size') int? txPoolSize,
+      @JsonKey(name: 'dynamic_fee_per_kb') int? dynamicFeePerKb,
+      @JsonKey(name: 'total_supply') int? totalSupply,
+      @JsonKey(name: 'median_block_size') int? medianBlockSize,
+      @JsonKey(name: 'white_peerlist_size') int? whitePeerListSize,
+      @JsonKey(name: 'version') String? version,
+      @JsonKey(name: 'connected_miners') int? connectedMiners,
+      @JsonKey(name: 'miniblocks_in_memory') int? miniblocksInMemory,
+      @JsonKey(name: 'blocks_count') int? blocksCount,
+      @JsonKey(name: 'miniblocks_accepted_count') int? miniblocksAcceptedCount,
+      @JsonKey(name: 'miniblocks_rejected_count') int? miniblocksRejectedCount,
+      @JsonKey(name: 'mining_velocity') double? miningVelocity,
+      @JsonKey(name: 'uptime') int? uptime,
+      @JsonKey(name: 'hashrate_1hr') int? hashrate1hr,
+      @JsonKey(name: 'hashrate_1d') int? hashrate1d,
+      @JsonKey(name: 'hashrate_7d') int? hashrate7d,
+      @JsonKey(name: 'status') String? status});
 }
 
 /// @nodoc
@@ -426,72 +395,41 @@ abstract class _$$_GetInfoResultCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'alt_blocks_count')
-          int? altBlocksCount,
-      @JsonKey(name: 'difficulty')
-          int? difficulty,
-      @JsonKey(name: 'grey_peerlist_size')
-          int? greyPeerListSize,
-      @JsonKey(name: 'height')
-          int? height,
-      @JsonKey(name: 'stableheight')
-          int? stableHeight,
-      @JsonKey(name: 'topoheight')
-          int? topoHeight,
-      @JsonKey(name: 'treehash')
-          String? merkleBalanceTreeHash,
-      @JsonKey(name: 'averageblocktime50')
-          double? averageBlockTime50,
+      {@JsonKey(name: 'alt_blocks_count') int? altBlocksCount,
+      @JsonKey(name: 'difficulty') int? difficulty,
+      @JsonKey(name: 'grey_peerlist_size') int? greyPeerListSize,
+      @JsonKey(name: 'height') int? height,
+      @JsonKey(name: 'stableheight') int? stableHeight,
+      @JsonKey(name: 'topoheight') int? topoHeight,
+      @JsonKey(name: 'treehash') String? merkleBalanceTreeHash,
+      @JsonKey(name: 'averageblocktime50') double? averageBlockTime50,
       @JsonKey(name: 'incoming_connections_count')
-          int? incomingConnectionsCount,
+      int? incomingConnectionsCount,
       @JsonKey(name: 'outgoing_connections_count')
-          int? outgoingConnectionsCount,
-      @JsonKey(name: 'target')
-          int? target,
-      @JsonKey(name: 'target_height')
-          int? targetHeight,
-      @JsonKey(name: 'testnet')
-          bool? testnet,
-      @JsonKey(name: 'network')
-          String? network,
-      @JsonKey(name: 'top_block_hash')
-          String? topBlockHash,
-      @JsonKey(name: 'tx_count')
-          int? txCount,
-      @JsonKey(name: 'tx_pool_size')
-          int? txPoolSize,
-      @JsonKey(name: 'dynamic_fee_per_kb')
-          int? dynamicFeePerKb,
-      @JsonKey(name: 'total_supply')
-          int? totalSupply,
-      @JsonKey(name: 'median_block_size')
-          int? medianBlockSize,
-      @JsonKey(name: 'white_peerlist_size')
-          int? whitePeerListSize,
-      @JsonKey(name: 'version')
-          String? version,
-      @JsonKey(name: 'connected_miners')
-          int? connectedMiners,
-      @JsonKey(name: 'miniblocks_in_memory')
-          int? miniblocksInMemory,
-      @JsonKey(name: 'blocks_count')
-          int? blocksCount,
-      @JsonKey(name: 'miniblocks_accepted_count')
-          int? miniblocksAcceptedCount,
-      @JsonKey(name: 'miniblocks_rejected_count')
-          int? miniblocksRejectedCount,
-      @JsonKey(name: 'mining_velocity')
-          double? miningVelocity,
-      @JsonKey(name: 'uptime')
-          int? uptime,
-      @JsonKey(name: 'hashrate_1hr')
-          int? hashrate1hr,
-      @JsonKey(name: 'hashrate_1d')
-          int? hashrate1d,
-      @JsonKey(name: 'hashrate_7d')
-          int? hashrate7d,
-      @JsonKey(name: 'status')
-          String? status});
+      int? outgoingConnectionsCount,
+      @JsonKey(name: 'target') int? target,
+      @JsonKey(name: 'target_height') int? targetHeight,
+      @JsonKey(name: 'testnet') bool? testnet,
+      @JsonKey(name: 'network') String? network,
+      @JsonKey(name: 'top_block_hash') String? topBlockHash,
+      @JsonKey(name: 'tx_count') int? txCount,
+      @JsonKey(name: 'tx_pool_size') int? txPoolSize,
+      @JsonKey(name: 'dynamic_fee_per_kb') int? dynamicFeePerKb,
+      @JsonKey(name: 'total_supply') int? totalSupply,
+      @JsonKey(name: 'median_block_size') int? medianBlockSize,
+      @JsonKey(name: 'white_peerlist_size') int? whitePeerListSize,
+      @JsonKey(name: 'version') String? version,
+      @JsonKey(name: 'connected_miners') int? connectedMiners,
+      @JsonKey(name: 'miniblocks_in_memory') int? miniblocksInMemory,
+      @JsonKey(name: 'blocks_count') int? blocksCount,
+      @JsonKey(name: 'miniblocks_accepted_count') int? miniblocksAcceptedCount,
+      @JsonKey(name: 'miniblocks_rejected_count') int? miniblocksRejectedCount,
+      @JsonKey(name: 'mining_velocity') double? miningVelocity,
+      @JsonKey(name: 'uptime') int? uptime,
+      @JsonKey(name: 'hashrate_1hr') int? hashrate1hr,
+      @JsonKey(name: 'hashrate_1d') int? hashrate1d,
+      @JsonKey(name: 'hashrate_7d') int? hashrate7d,
+      @JsonKey(name: 'status') String? status});
 }
 
 /// @nodoc
@@ -680,72 +618,41 @@ class __$$_GetInfoResultCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GetInfoResult implements _GetInfoResult {
   _$_GetInfoResult(
-      {@JsonKey(name: 'alt_blocks_count')
-          this.altBlocksCount,
-      @JsonKey(name: 'difficulty')
-          this.difficulty,
-      @JsonKey(name: 'grey_peerlist_size')
-          this.greyPeerListSize,
-      @JsonKey(name: 'height')
-          this.height,
-      @JsonKey(name: 'stableheight')
-          this.stableHeight,
-      @JsonKey(name: 'topoheight')
-          this.topoHeight,
-      @JsonKey(name: 'treehash')
-          this.merkleBalanceTreeHash,
-      @JsonKey(name: 'averageblocktime50')
-          this.averageBlockTime50,
+      {@JsonKey(name: 'alt_blocks_count') this.altBlocksCount,
+      @JsonKey(name: 'difficulty') this.difficulty,
+      @JsonKey(name: 'grey_peerlist_size') this.greyPeerListSize,
+      @JsonKey(name: 'height') this.height,
+      @JsonKey(name: 'stableheight') this.stableHeight,
+      @JsonKey(name: 'topoheight') this.topoHeight,
+      @JsonKey(name: 'treehash') this.merkleBalanceTreeHash,
+      @JsonKey(name: 'averageblocktime50') this.averageBlockTime50,
       @JsonKey(name: 'incoming_connections_count')
-          this.incomingConnectionsCount,
+      this.incomingConnectionsCount,
       @JsonKey(name: 'outgoing_connections_count')
-          this.outgoingConnectionsCount,
-      @JsonKey(name: 'target')
-          this.target,
-      @JsonKey(name: 'target_height')
-          this.targetHeight,
-      @JsonKey(name: 'testnet')
-          this.testnet,
-      @JsonKey(name: 'network')
-          this.network,
-      @JsonKey(name: 'top_block_hash')
-          this.topBlockHash,
-      @JsonKey(name: 'tx_count')
-          this.txCount,
-      @JsonKey(name: 'tx_pool_size')
-          this.txPoolSize,
-      @JsonKey(name: 'dynamic_fee_per_kb')
-          this.dynamicFeePerKb,
-      @JsonKey(name: 'total_supply')
-          this.totalSupply,
-      @JsonKey(name: 'median_block_size')
-          this.medianBlockSize,
-      @JsonKey(name: 'white_peerlist_size')
-          this.whitePeerListSize,
-      @JsonKey(name: 'version')
-          this.version,
-      @JsonKey(name: 'connected_miners')
-          this.connectedMiners,
-      @JsonKey(name: 'miniblocks_in_memory')
-          this.miniblocksInMemory,
-      @JsonKey(name: 'blocks_count')
-          this.blocksCount,
-      @JsonKey(name: 'miniblocks_accepted_count')
-          this.miniblocksAcceptedCount,
-      @JsonKey(name: 'miniblocks_rejected_count')
-          this.miniblocksRejectedCount,
-      @JsonKey(name: 'mining_velocity')
-          this.miningVelocity,
-      @JsonKey(name: 'uptime')
-          this.uptime,
-      @JsonKey(name: 'hashrate_1hr')
-          this.hashrate1hr,
-      @JsonKey(name: 'hashrate_1d')
-          this.hashrate1d,
-      @JsonKey(name: 'hashrate_7d')
-          this.hashrate7d,
-      @JsonKey(name: 'status')
-          this.status});
+      this.outgoingConnectionsCount,
+      @JsonKey(name: 'target') this.target,
+      @JsonKey(name: 'target_height') this.targetHeight,
+      @JsonKey(name: 'testnet') this.testnet,
+      @JsonKey(name: 'network') this.network,
+      @JsonKey(name: 'top_block_hash') this.topBlockHash,
+      @JsonKey(name: 'tx_count') this.txCount,
+      @JsonKey(name: 'tx_pool_size') this.txPoolSize,
+      @JsonKey(name: 'dynamic_fee_per_kb') this.dynamicFeePerKb,
+      @JsonKey(name: 'total_supply') this.totalSupply,
+      @JsonKey(name: 'median_block_size') this.medianBlockSize,
+      @JsonKey(name: 'white_peerlist_size') this.whitePeerListSize,
+      @JsonKey(name: 'version') this.version,
+      @JsonKey(name: 'connected_miners') this.connectedMiners,
+      @JsonKey(name: 'miniblocks_in_memory') this.miniblocksInMemory,
+      @JsonKey(name: 'blocks_count') this.blocksCount,
+      @JsonKey(name: 'miniblocks_accepted_count') this.miniblocksAcceptedCount,
+      @JsonKey(name: 'miniblocks_rejected_count') this.miniblocksRejectedCount,
+      @JsonKey(name: 'mining_velocity') this.miningVelocity,
+      @JsonKey(name: 'uptime') this.uptime,
+      @JsonKey(name: 'hashrate_1hr') this.hashrate1hr,
+      @JsonKey(name: 'hashrate_1d') this.hashrate1d,
+      @JsonKey(name: 'hashrate_7d') this.hashrate7d,
+      @JsonKey(name: 'status') this.status});
 
   factory _$_GetInfoResult.fromJson(Map<String, dynamic> json) =>
       _$$_GetInfoResultFromJson(json);
@@ -1043,72 +950,43 @@ class _$_GetInfoResult implements _GetInfoResult {
 
 abstract class _GetInfoResult implements GetInfoResult {
   factory _GetInfoResult(
-      {@JsonKey(name: 'alt_blocks_count')
-          final int? altBlocksCount,
-      @JsonKey(name: 'difficulty')
-          final int? difficulty,
-      @JsonKey(name: 'grey_peerlist_size')
-          final int? greyPeerListSize,
-      @JsonKey(name: 'height')
-          final int? height,
-      @JsonKey(name: 'stableheight')
-          final int? stableHeight,
-      @JsonKey(name: 'topoheight')
-          final int? topoHeight,
-      @JsonKey(name: 'treehash')
-          final String? merkleBalanceTreeHash,
-      @JsonKey(name: 'averageblocktime50')
-          final double? averageBlockTime50,
+      {@JsonKey(name: 'alt_blocks_count') final int? altBlocksCount,
+      @JsonKey(name: 'difficulty') final int? difficulty,
+      @JsonKey(name: 'grey_peerlist_size') final int? greyPeerListSize,
+      @JsonKey(name: 'height') final int? height,
+      @JsonKey(name: 'stableheight') final int? stableHeight,
+      @JsonKey(name: 'topoheight') final int? topoHeight,
+      @JsonKey(name: 'treehash') final String? merkleBalanceTreeHash,
+      @JsonKey(name: 'averageblocktime50') final double? averageBlockTime50,
       @JsonKey(name: 'incoming_connections_count')
-          final int? incomingConnectionsCount,
+      final int? incomingConnectionsCount,
       @JsonKey(name: 'outgoing_connections_count')
-          final int? outgoingConnectionsCount,
-      @JsonKey(name: 'target')
-          final int? target,
-      @JsonKey(name: 'target_height')
-          final int? targetHeight,
-      @JsonKey(name: 'testnet')
-          final bool? testnet,
-      @JsonKey(name: 'network')
-          final String? network,
-      @JsonKey(name: 'top_block_hash')
-          final String? topBlockHash,
-      @JsonKey(name: 'tx_count')
-          final int? txCount,
-      @JsonKey(name: 'tx_pool_size')
-          final int? txPoolSize,
-      @JsonKey(name: 'dynamic_fee_per_kb')
-          final int? dynamicFeePerKb,
-      @JsonKey(name: 'total_supply')
-          final int? totalSupply,
-      @JsonKey(name: 'median_block_size')
-          final int? medianBlockSize,
-      @JsonKey(name: 'white_peerlist_size')
-          final int? whitePeerListSize,
-      @JsonKey(name: 'version')
-          final String? version,
-      @JsonKey(name: 'connected_miners')
-          final int? connectedMiners,
-      @JsonKey(name: 'miniblocks_in_memory')
-          final int? miniblocksInMemory,
-      @JsonKey(name: 'blocks_count')
-          final int? blocksCount,
+      final int? outgoingConnectionsCount,
+      @JsonKey(name: 'target') final int? target,
+      @JsonKey(name: 'target_height') final int? targetHeight,
+      @JsonKey(name: 'testnet') final bool? testnet,
+      @JsonKey(name: 'network') final String? network,
+      @JsonKey(name: 'top_block_hash') final String? topBlockHash,
+      @JsonKey(name: 'tx_count') final int? txCount,
+      @JsonKey(name: 'tx_pool_size') final int? txPoolSize,
+      @JsonKey(name: 'dynamic_fee_per_kb') final int? dynamicFeePerKb,
+      @JsonKey(name: 'total_supply') final int? totalSupply,
+      @JsonKey(name: 'median_block_size') final int? medianBlockSize,
+      @JsonKey(name: 'white_peerlist_size') final int? whitePeerListSize,
+      @JsonKey(name: 'version') final String? version,
+      @JsonKey(name: 'connected_miners') final int? connectedMiners,
+      @JsonKey(name: 'miniblocks_in_memory') final int? miniblocksInMemory,
+      @JsonKey(name: 'blocks_count') final int? blocksCount,
       @JsonKey(name: 'miniblocks_accepted_count')
-          final int? miniblocksAcceptedCount,
+      final int? miniblocksAcceptedCount,
       @JsonKey(name: 'miniblocks_rejected_count')
-          final int? miniblocksRejectedCount,
-      @JsonKey(name: 'mining_velocity')
-          final double? miningVelocity,
-      @JsonKey(name: 'uptime')
-          final int? uptime,
-      @JsonKey(name: 'hashrate_1hr')
-          final int? hashrate1hr,
-      @JsonKey(name: 'hashrate_1d')
-          final int? hashrate1d,
-      @JsonKey(name: 'hashrate_7d')
-          final int? hashrate7d,
-      @JsonKey(name: 'status')
-          final String? status}) = _$_GetInfoResult;
+      final int? miniblocksRejectedCount,
+      @JsonKey(name: 'mining_velocity') final double? miningVelocity,
+      @JsonKey(name: 'uptime') final int? uptime,
+      @JsonKey(name: 'hashrate_1hr') final int? hashrate1hr,
+      @JsonKey(name: 'hashrate_1d') final int? hashrate1d,
+      @JsonKey(name: 'hashrate_7d') final int? hashrate7d,
+      @JsonKey(name: 'status') final String? status}) = _$_GetInfoResult;
 
   factory _GetInfoResult.fromJson(Map<String, dynamic> json) =
       _$_GetInfoResult.fromJson;

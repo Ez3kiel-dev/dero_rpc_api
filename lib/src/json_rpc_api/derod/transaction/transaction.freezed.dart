@@ -81,32 +81,19 @@ abstract class $TransactionCopyWith<$Res> {
       _$TransactionCopyWithImpl<$Res, Transaction>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'version')
-          int? version,
-      @JsonKey(name: 'source_network')
-          int? sourceNetwork,
-      @JsonKey(name: 'dest_network')
-          int? destinationNetwork,
-      @JsonKey(name: 'txtype')
-          int? txType,
-      @JsonKey(name: 'value')
-          int? value,
+      {@JsonKey(name: 'version') int? version,
+      @JsonKey(name: 'source_network') int? sourceNetwork,
+      @JsonKey(name: 'dest_network') int? destinationNetwork,
+      @JsonKey(name: 'txtype') int? txType,
+      @JsonKey(name: 'value') int? value,
       @JsonKey(name: 'miner_address')
       @Uint8ListConverter()
-          Uint8List? minerAddress,
-      @JsonKey(name: 'c')
-      @Uint8ListConverter()
-          Uint8List? c,
-      @JsonKey(name: 's')
-      @Uint8ListConverter()
-          Uint8List? s,
-      @JsonKey(name: 'height')
-          int? height,
-      @JsonKey(name: 'blid')
-      @Uint8ListConverter()
-          Uint8List? blid,
-      @JsonKey(name: 'scdata')
-          List<Argument>? scData});
+      Uint8List? minerAddress,
+      @JsonKey(name: 'c') @Uint8ListConverter() Uint8List? c,
+      @JsonKey(name: 's') @Uint8ListConverter() Uint8List? s,
+      @JsonKey(name: 'height') int? height,
+      @JsonKey(name: 'blid') @Uint8ListConverter() Uint8List? blid,
+      @JsonKey(name: 'scdata') List<Argument>? scData});
 }
 
 /// @nodoc
@@ -189,35 +176,23 @@ abstract class _$$_TransactionCopyWith<$Res>
   factory _$$_TransactionCopyWith(
           _$_Transaction value, $Res Function(_$_Transaction) then) =
       __$$_TransactionCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'version')
-          int? version,
-      @JsonKey(name: 'source_network')
-          int? sourceNetwork,
-      @JsonKey(name: 'dest_network')
-          int? destinationNetwork,
-      @JsonKey(name: 'txtype')
-          int? txType,
-      @JsonKey(name: 'value')
-          int? value,
+      {@JsonKey(name: 'version') int? version,
+      @JsonKey(name: 'source_network') int? sourceNetwork,
+      @JsonKey(name: 'dest_network') int? destinationNetwork,
+      @JsonKey(name: 'txtype') int? txType,
+      @JsonKey(name: 'value') int? value,
       @JsonKey(name: 'miner_address')
       @Uint8ListConverter()
-          Uint8List? minerAddress,
-      @JsonKey(name: 'c')
-      @Uint8ListConverter()
-          Uint8List? c,
-      @JsonKey(name: 's')
-      @Uint8ListConverter()
-          Uint8List? s,
-      @JsonKey(name: 'height')
-          int? height,
-      @JsonKey(name: 'blid')
-      @Uint8ListConverter()
-          Uint8List? blid,
-      @JsonKey(name: 'scdata')
-          List<Argument>? scData});
+      Uint8List? minerAddress,
+      @JsonKey(name: 'c') @Uint8ListConverter() Uint8List? c,
+      @JsonKey(name: 's') @Uint8ListConverter() Uint8List? s,
+      @JsonKey(name: 'height') int? height,
+      @JsonKey(name: 'blid') @Uint8ListConverter() Uint8List? blid,
+      @JsonKey(name: 'scdata') List<Argument>? scData});
 }
 
 /// @nodoc
@@ -438,32 +413,19 @@ class _$_Transaction implements _Transaction {
 
 abstract class _Transaction implements Transaction {
   factory _Transaction(
-      {@JsonKey(name: 'version')
-          final int? version,
-      @JsonKey(name: 'source_network')
-          final int? sourceNetwork,
-      @JsonKey(name: 'dest_network')
-          final int? destinationNetwork,
-      @JsonKey(name: 'txtype')
-          final int? txType,
-      @JsonKey(name: 'value')
-          final int? value,
+      {@JsonKey(name: 'version') final int? version,
+      @JsonKey(name: 'source_network') final int? sourceNetwork,
+      @JsonKey(name: 'dest_network') final int? destinationNetwork,
+      @JsonKey(name: 'txtype') final int? txType,
+      @JsonKey(name: 'value') final int? value,
       @JsonKey(name: 'miner_address')
       @Uint8ListConverter()
-          final Uint8List? minerAddress,
-      @JsonKey(name: 'c')
-      @Uint8ListConverter()
-          final Uint8List? c,
-      @JsonKey(name: 's')
-      @Uint8ListConverter()
-          final Uint8List? s,
-      @JsonKey(name: 'height')
-          final int? height,
-      @JsonKey(name: 'blid')
-      @Uint8ListConverter()
-          final Uint8List? blid,
-      @JsonKey(name: 'scdata')
-          final List<Argument>? scData}) = _$_Transaction;
+      final Uint8List? minerAddress,
+      @JsonKey(name: 'c') @Uint8ListConverter() final Uint8List? c,
+      @JsonKey(name: 's') @Uint8ListConverter() final Uint8List? s,
+      @JsonKey(name: 'height') final int? height,
+      @JsonKey(name: 'blid') @Uint8ListConverter() final Uint8List? blid,
+      @JsonKey(name: 'scdata') final List<Argument>? scData}) = _$_Transaction;
 
   factory _Transaction.fromJson(Map<String, dynamic> json) =
       _$_Transaction.fromJson;

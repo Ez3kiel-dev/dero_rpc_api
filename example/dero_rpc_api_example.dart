@@ -51,7 +51,7 @@ Future<void> main() async {
           name: 'identifier',
           datatype: DataType.dataString,
           value: 'my_payment_identifier',
-        )
+        ),
       ],
     );
 
@@ -72,9 +72,9 @@ Future<void> main() async {
               name: RPC.comment,
               datatype: DataType.dataString,
               value: 'my secret message ...',
-            )
+            ),
           ],
-        )
+        ),
       ],
     );
     final transferResult = await walletRepository.transfer(transferParams);

@@ -154,7 +154,7 @@ abstract class _SplitIntegratedAddressParams
     implements SplitIntegratedAddressParams {
   factory _SplitIntegratedAddressParams(
           {@JsonKey(name: 'integrated_address')
-              required final String integratedAddress}) =
+          required final String integratedAddress}) =
       _$_SplitIntegratedAddressParams;
 
   factory _SplitIntegratedAddressParams.fromJson(Map<String, dynamic> json) =

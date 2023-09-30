@@ -7,7 +7,7 @@ part 'split_integrated_address_result.freezed.dart';
 
 part 'split_integrated_address_result.g.dart';
 
-/// The response returned by a call to [WalletRepository.splitIntegratedAddress].
+/// The response returned by a call to [WalletRepository.splitIntegratedAddress]
 @freezed
 class SplitIntegratedAddressResult with _$SplitIntegratedAddressResult {
   /// @nodoc

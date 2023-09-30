@@ -41,7 +41,7 @@ class GetSCParams with _$GetSCParams {
     /// @nodoc
     @JsonKey(name: 'keysbytes')
     @Uint8ListConverter()
-        List<Uint8List>? keysBytes,
+    List<Uint8List>? keysBytes,
   }) = _GetSCParams;
 
   /// @nodoc

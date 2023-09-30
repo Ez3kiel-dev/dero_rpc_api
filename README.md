@@ -113,7 +113,7 @@ Other examples are available in the `example` folder.
 
 ## Donations
 
-If you found this package useful :)
+If you find this package useful :)
 
 Send any amount to `dero1qy5a6wk2r9mq3e5kagku4kdrhq407qhvht8qke5sxpm9u8lqmph3vqgl3nz8t` or use my
 named address `Ez3kiel`.

@@ -231,24 +231,16 @@ class __$$_GetSCResultCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GetSCResult implements _GetSCResult {
   _$_GetSCResult(
-      {@JsonKey(name: 'valuesuint64')
-          final List<dynamic>? valuesInt,
-      @JsonKey(name: 'valuesstring')
-          final List<dynamic>? valuesString,
-      @JsonKey(name: 'valuesbytes')
-          final List<dynamic>? valuesBytes,
+      {@JsonKey(name: 'valuesuint64') final List<dynamic>? valuesInt,
+      @JsonKey(name: 'valuesstring') final List<dynamic>? valuesString,
+      @JsonKey(name: 'valuesbytes') final List<dynamic>? valuesBytes,
       @JsonKey(name: 'stringkeys')
-          final Map<String, dynamic>? variableStringKeys,
-      @JsonKey(name: 'uint64keys')
-          final Map<int, dynamic>? variableIntKeys,
-      @JsonKey(name: 'balances')
-          final Map<String, int>? balances,
-      @JsonKey(name: 'balance')
-          this.balance,
-      @JsonKey(name: 'code')
-          this.code,
-      @JsonKey(name: 'status')
-          this.status})
+      final Map<String, dynamic>? variableStringKeys,
+      @JsonKey(name: 'uint64keys') final Map<int, dynamic>? variableIntKeys,
+      @JsonKey(name: 'balances') final Map<String, int>? balances,
+      @JsonKey(name: 'balance') this.balance,
+      @JsonKey(name: 'code') this.code,
+      @JsonKey(name: 'status') this.status})
       : _valuesInt = valuesInt,
         _valuesString = valuesString,
         _valuesBytes = valuesBytes,
@@ -415,24 +407,16 @@ class _$_GetSCResult implements _GetSCResult {
 
 abstract class _GetSCResult implements GetSCResult {
   factory _GetSCResult(
-      {@JsonKey(name: 'valuesuint64')
-          final List<dynamic>? valuesInt,
-      @JsonKey(name: 'valuesstring')
-          final List<dynamic>? valuesString,
-      @JsonKey(name: 'valuesbytes')
-          final List<dynamic>? valuesBytes,
+      {@JsonKey(name: 'valuesuint64') final List<dynamic>? valuesInt,
+      @JsonKey(name: 'valuesstring') final List<dynamic>? valuesString,
+      @JsonKey(name: 'valuesbytes') final List<dynamic>? valuesBytes,
       @JsonKey(name: 'stringkeys')
-          final Map<String, dynamic>? variableStringKeys,
-      @JsonKey(name: 'uint64keys')
-          final Map<int, dynamic>? variableIntKeys,
-      @JsonKey(name: 'balances')
-          final Map<String, int>? balances,
-      @JsonKey(name: 'balance')
-          final int? balance,
-      @JsonKey(name: 'code')
-          final String? code,
-      @JsonKey(name: 'status')
-          final String? status}) = _$_GetSCResult;
+      final Map<String, dynamic>? variableStringKeys,
+      @JsonKey(name: 'uint64keys') final Map<int, dynamic>? variableIntKeys,
+      @JsonKey(name: 'balances') final Map<String, int>? balances,
+      @JsonKey(name: 'balance') final int? balance,
+      @JsonKey(name: 'code') final String? code,
+      @JsonKey(name: 'status') final String? status}) = _$_GetSCResult;
 
   factory _GetSCResult.fromJson(Map<String, dynamic> json) =
       _$_GetSCResult.fromJson;

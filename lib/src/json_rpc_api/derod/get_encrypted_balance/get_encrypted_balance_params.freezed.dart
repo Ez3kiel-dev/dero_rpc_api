@@ -97,12 +97,12 @@ class _$GetEncryptedBalanceParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetEncryptedBalanceParamsCopyWith<$Res>
+abstract class _$$GetEncryptedBalanceParamsImplCopyWith<$Res>
     implements $GetEncryptedBalanceParamsCopyWith<$Res> {
-  factory _$$_GetEncryptedBalanceParamsCopyWith(
-          _$_GetEncryptedBalanceParams value,
-          $Res Function(_$_GetEncryptedBalanceParams) then) =
-      __$$_GetEncryptedBalanceParamsCopyWithImpl<$Res>;
+  factory _$$GetEncryptedBalanceParamsImplCopyWith(
+          _$GetEncryptedBalanceParamsImpl value,
+          $Res Function(_$GetEncryptedBalanceParamsImpl) then) =
+      __$$GetEncryptedBalanceParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -113,13 +113,13 @@ abstract class _$$_GetEncryptedBalanceParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetEncryptedBalanceParamsCopyWithImpl<$Res>
+class __$$GetEncryptedBalanceParamsImplCopyWithImpl<$Res>
     extends _$GetEncryptedBalanceParamsCopyWithImpl<$Res,
-        _$_GetEncryptedBalanceParams>
-    implements _$$_GetEncryptedBalanceParamsCopyWith<$Res> {
-  __$$_GetEncryptedBalanceParamsCopyWithImpl(
-      _$_GetEncryptedBalanceParams _value,
-      $Res Function(_$_GetEncryptedBalanceParams) _then)
+        _$GetEncryptedBalanceParamsImpl>
+    implements _$$GetEncryptedBalanceParamsImplCopyWith<$Res> {
+  __$$GetEncryptedBalanceParamsImplCopyWithImpl(
+      _$GetEncryptedBalanceParamsImpl _value,
+      $Res Function(_$GetEncryptedBalanceParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -130,7 +130,7 @@ class __$$_GetEncryptedBalanceParamsCopyWithImpl<$Res>
     Object? treeHash = freezed,
     Object? topoHeight = freezed,
   }) {
-    return _then(_$_GetEncryptedBalanceParams(
+    return _then(_$GetEncryptedBalanceParamsImpl(
       address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -153,15 +153,15 @@ class __$$_GetEncryptedBalanceParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetEncryptedBalanceParams implements _GetEncryptedBalanceParams {
-  _$_GetEncryptedBalanceParams(
+class _$GetEncryptedBalanceParamsImpl implements _GetEncryptedBalanceParams {
+  _$GetEncryptedBalanceParamsImpl(
       {@JsonKey(name: 'address') required this.address,
       @JsonKey(name: 'scid') this.scid,
       @JsonKey(name: 'treehash') this.treeHash,
       @JsonKey(name: 'topoheight') this.topoHeight});
 
-  factory _$_GetEncryptedBalanceParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetEncryptedBalanceParamsFromJson(json);
+  factory _$GetEncryptedBalanceParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetEncryptedBalanceParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -189,10 +189,10 @@ class _$_GetEncryptedBalanceParams implements _GetEncryptedBalanceParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetEncryptedBalanceParams &&
+            other is _$GetEncryptedBalanceParamsImpl &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.scid, scid) || other.scid == scid) &&
             (identical(other.treeHash, treeHash) ||
@@ -209,13 +209,13 @@ class _$_GetEncryptedBalanceParams implements _GetEncryptedBalanceParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetEncryptedBalanceParamsCopyWith<_$_GetEncryptedBalanceParams>
-      get copyWith => __$$_GetEncryptedBalanceParamsCopyWithImpl<
-          _$_GetEncryptedBalanceParams>(this, _$identity);
+  _$$GetEncryptedBalanceParamsImplCopyWith<_$GetEncryptedBalanceParamsImpl>
+      get copyWith => __$$GetEncryptedBalanceParamsImplCopyWithImpl<
+          _$GetEncryptedBalanceParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetEncryptedBalanceParamsToJson(
+    return _$$GetEncryptedBalanceParamsImplToJson(
       this,
     );
   }
@@ -227,10 +227,10 @@ abstract class _GetEncryptedBalanceParams implements GetEncryptedBalanceParams {
           @JsonKey(name: 'scid') final String? scid,
           @JsonKey(name: 'treehash') final String? treeHash,
           @JsonKey(name: 'topoheight') final int? topoHeight}) =
-      _$_GetEncryptedBalanceParams;
+      _$GetEncryptedBalanceParamsImpl;
 
   factory _GetEncryptedBalanceParams.fromJson(Map<String, dynamic> json) =
-      _$_GetEncryptedBalanceParams.fromJson;
+      _$GetEncryptedBalanceParamsImpl.fromJson;
 
   @override
 
@@ -253,6 +253,6 @@ abstract class _GetEncryptedBalanceParams implements GetEncryptedBalanceParams {
   int? get topoHeight;
   @override
   @JsonKey(ignore: true)
-  _$$_GetEncryptedBalanceParamsCopyWith<_$_GetEncryptedBalanceParams>
+  _$$GetEncryptedBalanceParamsImplCopyWith<_$GetEncryptedBalanceParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

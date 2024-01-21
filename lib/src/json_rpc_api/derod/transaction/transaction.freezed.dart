@@ -171,12 +171,11 @@ class _$TransactionCopyWithImpl<$Res, $Val extends Transaction>
 }
 
 /// @nodoc
-abstract class _$$_TransactionCopyWith<$Res>
+abstract class _$$TransactionImplCopyWith<$Res>
     implements $TransactionCopyWith<$Res> {
-  factory _$$_TransactionCopyWith(
-          _$_Transaction value, $Res Function(_$_Transaction) then) =
-      __$$_TransactionCopyWithImpl<$Res>;
-
+  factory _$$TransactionImplCopyWith(
+          _$TransactionImpl value, $Res Function(_$TransactionImpl) then) =
+      __$$TransactionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -196,11 +195,11 @@ abstract class _$$_TransactionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TransactionCopyWithImpl<$Res>
-    extends _$TransactionCopyWithImpl<$Res, _$_Transaction>
-    implements _$$_TransactionCopyWith<$Res> {
-  __$$_TransactionCopyWithImpl(
-      _$_Transaction _value, $Res Function(_$_Transaction) _then)
+class __$$TransactionImplCopyWithImpl<$Res>
+    extends _$TransactionCopyWithImpl<$Res, _$TransactionImpl>
+    implements _$$TransactionImplCopyWith<$Res> {
+  __$$TransactionImplCopyWithImpl(
+      _$TransactionImpl _value, $Res Function(_$TransactionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -218,7 +217,7 @@ class __$$_TransactionCopyWithImpl<$Res>
     Object? blid = freezed,
     Object? scData = freezed,
   }) {
-    return _then(_$_Transaction(
+    return _then(_$TransactionImpl(
       version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -269,8 +268,8 @@ class __$$_TransactionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Transaction implements _Transaction {
-  _$_Transaction(
+class _$TransactionImpl implements _Transaction {
+  _$TransactionImpl(
       {@JsonKey(name: 'version') this.version,
       @JsonKey(name: 'source_network') this.sourceNetwork,
       @JsonKey(name: 'dest_network') this.destinationNetwork,
@@ -284,8 +283,8 @@ class _$_Transaction implements _Transaction {
       @JsonKey(name: 'scdata') final List<Argument>? scData})
       : _scData = scData;
 
-  factory _$_Transaction.fromJson(Map<String, dynamic> json) =>
-      _$$_TransactionFromJson(json);
+  factory _$TransactionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransactionImplFromJson(json);
 
   /// @nodoc
   @override
@@ -361,10 +360,10 @@ class _$_Transaction implements _Transaction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Transaction &&
+            other is _$TransactionImpl &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.sourceNetwork, sourceNetwork) ||
                 other.sourceNetwork == sourceNetwork) &&
@@ -400,12 +399,12 @@ class _$_Transaction implements _Transaction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TransactionCopyWith<_$_Transaction> get copyWith =>
-      __$$_TransactionCopyWithImpl<_$_Transaction>(this, _$identity);
+  _$$TransactionImplCopyWith<_$TransactionImpl> get copyWith =>
+      __$$TransactionImplCopyWithImpl<_$TransactionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransactionToJson(
+    return _$$TransactionImplToJson(
       this,
     );
   }
@@ -413,22 +412,23 @@ class _$_Transaction implements _Transaction {
 
 abstract class _Transaction implements Transaction {
   factory _Transaction(
-      {@JsonKey(name: 'version') final int? version,
-      @JsonKey(name: 'source_network') final int? sourceNetwork,
-      @JsonKey(name: 'dest_network') final int? destinationNetwork,
-      @JsonKey(name: 'txtype') final int? txType,
-      @JsonKey(name: 'value') final int? value,
-      @JsonKey(name: 'miner_address')
-      @Uint8ListConverter()
-      final Uint8List? minerAddress,
-      @JsonKey(name: 'c') @Uint8ListConverter() final Uint8List? c,
-      @JsonKey(name: 's') @Uint8ListConverter() final Uint8List? s,
-      @JsonKey(name: 'height') final int? height,
-      @JsonKey(name: 'blid') @Uint8ListConverter() final Uint8List? blid,
-      @JsonKey(name: 'scdata') final List<Argument>? scData}) = _$_Transaction;
+          {@JsonKey(name: 'version') final int? version,
+          @JsonKey(name: 'source_network') final int? sourceNetwork,
+          @JsonKey(name: 'dest_network') final int? destinationNetwork,
+          @JsonKey(name: 'txtype') final int? txType,
+          @JsonKey(name: 'value') final int? value,
+          @JsonKey(name: 'miner_address')
+          @Uint8ListConverter()
+          final Uint8List? minerAddress,
+          @JsonKey(name: 'c') @Uint8ListConverter() final Uint8List? c,
+          @JsonKey(name: 's') @Uint8ListConverter() final Uint8List? s,
+          @JsonKey(name: 'height') final int? height,
+          @JsonKey(name: 'blid') @Uint8ListConverter() final Uint8List? blid,
+          @JsonKey(name: 'scdata') final List<Argument>? scData}) =
+      _$TransactionImpl;
 
   factory _Transaction.fromJson(Map<String, dynamic> json) =
-      _$_Transaction.fromJson;
+      _$TransactionImpl.fromJson;
 
   @override
 
@@ -491,6 +491,6 @@ abstract class _Transaction implements Transaction {
   List<Argument>? get scData;
   @override
   @JsonKey(ignore: true)
-  _$$_TransactionCopyWith<_$_Transaction> get copyWith =>
+  _$$TransactionImplCopyWith<_$TransactionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

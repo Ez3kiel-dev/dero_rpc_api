@@ -8,14 +8,14 @@ part of 'get_transfer_by_txid_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTransferByTxidParams _$$_GetTransferByTxidParamsFromJson(
+_$GetTransferByTxidParamsImpl _$$GetTransferByTxidParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetTransferByTxidParams(
+    _$GetTransferByTxidParamsImpl(
       txid: json['txid'] as String,
     );
 
-Map<String, dynamic> _$$_GetTransferByTxidParamsToJson(
-        _$_GetTransferByTxidParams instance) =>
+Map<String, dynamic> _$$GetTransferByTxidParamsImplToJson(
+        _$GetTransferByTxidParamsImpl instance) =>
     <String, dynamic>{
       'txid': instance.txid,
     };

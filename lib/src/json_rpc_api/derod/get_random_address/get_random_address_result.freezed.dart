@@ -77,11 +77,12 @@ class _$GetRandomAddressResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRandomAddressResultCopyWith<$Res>
+abstract class _$$GetRandomAddressResultImplCopyWith<$Res>
     implements $GetRandomAddressResultCopyWith<$Res> {
-  factory _$$_GetRandomAddressResultCopyWith(_$_GetRandomAddressResult value,
-          $Res Function(_$_GetRandomAddressResult) then) =
-      __$$_GetRandomAddressResultCopyWithImpl<$Res>;
+  factory _$$GetRandomAddressResultImplCopyWith(
+          _$GetRandomAddressResultImpl value,
+          $Res Function(_$GetRandomAddressResultImpl) then) =
+      __$$GetRandomAddressResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -90,12 +91,13 @@ abstract class _$$_GetRandomAddressResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRandomAddressResultCopyWithImpl<$Res>
+class __$$GetRandomAddressResultImplCopyWithImpl<$Res>
     extends _$GetRandomAddressResultCopyWithImpl<$Res,
-        _$_GetRandomAddressResult>
-    implements _$$_GetRandomAddressResultCopyWith<$Res> {
-  __$$_GetRandomAddressResultCopyWithImpl(_$_GetRandomAddressResult _value,
-      $Res Function(_$_GetRandomAddressResult) _then)
+        _$GetRandomAddressResultImpl>
+    implements _$$GetRandomAddressResultImplCopyWith<$Res> {
+  __$$GetRandomAddressResultImplCopyWithImpl(
+      _$GetRandomAddressResultImpl _value,
+      $Res Function(_$GetRandomAddressResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +106,7 @@ class __$$_GetRandomAddressResultCopyWithImpl<$Res>
     Object? address = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetRandomAddressResult(
+    return _then(_$GetRandomAddressResultImpl(
       address: freezed == address
           ? _value._address
           : address // ignore: cast_nullable_to_non_nullable
@@ -119,14 +121,14 @@ class __$$_GetRandomAddressResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRandomAddressResult implements _GetRandomAddressResult {
-  _$_GetRandomAddressResult(
+class _$GetRandomAddressResultImpl implements _GetRandomAddressResult {
+  _$GetRandomAddressResultImpl(
       {@JsonKey(name: 'address') final List<String>? address,
       @JsonKey(name: 'status') this.status})
       : _address = address;
 
-  factory _$_GetRandomAddressResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRandomAddressResultFromJson(json);
+  factory _$GetRandomAddressResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRandomAddressResultImplFromJson(json);
 
   /// @nodoc
   final List<String>? _address;
@@ -153,10 +155,10 @@ class _$_GetRandomAddressResult implements _GetRandomAddressResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRandomAddressResult &&
+            other is _$GetRandomAddressResultImpl &&
             const DeepCollectionEquality().equals(other._address, _address) &&
             (identical(other.status, status) || other.status == status));
   }
@@ -169,13 +171,13 @@ class _$_GetRandomAddressResult implements _GetRandomAddressResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRandomAddressResultCopyWith<_$_GetRandomAddressResult> get copyWith =>
-      __$$_GetRandomAddressResultCopyWithImpl<_$_GetRandomAddressResult>(
-          this, _$identity);
+  _$$GetRandomAddressResultImplCopyWith<_$GetRandomAddressResultImpl>
+      get copyWith => __$$GetRandomAddressResultImplCopyWithImpl<
+          _$GetRandomAddressResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRandomAddressResultToJson(
+    return _$$GetRandomAddressResultImplToJson(
       this,
     );
   }
@@ -185,10 +187,10 @@ abstract class _GetRandomAddressResult implements GetRandomAddressResult {
   factory _GetRandomAddressResult(
           {@JsonKey(name: 'address') final List<String>? address,
           @JsonKey(name: 'status') final String? status}) =
-      _$_GetRandomAddressResult;
+      _$GetRandomAddressResultImpl;
 
   factory _GetRandomAddressResult.fromJson(Map<String, dynamic> json) =
-      _$_GetRandomAddressResult.fromJson;
+      _$GetRandomAddressResultImpl.fromJson;
 
   @override
 
@@ -202,6 +204,6 @@ abstract class _GetRandomAddressResult implements GetRandomAddressResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetRandomAddressResultCopyWith<_$_GetRandomAddressResult> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetRandomAddressResultImplCopyWith<_$GetRandomAddressResultImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

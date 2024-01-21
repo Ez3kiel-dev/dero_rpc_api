@@ -8,13 +8,14 @@ part of 'argument.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Argument _$$_ArgumentFromJson(Map<String, dynamic> json) => _$_Argument(
+_$ArgumentImpl _$$ArgumentImplFromJson(Map<String, dynamic> json) =>
+    _$ArgumentImpl(
       name: json['name'] as String,
       datatype: $enumDecode(_$DataTypeEnumMap, json['datatype']),
       value: const ArgumentValueConverter().fromJson(json['value']),
     );
 
-Map<String, dynamic> _$$_ArgumentToJson(_$_Argument instance) =>
+Map<String, dynamic> _$$ArgumentImplToJson(_$ArgumentImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'datatype': _$DataTypeEnumMap[instance.datatype]!,

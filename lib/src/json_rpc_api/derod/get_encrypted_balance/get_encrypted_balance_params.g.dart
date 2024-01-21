@@ -8,17 +8,17 @@ part of 'get_encrypted_balance_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetEncryptedBalanceParams _$$_GetEncryptedBalanceParamsFromJson(
+_$GetEncryptedBalanceParamsImpl _$$GetEncryptedBalanceParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetEncryptedBalanceParams(
+    _$GetEncryptedBalanceParamsImpl(
       address: json['address'] as String,
       scid: json['scid'] as String?,
       treeHash: json['treehash'] as String?,
       topoHeight: json['topoheight'] as int?,
     );
 
-Map<String, dynamic> _$$_GetEncryptedBalanceParamsToJson(
-        _$_GetEncryptedBalanceParams instance) =>
+Map<String, dynamic> _$$GetEncryptedBalanceParamsImplToJson(
+        _$GetEncryptedBalanceParamsImpl instance) =>
     <String, dynamic>{
       'address': instance.address,
       'scid': instance.scid,

@@ -187,11 +187,12 @@ class _$GetBlockTemplateResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetBlockTemplateResultCopyWith<$Res>
+abstract class _$$GetBlockTemplateResultImplCopyWith<$Res>
     implements $GetBlockTemplateResultCopyWith<$Res> {
-  factory _$$_GetBlockTemplateResultCopyWith(_$_GetBlockTemplateResult value,
-          $Res Function(_$_GetBlockTemplateResult) then) =
-      __$$_GetBlockTemplateResultCopyWithImpl<$Res>;
+  factory _$$GetBlockTemplateResultImplCopyWith(
+          _$GetBlockTemplateResultImpl value,
+          $Res Function(_$GetBlockTemplateResultImpl) then) =
+      __$$GetBlockTemplateResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -211,12 +212,13 @@ abstract class _$$_GetBlockTemplateResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetBlockTemplateResultCopyWithImpl<$Res>
+class __$$GetBlockTemplateResultImplCopyWithImpl<$Res>
     extends _$GetBlockTemplateResultCopyWithImpl<$Res,
-        _$_GetBlockTemplateResult>
-    implements _$$_GetBlockTemplateResultCopyWith<$Res> {
-  __$$_GetBlockTemplateResultCopyWithImpl(_$_GetBlockTemplateResult _value,
-      $Res Function(_$_GetBlockTemplateResult) _then)
+        _$GetBlockTemplateResultImpl>
+    implements _$$GetBlockTemplateResultImplCopyWith<$Res> {
+  __$$GetBlockTemplateResultImplCopyWithImpl(
+      _$GetBlockTemplateResultImpl _value,
+      $Res Function(_$GetBlockTemplateResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -236,7 +238,7 @@ class __$$_GetBlockTemplateResultCopyWithImpl<$Res>
     Object? lastError = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetBlockTemplateResult(
+    return _then(_$GetBlockTemplateResultImpl(
       jobId: freezed == jobId
           ? _value.jobId
           : jobId // ignore: cast_nullable_to_non_nullable
@@ -295,8 +297,8 @@ class __$$_GetBlockTemplateResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBlockTemplateResult implements _GetBlockTemplateResult {
-  _$_GetBlockTemplateResult(
+class _$GetBlockTemplateResultImpl implements _GetBlockTemplateResult {
+  _$GetBlockTemplateResultImpl(
       {@JsonKey(name: 'jobid') this.jobId,
       @JsonKey(name: 'blocktemplate_blob') this.blockTemplateBlob,
       @JsonKey(name: 'blockhashing_blob') this.blockHashingBlob,
@@ -311,8 +313,8 @@ class _$_GetBlockTemplateResult implements _GetBlockTemplateResult {
       @JsonKey(name: 'lasterror') this.lastError,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_GetBlockTemplateResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBlockTemplateResultFromJson(json);
+  factory _$GetBlockTemplateResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBlockTemplateResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -385,10 +387,10 @@ class _$_GetBlockTemplateResult implements _GetBlockTemplateResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBlockTemplateResult &&
+            other is _$GetBlockTemplateResultImpl &&
             (identical(other.jobId, jobId) || other.jobId == jobId) &&
             (identical(other.blockTemplateBlob, blockTemplateBlob) ||
                 other.blockTemplateBlob == blockTemplateBlob) &&
@@ -434,13 +436,13 @@ class _$_GetBlockTemplateResult implements _GetBlockTemplateResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBlockTemplateResultCopyWith<_$_GetBlockTemplateResult> get copyWith =>
-      __$$_GetBlockTemplateResultCopyWithImpl<_$_GetBlockTemplateResult>(
-          this, _$identity);
+  _$$GetBlockTemplateResultImplCopyWith<_$GetBlockTemplateResultImpl>
+      get copyWith => __$$GetBlockTemplateResultImplCopyWithImpl<
+          _$GetBlockTemplateResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBlockTemplateResultToJson(
+    return _$$GetBlockTemplateResultImplToJson(
       this,
     );
   }
@@ -461,10 +463,10 @@ abstract class _GetBlockTemplateResult implements GetBlockTemplateResult {
           @JsonKey(name: 'rejected') final int? rejected,
           @JsonKey(name: 'lasterror') final String? lastError,
           @JsonKey(name: 'status') final String? status}) =
-      _$_GetBlockTemplateResult;
+      _$GetBlockTemplateResultImpl;
 
   factory _GetBlockTemplateResult.fromJson(Map<String, dynamic> json) =
-      _$_GetBlockTemplateResult.fromJson;
+      _$GetBlockTemplateResultImpl.fromJson;
 
   @override
 
@@ -533,6 +535,6 @@ abstract class _GetBlockTemplateResult implements GetBlockTemplateResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetBlockTemplateResultCopyWith<_$_GetBlockTemplateResult> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetBlockTemplateResultImplCopyWith<_$GetBlockTemplateResultImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

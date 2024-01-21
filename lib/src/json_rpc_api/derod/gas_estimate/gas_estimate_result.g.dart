@@ -8,15 +8,16 @@ part of 'gas_estimate_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GasEstimateResult _$$_GasEstimateResultFromJson(Map<String, dynamic> json) =>
-    _$_GasEstimateResult(
+_$GasEstimateResultImpl _$$GasEstimateResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GasEstimateResultImpl(
       gasCompute: json['gascompute'] as int?,
       gasStorage: json['gasstorage'] as int?,
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GasEstimateResultToJson(
-        _$_GasEstimateResult instance) =>
+Map<String, dynamic> _$$GasEstimateResultImplToJson(
+        _$GasEstimateResultImpl instance) =>
     <String, dynamic>{
       'gascompute': instance.gasCompute,
       'gasstorage': instance.gasStorage,

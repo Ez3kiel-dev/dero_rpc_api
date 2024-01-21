@@ -8,12 +8,14 @@ part of 'get_address_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetAddressResult _$$_GetAddressResultFromJson(Map<String, dynamic> json) =>
-    _$_GetAddressResult(
+_$GetAddressResultImpl _$$GetAddressResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetAddressResultImpl(
       address: json['address'] as String?,
     );
 
-Map<String, dynamic> _$$_GetAddressResultToJson(_$_GetAddressResult instance) =>
+Map<String, dynamic> _$$GetAddressResultImplToJson(
+        _$GetAddressResultImpl instance) =>
     <String, dynamic>{
       'address': instance.address,
     };

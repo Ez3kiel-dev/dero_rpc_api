@@ -8,8 +8,8 @@ part of 'get_block_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBlockResult _$$_GetBlockResultFromJson(Map<String, dynamic> json) =>
-    _$_GetBlockResult(
+_$GetBlockResultImpl _$$GetBlockResultImplFromJson(Map<String, dynamic> json) =>
+    _$GetBlockResultImpl(
       blob: json['blob'] as String?,
       block: _$JsonConverterFromJson<String, Block>(
           json['json'], const BlockConverter().fromJson),
@@ -19,7 +19,8 @@ _$_GetBlockResult _$$_GetBlockResultFromJson(Map<String, dynamic> json) =>
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetBlockResultToJson(_$_GetBlockResult instance) =>
+Map<String, dynamic> _$$GetBlockResultImplToJson(
+        _$GetBlockResultImpl instance) =>
     <String, dynamic>{
       'blob': instance.blob,
       'json': _$JsonConverterToJson<String, Block>(

@@ -105,11 +105,11 @@ class _$SubmitBlockResultCopyWithImpl<$Res, $Val extends SubmitBlockResult>
 }
 
 /// @nodoc
-abstract class _$$_SubmitBlockResultCopyWith<$Res>
+abstract class _$$SubmitBlockResultImplCopyWith<$Res>
     implements $SubmitBlockResultCopyWith<$Res> {
-  factory _$$_SubmitBlockResultCopyWith(_$_SubmitBlockResult value,
-          $Res Function(_$_SubmitBlockResult) then) =
-      __$$_SubmitBlockResultCopyWithImpl<$Res>;
+  factory _$$SubmitBlockResultImplCopyWith(_$SubmitBlockResultImpl value,
+          $Res Function(_$SubmitBlockResultImpl) then) =
+      __$$SubmitBlockResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,11 +121,11 @@ abstract class _$$_SubmitBlockResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SubmitBlockResultCopyWithImpl<$Res>
-    extends _$SubmitBlockResultCopyWithImpl<$Res, _$_SubmitBlockResult>
-    implements _$$_SubmitBlockResultCopyWith<$Res> {
-  __$$_SubmitBlockResultCopyWithImpl(
-      _$_SubmitBlockResult _value, $Res Function(_$_SubmitBlockResult) _then)
+class __$$SubmitBlockResultImplCopyWithImpl<$Res>
+    extends _$SubmitBlockResultCopyWithImpl<$Res, _$SubmitBlockResultImpl>
+    implements _$$SubmitBlockResultImplCopyWith<$Res> {
+  __$$SubmitBlockResultImplCopyWithImpl(_$SubmitBlockResultImpl _value,
+      $Res Function(_$SubmitBlockResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +137,7 @@ class __$$_SubmitBlockResultCopyWithImpl<$Res>
     Object? miniblock = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_SubmitBlockResult(
+    return _then(_$SubmitBlockResultImpl(
       jobId: freezed == jobId
           ? _value.jobId
           : jobId // ignore: cast_nullable_to_non_nullable
@@ -164,16 +164,16 @@ class __$$_SubmitBlockResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SubmitBlockResult implements _SubmitBlockResult {
-  _$_SubmitBlockResult(
+class _$SubmitBlockResultImpl implements _SubmitBlockResult {
+  _$SubmitBlockResultImpl(
       {@JsonKey(name: 'jobid') this.jobId,
       @JsonKey(name: 'mblid') this.mblid,
       @JsonKey(name: 'blid') this.blid,
       @JsonKey(name: 'mini') this.miniblock,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_SubmitBlockResult.fromJson(Map<String, dynamic> json) =>
-      _$$_SubmitBlockResultFromJson(json);
+  factory _$SubmitBlockResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SubmitBlockResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -206,10 +206,10 @@ class _$_SubmitBlockResult implements _SubmitBlockResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SubmitBlockResult &&
+            other is _$SubmitBlockResultImpl &&
             (identical(other.jobId, jobId) || other.jobId == jobId) &&
             (identical(other.mblid, mblid) || other.mblid == mblid) &&
             (identical(other.blid, blid) || other.blid == blid) &&
@@ -226,13 +226,13 @@ class _$_SubmitBlockResult implements _SubmitBlockResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SubmitBlockResultCopyWith<_$_SubmitBlockResult> get copyWith =>
-      __$$_SubmitBlockResultCopyWithImpl<_$_SubmitBlockResult>(
+  _$$SubmitBlockResultImplCopyWith<_$SubmitBlockResultImpl> get copyWith =>
+      __$$SubmitBlockResultImplCopyWithImpl<_$SubmitBlockResultImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubmitBlockResultToJson(
+    return _$$SubmitBlockResultImplToJson(
       this,
     );
   }
@@ -244,10 +244,10 @@ abstract class _SubmitBlockResult implements SubmitBlockResult {
       @JsonKey(name: 'mblid') final String? mblid,
       @JsonKey(name: 'blid') final String? blid,
       @JsonKey(name: 'mini') final bool? miniblock,
-      @JsonKey(name: 'status') final String? status}) = _$_SubmitBlockResult;
+      @JsonKey(name: 'status') final String? status}) = _$SubmitBlockResultImpl;
 
   factory _SubmitBlockResult.fromJson(Map<String, dynamic> json) =
-      _$_SubmitBlockResult.fromJson;
+      _$SubmitBlockResultImpl.fromJson;
 
   @override
 
@@ -276,6 +276,6 @@ abstract class _SubmitBlockResult implements SubmitBlockResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_SubmitBlockResultCopyWith<_$_SubmitBlockResult> get copyWith =>
+  _$$SubmitBlockResultImplCopyWith<_$SubmitBlockResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

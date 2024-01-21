@@ -157,9 +157,10 @@ class _$BlockCopyWithImpl<$Res, $Val extends Block>
 }
 
 /// @nodoc
-abstract class _$$_BlockCopyWith<$Res> implements $BlockCopyWith<$Res> {
-  factory _$$_BlockCopyWith(_$_Block value, $Res Function(_$_Block) then) =
-      __$$_BlockCopyWithImpl<$Res>;
+abstract class _$$BlockImplCopyWith<$Res> implements $BlockCopyWith<$Res> {
+  factory _$$BlockImplCopyWith(
+          _$BlockImpl value, $Res Function(_$BlockImpl) then) =
+      __$$BlockImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -178,9 +179,11 @@ abstract class _$$_BlockCopyWith<$Res> implements $BlockCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_BlockCopyWithImpl<$Res> extends _$BlockCopyWithImpl<$Res, _$_Block>
-    implements _$$_BlockCopyWith<$Res> {
-  __$$_BlockCopyWithImpl(_$_Block _value, $Res Function(_$_Block) _then)
+class __$$BlockImplCopyWithImpl<$Res>
+    extends _$BlockCopyWithImpl<$Res, _$BlockImpl>
+    implements _$$BlockImplCopyWith<$Res> {
+  __$$BlockImplCopyWithImpl(
+      _$BlockImpl _value, $Res Function(_$BlockImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -196,7 +199,7 @@ class __$$_BlockCopyWithImpl<$Res> extends _$BlockCopyWithImpl<$Res, _$_Block>
     Object? miniblocks = freezed,
     Object? txHashes = freezed,
   }) {
-    return _then(_$_Block(
+    return _then(_$BlockImpl(
       majorVersion: freezed == majorVersion
           ? _value.majorVersion
           : majorVersion // ignore: cast_nullable_to_non_nullable
@@ -239,8 +242,8 @@ class __$$_BlockCopyWithImpl<$Res> extends _$BlockCopyWithImpl<$Res, _$_Block>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Block implements _Block {
-  _$_Block(
+class _$BlockImpl implements _Block {
+  _$BlockImpl(
       {@JsonKey(name: 'major_version') this.majorVersion,
       @JsonKey(name: 'minor_version') this.minorVersion,
       @JsonKey(name: 'timestamp') this.timestamp,
@@ -254,8 +257,8 @@ class _$_Block implements _Block {
         _miniblocks = miniblocks,
         _txHashes = txHashes;
 
-  factory _$_Block.fromJson(Map<String, dynamic> json) =>
-      _$$_BlockFromJson(json);
+  factory _$BlockImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BlockImplFromJson(json);
 
   /// @nodoc
   @override
@@ -335,10 +338,10 @@ class _$_Block implements _Block {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Block &&
+            other is _$BlockImpl &&
             (identical(other.majorVersion, majorVersion) ||
                 other.majorVersion == majorVersion) &&
             (identical(other.minorVersion, minorVersion) ||
@@ -371,12 +374,12 @@ class _$_Block implements _Block {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BlockCopyWith<_$_Block> get copyWith =>
-      __$$_BlockCopyWithImpl<_$_Block>(this, _$identity);
+  _$$BlockImplCopyWith<_$BlockImpl> get copyWith =>
+      __$$BlockImplCopyWithImpl<_$BlockImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BlockToJson(
+    return _$$BlockImplToJson(
       this,
     );
   }
@@ -392,9 +395,9 @@ abstract class _Block implements Block {
       @JsonKey(name: '-') final dynamic proof,
       @JsonKey(name: 'tips') final List<String>? tips,
       @JsonKey(name: 'miniblocks') final List<Miniblock>? miniblocks,
-      @JsonKey(name: 'tx_hashes') final List<String>? txHashes}) = _$_Block;
+      @JsonKey(name: 'tx_hashes') final List<String>? txHashes}) = _$BlockImpl;
 
-  factory _Block.fromJson(Map<String, dynamic> json) = _$_Block.fromJson;
+  factory _Block.fromJson(Map<String, dynamic> json) = _$BlockImpl.fromJson;
 
   @override
 
@@ -442,6 +445,6 @@ abstract class _Block implements Block {
   List<String>? get txHashes;
   @override
   @JsonKey(ignore: true)
-  _$$_BlockCopyWith<_$_Block> get copyWith =>
+  _$$BlockImplCopyWith<_$BlockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

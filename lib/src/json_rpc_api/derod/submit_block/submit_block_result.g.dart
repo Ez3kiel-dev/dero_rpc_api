@@ -8,8 +8,9 @@ part of 'submit_block_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SubmitBlockResult _$$_SubmitBlockResultFromJson(Map<String, dynamic> json) =>
-    _$_SubmitBlockResult(
+_$SubmitBlockResultImpl _$$SubmitBlockResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SubmitBlockResultImpl(
       jobId: json['jobid'] as String?,
       mblid: json['mblid'] as String?,
       blid: json['blid'] as String?,
@@ -17,8 +18,8 @@ _$_SubmitBlockResult _$$_SubmitBlockResultFromJson(Map<String, dynamic> json) =>
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_SubmitBlockResultToJson(
-        _$_SubmitBlockResult instance) =>
+Map<String, dynamic> _$$SubmitBlockResultImplToJson(
+        _$SubmitBlockResultImpl instance) =>
     <String, dynamic>{
       'jobid': instance.jobId,
       'mblid': instance.mblid,

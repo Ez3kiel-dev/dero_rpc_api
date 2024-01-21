@@ -177,12 +177,12 @@ class _$GetEncryptedBalanceResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetEncryptedBalanceResultCopyWith<$Res>
+abstract class _$$GetEncryptedBalanceResultImplCopyWith<$Res>
     implements $GetEncryptedBalanceResultCopyWith<$Res> {
-  factory _$$_GetEncryptedBalanceResultCopyWith(
-          _$_GetEncryptedBalanceResult value,
-          $Res Function(_$_GetEncryptedBalanceResult) then) =
-      __$$_GetEncryptedBalanceResultCopyWithImpl<$Res>;
+  factory _$$GetEncryptedBalanceResultImplCopyWith(
+          _$GetEncryptedBalanceResultImpl value,
+          $Res Function(_$GetEncryptedBalanceResultImpl) then) =
+      __$$GetEncryptedBalanceResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -201,13 +201,13 @@ abstract class _$$_GetEncryptedBalanceResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetEncryptedBalanceResultCopyWithImpl<$Res>
+class __$$GetEncryptedBalanceResultImplCopyWithImpl<$Res>
     extends _$GetEncryptedBalanceResultCopyWithImpl<$Res,
-        _$_GetEncryptedBalanceResult>
-    implements _$$_GetEncryptedBalanceResultCopyWith<$Res> {
-  __$$_GetEncryptedBalanceResultCopyWithImpl(
-      _$_GetEncryptedBalanceResult _value,
-      $Res Function(_$_GetEncryptedBalanceResult) _then)
+        _$GetEncryptedBalanceResultImpl>
+    implements _$$GetEncryptedBalanceResultImplCopyWith<$Res> {
+  __$$GetEncryptedBalanceResultImplCopyWithImpl(
+      _$GetEncryptedBalanceResultImpl _value,
+      $Res Function(_$GetEncryptedBalanceResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -226,7 +226,7 @@ class __$$_GetEncryptedBalanceResultCopyWithImpl<$Res>
     Object? deamonTreeHash = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetEncryptedBalanceResult(
+    return _then(_$GetEncryptedBalanceResultImpl(
       scid: freezed == scid
           ? _value.scid
           : scid // ignore: cast_nullable_to_non_nullable
@@ -281,8 +281,8 @@ class __$$_GetEncryptedBalanceResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetEncryptedBalanceResult implements _GetEncryptedBalanceResult {
-  _$_GetEncryptedBalanceResult(
+class _$GetEncryptedBalanceResultImpl implements _GetEncryptedBalanceResult {
+  _$GetEncryptedBalanceResultImpl(
       {@JsonKey(name: 'scid') this.scid,
       @JsonKey(name: 'data') this.data,
       @JsonKey(name: 'registration') this.registration,
@@ -296,8 +296,8 @@ class _$_GetEncryptedBalanceResult implements _GetEncryptedBalanceResult {
       @JsonKey(name: 'dtreehash') this.deamonTreeHash,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_GetEncryptedBalanceResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetEncryptedBalanceResultFromJson(json);
+  factory _$GetEncryptedBalanceResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetEncryptedBalanceResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -365,10 +365,10 @@ class _$_GetEncryptedBalanceResult implements _GetEncryptedBalanceResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetEncryptedBalanceResult &&
+            other is _$GetEncryptedBalanceResultImpl &&
             (identical(other.scid, scid) || other.scid == scid) &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.registration, registration) ||
@@ -410,13 +410,13 @@ class _$_GetEncryptedBalanceResult implements _GetEncryptedBalanceResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetEncryptedBalanceResultCopyWith<_$_GetEncryptedBalanceResult>
-      get copyWith => __$$_GetEncryptedBalanceResultCopyWithImpl<
-          _$_GetEncryptedBalanceResult>(this, _$identity);
+  _$$GetEncryptedBalanceResultImplCopyWith<_$GetEncryptedBalanceResultImpl>
+      get copyWith => __$$GetEncryptedBalanceResultImplCopyWithImpl<
+          _$GetEncryptedBalanceResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetEncryptedBalanceResultToJson(
+    return _$$GetEncryptedBalanceResultImplToJson(
       this,
     );
   }
@@ -436,10 +436,10 @@ abstract class _GetEncryptedBalanceResult implements GetEncryptedBalanceResult {
           @JsonKey(name: 'dtopoheight') final int? deamonTopoHeight,
           @JsonKey(name: 'dtreehash') final String? deamonTreeHash,
           @JsonKey(name: 'status') final String? status}) =
-      _$_GetEncryptedBalanceResult;
+      _$GetEncryptedBalanceResultImpl;
 
   factory _GetEncryptedBalanceResult.fromJson(Map<String, dynamic> json) =
-      _$_GetEncryptedBalanceResult.fromJson;
+      _$GetEncryptedBalanceResultImpl.fromJson;
 
   @override
 
@@ -501,6 +501,6 @@ abstract class _GetEncryptedBalanceResult implements GetEncryptedBalanceResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetEncryptedBalanceResultCopyWith<_$_GetEncryptedBalanceResult>
+  _$$GetEncryptedBalanceResultImplCopyWith<_$GetEncryptedBalanceResultImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

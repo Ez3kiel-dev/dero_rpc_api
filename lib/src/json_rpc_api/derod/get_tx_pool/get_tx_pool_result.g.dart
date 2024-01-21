@@ -8,13 +8,15 @@ part of 'get_tx_pool_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTxPoolResult _$$_GetTxPoolResultFromJson(Map<String, dynamic> json) =>
-    _$_GetTxPoolResult(
+_$GetTxPoolResultImpl _$$GetTxPoolResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetTxPoolResultImpl(
       txs: (json['txs'] as List<dynamic>?)?.map((e) => e as String).toList(),
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetTxPoolResultToJson(_$_GetTxPoolResult instance) =>
+Map<String, dynamic> _$$GetTxPoolResultImplToJson(
+        _$GetTxPoolResultImpl instance) =>
     <String, dynamic>{
       'txs': instance.txs,
       'status': instance.status,

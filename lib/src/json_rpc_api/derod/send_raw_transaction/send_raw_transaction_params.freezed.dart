@@ -66,24 +66,25 @@ class _$SendRawTransactionParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SendRawTransactionParamsCopyWith<$Res>
+abstract class _$$SendRawTransactionParamsImplCopyWith<$Res>
     implements $SendRawTransactionParamsCopyWith<$Res> {
-  factory _$$_SendRawTransactionParamsCopyWith(
-          _$_SendRawTransactionParams value,
-          $Res Function(_$_SendRawTransactionParams) then) =
-      __$$_SendRawTransactionParamsCopyWithImpl<$Res>;
+  factory _$$SendRawTransactionParamsImplCopyWith(
+          _$SendRawTransactionParamsImpl value,
+          $Res Function(_$SendRawTransactionParamsImpl) then) =
+      __$$SendRawTransactionParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'tx_as_hex') String txAsHex});
 }
 
 /// @nodoc
-class __$$_SendRawTransactionParamsCopyWithImpl<$Res>
+class __$$SendRawTransactionParamsImplCopyWithImpl<$Res>
     extends _$SendRawTransactionParamsCopyWithImpl<$Res,
-        _$_SendRawTransactionParams>
-    implements _$$_SendRawTransactionParamsCopyWith<$Res> {
-  __$$_SendRawTransactionParamsCopyWithImpl(_$_SendRawTransactionParams _value,
-      $Res Function(_$_SendRawTransactionParams) _then)
+        _$SendRawTransactionParamsImpl>
+    implements _$$SendRawTransactionParamsImplCopyWith<$Res> {
+  __$$SendRawTransactionParamsImplCopyWithImpl(
+      _$SendRawTransactionParamsImpl _value,
+      $Res Function(_$SendRawTransactionParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -91,7 +92,7 @@ class __$$_SendRawTransactionParamsCopyWithImpl<$Res>
   $Res call({
     Object? txAsHex = null,
   }) {
-    return _then(_$_SendRawTransactionParams(
+    return _then(_$SendRawTransactionParamsImpl(
       txAsHex: null == txAsHex
           ? _value.txAsHex
           : txAsHex // ignore: cast_nullable_to_non_nullable
@@ -102,12 +103,12 @@ class __$$_SendRawTransactionParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SendRawTransactionParams implements _SendRawTransactionParams {
-  _$_SendRawTransactionParams(
+class _$SendRawTransactionParamsImpl implements _SendRawTransactionParams {
+  _$SendRawTransactionParamsImpl(
       {@JsonKey(name: 'tx_as_hex') required this.txAsHex});
 
-  factory _$_SendRawTransactionParams.fromJson(Map<String, dynamic> json) =>
-      _$$_SendRawTransactionParamsFromJson(json);
+  factory _$SendRawTransactionParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SendRawTransactionParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -120,10 +121,10 @@ class _$_SendRawTransactionParams implements _SendRawTransactionParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendRawTransactionParams &&
+            other is _$SendRawTransactionParamsImpl &&
             (identical(other.txAsHex, txAsHex) || other.txAsHex == txAsHex));
   }
 
@@ -134,13 +135,13 @@ class _$_SendRawTransactionParams implements _SendRawTransactionParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendRawTransactionParamsCopyWith<_$_SendRawTransactionParams>
-      get copyWith => __$$_SendRawTransactionParamsCopyWithImpl<
-          _$_SendRawTransactionParams>(this, _$identity);
+  _$$SendRawTransactionParamsImplCopyWith<_$SendRawTransactionParamsImpl>
+      get copyWith => __$$SendRawTransactionParamsImplCopyWithImpl<
+          _$SendRawTransactionParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SendRawTransactionParamsToJson(
+    return _$$SendRawTransactionParamsImplToJson(
       this,
     );
   }
@@ -149,10 +150,10 @@ class _$_SendRawTransactionParams implements _SendRawTransactionParams {
 abstract class _SendRawTransactionParams implements SendRawTransactionParams {
   factory _SendRawTransactionParams(
           {@JsonKey(name: 'tx_as_hex') required final String txAsHex}) =
-      _$_SendRawTransactionParams;
+      _$SendRawTransactionParamsImpl;
 
   factory _SendRawTransactionParams.fromJson(Map<String, dynamic> json) =
-      _$_SendRawTransactionParams.fromJson;
+      _$SendRawTransactionParamsImpl.fromJson;
 
   @override
 
@@ -161,6 +162,6 @@ abstract class _SendRawTransactionParams implements SendRawTransactionParams {
   String get txAsHex;
   @override
   @JsonKey(ignore: true)
-  _$$_SendRawTransactionParamsCopyWith<_$_SendRawTransactionParams>
+  _$$SendRawTransactionParamsImplCopyWith<_$SendRawTransactionParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

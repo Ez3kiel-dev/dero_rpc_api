@@ -135,11 +135,11 @@ class _$TransferParamsCopyWithImpl<$Res, $Val extends TransferParams>
 }
 
 /// @nodoc
-abstract class _$$_TransferParamsCopyWith<$Res>
+abstract class _$$TransferParamsImplCopyWith<$Res>
     implements $TransferParamsCopyWith<$Res> {
-  factory _$$_TransferParamsCopyWith(
-          _$_TransferParams value, $Res Function(_$_TransferParams) then) =
-      __$$_TransferParamsCopyWithImpl<$Res>;
+  factory _$$TransferParamsImplCopyWith(_$TransferParamsImpl value,
+          $Res Function(_$TransferParamsImpl) then) =
+      __$$TransferParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -154,11 +154,11 @@ abstract class _$$_TransferParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TransferParamsCopyWithImpl<$Res>
-    extends _$TransferParamsCopyWithImpl<$Res, _$_TransferParams>
-    implements _$$_TransferParamsCopyWith<$Res> {
-  __$$_TransferParamsCopyWithImpl(
-      _$_TransferParams _value, $Res Function(_$_TransferParams) _then)
+class __$$TransferParamsImplCopyWithImpl<$Res>
+    extends _$TransferParamsCopyWithImpl<$Res, _$TransferParamsImpl>
+    implements _$$TransferParamsImplCopyWith<$Res> {
+  __$$TransferParamsImplCopyWithImpl(
+      _$TransferParamsImpl _value, $Res Function(_$TransferParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -173,7 +173,7 @@ class __$$_TransferParamsCopyWithImpl<$Res>
     Object? fees = freezed,
     Object? signer = freezed,
   }) {
-    return _then(_$_TransferParams(
+    return _then(_$TransferParamsImpl(
       transfers: freezed == transfers
           ? _value._transfers
           : transfers // ignore: cast_nullable_to_non_nullable
@@ -212,8 +212,8 @@ class __$$_TransferParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TransferParams implements _TransferParams {
-  _$_TransferParams(
+class _$TransferParamsImpl implements _TransferParams {
+  _$TransferParamsImpl(
       {@JsonKey(name: 'transfers') final List<Transfer>? transfers,
       @JsonKey(name: 'sc') this.smartContractCode,
       @JsonKey(name: 'sc_value') this.smartContractValue,
@@ -225,8 +225,8 @@ class _$_TransferParams implements _TransferParams {
       : _transfers = transfers,
         _scRPC = scRPC;
 
-  factory _$_TransferParams.fromJson(Map<String, dynamic> json) =>
-      _$$_TransferParamsFromJson(json);
+  factory _$TransferParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransferParamsImplFromJson(json);
 
   /// @nodoc
   final List<Transfer>? _transfers;
@@ -292,10 +292,10 @@ class _$_TransferParams implements _TransferParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TransferParams &&
+            other is _$TransferParamsImpl &&
             const DeepCollectionEquality()
                 .equals(other._transfers, _transfers) &&
             (identical(other.smartContractCode, smartContractCode) ||
@@ -326,12 +326,13 @@ class _$_TransferParams implements _TransferParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TransferParamsCopyWith<_$_TransferParams> get copyWith =>
-      __$$_TransferParamsCopyWithImpl<_$_TransferParams>(this, _$identity);
+  _$$TransferParamsImplCopyWith<_$TransferParamsImpl> get copyWith =>
+      __$$TransferParamsImplCopyWithImpl<_$TransferParamsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransferParamsToJson(
+    return _$$TransferParamsImplToJson(
       this,
     );
   }
@@ -346,10 +347,10 @@ abstract class _TransferParams implements TransferParams {
       @JsonKey(name: 'sc_rpc') final List<Argument>? scRPC,
       @JsonKey(name: 'ringsize') final int? ringsize,
       @JsonKey(name: 'fees') final int? fees,
-      @JsonKey(name: 'signer') final String? signer}) = _$_TransferParams;
+      @JsonKey(name: 'signer') final String? signer}) = _$TransferParamsImpl;
 
   factory _TransferParams.fromJson(Map<String, dynamic> json) =
-      _$_TransferParams.fromJson;
+      _$TransferParamsImpl.fromJson;
 
   @override
 
@@ -393,6 +394,6 @@ abstract class _TransferParams implements TransferParams {
   String? get signer;
   @override
   @JsonKey(ignore: true)
-  _$$_TransferParamsCopyWith<_$_TransferParams> get copyWith =>
+  _$$TransferParamsImplCopyWith<_$TransferParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

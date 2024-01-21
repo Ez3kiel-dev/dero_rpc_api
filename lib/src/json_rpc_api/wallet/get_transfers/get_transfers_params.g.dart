@@ -8,9 +8,9 @@ part of 'get_transfers_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTransfersParams _$$_GetTransfersParamsFromJson(
+_$GetTransfersParamsImpl _$$GetTransfersParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetTransfersParams(
+    _$GetTransfersParamsImpl(
       scid: _$JsonConverterFromJson<List<dynamic>, Uint8List>(
           json['scid'], const Uint8ListConverter().fromJson),
       coinbase: json['coinbase'] as bool? ?? true,
@@ -24,8 +24,8 @@ _$_GetTransfersParams _$$_GetTransfersParamsFromJson(
       srcPort: json['srcport'] as int?,
     );
 
-Map<String, dynamic> _$$_GetTransfersParamsToJson(
-        _$_GetTransfersParams instance) =>
+Map<String, dynamic> _$$GetTransfersParamsImplToJson(
+        _$GetTransfersParamsImpl instance) =>
     <String, dynamic>{
       'scid': _$JsonConverterToJson<List<dynamic>, Uint8List>(
           instance.scid, const Uint8ListConverter().toJson),

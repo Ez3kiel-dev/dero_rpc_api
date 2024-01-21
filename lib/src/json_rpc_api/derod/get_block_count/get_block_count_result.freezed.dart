@@ -75,11 +75,11 @@ class _$GetBlockCountResultCopyWithImpl<$Res, $Val extends GetBlockCountResult>
 }
 
 /// @nodoc
-abstract class _$$_GetBlockCountResultCopyWith<$Res>
+abstract class _$$GetBlockCountResultImplCopyWith<$Res>
     implements $GetBlockCountResultCopyWith<$Res> {
-  factory _$$_GetBlockCountResultCopyWith(_$_GetBlockCountResult value,
-          $Res Function(_$_GetBlockCountResult) then) =
-      __$$_GetBlockCountResultCopyWithImpl<$Res>;
+  factory _$$GetBlockCountResultImplCopyWith(_$GetBlockCountResultImpl value,
+          $Res Function(_$GetBlockCountResultImpl) then) =
+      __$$GetBlockCountResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +88,11 @@ abstract class _$$_GetBlockCountResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetBlockCountResultCopyWithImpl<$Res>
-    extends _$GetBlockCountResultCopyWithImpl<$Res, _$_GetBlockCountResult>
-    implements _$$_GetBlockCountResultCopyWith<$Res> {
-  __$$_GetBlockCountResultCopyWithImpl(_$_GetBlockCountResult _value,
-      $Res Function(_$_GetBlockCountResult) _then)
+class __$$GetBlockCountResultImplCopyWithImpl<$Res>
+    extends _$GetBlockCountResultCopyWithImpl<$Res, _$GetBlockCountResultImpl>
+    implements _$$GetBlockCountResultImplCopyWith<$Res> {
+  __$$GetBlockCountResultImplCopyWithImpl(_$GetBlockCountResultImpl _value,
+      $Res Function(_$GetBlockCountResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_GetBlockCountResultCopyWithImpl<$Res>
     Object? count = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetBlockCountResult(
+    return _then(_$GetBlockCountResultImpl(
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
@@ -116,13 +116,13 @@ class __$$_GetBlockCountResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBlockCountResult implements _GetBlockCountResult {
-  _$_GetBlockCountResult(
+class _$GetBlockCountResultImpl implements _GetBlockCountResult {
+  _$GetBlockCountResultImpl(
       {@JsonKey(name: 'count') this.count,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_GetBlockCountResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBlockCountResultFromJson(json);
+  factory _$GetBlockCountResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBlockCountResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -140,10 +140,10 @@ class _$_GetBlockCountResult implements _GetBlockCountResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBlockCountResult &&
+            other is _$GetBlockCountResultImpl &&
             (identical(other.count, count) || other.count == count) &&
             (identical(other.status, status) || other.status == status));
   }
@@ -155,13 +155,13 @@ class _$_GetBlockCountResult implements _GetBlockCountResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBlockCountResultCopyWith<_$_GetBlockCountResult> get copyWith =>
-      __$$_GetBlockCountResultCopyWithImpl<_$_GetBlockCountResult>(
+  _$$GetBlockCountResultImplCopyWith<_$GetBlockCountResultImpl> get copyWith =>
+      __$$GetBlockCountResultImplCopyWithImpl<_$GetBlockCountResultImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBlockCountResultToJson(
+    return _$$GetBlockCountResultImplToJson(
       this,
     );
   }
@@ -169,11 +169,12 @@ class _$_GetBlockCountResult implements _GetBlockCountResult {
 
 abstract class _GetBlockCountResult implements GetBlockCountResult {
   factory _GetBlockCountResult(
-      {@JsonKey(name: 'count') final int? count,
-      @JsonKey(name: 'status') final String? status}) = _$_GetBlockCountResult;
+          {@JsonKey(name: 'count') final int? count,
+          @JsonKey(name: 'status') final String? status}) =
+      _$GetBlockCountResultImpl;
 
   factory _GetBlockCountResult.fromJson(Map<String, dynamic> json) =
-      _$_GetBlockCountResult.fromJson;
+      _$GetBlockCountResultImpl.fromJson;
 
   @override
 
@@ -187,6 +188,6 @@ abstract class _GetBlockCountResult implements GetBlockCountResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetBlockCountResultCopyWith<_$_GetBlockCountResult> get copyWith =>
+  _$$GetBlockCountResultImplCopyWith<_$GetBlockCountResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

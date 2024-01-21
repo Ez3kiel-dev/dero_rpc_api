@@ -8,16 +8,16 @@ part of 'send_raw_transaction_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SendRawTransactionResult _$$_SendRawTransactionResultFromJson(
+_$SendRawTransactionResultImpl _$$SendRawTransactionResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SendRawTransactionResult(
+    _$SendRawTransactionResultImpl(
       status: json['status'] as String?,
       txid: json['txid'] as String?,
       reason: json['string'] as String?,
     );
 
-Map<String, dynamic> _$$_SendRawTransactionResultToJson(
-        _$_SendRawTransactionResult instance) =>
+Map<String, dynamic> _$$SendRawTransactionResultImplToJson(
+        _$SendRawTransactionResultImpl instance) =>
     <String, dynamic>{
       'status': instance.status,
       'txid': instance.txid,

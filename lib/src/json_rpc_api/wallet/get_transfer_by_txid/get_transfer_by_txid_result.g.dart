@@ -8,16 +8,16 @@ part of 'get_transfer_by_txid_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTransferByTxidResult _$$_GetTransferByTxidResultFromJson(
+_$GetTransferByTxidResultImpl _$$GetTransferByTxidResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetTransferByTxidResult(
+    _$GetTransferByTxidResultImpl(
       entry: json['entry'] == null
           ? null
           : Entry.fromJson(json['entry'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetTransferByTxidResultToJson(
-        _$_GetTransferByTxidResult instance) =>
+Map<String, dynamic> _$$GetTransferByTxidResultImplToJson(
+        _$GetTransferByTxidResultImpl instance) =>
     <String, dynamic>{
       'entry': instance.entry,
     };

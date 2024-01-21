@@ -66,23 +66,25 @@ class _$GetRandomAddressParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRandomAddressParamsCopyWith<$Res>
+abstract class _$$GetRandomAddressParamsImplCopyWith<$Res>
     implements $GetRandomAddressParamsCopyWith<$Res> {
-  factory _$$_GetRandomAddressParamsCopyWith(_$_GetRandomAddressParams value,
-          $Res Function(_$_GetRandomAddressParams) then) =
-      __$$_GetRandomAddressParamsCopyWithImpl<$Res>;
+  factory _$$GetRandomAddressParamsImplCopyWith(
+          _$GetRandomAddressParamsImpl value,
+          $Res Function(_$GetRandomAddressParamsImpl) then) =
+      __$$GetRandomAddressParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'scid') String? scid});
 }
 
 /// @nodoc
-class __$$_GetRandomAddressParamsCopyWithImpl<$Res>
+class __$$GetRandomAddressParamsImplCopyWithImpl<$Res>
     extends _$GetRandomAddressParamsCopyWithImpl<$Res,
-        _$_GetRandomAddressParams>
-    implements _$$_GetRandomAddressParamsCopyWith<$Res> {
-  __$$_GetRandomAddressParamsCopyWithImpl(_$_GetRandomAddressParams _value,
-      $Res Function(_$_GetRandomAddressParams) _then)
+        _$GetRandomAddressParamsImpl>
+    implements _$$GetRandomAddressParamsImplCopyWith<$Res> {
+  __$$GetRandomAddressParamsImplCopyWithImpl(
+      _$GetRandomAddressParamsImpl _value,
+      $Res Function(_$GetRandomAddressParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +92,7 @@ class __$$_GetRandomAddressParamsCopyWithImpl<$Res>
   $Res call({
     Object? scid = freezed,
   }) {
-    return _then(_$_GetRandomAddressParams(
+    return _then(_$GetRandomAddressParamsImpl(
       scid: freezed == scid
           ? _value.scid
           : scid // ignore: cast_nullable_to_non_nullable
@@ -101,11 +103,11 @@ class __$$_GetRandomAddressParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRandomAddressParams implements _GetRandomAddressParams {
-  _$_GetRandomAddressParams({@JsonKey(name: 'scid') this.scid});
+class _$GetRandomAddressParamsImpl implements _GetRandomAddressParams {
+  _$GetRandomAddressParamsImpl({@JsonKey(name: 'scid') this.scid});
 
-  factory _$_GetRandomAddressParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRandomAddressParamsFromJson(json);
+  factory _$GetRandomAddressParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRandomAddressParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -118,10 +120,10 @@ class _$_GetRandomAddressParams implements _GetRandomAddressParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRandomAddressParams &&
+            other is _$GetRandomAddressParamsImpl &&
             (identical(other.scid, scid) || other.scid == scid));
   }
 
@@ -132,13 +134,13 @@ class _$_GetRandomAddressParams implements _GetRandomAddressParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRandomAddressParamsCopyWith<_$_GetRandomAddressParams> get copyWith =>
-      __$$_GetRandomAddressParamsCopyWithImpl<_$_GetRandomAddressParams>(
-          this, _$identity);
+  _$$GetRandomAddressParamsImplCopyWith<_$GetRandomAddressParamsImpl>
+      get copyWith => __$$GetRandomAddressParamsImplCopyWithImpl<
+          _$GetRandomAddressParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRandomAddressParamsToJson(
+    return _$$GetRandomAddressParamsImplToJson(
       this,
     );
   }
@@ -146,10 +148,10 @@ class _$_GetRandomAddressParams implements _GetRandomAddressParams {
 
 abstract class _GetRandomAddressParams implements GetRandomAddressParams {
   factory _GetRandomAddressParams({@JsonKey(name: 'scid') final String? scid}) =
-      _$_GetRandomAddressParams;
+      _$GetRandomAddressParamsImpl;
 
   factory _GetRandomAddressParams.fromJson(Map<String, dynamic> json) =
-      _$_GetRandomAddressParams.fromJson;
+      _$GetRandomAddressParamsImpl.fromJson;
 
   @override
 
@@ -158,6 +160,6 @@ abstract class _GetRandomAddressParams implements GetRandomAddressParams {
   String? get scid;
   @override
   @JsonKey(ignore: true)
-  _$$_GetRandomAddressParamsCopyWith<_$_GetRandomAddressParams> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetRandomAddressParamsImplCopyWith<_$GetRandomAddressParamsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

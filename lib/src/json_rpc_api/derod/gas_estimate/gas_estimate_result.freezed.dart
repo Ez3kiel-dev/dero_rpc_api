@@ -85,11 +85,11 @@ class _$GasEstimateResultCopyWithImpl<$Res, $Val extends GasEstimateResult>
 }
 
 /// @nodoc
-abstract class _$$_GasEstimateResultCopyWith<$Res>
+abstract class _$$GasEstimateResultImplCopyWith<$Res>
     implements $GasEstimateResultCopyWith<$Res> {
-  factory _$$_GasEstimateResultCopyWith(_$_GasEstimateResult value,
-          $Res Function(_$_GasEstimateResult) then) =
-      __$$_GasEstimateResultCopyWithImpl<$Res>;
+  factory _$$GasEstimateResultImplCopyWith(_$GasEstimateResultImpl value,
+          $Res Function(_$GasEstimateResultImpl) then) =
+      __$$GasEstimateResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$_GasEstimateResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GasEstimateResultCopyWithImpl<$Res>
-    extends _$GasEstimateResultCopyWithImpl<$Res, _$_GasEstimateResult>
-    implements _$$_GasEstimateResultCopyWith<$Res> {
-  __$$_GasEstimateResultCopyWithImpl(
-      _$_GasEstimateResult _value, $Res Function(_$_GasEstimateResult) _then)
+class __$$GasEstimateResultImplCopyWithImpl<$Res>
+    extends _$GasEstimateResultCopyWithImpl<$Res, _$GasEstimateResultImpl>
+    implements _$$GasEstimateResultImplCopyWith<$Res> {
+  __$$GasEstimateResultImplCopyWithImpl(_$GasEstimateResultImpl _value,
+      $Res Function(_$GasEstimateResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -113,7 +113,7 @@ class __$$_GasEstimateResultCopyWithImpl<$Res>
     Object? gasStorage = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GasEstimateResult(
+    return _then(_$GasEstimateResultImpl(
       gasCompute: freezed == gasCompute
           ? _value.gasCompute
           : gasCompute // ignore: cast_nullable_to_non_nullable
@@ -132,14 +132,14 @@ class __$$_GasEstimateResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GasEstimateResult implements _GasEstimateResult {
-  _$_GasEstimateResult(
+class _$GasEstimateResultImpl implements _GasEstimateResult {
+  _$GasEstimateResultImpl(
       {@JsonKey(name: 'gascompute') this.gasCompute,
       @JsonKey(name: 'gasstorage') this.gasStorage,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_GasEstimateResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GasEstimateResultFromJson(json);
+  factory _$GasEstimateResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GasEstimateResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -162,10 +162,10 @@ class _$_GasEstimateResult implements _GasEstimateResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GasEstimateResult &&
+            other is _$GasEstimateResultImpl &&
             (identical(other.gasCompute, gasCompute) ||
                 other.gasCompute == gasCompute) &&
             (identical(other.gasStorage, gasStorage) ||
@@ -180,13 +180,13 @@ class _$_GasEstimateResult implements _GasEstimateResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GasEstimateResultCopyWith<_$_GasEstimateResult> get copyWith =>
-      __$$_GasEstimateResultCopyWithImpl<_$_GasEstimateResult>(
+  _$$GasEstimateResultImplCopyWith<_$GasEstimateResultImpl> get copyWith =>
+      __$$GasEstimateResultImplCopyWithImpl<_$GasEstimateResultImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GasEstimateResultToJson(
+    return _$$GasEstimateResultImplToJson(
       this,
     );
   }
@@ -196,10 +196,10 @@ abstract class _GasEstimateResult implements GasEstimateResult {
   factory _GasEstimateResult(
       {@JsonKey(name: 'gascompute') final int? gasCompute,
       @JsonKey(name: 'gasstorage') final int? gasStorage,
-      @JsonKey(name: 'status') final String? status}) = _$_GasEstimateResult;
+      @JsonKey(name: 'status') final String? status}) = _$GasEstimateResultImpl;
 
   factory _GasEstimateResult.fromJson(Map<String, dynamic> json) =
-      _$_GasEstimateResult.fromJson;
+      _$GasEstimateResultImpl.fromJson;
 
   @override
 
@@ -218,6 +218,6 @@ abstract class _GasEstimateResult implements GasEstimateResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GasEstimateResultCopyWith<_$_GasEstimateResult> get copyWith =>
+  _$$GasEstimateResultImplCopyWith<_$GasEstimateResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

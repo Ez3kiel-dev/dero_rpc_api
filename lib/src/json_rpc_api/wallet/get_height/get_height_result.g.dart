@@ -8,14 +8,14 @@ part of 'get_height_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetHeightWalletResult _$$_GetHeightWalletResultFromJson(
+_$GetHeightWalletResultImpl _$$GetHeightWalletResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetHeightWalletResult(
+    _$GetHeightWalletResultImpl(
       height: json['height'] as int?,
     );
 
-Map<String, dynamic> _$$_GetHeightWalletResultToJson(
-        _$_GetHeightWalletResult instance) =>
+Map<String, dynamic> _$$GetHeightWalletResultImplToJson(
+        _$GetHeightWalletResultImpl instance) =>
     <String, dynamic>{
       'height': instance.height,
     };

@@ -64,22 +64,22 @@ class _$QueryKeyParamsCopyWithImpl<$Res, $Val extends QueryKeyParams>
 }
 
 /// @nodoc
-abstract class _$$_QueryKeyParamsCopyWith<$Res>
+abstract class _$$QueryKeyParamsImplCopyWith<$Res>
     implements $QueryKeyParamsCopyWith<$Res> {
-  factory _$$_QueryKeyParamsCopyWith(
-          _$_QueryKeyParams value, $Res Function(_$_QueryKeyParams) then) =
-      __$$_QueryKeyParamsCopyWithImpl<$Res>;
+  factory _$$QueryKeyParamsImplCopyWith(_$QueryKeyParamsImpl value,
+          $Res Function(_$QueryKeyParamsImpl) then) =
+      __$$QueryKeyParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'key_type') String keyType});
 }
 
 /// @nodoc
-class __$$_QueryKeyParamsCopyWithImpl<$Res>
-    extends _$QueryKeyParamsCopyWithImpl<$Res, _$_QueryKeyParams>
-    implements _$$_QueryKeyParamsCopyWith<$Res> {
-  __$$_QueryKeyParamsCopyWithImpl(
-      _$_QueryKeyParams _value, $Res Function(_$_QueryKeyParams) _then)
+class __$$QueryKeyParamsImplCopyWithImpl<$Res>
+    extends _$QueryKeyParamsCopyWithImpl<$Res, _$QueryKeyParamsImpl>
+    implements _$$QueryKeyParamsImplCopyWith<$Res> {
+  __$$QueryKeyParamsImplCopyWithImpl(
+      _$QueryKeyParamsImpl _value, $Res Function(_$QueryKeyParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_QueryKeyParamsCopyWithImpl<$Res>
   $Res call({
     Object? keyType = null,
   }) {
-    return _then(_$_QueryKeyParams(
+    return _then(_$QueryKeyParamsImpl(
       keyType: null == keyType
           ? _value.keyType
           : keyType // ignore: cast_nullable_to_non_nullable
@@ -98,11 +98,11 @@ class __$$_QueryKeyParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QueryKeyParams implements _QueryKeyParams {
-  _$_QueryKeyParams({@JsonKey(name: 'key_type') this.keyType = 'mnemonic'});
+class _$QueryKeyParamsImpl implements _QueryKeyParams {
+  _$QueryKeyParamsImpl({@JsonKey(name: 'key_type') this.keyType = 'mnemonic'});
 
-  factory _$_QueryKeyParams.fromJson(Map<String, dynamic> json) =>
-      _$$_QueryKeyParamsFromJson(json);
+  factory _$QueryKeyParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QueryKeyParamsImplFromJson(json);
 
   /// Key type: `mnemonic` by default.
   @override
@@ -115,10 +115,10 @@ class _$_QueryKeyParams implements _QueryKeyParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QueryKeyParams &&
+            other is _$QueryKeyParamsImpl &&
             (identical(other.keyType, keyType) || other.keyType == keyType));
   }
 
@@ -129,12 +129,13 @@ class _$_QueryKeyParams implements _QueryKeyParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QueryKeyParamsCopyWith<_$_QueryKeyParams> get copyWith =>
-      __$$_QueryKeyParamsCopyWithImpl<_$_QueryKeyParams>(this, _$identity);
+  _$$QueryKeyParamsImplCopyWith<_$QueryKeyParamsImpl> get copyWith =>
+      __$$QueryKeyParamsImplCopyWithImpl<_$QueryKeyParamsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QueryKeyParamsToJson(
+    return _$$QueryKeyParamsImplToJson(
       this,
     );
   }
@@ -142,10 +143,10 @@ class _$_QueryKeyParams implements _QueryKeyParams {
 
 abstract class _QueryKeyParams implements QueryKeyParams {
   factory _QueryKeyParams({@JsonKey(name: 'key_type') final String keyType}) =
-      _$_QueryKeyParams;
+      _$QueryKeyParamsImpl;
 
   factory _QueryKeyParams.fromJson(Map<String, dynamic> json) =
-      _$_QueryKeyParams.fromJson;
+      _$QueryKeyParamsImpl.fromJson;
 
   @override
 
@@ -154,6 +155,6 @@ abstract class _QueryKeyParams implements QueryKeyParams {
   String get keyType;
   @override
   @JsonKey(ignore: true)
-  _$$_QueryKeyParamsCopyWith<_$_QueryKeyParams> get copyWith =>
+  _$$QueryKeyParamsImplCopyWith<_$QueryKeyParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

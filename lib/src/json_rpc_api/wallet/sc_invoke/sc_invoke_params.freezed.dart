@@ -105,11 +105,11 @@ class _$ScInvokeParamsCopyWithImpl<$Res, $Val extends ScInvokeParams>
 }
 
 /// @nodoc
-abstract class _$$_ScInvokeParamsCopyWith<$Res>
+abstract class _$$ScInvokeParamsImplCopyWith<$Res>
     implements $ScInvokeParamsCopyWith<$Res> {
-  factory _$$_ScInvokeParamsCopyWith(
-          _$_ScInvokeParams value, $Res Function(_$_ScInvokeParams) then) =
-      __$$_ScInvokeParamsCopyWithImpl<$Res>;
+  factory _$$ScInvokeParamsImplCopyWith(_$ScInvokeParamsImpl value,
+          $Res Function(_$ScInvokeParamsImpl) then) =
+      __$$ScInvokeParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,11 +121,11 @@ abstract class _$$_ScInvokeParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScInvokeParamsCopyWithImpl<$Res>
-    extends _$ScInvokeParamsCopyWithImpl<$Res, _$_ScInvokeParams>
-    implements _$$_ScInvokeParamsCopyWith<$Res> {
-  __$$_ScInvokeParamsCopyWithImpl(
-      _$_ScInvokeParams _value, $Res Function(_$_ScInvokeParams) _then)
+class __$$ScInvokeParamsImplCopyWithImpl<$Res>
+    extends _$ScInvokeParamsCopyWithImpl<$Res, _$ScInvokeParamsImpl>
+    implements _$$ScInvokeParamsImplCopyWith<$Res> {
+  __$$ScInvokeParamsImplCopyWithImpl(
+      _$ScInvokeParamsImpl _value, $Res Function(_$ScInvokeParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +137,7 @@ class __$$_ScInvokeParamsCopyWithImpl<$Res>
     Object? tokenDeposit = freezed,
     Object? ringsize = freezed,
   }) {
-    return _then(_$_ScInvokeParams(
+    return _then(_$ScInvokeParamsImpl(
       scid: null == scid
           ? _value.scid
           : scid // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_ScInvokeParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ScInvokeParams implements _ScInvokeParams {
-  _$_ScInvokeParams(
+class _$ScInvokeParamsImpl implements _ScInvokeParams {
+  _$ScInvokeParamsImpl(
       {@JsonKey(name: 'scid') required this.scid,
       @JsonKey(name: 'sc_rpc') final List<Argument>? scRPC,
       @JsonKey(name: 'sc_dero_deposit') this.deroDeposit,
@@ -173,8 +173,8 @@ class _$_ScInvokeParams implements _ScInvokeParams {
       @JsonKey(name: 'ringsize') this.ringsize})
       : _scRPC = scRPC;
 
-  factory _$_ScInvokeParams.fromJson(Map<String, dynamic> json) =>
-      _$$_ScInvokeParamsFromJson(json);
+  factory _$ScInvokeParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScInvokeParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -216,10 +216,10 @@ class _$_ScInvokeParams implements _ScInvokeParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScInvokeParams &&
+            other is _$ScInvokeParamsImpl &&
             (identical(other.scid, scid) || other.scid == scid) &&
             const DeepCollectionEquality().equals(other._scRPC, _scRPC) &&
             (identical(other.deroDeposit, deroDeposit) ||
@@ -243,12 +243,13 @@ class _$_ScInvokeParams implements _ScInvokeParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScInvokeParamsCopyWith<_$_ScInvokeParams> get copyWith =>
-      __$$_ScInvokeParamsCopyWithImpl<_$_ScInvokeParams>(this, _$identity);
+  _$$ScInvokeParamsImplCopyWith<_$ScInvokeParamsImpl> get copyWith =>
+      __$$ScInvokeParamsImplCopyWithImpl<_$ScInvokeParamsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScInvokeParamsToJson(
+    return _$$ScInvokeParamsImplToJson(
       this,
     );
   }
@@ -260,10 +261,10 @@ abstract class _ScInvokeParams implements ScInvokeParams {
       @JsonKey(name: 'sc_rpc') final List<Argument>? scRPC,
       @JsonKey(name: 'sc_dero_deposit') final int? deroDeposit,
       @JsonKey(name: 'sc_token_deposit') final int? tokenDeposit,
-      @JsonKey(name: 'ringsize') final int? ringsize}) = _$_ScInvokeParams;
+      @JsonKey(name: 'ringsize') final int? ringsize}) = _$ScInvokeParamsImpl;
 
   factory _ScInvokeParams.fromJson(Map<String, dynamic> json) =
-      _$_ScInvokeParams.fromJson;
+      _$ScInvokeParamsImpl.fromJson;
 
   @override
 
@@ -292,6 +293,6 @@ abstract class _ScInvokeParams implements ScInvokeParams {
   int? get ringsize;
   @override
   @JsonKey(ignore: true)
-  _$$_ScInvokeParamsCopyWith<_$_ScInvokeParams> get copyWith =>
+  _$$ScInvokeParamsImplCopyWith<_$ScInvokeParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

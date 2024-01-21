@@ -64,22 +64,22 @@ class _$QueryKeyResultCopyWithImpl<$Res, $Val extends QueryKeyResult>
 }
 
 /// @nodoc
-abstract class _$$_QueryKeyResultCopyWith<$Res>
+abstract class _$$QueryKeyResultImplCopyWith<$Res>
     implements $QueryKeyResultCopyWith<$Res> {
-  factory _$$_QueryKeyResultCopyWith(
-          _$_QueryKeyResult value, $Res Function(_$_QueryKeyResult) then) =
-      __$$_QueryKeyResultCopyWithImpl<$Res>;
+  factory _$$QueryKeyResultImplCopyWith(_$QueryKeyResultImpl value,
+          $Res Function(_$QueryKeyResultImpl) then) =
+      __$$QueryKeyResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'key') String? key});
 }
 
 /// @nodoc
-class __$$_QueryKeyResultCopyWithImpl<$Res>
-    extends _$QueryKeyResultCopyWithImpl<$Res, _$_QueryKeyResult>
-    implements _$$_QueryKeyResultCopyWith<$Res> {
-  __$$_QueryKeyResultCopyWithImpl(
-      _$_QueryKeyResult _value, $Res Function(_$_QueryKeyResult) _then)
+class __$$QueryKeyResultImplCopyWithImpl<$Res>
+    extends _$QueryKeyResultCopyWithImpl<$Res, _$QueryKeyResultImpl>
+    implements _$$QueryKeyResultImplCopyWith<$Res> {
+  __$$QueryKeyResultImplCopyWithImpl(
+      _$QueryKeyResultImpl _value, $Res Function(_$QueryKeyResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_QueryKeyResultCopyWithImpl<$Res>
   $Res call({
     Object? key = freezed,
   }) {
-    return _then(_$_QueryKeyResult(
+    return _then(_$QueryKeyResultImpl(
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -98,11 +98,11 @@ class __$$_QueryKeyResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QueryKeyResult implements _QueryKeyResult {
-  _$_QueryKeyResult({@JsonKey(name: 'key') this.key});
+class _$QueryKeyResultImpl implements _QueryKeyResult {
+  _$QueryKeyResultImpl({@JsonKey(name: 'key') this.key});
 
-  factory _$_QueryKeyResult.fromJson(Map<String, dynamic> json) =>
-      _$$_QueryKeyResultFromJson(json);
+  factory _$QueryKeyResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QueryKeyResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -115,10 +115,10 @@ class _$_QueryKeyResult implements _QueryKeyResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QueryKeyResult &&
+            other is _$QueryKeyResultImpl &&
             (identical(other.key, key) || other.key == key));
   }
 
@@ -129,12 +129,13 @@ class _$_QueryKeyResult implements _QueryKeyResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QueryKeyResultCopyWith<_$_QueryKeyResult> get copyWith =>
-      __$$_QueryKeyResultCopyWithImpl<_$_QueryKeyResult>(this, _$identity);
+  _$$QueryKeyResultImplCopyWith<_$QueryKeyResultImpl> get copyWith =>
+      __$$QueryKeyResultImplCopyWithImpl<_$QueryKeyResultImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QueryKeyResultToJson(
+    return _$$QueryKeyResultImplToJson(
       this,
     );
   }
@@ -142,10 +143,10 @@ class _$_QueryKeyResult implements _QueryKeyResult {
 
 abstract class _QueryKeyResult implements QueryKeyResult {
   factory _QueryKeyResult({@JsonKey(name: 'key') final String? key}) =
-      _$_QueryKeyResult;
+      _$QueryKeyResultImpl;
 
   factory _QueryKeyResult.fromJson(Map<String, dynamic> json) =
-      _$_QueryKeyResult.fromJson;
+      _$QueryKeyResultImpl.fromJson;
 
   @override
 
@@ -154,6 +155,6 @@ abstract class _QueryKeyResult implements QueryKeyResult {
   String? get key;
   @override
   @JsonKey(ignore: true)
-  _$$_QueryKeyResultCopyWith<_$_QueryKeyResult> get copyWith =>
+  _$$QueryKeyResultImplCopyWith<_$QueryKeyResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

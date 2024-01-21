@@ -75,11 +75,11 @@ class _$SubmitBlockParamsCopyWithImpl<$Res, $Val extends SubmitBlockParams>
 }
 
 /// @nodoc
-abstract class _$$_SubmitBlockParamsCopyWith<$Res>
+abstract class _$$SubmitBlockParamsImplCopyWith<$Res>
     implements $SubmitBlockParamsCopyWith<$Res> {
-  factory _$$_SubmitBlockParamsCopyWith(_$_SubmitBlockParams value,
-          $Res Function(_$_SubmitBlockParams) then) =
-      __$$_SubmitBlockParamsCopyWithImpl<$Res>;
+  factory _$$SubmitBlockParamsImplCopyWith(_$SubmitBlockParamsImpl value,
+          $Res Function(_$SubmitBlockParamsImpl) then) =
+      __$$SubmitBlockParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +88,11 @@ abstract class _$$_SubmitBlockParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SubmitBlockParamsCopyWithImpl<$Res>
-    extends _$SubmitBlockParamsCopyWithImpl<$Res, _$_SubmitBlockParams>
-    implements _$$_SubmitBlockParamsCopyWith<$Res> {
-  __$$_SubmitBlockParamsCopyWithImpl(
-      _$_SubmitBlockParams _value, $Res Function(_$_SubmitBlockParams) _then)
+class __$$SubmitBlockParamsImplCopyWithImpl<$Res>
+    extends _$SubmitBlockParamsCopyWithImpl<$Res, _$SubmitBlockParamsImpl>
+    implements _$$SubmitBlockParamsImplCopyWith<$Res> {
+  __$$SubmitBlockParamsImplCopyWithImpl(_$SubmitBlockParamsImpl _value,
+      $Res Function(_$SubmitBlockParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_SubmitBlockParamsCopyWithImpl<$Res>
     Object? jobId = null,
     Object? miniblockHashingBlob = null,
   }) {
-    return _then(_$_SubmitBlockParams(
+    return _then(_$SubmitBlockParamsImpl(
       jobId: null == jobId
           ? _value.jobId
           : jobId // ignore: cast_nullable_to_non_nullable
@@ -116,13 +116,13 @@ class __$$_SubmitBlockParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SubmitBlockParams implements _SubmitBlockParams {
-  _$_SubmitBlockParams(
+class _$SubmitBlockParamsImpl implements _SubmitBlockParams {
+  _$SubmitBlockParamsImpl(
       {@JsonKey(name: 'jobid') required this.jobId,
       @JsonKey(name: 'mbl_blob') required this.miniblockHashingBlob});
 
-  factory _$_SubmitBlockParams.fromJson(Map<String, dynamic> json) =>
-      _$$_SubmitBlockParamsFromJson(json);
+  factory _$SubmitBlockParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SubmitBlockParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -140,10 +140,10 @@ class _$_SubmitBlockParams implements _SubmitBlockParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SubmitBlockParams &&
+            other is _$SubmitBlockParamsImpl &&
             (identical(other.jobId, jobId) || other.jobId == jobId) &&
             (identical(other.miniblockHashingBlob, miniblockHashingBlob) ||
                 other.miniblockHashingBlob == miniblockHashingBlob));
@@ -156,13 +156,13 @@ class _$_SubmitBlockParams implements _SubmitBlockParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SubmitBlockParamsCopyWith<_$_SubmitBlockParams> get copyWith =>
-      __$$_SubmitBlockParamsCopyWithImpl<_$_SubmitBlockParams>(
+  _$$SubmitBlockParamsImplCopyWith<_$SubmitBlockParamsImpl> get copyWith =>
+      __$$SubmitBlockParamsImplCopyWithImpl<_$SubmitBlockParamsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubmitBlockParamsToJson(
+    return _$$SubmitBlockParamsImplToJson(
       this,
     );
   }
@@ -172,10 +172,10 @@ abstract class _SubmitBlockParams implements SubmitBlockParams {
   factory _SubmitBlockParams(
       {@JsonKey(name: 'jobid') required final String jobId,
       @JsonKey(name: 'mbl_blob')
-      required final String miniblockHashingBlob}) = _$_SubmitBlockParams;
+      required final String miniblockHashingBlob}) = _$SubmitBlockParamsImpl;
 
   factory _SubmitBlockParams.fromJson(Map<String, dynamic> json) =
-      _$_SubmitBlockParams.fromJson;
+      _$SubmitBlockParamsImpl.fromJson;
 
   @override
 
@@ -189,6 +189,6 @@ abstract class _SubmitBlockParams implements SubmitBlockParams {
   String get miniblockHashingBlob;
   @override
   @JsonKey(ignore: true)
-  _$$_SubmitBlockParamsCopyWith<_$_SubmitBlockParams> get copyWith =>
+  _$$SubmitBlockParamsImplCopyWith<_$SubmitBlockParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,16 +8,16 @@ part of 'name_to_address_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_NameToAddressResult _$$_NameToAddressResultFromJson(
+_$NameToAddressResultImpl _$$NameToAddressResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NameToAddressResult(
+    _$NameToAddressResultImpl(
       name: json['name'] as String?,
       address: json['address'] as String?,
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_NameToAddressResultToJson(
-        _$_NameToAddressResult instance) =>
+Map<String, dynamic> _$$NameToAddressResultImplToJson(
+        _$NameToAddressResultImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'address': instance.address,

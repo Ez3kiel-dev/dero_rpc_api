@@ -8,13 +8,14 @@ part of 'get_block_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBlockParams _$$_GetBlockParamsFromJson(Map<String, dynamic> json) =>
-    _$_GetBlockParams(
+_$GetBlockParamsImpl _$$GetBlockParamsImplFromJson(Map<String, dynamic> json) =>
+    _$GetBlockParamsImpl(
       hash: json['hash'] as String?,
       height: json['height'] as int?,
     );
 
-Map<String, dynamic> _$$_GetBlockParamsToJson(_$_GetBlockParams instance) =>
+Map<String, dynamic> _$$GetBlockParamsImplToJson(
+        _$GetBlockParamsImpl instance) =>
     <String, dynamic>{
       'hash': instance.hash,
       'height': instance.height,

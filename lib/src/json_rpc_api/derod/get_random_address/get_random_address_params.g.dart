@@ -8,14 +8,14 @@ part of 'get_random_address_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRandomAddressParams _$$_GetRandomAddressParamsFromJson(
+_$GetRandomAddressParamsImpl _$$GetRandomAddressParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRandomAddressParams(
+    _$GetRandomAddressParamsImpl(
       scid: json['scid'] as String?,
     );
 
-Map<String, dynamic> _$$_GetRandomAddressParamsToJson(
-        _$_GetRandomAddressParams instance) =>
+Map<String, dynamic> _$$GetRandomAddressParamsImplToJson(
+        _$GetRandomAddressParamsImpl instance) =>
     <String, dynamic>{
       'scid': instance.scid,
     };

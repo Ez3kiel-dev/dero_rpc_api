@@ -154,10 +154,11 @@ class _$MiniblockCopyWithImpl<$Res, $Val extends Miniblock>
 }
 
 /// @nodoc
-abstract class _$$_MiniblockCopyWith<$Res> implements $MiniblockCopyWith<$Res> {
-  factory _$$_MiniblockCopyWith(
-          _$_Miniblock value, $Res Function(_$_Miniblock) then) =
-      __$$_MiniblockCopyWithImpl<$Res>;
+abstract class _$$MiniblockImplCopyWith<$Res>
+    implements $MiniblockCopyWith<$Res> {
+  factory _$$MiniblockImplCopyWith(
+          _$MiniblockImpl value, $Res Function(_$MiniblockImpl) then) =
+      __$$MiniblockImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -174,11 +175,11 @@ abstract class _$$_MiniblockCopyWith<$Res> implements $MiniblockCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MiniblockCopyWithImpl<$Res>
-    extends _$MiniblockCopyWithImpl<$Res, _$_Miniblock>
-    implements _$$_MiniblockCopyWith<$Res> {
-  __$$_MiniblockCopyWithImpl(
-      _$_Miniblock _value, $Res Function(_$_Miniblock) _then)
+class __$$MiniblockImplCopyWithImpl<$Res>
+    extends _$MiniblockCopyWithImpl<$Res, _$MiniblockImpl>
+    implements _$$MiniblockImplCopyWith<$Res> {
+  __$$MiniblockImplCopyWithImpl(
+      _$MiniblockImpl _value, $Res Function(_$MiniblockImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -195,7 +196,7 @@ class __$$_MiniblockCopyWithImpl<$Res>
     Object? flags = freezed,
     Object? nonce = freezed,
   }) {
-    return _then(_$_Miniblock(
+    return _then(_$MiniblockImpl(
       version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -242,8 +243,8 @@ class __$$_MiniblockCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Miniblock implements _Miniblock {
-  _$_Miniblock(
+class _$MiniblockImpl implements _Miniblock {
+  _$MiniblockImpl(
       {@JsonKey(name: 'Version') this.version,
       @JsonKey(name: 'HighDiff') this.highDiff,
       @JsonKey(name: 'Final') this.isFinal,
@@ -257,8 +258,8 @@ class _$_Miniblock implements _Miniblock {
       : _past = past,
         _nonce = nonce;
 
-  factory _$_Miniblock.fromJson(Map<String, dynamic> json) =>
-      _$$_MiniblockFromJson(json);
+  factory _$MiniblockImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiniblockImplFromJson(json);
 
   /// @nodoc
   @override
@@ -334,10 +335,10 @@ class _$_Miniblock implements _Miniblock {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Miniblock &&
+            other is _$MiniblockImpl &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.highDiff, highDiff) ||
                 other.highDiff == highDiff) &&
@@ -371,12 +372,12 @@ class _$_Miniblock implements _Miniblock {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiniblockCopyWith<_$_Miniblock> get copyWith =>
-      __$$_MiniblockCopyWithImpl<_$_Miniblock>(this, _$identity);
+  _$$MiniblockImplCopyWith<_$MiniblockImpl> get copyWith =>
+      __$$MiniblockImplCopyWithImpl<_$MiniblockImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiniblockToJson(
+    return _$$MiniblockImplToJson(
       this,
     );
   }
@@ -393,10 +394,10 @@ abstract class _Miniblock implements Miniblock {
       @JsonKey(name: 'Past') final List<int>? past,
       @JsonKey(name: 'KeyHash') final String? keyHash,
       @JsonKey(name: 'Flags') final int? flags,
-      @JsonKey(name: 'Nonce') final List<int>? nonce}) = _$_Miniblock;
+      @JsonKey(name: 'Nonce') final List<int>? nonce}) = _$MiniblockImpl;
 
   factory _Miniblock.fromJson(Map<String, dynamic> json) =
-      _$_Miniblock.fromJson;
+      _$MiniblockImpl.fromJson;
 
   @override
 
@@ -450,6 +451,6 @@ abstract class _Miniblock implements Miniblock {
   List<int>? get nonce;
   @override
   @JsonKey(ignore: true)
-  _$$_MiniblockCopyWith<_$_Miniblock> get copyWith =>
+  _$$MiniblockImplCopyWith<_$MiniblockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,14 +8,14 @@ part of 'get_block_by_topoheight_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBlockByTopoHeightParams _$$_GetBlockByTopoHeightParamsFromJson(
+_$GetBlockByTopoHeightParamsImpl _$$GetBlockByTopoHeightParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetBlockByTopoHeightParams(
+    _$GetBlockByTopoHeightParamsImpl(
       topoHeight: json['topoheight'] as int,
     );
 
-Map<String, dynamic> _$$_GetBlockByTopoHeightParamsToJson(
-        _$_GetBlockByTopoHeightParams instance) =>
+Map<String, dynamic> _$$GetBlockByTopoHeightParamsImplToJson(
+        _$GetBlockByTopoHeightParamsImpl instance) =>
     <String, dynamic>{
       'topoheight': instance.topoHeight,
     };

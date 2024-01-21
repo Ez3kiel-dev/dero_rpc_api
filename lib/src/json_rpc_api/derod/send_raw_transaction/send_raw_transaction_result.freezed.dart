@@ -87,12 +87,12 @@ class _$SendRawTransactionResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SendRawTransactionResultCopyWith<$Res>
+abstract class _$$SendRawTransactionResultImplCopyWith<$Res>
     implements $SendRawTransactionResultCopyWith<$Res> {
-  factory _$$_SendRawTransactionResultCopyWith(
-          _$_SendRawTransactionResult value,
-          $Res Function(_$_SendRawTransactionResult) then) =
-      __$$_SendRawTransactionResultCopyWithImpl<$Res>;
+  factory _$$SendRawTransactionResultImplCopyWith(
+          _$SendRawTransactionResultImpl value,
+          $Res Function(_$SendRawTransactionResultImpl) then) =
+      __$$SendRawTransactionResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -102,12 +102,13 @@ abstract class _$$_SendRawTransactionResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SendRawTransactionResultCopyWithImpl<$Res>
+class __$$SendRawTransactionResultImplCopyWithImpl<$Res>
     extends _$SendRawTransactionResultCopyWithImpl<$Res,
-        _$_SendRawTransactionResult>
-    implements _$$_SendRawTransactionResultCopyWith<$Res> {
-  __$$_SendRawTransactionResultCopyWithImpl(_$_SendRawTransactionResult _value,
-      $Res Function(_$_SendRawTransactionResult) _then)
+        _$SendRawTransactionResultImpl>
+    implements _$$SendRawTransactionResultImplCopyWith<$Res> {
+  __$$SendRawTransactionResultImplCopyWithImpl(
+      _$SendRawTransactionResultImpl _value,
+      $Res Function(_$SendRawTransactionResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -117,7 +118,7 @@ class __$$_SendRawTransactionResultCopyWithImpl<$Res>
     Object? txid = freezed,
     Object? reason = freezed,
   }) {
-    return _then(_$_SendRawTransactionResult(
+    return _then(_$SendRawTransactionResultImpl(
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -136,14 +137,14 @@ class __$$_SendRawTransactionResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SendRawTransactionResult implements _SendRawTransactionResult {
-  _$_SendRawTransactionResult(
+class _$SendRawTransactionResultImpl implements _SendRawTransactionResult {
+  _$SendRawTransactionResultImpl(
       {@JsonKey(name: 'status') this.status,
       @JsonKey(name: 'txid') this.txid,
       @JsonKey(name: 'string') this.reason});
 
-  factory _$_SendRawTransactionResult.fromJson(Map<String, dynamic> json) =>
-      _$$_SendRawTransactionResultFromJson(json);
+  factory _$SendRawTransactionResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SendRawTransactionResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -166,10 +167,10 @@ class _$_SendRawTransactionResult implements _SendRawTransactionResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendRawTransactionResult &&
+            other is _$SendRawTransactionResultImpl &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.txid, txid) || other.txid == txid) &&
             (identical(other.reason, reason) || other.reason == reason));
@@ -182,13 +183,13 @@ class _$_SendRawTransactionResult implements _SendRawTransactionResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendRawTransactionResultCopyWith<_$_SendRawTransactionResult>
-      get copyWith => __$$_SendRawTransactionResultCopyWithImpl<
-          _$_SendRawTransactionResult>(this, _$identity);
+  _$$SendRawTransactionResultImplCopyWith<_$SendRawTransactionResultImpl>
+      get copyWith => __$$SendRawTransactionResultImplCopyWithImpl<
+          _$SendRawTransactionResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SendRawTransactionResultToJson(
+    return _$$SendRawTransactionResultImplToJson(
       this,
     );
   }
@@ -199,10 +200,10 @@ abstract class _SendRawTransactionResult implements SendRawTransactionResult {
           {@JsonKey(name: 'status') final String? status,
           @JsonKey(name: 'txid') final String? txid,
           @JsonKey(name: 'string') final String? reason}) =
-      _$_SendRawTransactionResult;
+      _$SendRawTransactionResultImpl;
 
   factory _SendRawTransactionResult.fromJson(Map<String, dynamic> json) =
-      _$_SendRawTransactionResult.fromJson;
+      _$SendRawTransactionResultImpl.fromJson;
 
   @override
 
@@ -221,6 +222,6 @@ abstract class _SendRawTransactionResult implements SendRawTransactionResult {
   String? get reason;
   @override
   @JsonKey(ignore: true)
-  _$$_SendRawTransactionResultCopyWith<_$_SendRawTransactionResult>
+  _$$SendRawTransactionResultImplCopyWith<_$SendRawTransactionResultImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

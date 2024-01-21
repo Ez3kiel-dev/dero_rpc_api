@@ -87,11 +87,12 @@ class _$GetBlockTemplateParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetBlockTemplateParamsCopyWith<$Res>
+abstract class _$$GetBlockTemplateParamsImplCopyWith<$Res>
     implements $GetBlockTemplateParamsCopyWith<$Res> {
-  factory _$$_GetBlockTemplateParamsCopyWith(_$_GetBlockTemplateParams value,
-          $Res Function(_$_GetBlockTemplateParams) then) =
-      __$$_GetBlockTemplateParamsCopyWithImpl<$Res>;
+  factory _$$GetBlockTemplateParamsImplCopyWith(
+          _$GetBlockTemplateParamsImpl value,
+          $Res Function(_$GetBlockTemplateParamsImpl) then) =
+      __$$GetBlockTemplateParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,12 +102,13 @@ abstract class _$$_GetBlockTemplateParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetBlockTemplateParamsCopyWithImpl<$Res>
+class __$$GetBlockTemplateParamsImplCopyWithImpl<$Res>
     extends _$GetBlockTemplateParamsCopyWithImpl<$Res,
-        _$_GetBlockTemplateParams>
-    implements _$$_GetBlockTemplateParamsCopyWith<$Res> {
-  __$$_GetBlockTemplateParamsCopyWithImpl(_$_GetBlockTemplateParams _value,
-      $Res Function(_$_GetBlockTemplateParams) _then)
+        _$GetBlockTemplateParamsImpl>
+    implements _$$GetBlockTemplateParamsImplCopyWith<$Res> {
+  __$$GetBlockTemplateParamsImplCopyWithImpl(
+      _$GetBlockTemplateParamsImpl _value,
+      $Res Function(_$GetBlockTemplateParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +118,7 @@ class __$$_GetBlockTemplateParamsCopyWithImpl<$Res>
     Object? block = freezed,
     Object? miner = freezed,
   }) {
-    return _then(_$_GetBlockTemplateParams(
+    return _then(_$GetBlockTemplateParamsImpl(
       walletAddress: null == walletAddress
           ? _value.walletAddress
           : walletAddress // ignore: cast_nullable_to_non_nullable
@@ -135,14 +137,14 @@ class __$$_GetBlockTemplateParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBlockTemplateParams implements _GetBlockTemplateParams {
-  _$_GetBlockTemplateParams(
+class _$GetBlockTemplateParamsImpl implements _GetBlockTemplateParams {
+  _$GetBlockTemplateParamsImpl(
       {@JsonKey(name: 'wallet_address') required this.walletAddress,
       @JsonKey(name: 'block') this.block,
       @JsonKey(name: 'miner') this.miner});
 
-  factory _$_GetBlockTemplateParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBlockTemplateParamsFromJson(json);
+  factory _$GetBlockTemplateParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBlockTemplateParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -165,10 +167,10 @@ class _$_GetBlockTemplateParams implements _GetBlockTemplateParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBlockTemplateParams &&
+            other is _$GetBlockTemplateParamsImpl &&
             (identical(other.walletAddress, walletAddress) ||
                 other.walletAddress == walletAddress) &&
             (identical(other.block, block) || other.block == block) &&
@@ -182,13 +184,13 @@ class _$_GetBlockTemplateParams implements _GetBlockTemplateParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBlockTemplateParamsCopyWith<_$_GetBlockTemplateParams> get copyWith =>
-      __$$_GetBlockTemplateParamsCopyWithImpl<_$_GetBlockTemplateParams>(
-          this, _$identity);
+  _$$GetBlockTemplateParamsImplCopyWith<_$GetBlockTemplateParamsImpl>
+      get copyWith => __$$GetBlockTemplateParamsImplCopyWithImpl<
+          _$GetBlockTemplateParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBlockTemplateParamsToJson(
+    return _$$GetBlockTemplateParamsImplToJson(
       this,
     );
   }
@@ -196,12 +198,13 @@ class _$_GetBlockTemplateParams implements _GetBlockTemplateParams {
 
 abstract class _GetBlockTemplateParams implements GetBlockTemplateParams {
   factory _GetBlockTemplateParams(
-      {@JsonKey(name: 'wallet_address') required final String walletAddress,
-      @JsonKey(name: 'block') final bool? block,
-      @JsonKey(name: 'miner') final String? miner}) = _$_GetBlockTemplateParams;
+          {@JsonKey(name: 'wallet_address') required final String walletAddress,
+          @JsonKey(name: 'block') final bool? block,
+          @JsonKey(name: 'miner') final String? miner}) =
+      _$GetBlockTemplateParamsImpl;
 
   factory _GetBlockTemplateParams.fromJson(Map<String, dynamic> json) =
-      _$_GetBlockTemplateParams.fromJson;
+      _$GetBlockTemplateParamsImpl.fromJson;
 
   @override
 
@@ -220,6 +223,6 @@ abstract class _GetBlockTemplateParams implements GetBlockTemplateParams {
   String? get miner;
   @override
   @JsonKey(ignore: true)
-  _$$_GetBlockTemplateParamsCopyWith<_$_GetBlockTemplateParams> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetBlockTemplateParamsImplCopyWith<_$GetBlockTemplateParamsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

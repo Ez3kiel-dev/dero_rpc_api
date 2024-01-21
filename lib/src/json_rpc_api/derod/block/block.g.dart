@@ -8,7 +8,7 @@ part of 'block.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Block _$$_BlockFromJson(Map<String, dynamic> json) => _$_Block(
+_$BlockImpl _$$BlockImplFromJson(Map<String, dynamic> json) => _$BlockImpl(
       majorVersion: json['major_version'] as int?,
       minorVersion: json['minor_version'] as int?,
       timestamp: json['timestamp'] == null
@@ -28,7 +28,8 @@ _$_Block _$$_BlockFromJson(Map<String, dynamic> json) => _$_Block(
           .toList(),
     );
 
-Map<String, dynamic> _$$_BlockToJson(_$_Block instance) => <String, dynamic>{
+Map<String, dynamic> _$$BlockImplToJson(_$BlockImpl instance) =>
+    <String, dynamic>{
       'major_version': instance.majorVersion,
       'minor_version': instance.minorVersion,
       'timestamp': instance.timestamp?.toIso8601String(),

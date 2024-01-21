@@ -8,12 +8,13 @@ part of 'query_key_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_QueryKeyParams _$$_QueryKeyParamsFromJson(Map<String, dynamic> json) =>
-    _$_QueryKeyParams(
+_$QueryKeyParamsImpl _$$QueryKeyParamsImplFromJson(Map<String, dynamic> json) =>
+    _$QueryKeyParamsImpl(
       keyType: json['key_type'] as String? ?? 'mnemonic',
     );
 
-Map<String, dynamic> _$$_QueryKeyParamsToJson(_$_QueryKeyParams instance) =>
+Map<String, dynamic> _$$QueryKeyParamsImplToJson(
+        _$QueryKeyParamsImpl instance) =>
     <String, dynamic>{
       'key_type': instance.keyType,
     };

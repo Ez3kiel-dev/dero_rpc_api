@@ -75,11 +75,11 @@ class _$GetTxPoolResultCopyWithImpl<$Res, $Val extends GetTxPoolResult>
 }
 
 /// @nodoc
-abstract class _$$_GetTxPoolResultCopyWith<$Res>
+abstract class _$$GetTxPoolResultImplCopyWith<$Res>
     implements $GetTxPoolResultCopyWith<$Res> {
-  factory _$$_GetTxPoolResultCopyWith(
-          _$_GetTxPoolResult value, $Res Function(_$_GetTxPoolResult) then) =
-      __$$_GetTxPoolResultCopyWithImpl<$Res>;
+  factory _$$GetTxPoolResultImplCopyWith(_$GetTxPoolResultImpl value,
+          $Res Function(_$GetTxPoolResultImpl) then) =
+      __$$GetTxPoolResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +88,11 @@ abstract class _$$_GetTxPoolResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTxPoolResultCopyWithImpl<$Res>
-    extends _$GetTxPoolResultCopyWithImpl<$Res, _$_GetTxPoolResult>
-    implements _$$_GetTxPoolResultCopyWith<$Res> {
-  __$$_GetTxPoolResultCopyWithImpl(
-      _$_GetTxPoolResult _value, $Res Function(_$_GetTxPoolResult) _then)
+class __$$GetTxPoolResultImplCopyWithImpl<$Res>
+    extends _$GetTxPoolResultCopyWithImpl<$Res, _$GetTxPoolResultImpl>
+    implements _$$GetTxPoolResultImplCopyWith<$Res> {
+  __$$GetTxPoolResultImplCopyWithImpl(
+      _$GetTxPoolResultImpl _value, $Res Function(_$GetTxPoolResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_GetTxPoolResultCopyWithImpl<$Res>
     Object? txs = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetTxPoolResult(
+    return _then(_$GetTxPoolResultImpl(
       txs: freezed == txs
           ? _value._txs
           : txs // ignore: cast_nullable_to_non_nullable
@@ -116,14 +116,14 @@ class __$$_GetTxPoolResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTxPoolResult implements _GetTxPoolResult {
-  _$_GetTxPoolResult(
+class _$GetTxPoolResultImpl implements _GetTxPoolResult {
+  _$GetTxPoolResultImpl(
       {@JsonKey(name: 'txs') final List<String>? txs,
       @JsonKey(name: 'status') this.status})
       : _txs = txs;
 
-  factory _$_GetTxPoolResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTxPoolResultFromJson(json);
+  factory _$GetTxPoolResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTxPoolResultImplFromJson(json);
 
   /// @nodoc
   final List<String>? _txs;
@@ -150,10 +150,10 @@ class _$_GetTxPoolResult implements _GetTxPoolResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTxPoolResult &&
+            other is _$GetTxPoolResultImpl &&
             const DeepCollectionEquality().equals(other._txs, _txs) &&
             (identical(other.status, status) || other.status == status));
   }
@@ -166,12 +166,13 @@ class _$_GetTxPoolResult implements _GetTxPoolResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTxPoolResultCopyWith<_$_GetTxPoolResult> get copyWith =>
-      __$$_GetTxPoolResultCopyWithImpl<_$_GetTxPoolResult>(this, _$identity);
+  _$$GetTxPoolResultImplCopyWith<_$GetTxPoolResultImpl> get copyWith =>
+      __$$GetTxPoolResultImplCopyWithImpl<_$GetTxPoolResultImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTxPoolResultToJson(
+    return _$$GetTxPoolResultImplToJson(
       this,
     );
   }
@@ -180,10 +181,10 @@ class _$_GetTxPoolResult implements _GetTxPoolResult {
 abstract class _GetTxPoolResult implements GetTxPoolResult {
   factory _GetTxPoolResult(
       {@JsonKey(name: 'txs') final List<String>? txs,
-      @JsonKey(name: 'status') final String? status}) = _$_GetTxPoolResult;
+      @JsonKey(name: 'status') final String? status}) = _$GetTxPoolResultImpl;
 
   factory _GetTxPoolResult.fromJson(Map<String, dynamic> json) =
-      _$_GetTxPoolResult.fromJson;
+      _$GetTxPoolResultImpl.fromJson;
 
   @override
 
@@ -197,6 +198,6 @@ abstract class _GetTxPoolResult implements GetTxPoolResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTxPoolResultCopyWith<_$_GetTxPoolResult> get copyWith =>
+  _$$GetTxPoolResultImplCopyWith<_$GetTxPoolResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

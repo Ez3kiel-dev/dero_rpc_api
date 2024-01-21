@@ -8,8 +8,8 @@ part of 'transaction.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Transaction _$$_TransactionFromJson(Map<String, dynamic> json) =>
-    _$_Transaction(
+_$TransactionImpl _$$TransactionImplFromJson(Map<String, dynamic> json) =>
+    _$TransactionImpl(
       version: json['version'] as int?,
       sourceNetwork: json['source_network'] as int?,
       destinationNetwork: json['dest_network'] as int?,
@@ -29,7 +29,7 @@ _$_Transaction _$$_TransactionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TransactionToJson(_$_Transaction instance) =>
+Map<String, dynamic> _$$TransactionImplToJson(_$TransactionImpl instance) =>
     <String, dynamic>{
       'version': instance.version,
       'source_network': instance.sourceNetwork,

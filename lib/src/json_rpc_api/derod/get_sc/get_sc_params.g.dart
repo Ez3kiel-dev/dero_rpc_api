@@ -8,8 +8,8 @@ part of 'get_sc_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSCParams _$$_GetSCParamsFromJson(Map<String, dynamic> json) =>
-    _$_GetSCParams(
+_$GetSCParamsImpl _$$GetSCParamsImplFromJson(Map<String, dynamic> json) =>
+    _$GetSCParamsImpl(
       scid: json['scid'] as String,
       code: json['code'] as bool? ?? true,
       variables: json['variables'] as bool? ?? true,
@@ -24,7 +24,7 @@ _$_GetSCParams _$$_GetSCParamsFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_GetSCParamsToJson(_$_GetSCParams instance) =>
+Map<String, dynamic> _$$GetSCParamsImplToJson(_$GetSCParamsImpl instance) =>
     <String, dynamic>{
       'scid': instance.scid,
       'code': instance.code,

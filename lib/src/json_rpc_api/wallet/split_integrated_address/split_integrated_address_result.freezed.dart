@@ -79,12 +79,12 @@ class _$SplitIntegratedAddressResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SplitIntegratedAddressResultCopyWith<$Res>
+abstract class _$$SplitIntegratedAddressResultImplCopyWith<$Res>
     implements $SplitIntegratedAddressResultCopyWith<$Res> {
-  factory _$$_SplitIntegratedAddressResultCopyWith(
-          _$_SplitIntegratedAddressResult value,
-          $Res Function(_$_SplitIntegratedAddressResult) then) =
-      __$$_SplitIntegratedAddressResultCopyWithImpl<$Res>;
+  factory _$$SplitIntegratedAddressResultImplCopyWith(
+          _$SplitIntegratedAddressResultImpl value,
+          $Res Function(_$SplitIntegratedAddressResultImpl) then) =
+      __$$SplitIntegratedAddressResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,13 +93,13 @@ abstract class _$$_SplitIntegratedAddressResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SplitIntegratedAddressResultCopyWithImpl<$Res>
+class __$$SplitIntegratedAddressResultImplCopyWithImpl<$Res>
     extends _$SplitIntegratedAddressResultCopyWithImpl<$Res,
-        _$_SplitIntegratedAddressResult>
-    implements _$$_SplitIntegratedAddressResultCopyWith<$Res> {
-  __$$_SplitIntegratedAddressResultCopyWithImpl(
-      _$_SplitIntegratedAddressResult _value,
-      $Res Function(_$_SplitIntegratedAddressResult) _then)
+        _$SplitIntegratedAddressResultImpl>
+    implements _$$SplitIntegratedAddressResultImplCopyWith<$Res> {
+  __$$SplitIntegratedAddressResultImplCopyWithImpl(
+      _$SplitIntegratedAddressResultImpl _value,
+      $Res Function(_$SplitIntegratedAddressResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$_SplitIntegratedAddressResultCopyWithImpl<$Res>
     Object? address = freezed,
     Object? payloadRPC = freezed,
   }) {
-    return _then(_$_SplitIntegratedAddressResult(
+    return _then(_$SplitIntegratedAddressResultImpl(
       address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -123,14 +123,16 @@ class __$$_SplitIntegratedAddressResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SplitIntegratedAddressResult implements _SplitIntegratedAddressResult {
-  _$_SplitIntegratedAddressResult(
+class _$SplitIntegratedAddressResultImpl
+    implements _SplitIntegratedAddressResult {
+  _$SplitIntegratedAddressResultImpl(
       {@JsonKey(name: 'address') this.address,
       @JsonKey(name: 'payload_rpc') final List<Argument>? payloadRPC})
       : _payloadRPC = payloadRPC;
 
-  factory _$_SplitIntegratedAddressResult.fromJson(Map<String, dynamic> json) =>
-      _$$_SplitIntegratedAddressResultFromJson(json);
+  factory _$SplitIntegratedAddressResultImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$SplitIntegratedAddressResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -157,10 +159,10 @@ class _$_SplitIntegratedAddressResult implements _SplitIntegratedAddressResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SplitIntegratedAddressResult &&
+            other is _$SplitIntegratedAddressResultImpl &&
             (identical(other.address, address) || other.address == address) &&
             const DeepCollectionEquality()
                 .equals(other._payloadRPC, _payloadRPC));
@@ -174,13 +176,14 @@ class _$_SplitIntegratedAddressResult implements _SplitIntegratedAddressResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SplitIntegratedAddressResultCopyWith<_$_SplitIntegratedAddressResult>
-      get copyWith => __$$_SplitIntegratedAddressResultCopyWithImpl<
-          _$_SplitIntegratedAddressResult>(this, _$identity);
+  _$$SplitIntegratedAddressResultImplCopyWith<
+          _$SplitIntegratedAddressResultImpl>
+      get copyWith => __$$SplitIntegratedAddressResultImplCopyWithImpl<
+          _$SplitIntegratedAddressResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SplitIntegratedAddressResultToJson(
+    return _$$SplitIntegratedAddressResultImplToJson(
       this,
     );
   }
@@ -191,10 +194,10 @@ abstract class _SplitIntegratedAddressResult
   factory _SplitIntegratedAddressResult(
           {@JsonKey(name: 'address') final String? address,
           @JsonKey(name: 'payload_rpc') final List<Argument>? payloadRPC}) =
-      _$_SplitIntegratedAddressResult;
+      _$SplitIntegratedAddressResultImpl;
 
   factory _SplitIntegratedAddressResult.fromJson(Map<String, dynamic> json) =
-      _$_SplitIntegratedAddressResult.fromJson;
+      _$SplitIntegratedAddressResultImpl.fromJson;
 
   @override
 
@@ -208,6 +211,7 @@ abstract class _SplitIntegratedAddressResult
   List<Argument>? get payloadRPC;
   @override
   @JsonKey(ignore: true)
-  _$$_SplitIntegratedAddressResultCopyWith<_$_SplitIntegratedAddressResult>
+  _$$SplitIntegratedAddressResultImplCopyWith<
+          _$SplitIntegratedAddressResultImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -8,9 +8,9 @@ part of 'get_transaction_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTransactionResult _$$_GetTransactionResultFromJson(
+_$GetTransactionResultImpl _$$GetTransactionResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetTransactionResult(
+    _$GetTransactionResultImpl(
       txsAsHex: (json['txs_as_hex'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -23,8 +23,8 @@ _$_GetTransactionResult _$$_GetTransactionResultFromJson(
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetTransactionResultToJson(
-        _$_GetTransactionResult instance) =>
+Map<String, dynamic> _$$GetTransactionResultImplToJson(
+        _$GetTransactionResultImpl instance) =>
     <String, dynamic>{
       'txs_as_hex': instance.txsAsHex,
       'txs_as_json': instance.txsAsJson,

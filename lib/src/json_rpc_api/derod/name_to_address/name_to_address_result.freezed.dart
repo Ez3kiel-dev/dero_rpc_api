@@ -85,11 +85,11 @@ class _$NameToAddressResultCopyWithImpl<$Res, $Val extends NameToAddressResult>
 }
 
 /// @nodoc
-abstract class _$$_NameToAddressResultCopyWith<$Res>
+abstract class _$$NameToAddressResultImplCopyWith<$Res>
     implements $NameToAddressResultCopyWith<$Res> {
-  factory _$$_NameToAddressResultCopyWith(_$_NameToAddressResult value,
-          $Res Function(_$_NameToAddressResult) then) =
-      __$$_NameToAddressResultCopyWithImpl<$Res>;
+  factory _$$NameToAddressResultImplCopyWith(_$NameToAddressResultImpl value,
+          $Res Function(_$NameToAddressResultImpl) then) =
+      __$$NameToAddressResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$_NameToAddressResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NameToAddressResultCopyWithImpl<$Res>
-    extends _$NameToAddressResultCopyWithImpl<$Res, _$_NameToAddressResult>
-    implements _$$_NameToAddressResultCopyWith<$Res> {
-  __$$_NameToAddressResultCopyWithImpl(_$_NameToAddressResult _value,
-      $Res Function(_$_NameToAddressResult) _then)
+class __$$NameToAddressResultImplCopyWithImpl<$Res>
+    extends _$NameToAddressResultCopyWithImpl<$Res, _$NameToAddressResultImpl>
+    implements _$$NameToAddressResultImplCopyWith<$Res> {
+  __$$NameToAddressResultImplCopyWithImpl(_$NameToAddressResultImpl _value,
+      $Res Function(_$NameToAddressResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -113,7 +113,7 @@ class __$$_NameToAddressResultCopyWithImpl<$Res>
     Object? address = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_NameToAddressResult(
+    return _then(_$NameToAddressResultImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -132,14 +132,14 @@ class __$$_NameToAddressResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NameToAddressResult implements _NameToAddressResult {
-  _$_NameToAddressResult(
+class _$NameToAddressResultImpl implements _NameToAddressResult {
+  _$NameToAddressResultImpl(
       {@JsonKey(name: 'name') this.name,
       @JsonKey(name: 'address') this.address,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_NameToAddressResult.fromJson(Map<String, dynamic> json) =>
-      _$$_NameToAddressResultFromJson(json);
+  factory _$NameToAddressResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NameToAddressResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -162,10 +162,10 @@ class _$_NameToAddressResult implements _NameToAddressResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NameToAddressResult &&
+            other is _$NameToAddressResultImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.status, status) || other.status == status));
@@ -178,13 +178,13 @@ class _$_NameToAddressResult implements _NameToAddressResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NameToAddressResultCopyWith<_$_NameToAddressResult> get copyWith =>
-      __$$_NameToAddressResultCopyWithImpl<_$_NameToAddressResult>(
+  _$$NameToAddressResultImplCopyWith<_$NameToAddressResultImpl> get copyWith =>
+      __$$NameToAddressResultImplCopyWithImpl<_$NameToAddressResultImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NameToAddressResultToJson(
+    return _$$NameToAddressResultImplToJson(
       this,
     );
   }
@@ -192,12 +192,13 @@ class _$_NameToAddressResult implements _NameToAddressResult {
 
 abstract class _NameToAddressResult implements NameToAddressResult {
   factory _NameToAddressResult(
-      {@JsonKey(name: 'name') final String? name,
-      @JsonKey(name: 'address') final String? address,
-      @JsonKey(name: 'status') final String? status}) = _$_NameToAddressResult;
+          {@JsonKey(name: 'name') final String? name,
+          @JsonKey(name: 'address') final String? address,
+          @JsonKey(name: 'status') final String? status}) =
+      _$NameToAddressResultImpl;
 
   factory _NameToAddressResult.fromJson(Map<String, dynamic> json) =
-      _$_NameToAddressResult.fromJson;
+      _$NameToAddressResultImpl.fromJson;
 
   @override
 
@@ -216,6 +217,6 @@ abstract class _NameToAddressResult implements NameToAddressResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_NameToAddressResultCopyWith<_$_NameToAddressResult> get copyWith =>
+  _$$NameToAddressResultImplCopyWith<_$NameToAddressResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

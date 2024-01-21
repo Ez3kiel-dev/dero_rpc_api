@@ -8,9 +8,9 @@ part of 'get_encrypted_balance_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetEncryptedBalanceResult _$$_GetEncryptedBalanceResultFromJson(
+_$GetEncryptedBalanceResultImpl _$$GetEncryptedBalanceResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetEncryptedBalanceResult(
+    _$GetEncryptedBalanceResultImpl(
       scid: json['scid'] as String?,
       data: json['data'] as String?,
       registration: json['registration'] as int?,
@@ -25,8 +25,8 @@ _$_GetEncryptedBalanceResult _$$_GetEncryptedBalanceResultFromJson(
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetEncryptedBalanceResultToJson(
-        _$_GetEncryptedBalanceResult instance) =>
+Map<String, dynamic> _$$GetEncryptedBalanceResultImplToJson(
+        _$GetEncryptedBalanceResultImpl instance) =>
     <String, dynamic>{
       'scid': instance.scid,
       'data': instance.data,

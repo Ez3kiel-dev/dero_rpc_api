@@ -104,10 +104,11 @@ class _$TransferCopyWithImpl<$Res, $Val extends Transfer>
 }
 
 /// @nodoc
-abstract class _$$_TransferCopyWith<$Res> implements $TransferCopyWith<$Res> {
-  factory _$$_TransferCopyWith(
-          _$_Transfer value, $Res Function(_$_Transfer) then) =
-      __$$_TransferCopyWithImpl<$Res>;
+abstract class _$$TransferImplCopyWith<$Res>
+    implements $TransferCopyWith<$Res> {
+  factory _$$TransferImplCopyWith(
+          _$TransferImpl value, $Res Function(_$TransferImpl) then) =
+      __$$TransferImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -119,11 +120,11 @@ abstract class _$$_TransferCopyWith<$Res> implements $TransferCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_TransferCopyWithImpl<$Res>
-    extends _$TransferCopyWithImpl<$Res, _$_Transfer>
-    implements _$$_TransferCopyWith<$Res> {
-  __$$_TransferCopyWithImpl(
-      _$_Transfer _value, $Res Function(_$_Transfer) _then)
+class __$$TransferImplCopyWithImpl<$Res>
+    extends _$TransferCopyWithImpl<$Res, _$TransferImpl>
+    implements _$$TransferImplCopyWith<$Res> {
+  __$$TransferImplCopyWithImpl(
+      _$TransferImpl _value, $Res Function(_$TransferImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -135,7 +136,7 @@ class __$$_TransferCopyWithImpl<$Res>
     Object? burn = freezed,
     Object? payloadRPC = freezed,
   }) {
-    return _then(_$_Transfer(
+    return _then(_$TransferImpl(
       scid: freezed == scid
           ? _value.scid
           : scid // ignore: cast_nullable_to_non_nullable
@@ -162,8 +163,8 @@ class __$$_TransferCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Transfer implements _Transfer {
-  _$_Transfer(
+class _$TransferImpl implements _Transfer {
+  _$TransferImpl(
       {@JsonKey(name: 'scid') this.scid,
       @JsonKey(name: 'destination') this.destination,
       @JsonKey(name: 'amount') this.amount,
@@ -171,8 +172,8 @@ class _$_Transfer implements _Transfer {
       @JsonKey(name: 'payload_rpc') final List<Argument>? payloadRPC})
       : _payloadRPC = payloadRPC;
 
-  factory _$_Transfer.fromJson(Map<String, dynamic> json) =>
-      _$$_TransferFromJson(json);
+  factory _$TransferImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransferImplFromJson(json);
 
   /// @nodoc
   @override
@@ -214,10 +215,10 @@ class _$_Transfer implements _Transfer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Transfer &&
+            other is _$TransferImpl &&
             (identical(other.scid, scid) || other.scid == scid) &&
             (identical(other.destination, destination) ||
                 other.destination == destination) &&
@@ -235,12 +236,12 @@ class _$_Transfer implements _Transfer {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TransferCopyWith<_$_Transfer> get copyWith =>
-      __$$_TransferCopyWithImpl<_$_Transfer>(this, _$identity);
+  _$$TransferImplCopyWith<_$TransferImpl> get copyWith =>
+      __$$TransferImplCopyWithImpl<_$TransferImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransferToJson(
+    return _$$TransferImplToJson(
       this,
     );
   }
@@ -253,9 +254,10 @@ abstract class _Transfer implements Transfer {
           @JsonKey(name: 'amount') final int? amount,
           @JsonKey(name: 'burn') final int? burn,
           @JsonKey(name: 'payload_rpc') final List<Argument>? payloadRPC}) =
-      _$_Transfer;
+      _$TransferImpl;
 
-  factory _Transfer.fromJson(Map<String, dynamic> json) = _$_Transfer.fromJson;
+  factory _Transfer.fromJson(Map<String, dynamic> json) =
+      _$TransferImpl.fromJson;
 
   @override
 
@@ -283,6 +285,6 @@ abstract class _Transfer implements Transfer {
   List<Argument>? get payloadRPC;
   @override
   @JsonKey(ignore: true)
-  _$$_TransferCopyWith<_$_Transfer> get copyWith =>
+  _$$TransferImplCopyWith<_$TransferImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

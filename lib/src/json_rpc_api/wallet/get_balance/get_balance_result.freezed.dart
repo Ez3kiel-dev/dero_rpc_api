@@ -75,11 +75,11 @@ class _$GetBalanceResultCopyWithImpl<$Res, $Val extends GetBalanceResult>
 }
 
 /// @nodoc
-abstract class _$$_GetBalanceResultCopyWith<$Res>
+abstract class _$$GetBalanceResultImplCopyWith<$Res>
     implements $GetBalanceResultCopyWith<$Res> {
-  factory _$$_GetBalanceResultCopyWith(
-          _$_GetBalanceResult value, $Res Function(_$_GetBalanceResult) then) =
-      __$$_GetBalanceResultCopyWithImpl<$Res>;
+  factory _$$GetBalanceResultImplCopyWith(_$GetBalanceResultImpl value,
+          $Res Function(_$GetBalanceResultImpl) then) =
+      __$$GetBalanceResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +88,11 @@ abstract class _$$_GetBalanceResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetBalanceResultCopyWithImpl<$Res>
-    extends _$GetBalanceResultCopyWithImpl<$Res, _$_GetBalanceResult>
-    implements _$$_GetBalanceResultCopyWith<$Res> {
-  __$$_GetBalanceResultCopyWithImpl(
-      _$_GetBalanceResult _value, $Res Function(_$_GetBalanceResult) _then)
+class __$$GetBalanceResultImplCopyWithImpl<$Res>
+    extends _$GetBalanceResultCopyWithImpl<$Res, _$GetBalanceResultImpl>
+    implements _$$GetBalanceResultImplCopyWith<$Res> {
+  __$$GetBalanceResultImplCopyWithImpl(_$GetBalanceResultImpl _value,
+      $Res Function(_$GetBalanceResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_GetBalanceResultCopyWithImpl<$Res>
     Object? balance = freezed,
     Object? unlockedBalance = freezed,
   }) {
-    return _then(_$_GetBalanceResult(
+    return _then(_$GetBalanceResultImpl(
       balance: freezed == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
@@ -116,13 +116,13 @@ class __$$_GetBalanceResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBalanceResult implements _GetBalanceResult {
-  _$_GetBalanceResult(
+class _$GetBalanceResultImpl implements _GetBalanceResult {
+  _$GetBalanceResultImpl(
       {@JsonKey(name: 'balance') this.balance,
       @JsonKey(name: 'unlocked_balance') this.unlockedBalance});
 
-  factory _$_GetBalanceResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBalanceResultFromJson(json);
+  factory _$GetBalanceResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBalanceResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -140,10 +140,10 @@ class _$_GetBalanceResult implements _GetBalanceResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBalanceResult &&
+            other is _$GetBalanceResultImpl &&
             (identical(other.balance, balance) || other.balance == balance) &&
             (identical(other.unlockedBalance, unlockedBalance) ||
                 other.unlockedBalance == unlockedBalance));
@@ -156,12 +156,13 @@ class _$_GetBalanceResult implements _GetBalanceResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBalanceResultCopyWith<_$_GetBalanceResult> get copyWith =>
-      __$$_GetBalanceResultCopyWithImpl<_$_GetBalanceResult>(this, _$identity);
+  _$$GetBalanceResultImplCopyWith<_$GetBalanceResultImpl> get copyWith =>
+      __$$GetBalanceResultImplCopyWithImpl<_$GetBalanceResultImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBalanceResultToJson(
+    return _$$GetBalanceResultImplToJson(
       this,
     );
   }
@@ -171,10 +172,10 @@ abstract class _GetBalanceResult implements GetBalanceResult {
   factory _GetBalanceResult(
           {@JsonKey(name: 'balance') final int? balance,
           @JsonKey(name: 'unlocked_balance') final int? unlockedBalance}) =
-      _$_GetBalanceResult;
+      _$GetBalanceResultImpl;
 
   factory _GetBalanceResult.fromJson(Map<String, dynamic> json) =
-      _$_GetBalanceResult.fromJson;
+      _$GetBalanceResultImpl.fromJson;
 
   @override
 
@@ -188,6 +189,6 @@ abstract class _GetBalanceResult implements GetBalanceResult {
   int? get unlockedBalance;
   @override
   @JsonKey(ignore: true)
-  _$$_GetBalanceResultCopyWith<_$_GetBalanceResult> get copyWith =>
+  _$$GetBalanceResultImplCopyWith<_$GetBalanceResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

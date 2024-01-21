@@ -8,7 +8,7 @@ part of 'wallet_entry.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Entry _$$_EntryFromJson(Map<String, dynamic> json) => _$_Entry(
+_$EntryImpl _$$EntryImplFromJson(Map<String, dynamic> json) => _$EntryImpl(
       height: json['height'] as int?,
       topoHeight: json['topoheight'] as int?,
       blockHash: json['blockhash'] as String?,
@@ -39,7 +39,8 @@ _$_Entry _$$_EntryFromJson(Map<String, dynamic> json) => _$_Entry(
       srcPort: json['srcport'] as int?,
     );
 
-Map<String, dynamic> _$$_EntryToJson(_$_Entry instance) => <String, dynamic>{
+Map<String, dynamic> _$$EntryImplToJson(_$EntryImpl instance) =>
+    <String, dynamic>{
       'height': instance.height,
       'topoheight': instance.topoHeight,
       'blockhash': instance.blockHash,

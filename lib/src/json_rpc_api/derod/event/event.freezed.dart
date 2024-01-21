@@ -25,7 +25,6 @@ mixin _$Event {
   String? get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $EventCopyWith<Event> get copyWith => throw _privateConstructorUsedError;
 }
@@ -34,7 +33,6 @@ mixin _$Event {
 abstract class $EventCopyWith<$Res> {
   factory $EventCopyWith(Event value, $Res Function(Event) then) =
       _$EventCopyWithImpl<$Res, Event>;
-
   @useResult
   $Res call({@JsonKey(name: 'method') String? name});
 }
@@ -46,7 +44,6 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -65,19 +62,21 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
 }
 
 /// @nodoc
-abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
-  factory _$$_EventCopyWith(_$_Event value, $Res Function(_$_Event) then) =
-      __$$_EventCopyWithImpl<$Res>;
-
+abstract class _$$EventImplCopyWith<$Res> implements $EventCopyWith<$Res> {
+  factory _$$EventImplCopyWith(
+          _$EventImpl value, $Res Function(_$EventImpl) then) =
+      __$$EventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'method') String? name});
 }
 
 /// @nodoc
-class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
-    implements _$$_EventCopyWith<$Res> {
-  __$$_EventCopyWithImpl(_$_Event _value, $Res Function(_$_Event) _then)
+class __$$EventImplCopyWithImpl<$Res>
+    extends _$EventCopyWithImpl<$Res, _$EventImpl>
+    implements _$$EventImplCopyWith<$Res> {
+  __$$EventImplCopyWithImpl(
+      _$EventImpl _value, $Res Function(_$EventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +84,7 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
   $Res call({
     Object? name = freezed,
   }) {
-    return _then(_$_Event(
+    return _then(_$EventImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -96,11 +95,11 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Event implements _Event {
-  const _$_Event({@JsonKey(name: 'method') this.name});
+class _$EventImpl implements _Event {
+  const _$EventImpl({@JsonKey(name: 'method') this.name});
 
-  factory _$_Event.fromJson(Map<String, dynamic> json) =>
-      _$$_EventFromJson(json);
+  factory _$EventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EventImplFromJson(json);
 
   /// @nodoc
   @override
@@ -113,10 +112,10 @@ class _$_Event implements _Event {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Event &&
+            other is _$EventImpl &&
             (identical(other.name, name) || other.name == name));
   }
 
@@ -127,12 +126,12 @@ class _$_Event implements _Event {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EventCopyWith<_$_Event> get copyWith =>
-      __$$_EventCopyWithImpl<_$_Event>(this, _$identity);
+  _$$EventImplCopyWith<_$EventImpl> get copyWith =>
+      __$$EventImplCopyWithImpl<_$EventImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EventToJson(
+    return _$$EventImplToJson(
       this,
     );
   }
@@ -140,18 +139,17 @@ class _$_Event implements _Event {
 
 abstract class _Event implements Event {
   const factory _Event({@JsonKey(name: 'method') final String? name}) =
-      _$_Event;
+      _$EventImpl;
 
-  factory _Event.fromJson(Map<String, dynamic> json) = _$_Event.fromJson;
+  factory _Event.fromJson(Map<String, dynamic> json) = _$EventImpl.fromJson;
 
   @override
 
   /// @nodoc
   @JsonKey(name: 'method')
   String? get name;
-
   @override
   @JsonKey(ignore: true)
-  _$$_EventCopyWith<_$_Event> get copyWith =>
+  _$$EventImplCopyWith<_$EventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

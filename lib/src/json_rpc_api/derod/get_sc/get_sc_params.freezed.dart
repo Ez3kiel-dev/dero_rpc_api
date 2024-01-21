@@ -131,11 +131,11 @@ class _$GetSCParamsCopyWithImpl<$Res, $Val extends GetSCParams>
 }
 
 /// @nodoc
-abstract class _$$_GetSCParamsCopyWith<$Res>
+abstract class _$$GetSCParamsImplCopyWith<$Res>
     implements $GetSCParamsCopyWith<$Res> {
-  factory _$$_GetSCParamsCopyWith(
-          _$_GetSCParams value, $Res Function(_$_GetSCParams) then) =
-      __$$_GetSCParamsCopyWithImpl<$Res>;
+  factory _$$GetSCParamsImplCopyWith(
+          _$GetSCParamsImpl value, $Res Function(_$GetSCParamsImpl) then) =
+      __$$GetSCParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -151,11 +151,11 @@ abstract class _$$_GetSCParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSCParamsCopyWithImpl<$Res>
-    extends _$GetSCParamsCopyWithImpl<$Res, _$_GetSCParams>
-    implements _$$_GetSCParamsCopyWith<$Res> {
-  __$$_GetSCParamsCopyWithImpl(
-      _$_GetSCParams _value, $Res Function(_$_GetSCParams) _then)
+class __$$GetSCParamsImplCopyWithImpl<$Res>
+    extends _$GetSCParamsCopyWithImpl<$Res, _$GetSCParamsImpl>
+    implements _$$GetSCParamsImplCopyWith<$Res> {
+  __$$GetSCParamsImplCopyWithImpl(
+      _$GetSCParamsImpl _value, $Res Function(_$GetSCParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -169,7 +169,7 @@ class __$$_GetSCParamsCopyWithImpl<$Res>
     Object? keysString = freezed,
     Object? keysBytes = freezed,
   }) {
-    return _then(_$_GetSCParams(
+    return _then(_$GetSCParamsImpl(
       scid: null == scid
           ? _value.scid
           : scid // ignore: cast_nullable_to_non_nullable
@@ -204,8 +204,8 @@ class __$$_GetSCParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSCParams implements _GetSCParams {
-  _$_GetSCParams(
+class _$GetSCParamsImpl implements _GetSCParams {
+  _$GetSCParamsImpl(
       {@JsonKey(name: 'scid') required this.scid,
       @JsonKey(name: 'code') this.code = true,
       @JsonKey(name: 'variables') this.variables = true,
@@ -219,8 +219,8 @@ class _$_GetSCParams implements _GetSCParams {
         _keysString = keysString,
         _keysBytes = keysBytes;
 
-  factory _$_GetSCParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSCParamsFromJson(json);
+  factory _$GetSCParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSCParamsImplFromJson(json);
 
   @override
   @JsonKey(name: 'scid')
@@ -294,10 +294,10 @@ class _$_GetSCParams implements _GetSCParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSCParams &&
+            other is _$GetSCParamsImpl &&
             (identical(other.scid, scid) || other.scid == scid) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.variables, variables) ||
@@ -326,12 +326,12 @@ class _$_GetSCParams implements _GetSCParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSCParamsCopyWith<_$_GetSCParams> get copyWith =>
-      __$$_GetSCParamsCopyWithImpl<_$_GetSCParams>(this, _$identity);
+  _$$GetSCParamsImplCopyWith<_$GetSCParamsImpl> get copyWith =>
+      __$$GetSCParamsImplCopyWithImpl<_$GetSCParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSCParamsToJson(
+    return _$$GetSCParamsImplToJson(
       this,
     );
   }
@@ -347,10 +347,10 @@ abstract class _GetSCParams implements GetSCParams {
       @JsonKey(name: 'keysstring') final List<String>? keysString,
       @JsonKey(name: 'keysbytes')
       @Uint8ListConverter()
-      final List<Uint8List>? keysBytes}) = _$_GetSCParams;
+      final List<Uint8List>? keysBytes}) = _$GetSCParamsImpl;
 
   factory _GetSCParams.fromJson(Map<String, dynamic> json) =
-      _$_GetSCParams.fromJson;
+      _$GetSCParamsImpl.fromJson;
 
   @override
   @JsonKey(name: 'scid')
@@ -392,6 +392,6 @@ abstract class _GetSCParams implements GetSCParams {
   List<Uint8List>? get keysBytes;
   @override
   @JsonKey(ignore: true)
-  _$$_GetSCParamsCopyWith<_$_GetSCParams> get copyWith =>
+  _$$GetSCParamsImplCopyWith<_$GetSCParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

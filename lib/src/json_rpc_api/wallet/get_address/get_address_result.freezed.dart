@@ -64,22 +64,22 @@ class _$GetAddressResultCopyWithImpl<$Res, $Val extends GetAddressResult>
 }
 
 /// @nodoc
-abstract class _$$_GetAddressResultCopyWith<$Res>
+abstract class _$$GetAddressResultImplCopyWith<$Res>
     implements $GetAddressResultCopyWith<$Res> {
-  factory _$$_GetAddressResultCopyWith(
-          _$_GetAddressResult value, $Res Function(_$_GetAddressResult) then) =
-      __$$_GetAddressResultCopyWithImpl<$Res>;
+  factory _$$GetAddressResultImplCopyWith(_$GetAddressResultImpl value,
+          $Res Function(_$GetAddressResultImpl) then) =
+      __$$GetAddressResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'address') String? address});
 }
 
 /// @nodoc
-class __$$_GetAddressResultCopyWithImpl<$Res>
-    extends _$GetAddressResultCopyWithImpl<$Res, _$_GetAddressResult>
-    implements _$$_GetAddressResultCopyWith<$Res> {
-  __$$_GetAddressResultCopyWithImpl(
-      _$_GetAddressResult _value, $Res Function(_$_GetAddressResult) _then)
+class __$$GetAddressResultImplCopyWithImpl<$Res>
+    extends _$GetAddressResultCopyWithImpl<$Res, _$GetAddressResultImpl>
+    implements _$$GetAddressResultImplCopyWith<$Res> {
+  __$$GetAddressResultImplCopyWithImpl(_$GetAddressResultImpl _value,
+      $Res Function(_$GetAddressResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_GetAddressResultCopyWithImpl<$Res>
   $Res call({
     Object? address = freezed,
   }) {
-    return _then(_$_GetAddressResult(
+    return _then(_$GetAddressResultImpl(
       address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -98,11 +98,11 @@ class __$$_GetAddressResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetAddressResult implements _GetAddressResult {
-  _$_GetAddressResult({@JsonKey(name: 'address') this.address});
+class _$GetAddressResultImpl implements _GetAddressResult {
+  _$GetAddressResultImpl({@JsonKey(name: 'address') this.address});
 
-  factory _$_GetAddressResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetAddressResultFromJson(json);
+  factory _$GetAddressResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetAddressResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -115,10 +115,10 @@ class _$_GetAddressResult implements _GetAddressResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAddressResult &&
+            other is _$GetAddressResultImpl &&
             (identical(other.address, address) || other.address == address));
   }
 
@@ -129,12 +129,13 @@ class _$_GetAddressResult implements _GetAddressResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAddressResultCopyWith<_$_GetAddressResult> get copyWith =>
-      __$$_GetAddressResultCopyWithImpl<_$_GetAddressResult>(this, _$identity);
+  _$$GetAddressResultImplCopyWith<_$GetAddressResultImpl> get copyWith =>
+      __$$GetAddressResultImplCopyWithImpl<_$GetAddressResultImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetAddressResultToJson(
+    return _$$GetAddressResultImplToJson(
       this,
     );
   }
@@ -142,10 +143,10 @@ class _$_GetAddressResult implements _GetAddressResult {
 
 abstract class _GetAddressResult implements GetAddressResult {
   factory _GetAddressResult({@JsonKey(name: 'address') final String? address}) =
-      _$_GetAddressResult;
+      _$GetAddressResultImpl;
 
   factory _GetAddressResult.fromJson(Map<String, dynamic> json) =
-      _$_GetAddressResult.fromJson;
+      _$GetAddressResultImpl.fromJson;
 
   @override
 
@@ -154,6 +155,6 @@ abstract class _GetAddressResult implements GetAddressResult {
   String? get address;
   @override
   @JsonKey(ignore: true)
-  _$$_GetAddressResultCopyWith<_$_GetAddressResult> get copyWith =>
+  _$$GetAddressResultImplCopyWith<_$GetAddressResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

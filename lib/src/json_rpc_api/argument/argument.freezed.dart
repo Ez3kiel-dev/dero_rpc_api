@@ -85,10 +85,11 @@ class _$ArgumentCopyWithImpl<$Res, $Val extends Argument>
 }
 
 /// @nodoc
-abstract class _$$_ArgumentCopyWith<$Res> implements $ArgumentCopyWith<$Res> {
-  factory _$$_ArgumentCopyWith(
-          _$_Argument value, $Res Function(_$_Argument) then) =
-      __$$_ArgumentCopyWithImpl<$Res>;
+abstract class _$$ArgumentImplCopyWith<$Res>
+    implements $ArgumentCopyWith<$Res> {
+  factory _$$ArgumentImplCopyWith(
+          _$ArgumentImpl value, $Res Function(_$ArgumentImpl) then) =
+      __$$ArgumentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -98,11 +99,11 @@ abstract class _$$_ArgumentCopyWith<$Res> implements $ArgumentCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ArgumentCopyWithImpl<$Res>
-    extends _$ArgumentCopyWithImpl<$Res, _$_Argument>
-    implements _$$_ArgumentCopyWith<$Res> {
-  __$$_ArgumentCopyWithImpl(
-      _$_Argument _value, $Res Function(_$_Argument) _then)
+class __$$ArgumentImplCopyWithImpl<$Res>
+    extends _$ArgumentCopyWithImpl<$Res, _$ArgumentImpl>
+    implements _$$ArgumentImplCopyWith<$Res> {
+  __$$ArgumentImplCopyWithImpl(
+      _$ArgumentImpl _value, $Res Function(_$ArgumentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -112,7 +113,7 @@ class __$$_ArgumentCopyWithImpl<$Res>
     Object? datatype = null,
     Object? value = freezed,
   }) {
-    return _then(_$_Argument(
+    return _then(_$ArgumentImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -131,14 +132,14 @@ class __$$_ArgumentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Argument implements _Argument {
-  _$_Argument(
+class _$ArgumentImpl implements _Argument {
+  _$ArgumentImpl(
       {@JsonKey(name: 'name') required this.name,
       @JsonKey(name: 'datatype') required this.datatype,
       @JsonKey(name: 'value') @ArgumentValueConverter() required this.value});
 
-  factory _$_Argument.fromJson(Map<String, dynamic> json) =>
-      _$$_ArgumentFromJson(json);
+  factory _$ArgumentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ArgumentImplFromJson(json);
 
   /// @nodoc
   @override
@@ -162,10 +163,10 @@ class _$_Argument implements _Argument {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Argument &&
+            other is _$ArgumentImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.datatype, datatype) ||
                 other.datatype == datatype) &&
@@ -180,12 +181,12 @@ class _$_Argument implements _Argument {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ArgumentCopyWith<_$_Argument> get copyWith =>
-      __$$_ArgumentCopyWithImpl<_$_Argument>(this, _$identity);
+  _$$ArgumentImplCopyWith<_$ArgumentImpl> get copyWith =>
+      __$$ArgumentImplCopyWithImpl<_$ArgumentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArgumentToJson(
+    return _$$ArgumentImplToJson(
       this,
     );
   }
@@ -197,9 +198,10 @@ abstract class _Argument implements Argument {
       @JsonKey(name: 'datatype') required final DataType datatype,
       @JsonKey(name: 'value')
       @ArgumentValueConverter()
-      required final dynamic value}) = _$_Argument;
+      required final dynamic value}) = _$ArgumentImpl;
 
-  factory _Argument.fromJson(Map<String, dynamic> json) = _$_Argument.fromJson;
+  factory _Argument.fromJson(Map<String, dynamic> json) =
+      _$ArgumentImpl.fromJson;
 
   @override
 
@@ -219,6 +221,6 @@ abstract class _Argument implements Argument {
   dynamic get value;
   @override
   @JsonKey(ignore: true)
-  _$$_ArgumentCopyWith<_$_Argument> get copyWith =>
+  _$$ArgumentImplCopyWith<_$ArgumentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

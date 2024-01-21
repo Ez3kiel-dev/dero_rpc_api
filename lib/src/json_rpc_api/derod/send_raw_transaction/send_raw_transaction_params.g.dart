@@ -8,14 +8,14 @@ part of 'send_raw_transaction_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SendRawTransactionParams _$$_SendRawTransactionParamsFromJson(
+_$SendRawTransactionParamsImpl _$$SendRawTransactionParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SendRawTransactionParams(
+    _$SendRawTransactionParamsImpl(
       txAsHex: json['tx_as_hex'] as String,
     );
 
-Map<String, dynamic> _$$_SendRawTransactionParamsToJson(
-        _$_SendRawTransactionParams instance) =>
+Map<String, dynamic> _$$SendRawTransactionParamsImplToJson(
+        _$SendRawTransactionParamsImpl instance) =>
     <String, dynamic>{
       'tx_as_hex': instance.txAsHex,
     };

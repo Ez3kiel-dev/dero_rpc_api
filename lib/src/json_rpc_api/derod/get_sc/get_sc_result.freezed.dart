@@ -146,11 +146,11 @@ class _$GetSCResultCopyWithImpl<$Res, $Val extends GetSCResult>
 }
 
 /// @nodoc
-abstract class _$$_GetSCResultCopyWith<$Res>
+abstract class _$$GetSCResultImplCopyWith<$Res>
     implements $GetSCResultCopyWith<$Res> {
-  factory _$$_GetSCResultCopyWith(
-          _$_GetSCResult value, $Res Function(_$_GetSCResult) then) =
-      __$$_GetSCResultCopyWithImpl<$Res>;
+  factory _$$GetSCResultImplCopyWith(
+          _$GetSCResultImpl value, $Res Function(_$GetSCResultImpl) then) =
+      __$$GetSCResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -166,11 +166,11 @@ abstract class _$$_GetSCResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSCResultCopyWithImpl<$Res>
-    extends _$GetSCResultCopyWithImpl<$Res, _$_GetSCResult>
-    implements _$$_GetSCResultCopyWith<$Res> {
-  __$$_GetSCResultCopyWithImpl(
-      _$_GetSCResult _value, $Res Function(_$_GetSCResult) _then)
+class __$$GetSCResultImplCopyWithImpl<$Res>
+    extends _$GetSCResultCopyWithImpl<$Res, _$GetSCResultImpl>
+    implements _$$GetSCResultImplCopyWith<$Res> {
+  __$$GetSCResultImplCopyWithImpl(
+      _$GetSCResultImpl _value, $Res Function(_$GetSCResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -186,7 +186,7 @@ class __$$_GetSCResultCopyWithImpl<$Res>
     Object? code = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetSCResult(
+    return _then(_$GetSCResultImpl(
       valuesInt: freezed == valuesInt
           ? _value._valuesInt
           : valuesInt // ignore: cast_nullable_to_non_nullable
@@ -229,8 +229,8 @@ class __$$_GetSCResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSCResult implements _GetSCResult {
-  _$_GetSCResult(
+class _$GetSCResultImpl implements _GetSCResult {
+  _$GetSCResultImpl(
       {@JsonKey(name: 'valuesuint64') final List<dynamic>? valuesInt,
       @JsonKey(name: 'valuesstring') final List<dynamic>? valuesString,
       @JsonKey(name: 'valuesbytes') final List<dynamic>? valuesBytes,
@@ -248,8 +248,8 @@ class _$_GetSCResult implements _GetSCResult {
         _variableIntKeys = variableIntKeys,
         _balances = balances;
 
-  factory _$_GetSCResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSCResultFromJson(json);
+  factory _$GetSCResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSCResultImplFromJson(json);
 
   /// @nodoc
   final List<dynamic>? _valuesInt;
@@ -357,10 +357,10 @@ class _$_GetSCResult implements _GetSCResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSCResult &&
+            other is _$GetSCResultImpl &&
             const DeepCollectionEquality()
                 .equals(other._valuesInt, _valuesInt) &&
             const DeepCollectionEquality()
@@ -394,12 +394,12 @@ class _$_GetSCResult implements _GetSCResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSCResultCopyWith<_$_GetSCResult> get copyWith =>
-      __$$_GetSCResultCopyWithImpl<_$_GetSCResult>(this, _$identity);
+  _$$GetSCResultImplCopyWith<_$GetSCResultImpl> get copyWith =>
+      __$$GetSCResultImplCopyWithImpl<_$GetSCResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSCResultToJson(
+    return _$$GetSCResultImplToJson(
       this,
     );
   }
@@ -416,10 +416,10 @@ abstract class _GetSCResult implements GetSCResult {
       @JsonKey(name: 'balances') final Map<String, int>? balances,
       @JsonKey(name: 'balance') final int? balance,
       @JsonKey(name: 'code') final String? code,
-      @JsonKey(name: 'status') final String? status}) = _$_GetSCResult;
+      @JsonKey(name: 'status') final String? status}) = _$GetSCResultImpl;
 
   factory _GetSCResult.fromJson(Map<String, dynamic> json) =
-      _$_GetSCResult.fromJson;
+      _$GetSCResultImpl.fromJson;
 
   @override
 
@@ -468,6 +468,6 @@ abstract class _GetSCResult implements GetSCResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetSCResultCopyWith<_$_GetSCResult> get copyWith =>
+  _$$GetSCResultImplCopyWith<_$GetSCResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,15 +8,15 @@ part of 'name_to_address_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_NameToAddressParams _$$_NameToAddressParamsFromJson(
+_$NameToAddressParamsImpl _$$NameToAddressParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NameToAddressParams(
+    _$NameToAddressParamsImpl(
       name: json['name'] as String,
       topoHeight: json['topoheight'] as int?,
     );
 
-Map<String, dynamic> _$$_NameToAddressParamsToJson(
-        _$_NameToAddressParams instance) =>
+Map<String, dynamic> _$$NameToAddressParamsImplToJson(
+        _$NameToAddressParamsImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'topoheight': instance.topoHeight,

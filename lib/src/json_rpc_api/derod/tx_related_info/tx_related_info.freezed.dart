@@ -215,11 +215,11 @@ class _$TxRelatedInfoCopyWithImpl<$Res, $Val extends TxRelatedInfo>
 }
 
 /// @nodoc
-abstract class _$$_TxRelatedInfoCopyWith<$Res>
+abstract class _$$TxRelatedInfoImplCopyWith<$Res>
     implements $TxRelatedInfoCopyWith<$Res> {
-  factory _$$_TxRelatedInfoCopyWith(
-          _$_TxRelatedInfo value, $Res Function(_$_TxRelatedInfo) then) =
-      __$$_TxRelatedInfoCopyWithImpl<$Res>;
+  factory _$$TxRelatedInfoImplCopyWith(
+          _$TxRelatedInfoImpl value, $Res Function(_$TxRelatedInfoImpl) then) =
+      __$$TxRelatedInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -242,11 +242,11 @@ abstract class _$$_TxRelatedInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TxRelatedInfoCopyWithImpl<$Res>
-    extends _$TxRelatedInfoCopyWithImpl<$Res, _$_TxRelatedInfo>
-    implements _$$_TxRelatedInfoCopyWith<$Res> {
-  __$$_TxRelatedInfoCopyWithImpl(
-      _$_TxRelatedInfo _value, $Res Function(_$_TxRelatedInfo) _then)
+class __$$TxRelatedInfoImplCopyWithImpl<$Res>
+    extends _$TxRelatedInfoCopyWithImpl<$Res, _$TxRelatedInfoImpl>
+    implements _$$TxRelatedInfoImplCopyWith<$Res> {
+  __$$TxRelatedInfoImplCopyWithImpl(
+      _$TxRelatedInfoImpl _value, $Res Function(_$TxRelatedInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -269,7 +269,7 @@ class __$$_TxRelatedInfoCopyWithImpl<$Res>
     Object? balanceNow = freezed,
     Object? codeNow = freezed,
   }) {
-    return _then(_$_TxRelatedInfo(
+    return _then(_$TxRelatedInfoImpl(
       asHex: freezed == asHex
           ? _value.asHex
           : asHex // ignore: cast_nullable_to_non_nullable
@@ -340,8 +340,8 @@ class __$$_TxRelatedInfoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TxRelatedInfo implements _TxRelatedInfo {
-  _$_TxRelatedInfo(
+class _$TxRelatedInfoImpl implements _TxRelatedInfo {
+  _$TxRelatedInfoImpl(
       {@JsonKey(name: 'as_hex') this.asHex,
       @JsonKey(name: 'as_json') this.asJson,
       @JsonKey(name: 'block_height') this.blockHeight,
@@ -362,8 +362,8 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
         _invalidBlock = invalidBlock,
         _ring = ring;
 
-  factory _$_TxRelatedInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_TxRelatedInfoFromJson(json);
+  factory _$TxRelatedInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TxRelatedInfoImplFromJson(json);
 
   /// @nodoc
   @override
@@ -478,10 +478,10 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TxRelatedInfo &&
+            other is _$TxRelatedInfoImpl &&
             (identical(other.asHex, asHex) || other.asHex == asHex) &&
             (identical(other.asJson, asJson) || other.asJson == asJson) &&
             (identical(other.blockHeight, blockHeight) ||
@@ -529,12 +529,12 @@ class _$_TxRelatedInfo implements _TxRelatedInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TxRelatedInfoCopyWith<_$_TxRelatedInfo> get copyWith =>
-      __$$_TxRelatedInfoCopyWithImpl<_$_TxRelatedInfo>(this, _$identity);
+  _$$TxRelatedInfoImplCopyWith<_$TxRelatedInfoImpl> get copyWith =>
+      __$$TxRelatedInfoImplCopyWithImpl<_$TxRelatedInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TxRelatedInfoToJson(
+    return _$$TxRelatedInfoImplToJson(
       this,
     );
   }
@@ -557,10 +557,10 @@ abstract class _TxRelatedInfo implements TxRelatedInfo {
       @JsonKey(name: 'balance') final int? balance,
       @JsonKey(name: 'code') final String? code,
       @JsonKey(name: 'balancenow') final int? balanceNow,
-      @JsonKey(name: 'codenow') final String? codeNow}) = _$_TxRelatedInfo;
+      @JsonKey(name: 'codenow') final String? codeNow}) = _$TxRelatedInfoImpl;
 
   factory _TxRelatedInfo.fromJson(Map<String, dynamic> json) =
-      _$_TxRelatedInfo.fromJson;
+      _$TxRelatedInfoImpl.fromJson;
 
   @override
 
@@ -644,6 +644,6 @@ abstract class _TxRelatedInfo implements TxRelatedInfo {
   String? get codeNow;
   @override
   @JsonKey(ignore: true)
-  _$$_TxRelatedInfoCopyWith<_$_TxRelatedInfo> get copyWith =>
+  _$$TxRelatedInfoImplCopyWith<_$TxRelatedInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

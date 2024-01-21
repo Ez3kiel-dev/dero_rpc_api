@@ -96,11 +96,11 @@ class _$GetTransactionResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetTransactionResultCopyWith<$Res>
+abstract class _$$GetTransactionResultImplCopyWith<$Res>
     implements $GetTransactionResultCopyWith<$Res> {
-  factory _$$_GetTransactionResultCopyWith(_$_GetTransactionResult value,
-          $Res Function(_$_GetTransactionResult) then) =
-      __$$_GetTransactionResultCopyWithImpl<$Res>;
+  factory _$$GetTransactionResultImplCopyWith(_$GetTransactionResultImpl value,
+          $Res Function(_$GetTransactionResultImpl) then) =
+      __$$GetTransactionResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -111,11 +111,11 @@ abstract class _$$_GetTransactionResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTransactionResultCopyWithImpl<$Res>
-    extends _$GetTransactionResultCopyWithImpl<$Res, _$_GetTransactionResult>
-    implements _$$_GetTransactionResultCopyWith<$Res> {
-  __$$_GetTransactionResultCopyWithImpl(_$_GetTransactionResult _value,
-      $Res Function(_$_GetTransactionResult) _then)
+class __$$GetTransactionResultImplCopyWithImpl<$Res>
+    extends _$GetTransactionResultCopyWithImpl<$Res, _$GetTransactionResultImpl>
+    implements _$$GetTransactionResultImplCopyWith<$Res> {
+  __$$GetTransactionResultImplCopyWithImpl(_$GetTransactionResultImpl _value,
+      $Res Function(_$GetTransactionResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -126,7 +126,7 @@ class __$$_GetTransactionResultCopyWithImpl<$Res>
     Object? txs = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetTransactionResult(
+    return _then(_$GetTransactionResultImpl(
       txsAsHex: freezed == txsAsHex
           ? _value._txsAsHex
           : txsAsHex // ignore: cast_nullable_to_non_nullable
@@ -149,8 +149,8 @@ class __$$_GetTransactionResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTransactionResult implements _GetTransactionResult {
-  _$_GetTransactionResult(
+class _$GetTransactionResultImpl implements _GetTransactionResult {
+  _$GetTransactionResultImpl(
       {@JsonKey(name: 'txs_as_hex') final List<String>? txsAsHex,
       @JsonKey(name: 'txs_as_json') final List<String>? txsAsJson,
       @JsonKey(name: 'txs') final List<TxRelatedInfo>? txs,
@@ -159,8 +159,8 @@ class _$_GetTransactionResult implements _GetTransactionResult {
         _txsAsJson = txsAsJson,
         _txs = txs;
 
-  factory _$_GetTransactionResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTransactionResultFromJson(json);
+  factory _$GetTransactionResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTransactionResultImplFromJson(json);
 
   /// @nodoc
   final List<String>? _txsAsHex;
@@ -215,10 +215,10 @@ class _$_GetTransactionResult implements _GetTransactionResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTransactionResult &&
+            other is _$GetTransactionResultImpl &&
             const DeepCollectionEquality().equals(other._txsAsHex, _txsAsHex) &&
             const DeepCollectionEquality()
                 .equals(other._txsAsJson, _txsAsJson) &&
@@ -238,13 +238,14 @@ class _$_GetTransactionResult implements _GetTransactionResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTransactionResultCopyWith<_$_GetTransactionResult> get copyWith =>
-      __$$_GetTransactionResultCopyWithImpl<_$_GetTransactionResult>(
-          this, _$identity);
+  _$$GetTransactionResultImplCopyWith<_$GetTransactionResultImpl>
+      get copyWith =>
+          __$$GetTransactionResultImplCopyWithImpl<_$GetTransactionResultImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTransactionResultToJson(
+    return _$$GetTransactionResultImplToJson(
       this,
     );
   }
@@ -252,13 +253,14 @@ class _$_GetTransactionResult implements _GetTransactionResult {
 
 abstract class _GetTransactionResult implements GetTransactionResult {
   factory _GetTransactionResult(
-      {@JsonKey(name: 'txs_as_hex') final List<String>? txsAsHex,
-      @JsonKey(name: 'txs_as_json') final List<String>? txsAsJson,
-      @JsonKey(name: 'txs') final List<TxRelatedInfo>? txs,
-      @JsonKey(name: 'status') final String? status}) = _$_GetTransactionResult;
+          {@JsonKey(name: 'txs_as_hex') final List<String>? txsAsHex,
+          @JsonKey(name: 'txs_as_json') final List<String>? txsAsJson,
+          @JsonKey(name: 'txs') final List<TxRelatedInfo>? txs,
+          @JsonKey(name: 'status') final String? status}) =
+      _$GetTransactionResultImpl;
 
   factory _GetTransactionResult.fromJson(Map<String, dynamic> json) =
-      _$_GetTransactionResult.fromJson;
+      _$GetTransactionResultImpl.fromJson;
 
   @override
 
@@ -282,6 +284,6 @@ abstract class _GetTransactionResult implements GetTransactionResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTransactionResultCopyWith<_$_GetTransactionResult> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetTransactionResultImplCopyWith<_$GetTransactionResultImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

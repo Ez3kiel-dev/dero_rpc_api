@@ -8,8 +8,8 @@ part of 'get_sc_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSCResult _$$_GetSCResultFromJson(Map<String, dynamic> json) =>
-    _$_GetSCResult(
+_$GetSCResultImpl _$$GetSCResultImplFromJson(Map<String, dynamic> json) =>
+    _$GetSCResultImpl(
       valuesInt: json['valuesuint64'] as List<dynamic>?,
       valuesString: json['valuesstring'] as List<dynamic>?,
       valuesBytes: json['valuesbytes'] as List<dynamic>?,
@@ -25,7 +25,7 @@ _$_GetSCResult _$$_GetSCResultFromJson(Map<String, dynamic> json) =>
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetSCResultToJson(_$_GetSCResult instance) =>
+Map<String, dynamic> _$$GetSCResultImplToJson(_$GetSCResultImpl instance) =>
     <String, dynamic>{
       'valuesuint64': instance.valuesInt,
       'valuesstring': instance.valuesString,

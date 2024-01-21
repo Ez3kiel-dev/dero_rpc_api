@@ -303,9 +303,10 @@ class _$EntryCopyWithImpl<$Res, $Val extends Entry>
 }
 
 /// @nodoc
-abstract class _$$_EntryCopyWith<$Res> implements $EntryCopyWith<$Res> {
-  factory _$$_EntryCopyWith(_$_Entry value, $Res Function(_$_Entry) then) =
-      __$$_EntryCopyWithImpl<$Res>;
+abstract class _$$EntryImplCopyWith<$Res> implements $EntryCopyWith<$Res> {
+  factory _$$EntryImplCopyWith(
+          _$EntryImpl value, $Res Function(_$EntryImpl) then) =
+      __$$EntryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -337,9 +338,11 @@ abstract class _$$_EntryCopyWith<$Res> implements $EntryCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EntryCopyWithImpl<$Res> extends _$EntryCopyWithImpl<$Res, _$_Entry>
-    implements _$$_EntryCopyWith<$Res> {
-  __$$_EntryCopyWithImpl(_$_Entry _value, $Res Function(_$_Entry) _then)
+class __$$EntryImplCopyWithImpl<$Res>
+    extends _$EntryCopyWithImpl<$Res, _$EntryImpl>
+    implements _$$EntryImplCopyWith<$Res> {
+  __$$EntryImplCopyWithImpl(
+      _$EntryImpl _value, $Res Function(_$EntryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -371,7 +374,7 @@ class __$$_EntryCopyWithImpl<$Res> extends _$EntryCopyWithImpl<$Res, _$_Entry>
     Object? dstPort = freezed,
     Object? srcPort = freezed,
   }) {
-    return _then(_$_Entry(
+    return _then(_$EntryImpl(
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -478,8 +481,8 @@ class __$$_EntryCopyWithImpl<$Res> extends _$EntryCopyWithImpl<$Res, _$_Entry>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Entry implements _Entry {
-  _$_Entry(
+class _$EntryImpl implements _Entry {
+  _$EntryImpl(
       {@JsonKey(name: 'height') this.height,
       @JsonKey(name: 'topoheight') this.topoHeight,
       @JsonKey(name: 'blockhash') this.blockHash,
@@ -507,8 +510,8 @@ class _$_Entry implements _Entry {
       @JsonKey(name: 'srcport') this.srcPort})
       : _payloadRpc = payloadRpc;
 
-  factory _$_Entry.fromJson(Map<String, dynamic> json) =>
-      _$$_EntryFromJson(json);
+  factory _$EntryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EntryImplFromJson(json);
 
   /// @nodoc
   @override
@@ -650,10 +653,10 @@ class _$_Entry implements _Entry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Entry &&
+            other is _$EntryImpl &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.topoHeight, topoHeight) ||
                 other.topoHeight == topoHeight) &&
@@ -725,12 +728,12 @@ class _$_Entry implements _Entry {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EntryCopyWith<_$_Entry> get copyWith =>
-      __$$_EntryCopyWithImpl<_$_Entry>(this, _$identity);
+  _$$EntryImplCopyWith<_$EntryImpl> get copyWith =>
+      __$$EntryImplCopyWithImpl<_$EntryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EntryToJson(
+    return _$$EntryImplToJson(
       this,
     );
   }
@@ -762,9 +765,9 @@ abstract class _Entry implements Entry {
       @JsonKey(name: 'payload_rpc') final List<Argument>? payloadRpc,
       @JsonKey(name: 'sender') final String? sender,
       @JsonKey(name: 'dstport') final int? dstPort,
-      @JsonKey(name: 'srcport') final int? srcPort}) = _$_Entry;
+      @JsonKey(name: 'srcport') final int? srcPort}) = _$EntryImpl;
 
-  factory _Entry.fromJson(Map<String, dynamic> json) = _$_Entry.fromJson;
+  factory _Entry.fromJson(Map<String, dynamic> json) = _$EntryImpl.fromJson;
 
   @override
 
@@ -890,6 +893,6 @@ abstract class _Entry implements Entry {
   int? get srcPort;
   @override
   @JsonKey(ignore: true)
-  _$$_EntryCopyWith<_$_Entry> get copyWith =>
+  _$$EntryImplCopyWith<_$EntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

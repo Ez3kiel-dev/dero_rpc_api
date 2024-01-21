@@ -8,8 +8,8 @@ part of 'tx_related_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TxRelatedInfo _$$_TxRelatedInfoFromJson(Map<String, dynamic> json) =>
-    _$_TxRelatedInfo(
+_$TxRelatedInfoImpl _$$TxRelatedInfoImplFromJson(Map<String, dynamic> json) =>
+    _$TxRelatedInfoImpl(
       asHex: json['as_hex'] as String?,
       asJson: json['as_json'] as String?,
       blockHeight: json['block_height'] as int?,
@@ -34,7 +34,7 @@ _$_TxRelatedInfo _$$_TxRelatedInfoFromJson(Map<String, dynamic> json) =>
       codeNow: json['codenow'] as String?,
     );
 
-Map<String, dynamic> _$$_TxRelatedInfoToJson(_$_TxRelatedInfo instance) =>
+Map<String, dynamic> _$$TxRelatedInfoImplToJson(_$TxRelatedInfoImpl instance) =>
     <String, dynamic>{
       'as_hex': instance.asHex,
       'as_json': instance.asJson,

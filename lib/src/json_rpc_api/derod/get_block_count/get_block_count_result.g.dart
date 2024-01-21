@@ -8,15 +8,15 @@ part of 'get_block_count_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBlockCountResult _$$_GetBlockCountResultFromJson(
+_$GetBlockCountResultImpl _$$GetBlockCountResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetBlockCountResult(
+    _$GetBlockCountResultImpl(
       count: json['count'] as int?,
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetBlockCountResultToJson(
-        _$_GetBlockCountResult instance) =>
+Map<String, dynamic> _$$GetBlockCountResultImplToJson(
+        _$GetBlockCountResultImpl instance) =>
     <String, dynamic>{
       'count': instance.count,
       'status': instance.status,

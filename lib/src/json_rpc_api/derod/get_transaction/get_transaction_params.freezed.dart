@@ -76,11 +76,11 @@ class _$GetTransactionParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetTransactionParamsCopyWith<$Res>
+abstract class _$$GetTransactionParamsImplCopyWith<$Res>
     implements $GetTransactionParamsCopyWith<$Res> {
-  factory _$$_GetTransactionParamsCopyWith(_$_GetTransactionParams value,
-          $Res Function(_$_GetTransactionParams) then) =
-      __$$_GetTransactionParamsCopyWithImpl<$Res>;
+  factory _$$GetTransactionParamsImplCopyWith(_$GetTransactionParamsImpl value,
+          $Res Function(_$GetTransactionParamsImpl) then) =
+      __$$GetTransactionParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -89,11 +89,11 @@ abstract class _$$_GetTransactionParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTransactionParamsCopyWithImpl<$Res>
-    extends _$GetTransactionParamsCopyWithImpl<$Res, _$_GetTransactionParams>
-    implements _$$_GetTransactionParamsCopyWith<$Res> {
-  __$$_GetTransactionParamsCopyWithImpl(_$_GetTransactionParams _value,
-      $Res Function(_$_GetTransactionParams) _then)
+class __$$GetTransactionParamsImplCopyWithImpl<$Res>
+    extends _$GetTransactionParamsCopyWithImpl<$Res, _$GetTransactionParamsImpl>
+    implements _$$GetTransactionParamsImplCopyWith<$Res> {
+  __$$GetTransactionParamsImplCopyWithImpl(_$GetTransactionParamsImpl _value,
+      $Res Function(_$GetTransactionParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +102,7 @@ class __$$_GetTransactionParamsCopyWithImpl<$Res>
     Object? txsHashes = null,
     Object? decode = freezed,
   }) {
-    return _then(_$_GetTransactionParams(
+    return _then(_$GetTransactionParamsImpl(
       txsHashes: null == txsHashes
           ? _value._txsHashes
           : txsHashes // ignore: cast_nullable_to_non_nullable
@@ -117,14 +117,14 @@ class __$$_GetTransactionParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTransactionParams implements _GetTransactionParams {
-  _$_GetTransactionParams(
+class _$GetTransactionParamsImpl implements _GetTransactionParams {
+  _$GetTransactionParamsImpl(
       {@JsonKey(name: 'txs_hashes') required final List<String> txsHashes,
       @JsonKey(name: 'decode_as_json') this.decode})
       : _txsHashes = txsHashes;
 
-  factory _$_GetTransactionParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTransactionParamsFromJson(json);
+  factory _$GetTransactionParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTransactionParamsImplFromJson(json);
 
   /// @nodoc
   final List<String> _txsHashes;
@@ -149,10 +149,10 @@ class _$_GetTransactionParams implements _GetTransactionParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTransactionParams &&
+            other is _$GetTransactionParamsImpl &&
             const DeepCollectionEquality()
                 .equals(other._txsHashes, _txsHashes) &&
             (identical(other.decode, decode) || other.decode == decode));
@@ -166,13 +166,14 @@ class _$_GetTransactionParams implements _GetTransactionParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTransactionParamsCopyWith<_$_GetTransactionParams> get copyWith =>
-      __$$_GetTransactionParamsCopyWithImpl<_$_GetTransactionParams>(
-          this, _$identity);
+  _$$GetTransactionParamsImplCopyWith<_$GetTransactionParamsImpl>
+      get copyWith =>
+          __$$GetTransactionParamsImplCopyWithImpl<_$GetTransactionParamsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTransactionParamsToJson(
+    return _$$GetTransactionParamsImplToJson(
       this,
     );
   }
@@ -182,10 +183,10 @@ abstract class _GetTransactionParams implements GetTransactionParams {
   factory _GetTransactionParams(
           {@JsonKey(name: 'txs_hashes') required final List<String> txsHashes,
           @JsonKey(name: 'decode_as_json') final int? decode}) =
-      _$_GetTransactionParams;
+      _$GetTransactionParamsImpl;
 
   factory _GetTransactionParams.fromJson(Map<String, dynamic> json) =
-      _$_GetTransactionParams.fromJson;
+      _$GetTransactionParamsImpl.fromJson;
 
   @override
 
@@ -199,6 +200,6 @@ abstract class _GetTransactionParams implements GetTransactionParams {
   int? get decode;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTransactionParamsCopyWith<_$_GetTransactionParams> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetTransactionParamsImplCopyWith<_$GetTransactionParamsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

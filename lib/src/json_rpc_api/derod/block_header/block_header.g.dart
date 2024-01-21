@@ -8,8 +8,8 @@ part of 'block_header.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BlockHeader _$$_BlockHeaderFromJson(Map<String, dynamic> json) =>
-    _$_BlockHeader(
+_$BlockHeaderImpl _$$BlockHeaderImplFromJson(Map<String, dynamic> json) =>
+    _$BlockHeaderImpl(
       depth: json['depth'] as int?,
       difficulty: json['difficulty'] as String?,
       hash: json['hash'] as String?,
@@ -29,7 +29,7 @@ _$_BlockHeader _$$_BlockHeaderFromJson(Map<String, dynamic> json) =>
       timestamp: json['timestamp'] as int?,
     );
 
-Map<String, dynamic> _$$_BlockHeaderToJson(_$_BlockHeader instance) =>
+Map<String, dynamic> _$$BlockHeaderImplToJson(_$BlockHeaderImpl instance) =>
     <String, dynamic>{
       'depth': instance.depth,
       'difficulty': instance.difficulty,

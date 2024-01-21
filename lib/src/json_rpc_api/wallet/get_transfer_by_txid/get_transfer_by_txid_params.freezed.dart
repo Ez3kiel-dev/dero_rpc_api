@@ -66,23 +66,25 @@ class _$GetTransferByTxidParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetTransferByTxidParamsCopyWith<$Res>
+abstract class _$$GetTransferByTxidParamsImplCopyWith<$Res>
     implements $GetTransferByTxidParamsCopyWith<$Res> {
-  factory _$$_GetTransferByTxidParamsCopyWith(_$_GetTransferByTxidParams value,
-          $Res Function(_$_GetTransferByTxidParams) then) =
-      __$$_GetTransferByTxidParamsCopyWithImpl<$Res>;
+  factory _$$GetTransferByTxidParamsImplCopyWith(
+          _$GetTransferByTxidParamsImpl value,
+          $Res Function(_$GetTransferByTxidParamsImpl) then) =
+      __$$GetTransferByTxidParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'txid') String txid});
 }
 
 /// @nodoc
-class __$$_GetTransferByTxidParamsCopyWithImpl<$Res>
+class __$$GetTransferByTxidParamsImplCopyWithImpl<$Res>
     extends _$GetTransferByTxidParamsCopyWithImpl<$Res,
-        _$_GetTransferByTxidParams>
-    implements _$$_GetTransferByTxidParamsCopyWith<$Res> {
-  __$$_GetTransferByTxidParamsCopyWithImpl(_$_GetTransferByTxidParams _value,
-      $Res Function(_$_GetTransferByTxidParams) _then)
+        _$GetTransferByTxidParamsImpl>
+    implements _$$GetTransferByTxidParamsImplCopyWith<$Res> {
+  __$$GetTransferByTxidParamsImplCopyWithImpl(
+      _$GetTransferByTxidParamsImpl _value,
+      $Res Function(_$GetTransferByTxidParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +92,7 @@ class __$$_GetTransferByTxidParamsCopyWithImpl<$Res>
   $Res call({
     Object? txid = null,
   }) {
-    return _then(_$_GetTransferByTxidParams(
+    return _then(_$GetTransferByTxidParamsImpl(
       txid: null == txid
           ? _value.txid
           : txid // ignore: cast_nullable_to_non_nullable
@@ -101,11 +103,11 @@ class __$$_GetTransferByTxidParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTransferByTxidParams implements _GetTransferByTxidParams {
-  _$_GetTransferByTxidParams({@JsonKey(name: 'txid') required this.txid});
+class _$GetTransferByTxidParamsImpl implements _GetTransferByTxidParams {
+  _$GetTransferByTxidParamsImpl({@JsonKey(name: 'txid') required this.txid});
 
-  factory _$_GetTransferByTxidParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTransferByTxidParamsFromJson(json);
+  factory _$GetTransferByTxidParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTransferByTxidParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -118,10 +120,10 @@ class _$_GetTransferByTxidParams implements _GetTransferByTxidParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTransferByTxidParams &&
+            other is _$GetTransferByTxidParamsImpl &&
             (identical(other.txid, txid) || other.txid == txid));
   }
 
@@ -132,14 +134,13 @@ class _$_GetTransferByTxidParams implements _GetTransferByTxidParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTransferByTxidParamsCopyWith<_$_GetTransferByTxidParams>
-      get copyWith =>
-          __$$_GetTransferByTxidParamsCopyWithImpl<_$_GetTransferByTxidParams>(
-              this, _$identity);
+  _$$GetTransferByTxidParamsImplCopyWith<_$GetTransferByTxidParamsImpl>
+      get copyWith => __$$GetTransferByTxidParamsImplCopyWithImpl<
+          _$GetTransferByTxidParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTransferByTxidParamsToJson(
+    return _$$GetTransferByTxidParamsImplToJson(
       this,
     );
   }
@@ -148,10 +149,10 @@ class _$_GetTransferByTxidParams implements _GetTransferByTxidParams {
 abstract class _GetTransferByTxidParams implements GetTransferByTxidParams {
   factory _GetTransferByTxidParams(
           {@JsonKey(name: 'txid') required final String txid}) =
-      _$_GetTransferByTxidParams;
+      _$GetTransferByTxidParamsImpl;
 
   factory _GetTransferByTxidParams.fromJson(Map<String, dynamic> json) =
-      _$_GetTransferByTxidParams.fromJson;
+      _$GetTransferByTxidParamsImpl.fromJson;
 
   @override
 
@@ -160,6 +161,6 @@ abstract class _GetTransferByTxidParams implements GetTransferByTxidParams {
   String get txid;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTransferByTxidParamsCopyWith<_$_GetTransferByTxidParams>
+  _$$GetTransferByTxidParamsImplCopyWith<_$GetTransferByTxidParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

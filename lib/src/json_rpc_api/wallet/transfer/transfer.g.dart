@@ -8,7 +8,8 @@ part of 'transfer.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Transfer _$$_TransferFromJson(Map<String, dynamic> json) => _$_Transfer(
+_$TransferImpl _$$TransferImplFromJson(Map<String, dynamic> json) =>
+    _$TransferImpl(
       scid: json['scid'] as String?,
       destination: json['destination'] as String?,
       amount: json['amount'] as int?,
@@ -18,7 +19,7 @@ _$_Transfer _$$_TransferFromJson(Map<String, dynamic> json) => _$_Transfer(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TransferToJson(_$_Transfer instance) =>
+Map<String, dynamic> _$$TransferImplToJson(_$TransferImpl instance) =>
     <String, dynamic>{
       'scid': instance.scid,
       'destination': instance.destination,

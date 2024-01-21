@@ -64,22 +64,22 @@ class _$GetTransfersResultCopyWithImpl<$Res, $Val extends GetTransfersResult>
 }
 
 /// @nodoc
-abstract class _$$_GetTransfersResultCopyWith<$Res>
+abstract class _$$GetTransfersResultImplCopyWith<$Res>
     implements $GetTransfersResultCopyWith<$Res> {
-  factory _$$_GetTransfersResultCopyWith(_$_GetTransfersResult value,
-          $Res Function(_$_GetTransfersResult) then) =
-      __$$_GetTransfersResultCopyWithImpl<$Res>;
+  factory _$$GetTransfersResultImplCopyWith(_$GetTransfersResultImpl value,
+          $Res Function(_$GetTransfersResultImpl) then) =
+      __$$GetTransfersResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'entries') List<Entry>? entries});
 }
 
 /// @nodoc
-class __$$_GetTransfersResultCopyWithImpl<$Res>
-    extends _$GetTransfersResultCopyWithImpl<$Res, _$_GetTransfersResult>
-    implements _$$_GetTransfersResultCopyWith<$Res> {
-  __$$_GetTransfersResultCopyWithImpl(
-      _$_GetTransfersResult _value, $Res Function(_$_GetTransfersResult) _then)
+class __$$GetTransfersResultImplCopyWithImpl<$Res>
+    extends _$GetTransfersResultCopyWithImpl<$Res, _$GetTransfersResultImpl>
+    implements _$$GetTransfersResultImplCopyWith<$Res> {
+  __$$GetTransfersResultImplCopyWithImpl(_$GetTransfersResultImpl _value,
+      $Res Function(_$GetTransfersResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_GetTransfersResultCopyWithImpl<$Res>
   $Res call({
     Object? entries = freezed,
   }) {
-    return _then(_$_GetTransfersResult(
+    return _then(_$GetTransfersResultImpl(
       entries: freezed == entries
           ? _value._entries
           : entries // ignore: cast_nullable_to_non_nullable
@@ -98,12 +98,13 @@ class __$$_GetTransfersResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTransfersResult implements _GetTransfersResult {
-  _$_GetTransfersResult({@JsonKey(name: 'entries') final List<Entry>? entries})
+class _$GetTransfersResultImpl implements _GetTransfersResult {
+  _$GetTransfersResultImpl(
+      {@JsonKey(name: 'entries') final List<Entry>? entries})
       : _entries = entries;
 
-  factory _$_GetTransfersResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTransfersResultFromJson(json);
+  factory _$GetTransfersResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTransfersResultImplFromJson(json);
 
   /// @nodoc
   final List<Entry>? _entries;
@@ -125,10 +126,10 @@ class _$_GetTransfersResult implements _GetTransfersResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTransfersResult &&
+            other is _$GetTransfersResultImpl &&
             const DeepCollectionEquality().equals(other._entries, _entries));
   }
 
@@ -140,13 +141,13 @@ class _$_GetTransfersResult implements _GetTransfersResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTransfersResultCopyWith<_$_GetTransfersResult> get copyWith =>
-      __$$_GetTransfersResultCopyWithImpl<_$_GetTransfersResult>(
+  _$$GetTransfersResultImplCopyWith<_$GetTransfersResultImpl> get copyWith =>
+      __$$GetTransfersResultImplCopyWithImpl<_$GetTransfersResultImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTransfersResultToJson(
+    return _$$GetTransfersResultImplToJson(
       this,
     );
   }
@@ -155,10 +156,10 @@ class _$_GetTransfersResult implements _GetTransfersResult {
 abstract class _GetTransfersResult implements GetTransfersResult {
   factory _GetTransfersResult(
           {@JsonKey(name: 'entries') final List<Entry>? entries}) =
-      _$_GetTransfersResult;
+      _$GetTransfersResultImpl;
 
   factory _GetTransfersResult.fromJson(Map<String, dynamic> json) =
-      _$_GetTransfersResult.fromJson;
+      _$GetTransfersResultImpl.fromJson;
 
   @override
 
@@ -167,6 +168,6 @@ abstract class _GetTransfersResult implements GetTransfersResult {
   List<Entry>? get entries;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTransfersResultCopyWith<_$_GetTransfersResult> get copyWith =>
+  _$$GetTransfersResultImplCopyWith<_$GetTransfersResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

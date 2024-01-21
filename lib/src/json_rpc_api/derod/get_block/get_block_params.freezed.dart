@@ -75,11 +75,11 @@ class _$GetBlockParamsCopyWithImpl<$Res, $Val extends GetBlockParams>
 }
 
 /// @nodoc
-abstract class _$$_GetBlockParamsCopyWith<$Res>
+abstract class _$$GetBlockParamsImplCopyWith<$Res>
     implements $GetBlockParamsCopyWith<$Res> {
-  factory _$$_GetBlockParamsCopyWith(
-          _$_GetBlockParams value, $Res Function(_$_GetBlockParams) then) =
-      __$$_GetBlockParamsCopyWithImpl<$Res>;
+  factory _$$GetBlockParamsImplCopyWith(_$GetBlockParamsImpl value,
+          $Res Function(_$GetBlockParamsImpl) then) =
+      __$$GetBlockParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +88,11 @@ abstract class _$$_GetBlockParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetBlockParamsCopyWithImpl<$Res>
-    extends _$GetBlockParamsCopyWithImpl<$Res, _$_GetBlockParams>
-    implements _$$_GetBlockParamsCopyWith<$Res> {
-  __$$_GetBlockParamsCopyWithImpl(
-      _$_GetBlockParams _value, $Res Function(_$_GetBlockParams) _then)
+class __$$GetBlockParamsImplCopyWithImpl<$Res>
+    extends _$GetBlockParamsCopyWithImpl<$Res, _$GetBlockParamsImpl>
+    implements _$$GetBlockParamsImplCopyWith<$Res> {
+  __$$GetBlockParamsImplCopyWithImpl(
+      _$GetBlockParamsImpl _value, $Res Function(_$GetBlockParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_GetBlockParamsCopyWithImpl<$Res>
     Object? hash = freezed,
     Object? height = freezed,
   }) {
-    return _then(_$_GetBlockParams(
+    return _then(_$GetBlockParamsImpl(
       hash: freezed == hash
           ? _value.hash
           : hash // ignore: cast_nullable_to_non_nullable
@@ -116,12 +116,12 @@ class __$$_GetBlockParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBlockParams implements _GetBlockParams {
-  _$_GetBlockParams(
+class _$GetBlockParamsImpl implements _GetBlockParams {
+  _$GetBlockParamsImpl(
       {@JsonKey(name: 'hash') this.hash, @JsonKey(name: 'height') this.height});
 
-  factory _$_GetBlockParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBlockParamsFromJson(json);
+  factory _$GetBlockParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBlockParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -139,10 +139,10 @@ class _$_GetBlockParams implements _GetBlockParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBlockParams &&
+            other is _$GetBlockParamsImpl &&
             (identical(other.hash, hash) || other.hash == hash) &&
             (identical(other.height, height) || other.height == height));
   }
@@ -154,12 +154,13 @@ class _$_GetBlockParams implements _GetBlockParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBlockParamsCopyWith<_$_GetBlockParams> get copyWith =>
-      __$$_GetBlockParamsCopyWithImpl<_$_GetBlockParams>(this, _$identity);
+  _$$GetBlockParamsImplCopyWith<_$GetBlockParamsImpl> get copyWith =>
+      __$$GetBlockParamsImplCopyWithImpl<_$GetBlockParamsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBlockParamsToJson(
+    return _$$GetBlockParamsImplToJson(
       this,
     );
   }
@@ -168,10 +169,10 @@ class _$_GetBlockParams implements _GetBlockParams {
 abstract class _GetBlockParams implements GetBlockParams {
   factory _GetBlockParams(
       {@JsonKey(name: 'hash') final String? hash,
-      @JsonKey(name: 'height') final int? height}) = _$_GetBlockParams;
+      @JsonKey(name: 'height') final int? height}) = _$GetBlockParamsImpl;
 
   factory _GetBlockParams.fromJson(Map<String, dynamic> json) =
-      _$_GetBlockParams.fromJson;
+      _$GetBlockParamsImpl.fromJson;
 
   @override
 
@@ -185,6 +186,6 @@ abstract class _GetBlockParams implements GetBlockParams {
   int? get height;
   @override
   @JsonKey(ignore: true)
-  _$$_GetBlockParamsCopyWith<_$_GetBlockParams> get copyWith =>
+  _$$GetBlockParamsImplCopyWith<_$GetBlockParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

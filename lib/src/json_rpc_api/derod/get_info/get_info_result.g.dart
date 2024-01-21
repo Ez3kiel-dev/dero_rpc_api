@@ -8,8 +8,8 @@ part of 'get_info_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetInfoResult _$$_GetInfoResultFromJson(Map<String, dynamic> json) =>
-    _$_GetInfoResult(
+_$GetInfoResultImpl _$$GetInfoResultImplFromJson(Map<String, dynamic> json) =>
+    _$GetInfoResultImpl(
       altBlocksCount: json['alt_blocks_count'] as int?,
       difficulty: json['difficulty'] as int?,
       greyPeerListSize: json['grey_peerlist_size'] as int?,
@@ -45,7 +45,7 @@ _$_GetInfoResult _$$_GetInfoResultFromJson(Map<String, dynamic> json) =>
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetInfoResultToJson(_$_GetInfoResult instance) =>
+Map<String, dynamic> _$$GetInfoResultImplToJson(_$GetInfoResultImpl instance) =>
     <String, dynamic>{
       'alt_blocks_count': instance.altBlocksCount,
       'difficulty': instance.difficulty,

@@ -8,16 +8,16 @@ part of 'get_random_address_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRandomAddressResult _$$_GetRandomAddressResultFromJson(
+_$GetRandomAddressResultImpl _$$GetRandomAddressResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRandomAddressResult(
+    _$GetRandomAddressResultImpl(
       address:
           (json['address'] as List<dynamic>?)?.map((e) => e as String).toList(),
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetRandomAddressResultToJson(
-        _$_GetRandomAddressResult instance) =>
+Map<String, dynamic> _$$GetRandomAddressResultImplToJson(
+        _$GetRandomAddressResultImpl instance) =>
     <String, dynamic>{
       'address': instance.address,
       'status': instance.status,

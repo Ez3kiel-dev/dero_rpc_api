@@ -387,11 +387,11 @@ class _$GetInfoResultCopyWithImpl<$Res, $Val extends GetInfoResult>
 }
 
 /// @nodoc
-abstract class _$$_GetInfoResultCopyWith<$Res>
+abstract class _$$GetInfoResultImplCopyWith<$Res>
     implements $GetInfoResultCopyWith<$Res> {
-  factory _$$_GetInfoResultCopyWith(
-          _$_GetInfoResult value, $Res Function(_$_GetInfoResult) then) =
-      __$$_GetInfoResultCopyWithImpl<$Res>;
+  factory _$$GetInfoResultImplCopyWith(
+          _$GetInfoResultImpl value, $Res Function(_$GetInfoResultImpl) then) =
+      __$$GetInfoResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -433,11 +433,11 @@ abstract class _$$_GetInfoResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetInfoResultCopyWithImpl<$Res>
-    extends _$GetInfoResultCopyWithImpl<$Res, _$_GetInfoResult>
-    implements _$$_GetInfoResultCopyWith<$Res> {
-  __$$_GetInfoResultCopyWithImpl(
-      _$_GetInfoResult _value, $Res Function(_$_GetInfoResult) _then)
+class __$$GetInfoResultImplCopyWithImpl<$Res>
+    extends _$GetInfoResultCopyWithImpl<$Res, _$GetInfoResultImpl>
+    implements _$$GetInfoResultImplCopyWith<$Res> {
+  __$$GetInfoResultImplCopyWithImpl(
+      _$GetInfoResultImpl _value, $Res Function(_$GetInfoResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -477,7 +477,7 @@ class __$$_GetInfoResultCopyWithImpl<$Res>
     Object? hashrate7d = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetInfoResult(
+    return _then(_$GetInfoResultImpl(
       altBlocksCount: freezed == altBlocksCount
           ? _value.altBlocksCount
           : altBlocksCount // ignore: cast_nullable_to_non_nullable
@@ -616,8 +616,8 @@ class __$$_GetInfoResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetInfoResult implements _GetInfoResult {
-  _$_GetInfoResult(
+class _$GetInfoResultImpl implements _GetInfoResult {
+  _$GetInfoResultImpl(
       {@JsonKey(name: 'alt_blocks_count') this.altBlocksCount,
       @JsonKey(name: 'difficulty') this.difficulty,
       @JsonKey(name: 'grey_peerlist_size') this.greyPeerListSize,
@@ -654,8 +654,8 @@ class _$_GetInfoResult implements _GetInfoResult {
       @JsonKey(name: 'hashrate_7d') this.hashrate7d,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_GetInfoResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetInfoResultFromJson(json);
+  factory _$GetInfoResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetInfoResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -828,10 +828,10 @@ class _$_GetInfoResult implements _GetInfoResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetInfoResult &&
+            other is _$GetInfoResultImpl &&
             (identical(other.altBlocksCount, altBlocksCount) ||
                 other.altBlocksCount == altBlocksCount) &&
             (identical(other.difficulty, difficulty) ||
@@ -937,12 +937,12 @@ class _$_GetInfoResult implements _GetInfoResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetInfoResultCopyWith<_$_GetInfoResult> get copyWith =>
-      __$$_GetInfoResultCopyWithImpl<_$_GetInfoResult>(this, _$identity);
+  _$$GetInfoResultImplCopyWith<_$GetInfoResultImpl> get copyWith =>
+      __$$GetInfoResultImplCopyWithImpl<_$GetInfoResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetInfoResultToJson(
+    return _$$GetInfoResultImplToJson(
       this,
     );
   }
@@ -986,10 +986,10 @@ abstract class _GetInfoResult implements GetInfoResult {
       @JsonKey(name: 'hashrate_1hr') final int? hashrate1hr,
       @JsonKey(name: 'hashrate_1d') final int? hashrate1d,
       @JsonKey(name: 'hashrate_7d') final int? hashrate7d,
-      @JsonKey(name: 'status') final String? status}) = _$_GetInfoResult;
+      @JsonKey(name: 'status') final String? status}) = _$GetInfoResultImpl;
 
   factory _GetInfoResult.fromJson(Map<String, dynamic> json) =
-      _$_GetInfoResult.fromJson;
+      _$GetInfoResultImpl.fromJson;
 
   @override
 
@@ -1158,6 +1158,6 @@ abstract class _GetInfoResult implements GetInfoResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetInfoResultCopyWith<_$_GetInfoResult> get copyWith =>
+  _$$GetInfoResultImplCopyWith<_$GetInfoResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

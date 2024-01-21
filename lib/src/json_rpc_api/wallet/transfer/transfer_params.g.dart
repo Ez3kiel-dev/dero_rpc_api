@@ -8,8 +8,8 @@ part of 'transfer_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TransferParams _$$_TransferParamsFromJson(Map<String, dynamic> json) =>
-    _$_TransferParams(
+_$TransferParamsImpl _$$TransferParamsImplFromJson(Map<String, dynamic> json) =>
+    _$TransferParamsImpl(
       transfers: (json['transfers'] as List<dynamic>?)
           ?.map((e) => Transfer.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -24,7 +24,8 @@ _$_TransferParams _$$_TransferParamsFromJson(Map<String, dynamic> json) =>
       signer: json['signer'] as String?,
     );
 
-Map<String, dynamic> _$$_TransferParamsToJson(_$_TransferParams instance) =>
+Map<String, dynamic> _$$TransferParamsImplToJson(
+        _$TransferParamsImpl instance) =>
     <String, dynamic>{
       'transfers': instance.transfers,
       'sc': instance.smartContractCode,

@@ -64,22 +64,22 @@ class _$GetBalanceParamsCopyWithImpl<$Res, $Val extends GetBalanceParams>
 }
 
 /// @nodoc
-abstract class _$$_GetBalanceParamsCopyWith<$Res>
+abstract class _$$GetBalanceParamsImplCopyWith<$Res>
     implements $GetBalanceParamsCopyWith<$Res> {
-  factory _$$_GetBalanceParamsCopyWith(
-          _$_GetBalanceParams value, $Res Function(_$_GetBalanceParams) then) =
-      __$$_GetBalanceParamsCopyWithImpl<$Res>;
+  factory _$$GetBalanceParamsImplCopyWith(_$GetBalanceParamsImpl value,
+          $Res Function(_$GetBalanceParamsImpl) then) =
+      __$$GetBalanceParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'scid') String scid});
 }
 
 /// @nodoc
-class __$$_GetBalanceParamsCopyWithImpl<$Res>
-    extends _$GetBalanceParamsCopyWithImpl<$Res, _$_GetBalanceParams>
-    implements _$$_GetBalanceParamsCopyWith<$Res> {
-  __$$_GetBalanceParamsCopyWithImpl(
-      _$_GetBalanceParams _value, $Res Function(_$_GetBalanceParams) _then)
+class __$$GetBalanceParamsImplCopyWithImpl<$Res>
+    extends _$GetBalanceParamsCopyWithImpl<$Res, _$GetBalanceParamsImpl>
+    implements _$$GetBalanceParamsImplCopyWith<$Res> {
+  __$$GetBalanceParamsImplCopyWithImpl(_$GetBalanceParamsImpl _value,
+      $Res Function(_$GetBalanceParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_GetBalanceParamsCopyWithImpl<$Res>
   $Res call({
     Object? scid = null,
   }) {
-    return _then(_$_GetBalanceParams(
+    return _then(_$GetBalanceParamsImpl(
       scid: null == scid
           ? _value.scid
           : scid // ignore: cast_nullable_to_non_nullable
@@ -98,11 +98,11 @@ class __$$_GetBalanceParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBalanceParams implements _GetBalanceParams {
-  _$_GetBalanceParams({@JsonKey(name: 'scid') required this.scid});
+class _$GetBalanceParamsImpl implements _GetBalanceParams {
+  _$GetBalanceParamsImpl({@JsonKey(name: 'scid') required this.scid});
 
-  factory _$_GetBalanceParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBalanceParamsFromJson(json);
+  factory _$GetBalanceParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBalanceParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -115,10 +115,10 @@ class _$_GetBalanceParams implements _GetBalanceParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBalanceParams &&
+            other is _$GetBalanceParamsImpl &&
             (identical(other.scid, scid) || other.scid == scid));
   }
 
@@ -129,12 +129,13 @@ class _$_GetBalanceParams implements _GetBalanceParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBalanceParamsCopyWith<_$_GetBalanceParams> get copyWith =>
-      __$$_GetBalanceParamsCopyWithImpl<_$_GetBalanceParams>(this, _$identity);
+  _$$GetBalanceParamsImplCopyWith<_$GetBalanceParamsImpl> get copyWith =>
+      __$$GetBalanceParamsImplCopyWithImpl<_$GetBalanceParamsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBalanceParamsToJson(
+    return _$$GetBalanceParamsImplToJson(
       this,
     );
   }
@@ -143,10 +144,10 @@ class _$_GetBalanceParams implements _GetBalanceParams {
 abstract class _GetBalanceParams implements GetBalanceParams {
   factory _GetBalanceParams(
           {@JsonKey(name: 'scid') required final String scid}) =
-      _$_GetBalanceParams;
+      _$GetBalanceParamsImpl;
 
   factory _GetBalanceParams.fromJson(Map<String, dynamic> json) =
-      _$_GetBalanceParams.fromJson;
+      _$GetBalanceParamsImpl.fromJson;
 
   @override
 
@@ -155,6 +156,6 @@ abstract class _GetBalanceParams implements GetBalanceParams {
   String get scid;
   @override
   @JsonKey(ignore: true)
-  _$$_GetBalanceParamsCopyWith<_$_GetBalanceParams> get copyWith =>
+  _$$GetBalanceParamsImplCopyWith<_$GetBalanceParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

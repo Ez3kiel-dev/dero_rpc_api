@@ -8,12 +8,13 @@ part of 'query_key_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_QueryKeyResult _$$_QueryKeyResultFromJson(Map<String, dynamic> json) =>
-    _$_QueryKeyResult(
+_$QueryKeyResultImpl _$$QueryKeyResultImplFromJson(Map<String, dynamic> json) =>
+    _$QueryKeyResultImpl(
       key: json['key'] as String?,
     );
 
-Map<String, dynamic> _$$_QueryKeyResultToJson(_$_QueryKeyResult instance) =>
+Map<String, dynamic> _$$QueryKeyResultImplToJson(
+        _$QueryKeyResultImpl instance) =>
     <String, dynamic>{
       'key': instance.key,
     };

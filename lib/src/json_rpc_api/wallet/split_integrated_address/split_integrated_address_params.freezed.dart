@@ -68,25 +68,25 @@ class _$SplitIntegratedAddressParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SplitIntegratedAddressParamsCopyWith<$Res>
+abstract class _$$SplitIntegratedAddressParamsImplCopyWith<$Res>
     implements $SplitIntegratedAddressParamsCopyWith<$Res> {
-  factory _$$_SplitIntegratedAddressParamsCopyWith(
-          _$_SplitIntegratedAddressParams value,
-          $Res Function(_$_SplitIntegratedAddressParams) then) =
-      __$$_SplitIntegratedAddressParamsCopyWithImpl<$Res>;
+  factory _$$SplitIntegratedAddressParamsImplCopyWith(
+          _$SplitIntegratedAddressParamsImpl value,
+          $Res Function(_$SplitIntegratedAddressParamsImpl) then) =
+      __$$SplitIntegratedAddressParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'integrated_address') String integratedAddress});
 }
 
 /// @nodoc
-class __$$_SplitIntegratedAddressParamsCopyWithImpl<$Res>
+class __$$SplitIntegratedAddressParamsImplCopyWithImpl<$Res>
     extends _$SplitIntegratedAddressParamsCopyWithImpl<$Res,
-        _$_SplitIntegratedAddressParams>
-    implements _$$_SplitIntegratedAddressParamsCopyWith<$Res> {
-  __$$_SplitIntegratedAddressParamsCopyWithImpl(
-      _$_SplitIntegratedAddressParams _value,
-      $Res Function(_$_SplitIntegratedAddressParams) _then)
+        _$SplitIntegratedAddressParamsImpl>
+    implements _$$SplitIntegratedAddressParamsImplCopyWith<$Res> {
+  __$$SplitIntegratedAddressParamsImplCopyWithImpl(
+      _$SplitIntegratedAddressParamsImpl _value,
+      $Res Function(_$SplitIntegratedAddressParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -94,7 +94,7 @@ class __$$_SplitIntegratedAddressParamsCopyWithImpl<$Res>
   $Res call({
     Object? integratedAddress = null,
   }) {
-    return _then(_$_SplitIntegratedAddressParams(
+    return _then(_$SplitIntegratedAddressParamsImpl(
       integratedAddress: null == integratedAddress
           ? _value.integratedAddress
           : integratedAddress // ignore: cast_nullable_to_non_nullable
@@ -105,12 +105,14 @@ class __$$_SplitIntegratedAddressParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SplitIntegratedAddressParams implements _SplitIntegratedAddressParams {
-  _$_SplitIntegratedAddressParams(
+class _$SplitIntegratedAddressParamsImpl
+    implements _SplitIntegratedAddressParams {
+  _$SplitIntegratedAddressParamsImpl(
       {@JsonKey(name: 'integrated_address') required this.integratedAddress});
 
-  factory _$_SplitIntegratedAddressParams.fromJson(Map<String, dynamic> json) =>
-      _$$_SplitIntegratedAddressParamsFromJson(json);
+  factory _$SplitIntegratedAddressParamsImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$SplitIntegratedAddressParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -123,10 +125,10 @@ class _$_SplitIntegratedAddressParams implements _SplitIntegratedAddressParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SplitIntegratedAddressParams &&
+            other is _$SplitIntegratedAddressParamsImpl &&
             (identical(other.integratedAddress, integratedAddress) ||
                 other.integratedAddress == integratedAddress));
   }
@@ -138,13 +140,14 @@ class _$_SplitIntegratedAddressParams implements _SplitIntegratedAddressParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SplitIntegratedAddressParamsCopyWith<_$_SplitIntegratedAddressParams>
-      get copyWith => __$$_SplitIntegratedAddressParamsCopyWithImpl<
-          _$_SplitIntegratedAddressParams>(this, _$identity);
+  _$$SplitIntegratedAddressParamsImplCopyWith<
+          _$SplitIntegratedAddressParamsImpl>
+      get copyWith => __$$SplitIntegratedAddressParamsImplCopyWithImpl<
+          _$SplitIntegratedAddressParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SplitIntegratedAddressParamsToJson(
+    return _$$SplitIntegratedAddressParamsImplToJson(
       this,
     );
   }
@@ -155,10 +158,10 @@ abstract class _SplitIntegratedAddressParams
   factory _SplitIntegratedAddressParams(
           {@JsonKey(name: 'integrated_address')
           required final String integratedAddress}) =
-      _$_SplitIntegratedAddressParams;
+      _$SplitIntegratedAddressParamsImpl;
 
   factory _SplitIntegratedAddressParams.fromJson(Map<String, dynamic> json) =
-      _$_SplitIntegratedAddressParams.fromJson;
+      _$SplitIntegratedAddressParamsImpl.fromJson;
 
   @override
 
@@ -167,6 +170,7 @@ abstract class _SplitIntegratedAddressParams
   String get integratedAddress;
   @override
   @JsonKey(ignore: true)
-  _$$_SplitIntegratedAddressParamsCopyWith<_$_SplitIntegratedAddressParams>
+  _$$SplitIntegratedAddressParamsImplCopyWith<
+          _$SplitIntegratedAddressParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -89,11 +89,11 @@ class _$GetBlockByResultCopyWithImpl<$Res, $Val extends GetBlockByResult>
 }
 
 /// @nodoc
-abstract class _$$_GetBlockByResultCopyWith<$Res>
+abstract class _$$GetBlockByResultImplCopyWith<$Res>
     implements $GetBlockByResultCopyWith<$Res> {
-  factory _$$_GetBlockByResultCopyWith(
-          _$_GetBlockByResult value, $Res Function(_$_GetBlockByResult) then) =
-      __$$_GetBlockByResultCopyWithImpl<$Res>;
+  factory _$$GetBlockByResultImplCopyWith(_$GetBlockByResultImpl value,
+          $Res Function(_$GetBlockByResultImpl) then) =
+      __$$GetBlockByResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -105,11 +105,11 @@ abstract class _$$_GetBlockByResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetBlockByResultCopyWithImpl<$Res>
-    extends _$GetBlockByResultCopyWithImpl<$Res, _$_GetBlockByResult>
-    implements _$$_GetBlockByResultCopyWith<$Res> {
-  __$$_GetBlockByResultCopyWithImpl(
-      _$_GetBlockByResult _value, $Res Function(_$_GetBlockByResult) _then)
+class __$$GetBlockByResultImplCopyWithImpl<$Res>
+    extends _$GetBlockByResultCopyWithImpl<$Res, _$GetBlockByResultImpl>
+    implements _$$GetBlockByResultImplCopyWith<$Res> {
+  __$$GetBlockByResultImplCopyWithImpl(_$GetBlockByResultImpl _value,
+      $Res Function(_$GetBlockByResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$_GetBlockByResultCopyWithImpl<$Res>
     Object? blockHeader = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetBlockByResult(
+    return _then(_$GetBlockByResultImpl(
       blockHeader: freezed == blockHeader
           ? _value.blockHeader
           : blockHeader // ignore: cast_nullable_to_non_nullable
@@ -133,13 +133,13 @@ class __$$_GetBlockByResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBlockByResult implements _GetBlockByResult {
-  _$_GetBlockByResult(
+class _$GetBlockByResultImpl implements _GetBlockByResult {
+  _$GetBlockByResultImpl(
       {@JsonKey(name: 'block_header') this.blockHeader,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_GetBlockByResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBlockByResultFromJson(json);
+  factory _$GetBlockByResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBlockByResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -157,10 +157,10 @@ class _$_GetBlockByResult implements _GetBlockByResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBlockByResult &&
+            other is _$GetBlockByResultImpl &&
             (identical(other.blockHeader, blockHeader) ||
                 other.blockHeader == blockHeader) &&
             (identical(other.status, status) || other.status == status));
@@ -173,12 +173,13 @@ class _$_GetBlockByResult implements _GetBlockByResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBlockByResultCopyWith<_$_GetBlockByResult> get copyWith =>
-      __$$_GetBlockByResultCopyWithImpl<_$_GetBlockByResult>(this, _$identity);
+  _$$GetBlockByResultImplCopyWith<_$GetBlockByResultImpl> get copyWith =>
+      __$$GetBlockByResultImplCopyWithImpl<_$GetBlockByResultImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBlockByResultToJson(
+    return _$$GetBlockByResultImplToJson(
       this,
     );
   }
@@ -187,10 +188,10 @@ class _$_GetBlockByResult implements _GetBlockByResult {
 abstract class _GetBlockByResult implements GetBlockByResult {
   factory _GetBlockByResult(
       {@JsonKey(name: 'block_header') final BlockHeader? blockHeader,
-      @JsonKey(name: 'status') final String? status}) = _$_GetBlockByResult;
+      @JsonKey(name: 'status') final String? status}) = _$GetBlockByResultImpl;
 
   factory _GetBlockByResult.fromJson(Map<String, dynamic> json) =
-      _$_GetBlockByResult.fromJson;
+      _$GetBlockByResultImpl.fromJson;
 
   @override
 
@@ -204,6 +205,6 @@ abstract class _GetBlockByResult implements GetBlockByResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetBlockByResultCopyWith<_$_GetBlockByResult> get copyWith =>
+  _$$GetBlockByResultImplCopyWith<_$GetBlockByResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -79,12 +79,12 @@ class _$MakeIntegratedAddressResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MakeIntegratedAddressResultCopyWith<$Res>
+abstract class _$$MakeIntegratedAddressResultImplCopyWith<$Res>
     implements $MakeIntegratedAddressResultCopyWith<$Res> {
-  factory _$$_MakeIntegratedAddressResultCopyWith(
-          _$_MakeIntegratedAddressResult value,
-          $Res Function(_$_MakeIntegratedAddressResult) then) =
-      __$$_MakeIntegratedAddressResultCopyWithImpl<$Res>;
+  factory _$$MakeIntegratedAddressResultImplCopyWith(
+          _$MakeIntegratedAddressResultImpl value,
+          $Res Function(_$MakeIntegratedAddressResultImpl) then) =
+      __$$MakeIntegratedAddressResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,13 +93,13 @@ abstract class _$$_MakeIntegratedAddressResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MakeIntegratedAddressResultCopyWithImpl<$Res>
+class __$$MakeIntegratedAddressResultImplCopyWithImpl<$Res>
     extends _$MakeIntegratedAddressResultCopyWithImpl<$Res,
-        _$_MakeIntegratedAddressResult>
-    implements _$$_MakeIntegratedAddressResultCopyWith<$Res> {
-  __$$_MakeIntegratedAddressResultCopyWithImpl(
-      _$_MakeIntegratedAddressResult _value,
-      $Res Function(_$_MakeIntegratedAddressResult) _then)
+        _$MakeIntegratedAddressResultImpl>
+    implements _$$MakeIntegratedAddressResultImplCopyWith<$Res> {
+  __$$MakeIntegratedAddressResultImplCopyWithImpl(
+      _$MakeIntegratedAddressResultImpl _value,
+      $Res Function(_$MakeIntegratedAddressResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$_MakeIntegratedAddressResultCopyWithImpl<$Res>
     Object? integratedAddress = freezed,
     Object? payloadRPC = freezed,
   }) {
-    return _then(_$_MakeIntegratedAddressResult(
+    return _then(_$MakeIntegratedAddressResultImpl(
       integratedAddress: freezed == integratedAddress
           ? _value.integratedAddress
           : integratedAddress // ignore: cast_nullable_to_non_nullable
@@ -123,14 +123,16 @@ class __$$_MakeIntegratedAddressResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MakeIntegratedAddressResult implements _MakeIntegratedAddressResult {
-  _$_MakeIntegratedAddressResult(
+class _$MakeIntegratedAddressResultImpl
+    implements _MakeIntegratedAddressResult {
+  _$MakeIntegratedAddressResultImpl(
       {@JsonKey(name: 'integrated_address') this.integratedAddress,
       @JsonKey(name: 'payload_rpc') final List<Argument>? payloadRPC})
       : _payloadRPC = payloadRPC;
 
-  factory _$_MakeIntegratedAddressResult.fromJson(Map<String, dynamic> json) =>
-      _$$_MakeIntegratedAddressResultFromJson(json);
+  factory _$MakeIntegratedAddressResultImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MakeIntegratedAddressResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -157,10 +159,10 @@ class _$_MakeIntegratedAddressResult implements _MakeIntegratedAddressResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MakeIntegratedAddressResult &&
+            other is _$MakeIntegratedAddressResultImpl &&
             (identical(other.integratedAddress, integratedAddress) ||
                 other.integratedAddress == integratedAddress) &&
             const DeepCollectionEquality()
@@ -175,13 +177,13 @@ class _$_MakeIntegratedAddressResult implements _MakeIntegratedAddressResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MakeIntegratedAddressResultCopyWith<_$_MakeIntegratedAddressResult>
-      get copyWith => __$$_MakeIntegratedAddressResultCopyWithImpl<
-          _$_MakeIntegratedAddressResult>(this, _$identity);
+  _$$MakeIntegratedAddressResultImplCopyWith<_$MakeIntegratedAddressResultImpl>
+      get copyWith => __$$MakeIntegratedAddressResultImplCopyWithImpl<
+          _$MakeIntegratedAddressResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MakeIntegratedAddressResultToJson(
+    return _$$MakeIntegratedAddressResultImplToJson(
       this,
     );
   }
@@ -192,10 +194,10 @@ abstract class _MakeIntegratedAddressResult
   factory _MakeIntegratedAddressResult(
           {@JsonKey(name: 'integrated_address') final String? integratedAddress,
           @JsonKey(name: 'payload_rpc') final List<Argument>? payloadRPC}) =
-      _$_MakeIntegratedAddressResult;
+      _$MakeIntegratedAddressResultImpl;
 
   factory _MakeIntegratedAddressResult.fromJson(Map<String, dynamic> json) =
-      _$_MakeIntegratedAddressResult.fromJson;
+      _$MakeIntegratedAddressResultImpl.fromJson;
 
   @override
 
@@ -209,6 +211,6 @@ abstract class _MakeIntegratedAddressResult
   List<Argument>? get payloadRPC;
   @override
   @JsonKey(ignore: true)
-  _$$_MakeIntegratedAddressResultCopyWith<_$_MakeIntegratedAddressResult>
+  _$$MakeIntegratedAddressResultImplCopyWith<_$MakeIntegratedAddressResultImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

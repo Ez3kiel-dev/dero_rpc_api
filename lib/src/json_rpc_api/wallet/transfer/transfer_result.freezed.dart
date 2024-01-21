@@ -64,22 +64,22 @@ class _$TransferResultCopyWithImpl<$Res, $Val extends TransferResult>
 }
 
 /// @nodoc
-abstract class _$$_TransferResultCopyWith<$Res>
+abstract class _$$TransferResultImplCopyWith<$Res>
     implements $TransferResultCopyWith<$Res> {
-  factory _$$_TransferResultCopyWith(
-          _$_TransferResult value, $Res Function(_$_TransferResult) then) =
-      __$$_TransferResultCopyWithImpl<$Res>;
+  factory _$$TransferResultImplCopyWith(_$TransferResultImpl value,
+          $Res Function(_$TransferResultImpl) then) =
+      __$$TransferResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'txid') String? txid});
 }
 
 /// @nodoc
-class __$$_TransferResultCopyWithImpl<$Res>
-    extends _$TransferResultCopyWithImpl<$Res, _$_TransferResult>
-    implements _$$_TransferResultCopyWith<$Res> {
-  __$$_TransferResultCopyWithImpl(
-      _$_TransferResult _value, $Res Function(_$_TransferResult) _then)
+class __$$TransferResultImplCopyWithImpl<$Res>
+    extends _$TransferResultCopyWithImpl<$Res, _$TransferResultImpl>
+    implements _$$TransferResultImplCopyWith<$Res> {
+  __$$TransferResultImplCopyWithImpl(
+      _$TransferResultImpl _value, $Res Function(_$TransferResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_TransferResultCopyWithImpl<$Res>
   $Res call({
     Object? txid = freezed,
   }) {
-    return _then(_$_TransferResult(
+    return _then(_$TransferResultImpl(
       txid: freezed == txid
           ? _value.txid
           : txid // ignore: cast_nullable_to_non_nullable
@@ -98,11 +98,11 @@ class __$$_TransferResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TransferResult implements _TransferResult {
-  _$_TransferResult({@JsonKey(name: 'txid') this.txid});
+class _$TransferResultImpl implements _TransferResult {
+  _$TransferResultImpl({@JsonKey(name: 'txid') this.txid});
 
-  factory _$_TransferResult.fromJson(Map<String, dynamic> json) =>
-      _$$_TransferResultFromJson(json);
+  factory _$TransferResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransferResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -115,10 +115,10 @@ class _$_TransferResult implements _TransferResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TransferResult &&
+            other is _$TransferResultImpl &&
             (identical(other.txid, txid) || other.txid == txid));
   }
 
@@ -129,12 +129,13 @@ class _$_TransferResult implements _TransferResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TransferResultCopyWith<_$_TransferResult> get copyWith =>
-      __$$_TransferResultCopyWithImpl<_$_TransferResult>(this, _$identity);
+  _$$TransferResultImplCopyWith<_$TransferResultImpl> get copyWith =>
+      __$$TransferResultImplCopyWithImpl<_$TransferResultImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransferResultToJson(
+    return _$$TransferResultImplToJson(
       this,
     );
   }
@@ -142,10 +143,10 @@ class _$_TransferResult implements _TransferResult {
 
 abstract class _TransferResult implements TransferResult {
   factory _TransferResult({@JsonKey(name: 'txid') final String? txid}) =
-      _$_TransferResult;
+      _$TransferResultImpl;
 
   factory _TransferResult.fromJson(Map<String, dynamic> json) =
-      _$_TransferResult.fromJson;
+      _$TransferResultImpl.fromJson;
 
   @override
 
@@ -154,6 +155,6 @@ abstract class _TransferResult implements TransferResult {
   String? get txid;
   @override
   @JsonKey(ignore: true)
-  _$$_TransferResultCopyWith<_$_TransferResult> get copyWith =>
+  _$$TransferResultImplCopyWith<_$TransferResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

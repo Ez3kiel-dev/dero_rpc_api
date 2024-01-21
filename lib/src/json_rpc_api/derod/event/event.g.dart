@@ -8,10 +8,11 @@ part of 'event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Event _$$_EventFromJson(Map<String, dynamic> json) => _$_Event(
+_$EventImpl _$$EventImplFromJson(Map<String, dynamic> json) => _$EventImpl(
       name: json['method'] as String?,
     );
 
-Map<String, dynamic> _$$_EventToJson(_$_Event instance) => <String, dynamic>{
+Map<String, dynamic> _$$EventImplToJson(_$EventImpl instance) =>
+    <String, dynamic>{
       'method': instance.name,
     };

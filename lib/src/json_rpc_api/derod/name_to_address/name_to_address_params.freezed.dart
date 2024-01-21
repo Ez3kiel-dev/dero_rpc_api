@@ -76,11 +76,11 @@ class _$NameToAddressParamsCopyWithImpl<$Res, $Val extends NameToAddressParams>
 }
 
 /// @nodoc
-abstract class _$$_NameToAddressParamsCopyWith<$Res>
+abstract class _$$NameToAddressParamsImplCopyWith<$Res>
     implements $NameToAddressParamsCopyWith<$Res> {
-  factory _$$_NameToAddressParamsCopyWith(_$_NameToAddressParams value,
-          $Res Function(_$_NameToAddressParams) then) =
-      __$$_NameToAddressParamsCopyWithImpl<$Res>;
+  factory _$$NameToAddressParamsImplCopyWith(_$NameToAddressParamsImpl value,
+          $Res Function(_$NameToAddressParamsImpl) then) =
+      __$$NameToAddressParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -89,11 +89,11 @@ abstract class _$$_NameToAddressParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NameToAddressParamsCopyWithImpl<$Res>
-    extends _$NameToAddressParamsCopyWithImpl<$Res, _$_NameToAddressParams>
-    implements _$$_NameToAddressParamsCopyWith<$Res> {
-  __$$_NameToAddressParamsCopyWithImpl(_$_NameToAddressParams _value,
-      $Res Function(_$_NameToAddressParams) _then)
+class __$$NameToAddressParamsImplCopyWithImpl<$Res>
+    extends _$NameToAddressParamsCopyWithImpl<$Res, _$NameToAddressParamsImpl>
+    implements _$$NameToAddressParamsImplCopyWith<$Res> {
+  __$$NameToAddressParamsImplCopyWithImpl(_$NameToAddressParamsImpl _value,
+      $Res Function(_$NameToAddressParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +102,7 @@ class __$$_NameToAddressParamsCopyWithImpl<$Res>
     Object? name = null,
     Object? topoHeight = freezed,
   }) {
-    return _then(_$_NameToAddressParams(
+    return _then(_$NameToAddressParamsImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -117,13 +117,13 @@ class __$$_NameToAddressParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NameToAddressParams implements _NameToAddressParams {
-  _$_NameToAddressParams(
+class _$NameToAddressParamsImpl implements _NameToAddressParams {
+  _$NameToAddressParamsImpl(
       {@JsonKey(name: 'name') required this.name,
       @JsonKey(name: 'topoheight') this.topoHeight});
 
-  factory _$_NameToAddressParams.fromJson(Map<String, dynamic> json) =>
-      _$$_NameToAddressParamsFromJson(json);
+  factory _$NameToAddressParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NameToAddressParamsImplFromJson(json);
 
   @override
   @JsonKey(name: 'name')
@@ -142,10 +142,10 @@ class _$_NameToAddressParams implements _NameToAddressParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NameToAddressParams &&
+            other is _$NameToAddressParamsImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.topoHeight, topoHeight) ||
                 other.topoHeight == topoHeight));
@@ -158,13 +158,13 @@ class _$_NameToAddressParams implements _NameToAddressParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NameToAddressParamsCopyWith<_$_NameToAddressParams> get copyWith =>
-      __$$_NameToAddressParamsCopyWithImpl<_$_NameToAddressParams>(
+  _$$NameToAddressParamsImplCopyWith<_$NameToAddressParamsImpl> get copyWith =>
+      __$$NameToAddressParamsImplCopyWithImpl<_$NameToAddressParamsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NameToAddressParamsToJson(
+    return _$$NameToAddressParamsImplToJson(
       this,
     );
   }
@@ -174,10 +174,10 @@ abstract class _NameToAddressParams implements NameToAddressParams {
   factory _NameToAddressParams(
           {@JsonKey(name: 'name') required final String name,
           @JsonKey(name: 'topoheight') final int? topoHeight}) =
-      _$_NameToAddressParams;
+      _$NameToAddressParamsImpl;
 
   factory _NameToAddressParams.fromJson(Map<String, dynamic> json) =
-      _$_NameToAddressParams.fromJson;
+      _$NameToAddressParamsImpl.fromJson;
 
   @override
   @JsonKey(name: 'name')
@@ -191,6 +191,6 @@ abstract class _NameToAddressParams implements NameToAddressParams {
   int? get topoHeight;
   @override
   @JsonKey(ignore: true)
-  _$$_NameToAddressParamsCopyWith<_$_NameToAddressParams> get copyWith =>
+  _$$NameToAddressParamsImplCopyWith<_$NameToAddressParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

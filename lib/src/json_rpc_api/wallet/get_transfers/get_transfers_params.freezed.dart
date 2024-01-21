@@ -156,11 +156,11 @@ class _$GetTransfersParamsCopyWithImpl<$Res, $Val extends GetTransfersParams>
 }
 
 /// @nodoc
-abstract class _$$_GetTransfersParamsCopyWith<$Res>
+abstract class _$$GetTransfersParamsImplCopyWith<$Res>
     implements $GetTransfersParamsCopyWith<$Res> {
-  factory _$$_GetTransfersParamsCopyWith(_$_GetTransfersParams value,
-          $Res Function(_$_GetTransfersParams) then) =
-      __$$_GetTransfersParamsCopyWithImpl<$Res>;
+  factory _$$GetTransfersParamsImplCopyWith(_$GetTransfersParamsImpl value,
+          $Res Function(_$GetTransfersParamsImpl) then) =
+      __$$GetTransfersParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -177,11 +177,11 @@ abstract class _$$_GetTransfersParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTransfersParamsCopyWithImpl<$Res>
-    extends _$GetTransfersParamsCopyWithImpl<$Res, _$_GetTransfersParams>
-    implements _$$_GetTransfersParamsCopyWith<$Res> {
-  __$$_GetTransfersParamsCopyWithImpl(
-      _$_GetTransfersParams _value, $Res Function(_$_GetTransfersParams) _then)
+class __$$GetTransfersParamsImplCopyWithImpl<$Res>
+    extends _$GetTransfersParamsCopyWithImpl<$Res, _$GetTransfersParamsImpl>
+    implements _$$GetTransfersParamsImplCopyWith<$Res> {
+  __$$GetTransfersParamsImplCopyWithImpl(_$GetTransfersParamsImpl _value,
+      $Res Function(_$GetTransfersParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -198,7 +198,7 @@ class __$$_GetTransfersParamsCopyWithImpl<$Res>
     Object? dstPort = freezed,
     Object? srcPort = freezed,
   }) {
-    return _then(_$_GetTransfersParams(
+    return _then(_$GetTransfersParamsImpl(
       scid: freezed == scid
           ? _value.scid
           : scid // ignore: cast_nullable_to_non_nullable
@@ -245,8 +245,8 @@ class __$$_GetTransfersParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTransfersParams implements _GetTransfersParams {
-  _$_GetTransfersParams(
+class _$GetTransfersParamsImpl implements _GetTransfersParams {
+  _$GetTransfersParamsImpl(
       {@JsonKey(name: 'scid') @Uint8ListConverter() this.scid,
       @JsonKey(name: 'coinbase') this.coinbase = true,
       @JsonKey(name: 'in') this.incoming = true,
@@ -258,8 +258,8 @@ class _$_GetTransfersParams implements _GetTransfersParams {
       @JsonKey(name: 'dstport') this.dstPort,
       @JsonKey(name: 'srcport') this.srcPort});
 
-  factory _$_GetTransfersParams.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTransfersParamsFromJson(json);
+  factory _$GetTransfersParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTransfersParamsImplFromJson(json);
 
   /// @nodoc
   @override
@@ -318,10 +318,10 @@ class _$_GetTransfersParams implements _GetTransfersParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTransfersParams &&
+            other is _$GetTransfersParamsImpl &&
             const DeepCollectionEquality().equals(other.scid, scid) &&
             (identical(other.coinbase, coinbase) ||
                 other.coinbase == coinbase) &&
@@ -358,13 +358,13 @@ class _$_GetTransfersParams implements _GetTransfersParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTransfersParamsCopyWith<_$_GetTransfersParams> get copyWith =>
-      __$$_GetTransfersParamsCopyWithImpl<_$_GetTransfersParams>(
+  _$$GetTransfersParamsImplCopyWith<_$GetTransfersParamsImpl> get copyWith =>
+      __$$GetTransfersParamsImplCopyWithImpl<_$GetTransfersParamsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTransfersParamsToJson(
+    return _$$GetTransfersParamsImplToJson(
       this,
     );
   }
@@ -381,10 +381,10 @@ abstract class _GetTransfersParams implements GetTransfersParams {
       @JsonKey(name: 'sender') final String? sender,
       @JsonKey(name: 'receiver') final String? receiver,
       @JsonKey(name: 'dstport') final int? dstPort,
-      @JsonKey(name: 'srcport') final int? srcPort}) = _$_GetTransfersParams;
+      @JsonKey(name: 'srcport') final int? srcPort}) = _$GetTransfersParamsImpl;
 
   factory _GetTransfersParams.fromJson(Map<String, dynamic> json) =
-      _$_GetTransfersParams.fromJson;
+      _$GetTransfersParamsImpl.fromJson;
 
   @override
 
@@ -439,6 +439,6 @@ abstract class _GetTransfersParams implements GetTransfersParams {
   int? get srcPort;
   @override
   @JsonKey(ignore: true)
-  _$$_GetTransfersParamsCopyWith<_$_GetTransfersParams> get copyWith =>
+  _$$GetTransfersParamsImplCopyWith<_$GetTransfersParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

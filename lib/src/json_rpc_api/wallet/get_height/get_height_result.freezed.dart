@@ -66,22 +66,24 @@ class _$GetHeightWalletResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetHeightWalletResultCopyWith<$Res>
+abstract class _$$GetHeightWalletResultImplCopyWith<$Res>
     implements $GetHeightWalletResultCopyWith<$Res> {
-  factory _$$_GetHeightWalletResultCopyWith(_$_GetHeightWalletResult value,
-          $Res Function(_$_GetHeightWalletResult) then) =
-      __$$_GetHeightWalletResultCopyWithImpl<$Res>;
+  factory _$$GetHeightWalletResultImplCopyWith(
+          _$GetHeightWalletResultImpl value,
+          $Res Function(_$GetHeightWalletResultImpl) then) =
+      __$$GetHeightWalletResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'height') int? height});
 }
 
 /// @nodoc
-class __$$_GetHeightWalletResultCopyWithImpl<$Res>
-    extends _$GetHeightWalletResultCopyWithImpl<$Res, _$_GetHeightWalletResult>
-    implements _$$_GetHeightWalletResultCopyWith<$Res> {
-  __$$_GetHeightWalletResultCopyWithImpl(_$_GetHeightWalletResult _value,
-      $Res Function(_$_GetHeightWalletResult) _then)
+class __$$GetHeightWalletResultImplCopyWithImpl<$Res>
+    extends _$GetHeightWalletResultCopyWithImpl<$Res,
+        _$GetHeightWalletResultImpl>
+    implements _$$GetHeightWalletResultImplCopyWith<$Res> {
+  __$$GetHeightWalletResultImplCopyWithImpl(_$GetHeightWalletResultImpl _value,
+      $Res Function(_$GetHeightWalletResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +91,7 @@ class __$$_GetHeightWalletResultCopyWithImpl<$Res>
   $Res call({
     Object? height = freezed,
   }) {
-    return _then(_$_GetHeightWalletResult(
+    return _then(_$GetHeightWalletResultImpl(
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -100,11 +102,11 @@ class __$$_GetHeightWalletResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetHeightWalletResult implements _GetHeightWalletResult {
-  _$_GetHeightWalletResult({@JsonKey(name: 'height') this.height});
+class _$GetHeightWalletResultImpl implements _GetHeightWalletResult {
+  _$GetHeightWalletResultImpl({@JsonKey(name: 'height') this.height});
 
-  factory _$_GetHeightWalletResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetHeightWalletResultFromJson(json);
+  factory _$GetHeightWalletResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetHeightWalletResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -117,10 +119,10 @@ class _$_GetHeightWalletResult implements _GetHeightWalletResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetHeightWalletResult &&
+            other is _$GetHeightWalletResultImpl &&
             (identical(other.height, height) || other.height == height));
   }
 
@@ -131,13 +133,13 @@ class _$_GetHeightWalletResult implements _GetHeightWalletResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetHeightWalletResultCopyWith<_$_GetHeightWalletResult> get copyWith =>
-      __$$_GetHeightWalletResultCopyWithImpl<_$_GetHeightWalletResult>(
-          this, _$identity);
+  _$$GetHeightWalletResultImplCopyWith<_$GetHeightWalletResultImpl>
+      get copyWith => __$$GetHeightWalletResultImplCopyWithImpl<
+          _$GetHeightWalletResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetHeightWalletResultToJson(
+    return _$$GetHeightWalletResultImplToJson(
       this,
     );
   }
@@ -145,10 +147,10 @@ class _$_GetHeightWalletResult implements _GetHeightWalletResult {
 
 abstract class _GetHeightWalletResult implements GetHeightWalletResult {
   factory _GetHeightWalletResult({@JsonKey(name: 'height') final int? height}) =
-      _$_GetHeightWalletResult;
+      _$GetHeightWalletResultImpl;
 
   factory _GetHeightWalletResult.fromJson(Map<String, dynamic> json) =
-      _$_GetHeightWalletResult.fromJson;
+      _$GetHeightWalletResultImpl.fromJson;
 
   @override
 
@@ -157,6 +159,6 @@ abstract class _GetHeightWalletResult implements GetHeightWalletResult {
   int? get height;
   @override
   @JsonKey(ignore: true)
-  _$$_GetHeightWalletResultCopyWith<_$_GetHeightWalletResult> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetHeightWalletResultImplCopyWith<_$GetHeightWalletResultImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

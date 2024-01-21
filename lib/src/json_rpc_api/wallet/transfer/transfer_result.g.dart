@@ -8,12 +8,13 @@ part of 'transfer_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TransferResult _$$_TransferResultFromJson(Map<String, dynamic> json) =>
-    _$_TransferResult(
+_$TransferResultImpl _$$TransferResultImplFromJson(Map<String, dynamic> json) =>
+    _$TransferResultImpl(
       txid: json['txid'] as String?,
     );
 
-Map<String, dynamic> _$$_TransferResultToJson(_$_TransferResult instance) =>
+Map<String, dynamic> _$$TransferResultImplToJson(
+        _$TransferResultImpl instance) =>
     <String, dynamic>{
       'txid': instance.txid,
     };

@@ -96,11 +96,11 @@ class _$GetHeightDerodResultCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetHeightDerodResultCopyWith<$Res>
+abstract class _$$GetHeightDerodResultImplCopyWith<$Res>
     implements $GetHeightDerodResultCopyWith<$Res> {
-  factory _$$_GetHeightDerodResultCopyWith(_$_GetHeightDerodResult value,
-          $Res Function(_$_GetHeightDerodResult) then) =
-      __$$_GetHeightDerodResultCopyWithImpl<$Res>;
+  factory _$$GetHeightDerodResultImplCopyWith(_$GetHeightDerodResultImpl value,
+          $Res Function(_$GetHeightDerodResultImpl) then) =
+      __$$GetHeightDerodResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -111,11 +111,11 @@ abstract class _$$_GetHeightDerodResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetHeightDerodResultCopyWithImpl<$Res>
-    extends _$GetHeightDerodResultCopyWithImpl<$Res, _$_GetHeightDerodResult>
-    implements _$$_GetHeightDerodResultCopyWith<$Res> {
-  __$$_GetHeightDerodResultCopyWithImpl(_$_GetHeightDerodResult _value,
-      $Res Function(_$_GetHeightDerodResult) _then)
+class __$$GetHeightDerodResultImplCopyWithImpl<$Res>
+    extends _$GetHeightDerodResultCopyWithImpl<$Res, _$GetHeightDerodResultImpl>
+    implements _$$GetHeightDerodResultImplCopyWith<$Res> {
+  __$$GetHeightDerodResultImplCopyWithImpl(_$GetHeightDerodResultImpl _value,
+      $Res Function(_$GetHeightDerodResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -126,7 +126,7 @@ class __$$_GetHeightDerodResultCopyWithImpl<$Res>
     Object? topoHeight = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_GetHeightDerodResult(
+    return _then(_$GetHeightDerodResultImpl(
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -149,15 +149,15 @@ class __$$_GetHeightDerodResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetHeightDerodResult implements _GetHeightDerodResult {
-  _$_GetHeightDerodResult(
+class _$GetHeightDerodResultImpl implements _GetHeightDerodResult {
+  _$GetHeightDerodResultImpl(
       {@JsonKey(name: 'height') this.height,
       @JsonKey(name: 'stableheight') this.stableHeight,
       @JsonKey(name: 'topoheight') this.topoHeight,
       @JsonKey(name: 'status') this.status});
 
-  factory _$_GetHeightDerodResult.fromJson(Map<String, dynamic> json) =>
-      _$$_GetHeightDerodResultFromJson(json);
+  factory _$GetHeightDerodResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetHeightDerodResultImplFromJson(json);
 
   /// @nodoc
   @override
@@ -185,10 +185,10 @@ class _$_GetHeightDerodResult implements _GetHeightDerodResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetHeightDerodResult &&
+            other is _$GetHeightDerodResultImpl &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.stableHeight, stableHeight) ||
                 other.stableHeight == stableHeight) &&
@@ -205,13 +205,14 @@ class _$_GetHeightDerodResult implements _GetHeightDerodResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetHeightDerodResultCopyWith<_$_GetHeightDerodResult> get copyWith =>
-      __$$_GetHeightDerodResultCopyWithImpl<_$_GetHeightDerodResult>(
-          this, _$identity);
+  _$$GetHeightDerodResultImplCopyWith<_$GetHeightDerodResultImpl>
+      get copyWith =>
+          __$$GetHeightDerodResultImplCopyWithImpl<_$GetHeightDerodResultImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetHeightDerodResultToJson(
+    return _$$GetHeightDerodResultImplToJson(
       this,
     );
   }
@@ -219,13 +220,14 @@ class _$_GetHeightDerodResult implements _GetHeightDerodResult {
 
 abstract class _GetHeightDerodResult implements GetHeightDerodResult {
   factory _GetHeightDerodResult(
-      {@JsonKey(name: 'height') final int? height,
-      @JsonKey(name: 'stableheight') final int? stableHeight,
-      @JsonKey(name: 'topoheight') final int? topoHeight,
-      @JsonKey(name: 'status') final String? status}) = _$_GetHeightDerodResult;
+          {@JsonKey(name: 'height') final int? height,
+          @JsonKey(name: 'stableheight') final int? stableHeight,
+          @JsonKey(name: 'topoheight') final int? topoHeight,
+          @JsonKey(name: 'status') final String? status}) =
+      _$GetHeightDerodResultImpl;
 
   factory _GetHeightDerodResult.fromJson(Map<String, dynamic> json) =
-      _$_GetHeightDerodResult.fromJson;
+      _$GetHeightDerodResultImpl.fromJson;
 
   @override
 
@@ -249,6 +251,6 @@ abstract class _GetHeightDerodResult implements GetHeightDerodResult {
   String? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_GetHeightDerodResultCopyWith<_$_GetHeightDerodResult> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetHeightDerodResultImplCopyWith<_$GetHeightDerodResultImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

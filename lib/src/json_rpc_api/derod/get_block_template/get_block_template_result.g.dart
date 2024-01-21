@@ -8,9 +8,9 @@ part of 'get_block_template_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBlockTemplateResult _$$_GetBlockTemplateResultFromJson(
+_$GetBlockTemplateResultImpl _$$GetBlockTemplateResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetBlockTemplateResult(
+    _$GetBlockTemplateResultImpl(
       jobId: json['jobid'] as String?,
       blockTemplateBlob: json['blocktemplate_blob'] as String?,
       blockHashingBlob: json['blockhashing_blob'] as String?,
@@ -26,8 +26,8 @@ _$_GetBlockTemplateResult _$$_GetBlockTemplateResultFromJson(
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$_GetBlockTemplateResultToJson(
-        _$_GetBlockTemplateResult instance) =>
+Map<String, dynamic> _$$GetBlockTemplateResultImplToJson(
+        _$GetBlockTemplateResultImpl instance) =>
     <String, dynamic>{
       'jobid': instance.jobId,
       'blocktemplate_blob': instance.blockTemplateBlob,

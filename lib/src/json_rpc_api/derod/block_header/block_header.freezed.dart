@@ -215,11 +215,11 @@ class _$BlockHeaderCopyWithImpl<$Res, $Val extends BlockHeader>
 }
 
 /// @nodoc
-abstract class _$$_BlockHeaderCopyWith<$Res>
+abstract class _$$BlockHeaderImplCopyWith<$Res>
     implements $BlockHeaderCopyWith<$Res> {
-  factory _$$_BlockHeaderCopyWith(
-          _$_BlockHeader value, $Res Function(_$_BlockHeader) then) =
-      __$$_BlockHeaderCopyWithImpl<$Res>;
+  factory _$$BlockHeaderImplCopyWith(
+          _$BlockHeaderImpl value, $Res Function(_$BlockHeaderImpl) then) =
+      __$$BlockHeaderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -242,11 +242,11 @@ abstract class _$$_BlockHeaderCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BlockHeaderCopyWithImpl<$Res>
-    extends _$BlockHeaderCopyWithImpl<$Res, _$_BlockHeader>
-    implements _$$_BlockHeaderCopyWith<$Res> {
-  __$$_BlockHeaderCopyWithImpl(
-      _$_BlockHeader _value, $Res Function(_$_BlockHeader) _then)
+class __$$BlockHeaderImplCopyWithImpl<$Res>
+    extends _$BlockHeaderCopyWithImpl<$Res, _$BlockHeaderImpl>
+    implements _$$BlockHeaderImplCopyWith<$Res> {
+  __$$BlockHeaderImplCopyWithImpl(
+      _$BlockHeaderImpl _value, $Res Function(_$BlockHeaderImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -269,7 +269,7 @@ class __$$_BlockHeaderCopyWithImpl<$Res>
     Object? tips = freezed,
     Object? timestamp = freezed,
   }) {
-    return _then(_$_BlockHeader(
+    return _then(_$BlockHeaderImpl(
       depth: freezed == depth
           ? _value.depth
           : depth // ignore: cast_nullable_to_non_nullable
@@ -340,8 +340,8 @@ class __$$_BlockHeaderCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_BlockHeader implements _BlockHeader {
-  _$_BlockHeader(
+class _$BlockHeaderImpl implements _BlockHeader {
+  _$BlockHeaderImpl(
       {@JsonKey(name: 'depth') this.depth,
       @JsonKey(name: 'difficulty') this.difficulty,
       @JsonKey(name: 'hash') this.hash,
@@ -361,8 +361,8 @@ class _$_BlockHeader implements _BlockHeader {
       : _miners = miners,
         _tips = tips;
 
-  factory _$_BlockHeader.fromJson(Map<String, dynamic> json) =>
-      _$$_BlockHeaderFromJson(json);
+  factory _$BlockHeaderImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BlockHeaderImplFromJson(json);
 
   /// @nodoc
   @override
@@ -468,10 +468,10 @@ class _$_BlockHeader implements _BlockHeader {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BlockHeader &&
+            other is _$BlockHeaderImpl &&
             (identical(other.depth, depth) || other.depth == depth) &&
             (identical(other.difficulty, difficulty) ||
                 other.difficulty == difficulty) &&
@@ -522,12 +522,12 @@ class _$_BlockHeader implements _BlockHeader {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BlockHeaderCopyWith<_$_BlockHeader> get copyWith =>
-      __$$_BlockHeaderCopyWithImpl<_$_BlockHeader>(this, _$identity);
+  _$$BlockHeaderImplCopyWith<_$BlockHeaderImpl> get copyWith =>
+      __$$BlockHeaderImplCopyWithImpl<_$BlockHeaderImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BlockHeaderToJson(
+    return _$$BlockHeaderImplToJson(
       this,
     );
   }
@@ -550,10 +550,10 @@ abstract class _BlockHeader implements BlockHeader {
       @JsonKey(name: 'miners') final List<String>? miners,
       @JsonKey(name: 'reward') final int? reward,
       @JsonKey(name: 'tips') final List<String>? tips,
-      @JsonKey(name: 'timestamp') final int? timestamp}) = _$_BlockHeader;
+      @JsonKey(name: 'timestamp') final int? timestamp}) = _$BlockHeaderImpl;
 
   factory _BlockHeader.fromJson(Map<String, dynamic> json) =
-      _$_BlockHeader.fromJson;
+      _$BlockHeaderImpl.fromJson;
 
   @override
 
@@ -637,6 +637,6 @@ abstract class _BlockHeader implements BlockHeader {
   int? get timestamp;
   @override
   @JsonKey(ignore: true)
-  _$$_BlockHeaderCopyWith<_$_BlockHeader> get copyWith =>
+  _$$BlockHeaderImplCopyWith<_$BlockHeaderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

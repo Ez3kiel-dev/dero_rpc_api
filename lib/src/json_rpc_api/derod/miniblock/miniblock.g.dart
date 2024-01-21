@@ -8,7 +8,8 @@ part of 'miniblock.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Miniblock _$$_MiniblockFromJson(Map<String, dynamic> json) => _$_Miniblock(
+_$MiniblockImpl _$$MiniblockImplFromJson(Map<String, dynamic> json) =>
+    _$MiniblockImpl(
       version: json['Version'] as int?,
       highDiff: json['HighDiff'] as bool?,
       isFinal: json['Final'] as bool?,
@@ -21,7 +22,7 @@ _$_Miniblock _$$_MiniblockFromJson(Map<String, dynamic> json) => _$_Miniblock(
       nonce: (json['Nonce'] as List<dynamic>?)?.map((e) => e as int).toList(),
     );
 
-Map<String, dynamic> _$$_MiniblockToJson(_$_Miniblock instance) =>
+Map<String, dynamic> _$$MiniblockImplToJson(_$MiniblockImpl instance) =>
     <String, dynamic>{
       'Version': instance.version,
       'HighDiff': instance.highDiff,

@@ -11,7 +11,7 @@ part of 'get_height_result.dart';
 _$GetHeightWalletResultImpl _$$GetHeightWalletResultImplFromJson(
         Map<String, dynamic> json) =>
     _$GetHeightWalletResultImpl(
-      height: json['height'] as int?,
+      height: (json['height'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GetHeightWalletResultImplToJson(

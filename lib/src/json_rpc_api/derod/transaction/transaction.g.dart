@@ -10,18 +10,18 @@ part of 'transaction.dart';
 
 _$TransactionImpl _$$TransactionImplFromJson(Map<String, dynamic> json) =>
     _$TransactionImpl(
-      version: json['version'] as int?,
-      sourceNetwork: json['source_network'] as int?,
-      destinationNetwork: json['dest_network'] as int?,
-      txType: json['txtype'] as int?,
-      value: json['value'] as int?,
+      version: (json['version'] as num?)?.toInt(),
+      sourceNetwork: (json['source_network'] as num?)?.toInt(),
+      destinationNetwork: (json['dest_network'] as num?)?.toInt(),
+      txType: (json['txtype'] as num?)?.toInt(),
+      value: (json['value'] as num?)?.toInt(),
       minerAddress: _$JsonConverterFromJson<List<dynamic>, Uint8List>(
           json['miner_address'], const Uint8ListConverter().fromJson),
       c: _$JsonConverterFromJson<List<dynamic>, Uint8List>(
           json['c'], const Uint8ListConverter().fromJson),
       s: _$JsonConverterFromJson<List<dynamic>, Uint8List>(
           json['s'], const Uint8ListConverter().fromJson),
-      height: json['height'] as int?,
+      height: (json['height'] as num?)?.toInt(),
       blid: _$JsonConverterFromJson<List<dynamic>, Uint8List>(
           json['blid'], const Uint8ListConverter().fromJson),
       scData: (json['scdata'] as List<dynamic>?)

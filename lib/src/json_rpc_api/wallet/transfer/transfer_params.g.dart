@@ -14,13 +14,13 @@ _$TransferParamsImpl _$$TransferParamsImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Transfer.fromJson(e as Map<String, dynamic>))
           .toList(),
       smartContractCode: json['sc'] as String?,
-      smartContractValue: json['sc_value'] as int?,
+      smartContractValue: (json['sc_value'] as num?)?.toInt(),
       scid: json['scid'] as String?,
       scRPC: (json['sc_rpc'] as List<dynamic>?)
           ?.map((e) => Argument.fromJson(e as Map<String, dynamic>))
           .toList(),
-      ringsize: json['ringsize'] as int?,
-      fees: json['fees'] as int?,
+      ringsize: (json['ringsize'] as num?)?.toInt(),
+      fees: (json['fees'] as num?)?.toInt(),
       signer: json['signer'] as String?,
     );
 

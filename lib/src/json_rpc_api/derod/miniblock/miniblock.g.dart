@@ -10,16 +10,20 @@ part of 'miniblock.dart';
 
 _$MiniblockImpl _$$MiniblockImplFromJson(Map<String, dynamic> json) =>
     _$MiniblockImpl(
-      version: json['Version'] as int?,
+      version: (json['Version'] as num?)?.toInt(),
       highDiff: json['HighDiff'] as bool?,
       isFinal: json['Final'] as bool?,
-      pastCount: json['PastCount'] as int?,
-      timestamp: json['Timestamp'] as int?,
-      height: json['Height'] as int?,
-      past: (json['Past'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      pastCount: (json['PastCount'] as num?)?.toInt(),
+      timestamp: (json['Timestamp'] as num?)?.toInt(),
+      height: (json['Height'] as num?)?.toInt(),
+      past: (json['Past'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       keyHash: json['KeyHash'] as String?,
-      flags: json['Flags'] as int?,
-      nonce: (json['Nonce'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      flags: (json['Flags'] as num?)?.toInt(),
+      nonce: (json['Nonce'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
     );
 
 Map<String, dynamic> _$$MiniblockImplToJson(_$MiniblockImpl instance) =>

@@ -9,34 +9,34 @@ part of 'wallet_entry.dart';
 // **************************************************************************
 
 _$EntryImpl _$$EntryImplFromJson(Map<String, dynamic> json) => _$EntryImpl(
-      height: json['height'] as int?,
-      topoHeight: json['topoheight'] as int?,
+      height: (json['height'] as num?)?.toInt(),
+      topoHeight: (json['topoheight'] as num?)?.toInt(),
       blockHash: json['blockhash'] as String?,
-      minerReward: json['minerreward'] as int?,
-      tpos: json['tpos'] as int?,
-      pos: json['pos'] as int?,
+      minerReward: (json['minerreward'] as num?)?.toInt(),
+      tpos: (json['tpos'] as num?)?.toInt(),
+      pos: (json['pos'] as num?)?.toInt(),
       coinbase: json['coinbase'] as bool?,
       incoming: json['incoming'] as bool?,
       txid: json['txid'] as String?,
       destination: json['destination'] as String?,
-      burn: json['burn'] as int?,
-      amount: json['amount'] as int?,
-      fees: json['fees'] as int?,
+      burn: (json['burn'] as num?)?.toInt(),
+      amount: (json['amount'] as num?)?.toInt(),
+      fees: (json['fees'] as num?)?.toInt(),
       proof: json['proof'] as String?,
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
       time:
           json['time'] == null ? null : DateTime.parse(json['time'] as String),
       encryptedWalletData: json['ewdata'] as String?,
       data: json['data'] as String?,
-      payloadType: json['payloadtype'] as int?,
+      payloadType: (json['payloadtype'] as num?)?.toInt(),
       payload: json['payload'] as String?,
       payloadError: json['payloaderror'] as String?,
       payloadRpc: (json['payload_rpc'] as List<dynamic>?)
           ?.map((e) => Argument.fromJson(e as Map<String, dynamic>))
           .toList(),
       sender: json['sender'] as String?,
-      dstPort: json['dstport'] as int?,
-      srcPort: json['srcport'] as int?,
+      dstPort: (json['dstport'] as num?)?.toInt(),
+      srcPort: (json['srcport'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$EntryImplToJson(_$EntryImpl instance) =>

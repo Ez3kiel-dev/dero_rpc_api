@@ -11,8 +11,8 @@ part of 'get_balance_result.dart';
 _$GetBalanceResultImpl _$$GetBalanceResultImplFromJson(
         Map<String, dynamic> json) =>
     _$GetBalanceResultImpl(
-      balance: json['balance'] as int?,
-      unlockedBalance: json['unlocked_balance'] as int?,
+      balance: (json['balance'] as num?)?.toInt(),
+      unlockedBalance: (json['unlocked_balance'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GetBalanceResultImplToJson(

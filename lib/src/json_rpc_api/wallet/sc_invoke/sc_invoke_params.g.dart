@@ -14,9 +14,9 @@ _$ScInvokeParamsImpl _$$ScInvokeParamsImplFromJson(Map<String, dynamic> json) =>
       scRPC: (json['sc_rpc'] as List<dynamic>?)
           ?.map((e) => Argument.fromJson(e as Map<String, dynamic>))
           .toList(),
-      deroDeposit: json['sc_dero_deposit'] as int?,
-      tokenDeposit: json['sc_token_deposit'] as int?,
-      ringsize: json['ringsize'] as int?,
+      deroDeposit: (json['sc_dero_deposit'] as num?)?.toInt(),
+      tokenDeposit: (json['sc_token_deposit'] as num?)?.toInt(),
+      ringsize: (json['ringsize'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$ScInvokeParamsImplToJson(

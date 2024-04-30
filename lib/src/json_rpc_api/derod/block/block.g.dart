@@ -9,12 +9,12 @@ part of 'block.dart';
 // **************************************************************************
 
 _$BlockImpl _$$BlockImplFromJson(Map<String, dynamic> json) => _$BlockImpl(
-      majorVersion: json['major_version'] as int?,
-      minorVersion: json['minor_version'] as int?,
+      majorVersion: (json['major_version'] as num?)?.toInt(),
+      minorVersion: (json['minor_version'] as num?)?.toInt(),
       timestamp: json['timestamp'] == null
           ? null
           : DateTime.parse(json['timestamp'] as String),
-      height: json['height'] as int?,
+      height: (json['height'] as num?)?.toInt(),
       minerTx: json['miner_tx'] == null
           ? null
           : Transaction.fromJson(json['miner_tx'] as Map<String, dynamic>),

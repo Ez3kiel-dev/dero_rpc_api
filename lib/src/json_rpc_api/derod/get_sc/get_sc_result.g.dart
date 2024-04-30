@@ -18,9 +18,9 @@ _$GetSCResultImpl _$$GetSCResultImplFromJson(Map<String, dynamic> json) =>
         (k, e) => MapEntry(int.parse(k), e),
       ),
       balances: (json['balances'] as Map<String, dynamic>?)?.map(
-        (k, e) => MapEntry(k, e as int),
+        (k, e) => MapEntry(k, (e as num).toInt()),
       ),
-      balance: json['balance'] as int?,
+      balance: (json['balance'] as num?)?.toInt(),
       code: json['code'] as String?,
       status: json['status'] as String?,
     );

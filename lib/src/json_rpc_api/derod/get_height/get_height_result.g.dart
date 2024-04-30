@@ -11,9 +11,9 @@ part of 'get_height_result.dart';
 _$GetHeightDerodResultImpl _$$GetHeightDerodResultImplFromJson(
         Map<String, dynamic> json) =>
     _$GetHeightDerodResultImpl(
-      height: json['height'] as int?,
-      stableHeight: json['stableheight'] as int?,
-      topoHeight: json['topoheight'] as int?,
+      height: (json['height'] as num?)?.toInt(),
+      stableHeight: (json['stableheight'] as num?)?.toInt(),
+      topoHeight: (json['topoheight'] as num?)?.toInt(),
       status: json['status'] as String?,
     );
 

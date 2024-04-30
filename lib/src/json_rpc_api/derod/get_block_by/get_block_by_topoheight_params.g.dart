@@ -11,7 +11,7 @@ part of 'get_block_by_topoheight_params.dart';
 _$GetBlockByTopoHeightParamsImpl _$$GetBlockByTopoHeightParamsImplFromJson(
         Map<String, dynamic> json) =>
     _$GetBlockByTopoHeightParamsImpl(
-      topoHeight: json['topoheight'] as int,
+      topoHeight: (json['topoheight'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$GetBlockByTopoHeightParamsImplToJson(

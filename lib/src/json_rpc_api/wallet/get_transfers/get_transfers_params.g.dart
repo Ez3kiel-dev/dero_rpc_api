@@ -16,12 +16,12 @@ _$GetTransfersParamsImpl _$$GetTransfersParamsImplFromJson(
       coinbase: json['coinbase'] as bool? ?? true,
       incoming: json['in'] as bool? ?? true,
       outgoing: json['out'] as bool? ?? true,
-      minHeight: json['min_height'] as int?,
-      maxHeight: json['max_height'] as int?,
+      minHeight: (json['min_height'] as num?)?.toInt(),
+      maxHeight: (json['max_height'] as num?)?.toInt(),
       sender: json['sender'] as String?,
       receiver: json['receiver'] as String?,
-      dstPort: json['dstport'] as int?,
-      srcPort: json['srcport'] as int?,
+      dstPort: (json['dstport'] as num?)?.toInt(),
+      srcPort: (json['srcport'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GetTransfersParamsImplToJson(

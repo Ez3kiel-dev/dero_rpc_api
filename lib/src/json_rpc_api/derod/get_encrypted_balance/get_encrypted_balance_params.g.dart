@@ -14,7 +14,7 @@ _$GetEncryptedBalanceParamsImpl _$$GetEncryptedBalanceParamsImplFromJson(
       address: json['address'] as String,
       scid: json['scid'] as String?,
       treeHash: json['treehash'] as String?,
-      topoHeight: json['topoheight'] as int?,
+      topoHeight: (json['topoheight'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GetEncryptedBalanceParamsImplToJson(

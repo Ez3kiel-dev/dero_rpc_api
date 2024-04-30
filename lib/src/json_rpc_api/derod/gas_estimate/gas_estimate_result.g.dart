@@ -11,8 +11,8 @@ part of 'gas_estimate_result.dart';
 _$GasEstimateResultImpl _$$GasEstimateResultImplFromJson(
         Map<String, dynamic> json) =>
     _$GasEstimateResultImpl(
-      gasCompute: json['gascompute'] as int?,
-      gasStorage: json['gasstorage'] as int?,
+      gasCompute: (json['gascompute'] as num?)?.toInt(),
+      gasStorage: (json['gasstorage'] as num?)?.toInt(),
       status: json['status'] as String?,
     );
 

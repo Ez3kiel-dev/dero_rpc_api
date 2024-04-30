@@ -13,9 +13,10 @@ _$GetSCParamsImpl _$$GetSCParamsImplFromJson(Map<String, dynamic> json) =>
       scid: json['scid'] as String,
       code: json['code'] as bool? ?? true,
       variables: json['variables'] as bool? ?? true,
-      topoHeight: json['topoheight'] as int?,
-      keysInt:
-          (json['keysuint64'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      topoHeight: (json['topoheight'] as num?)?.toInt(),
+      keysInt: (json['keysuint64'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       keysString: (json['keysstring'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),

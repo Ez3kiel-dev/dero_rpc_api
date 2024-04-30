@@ -14,7 +14,7 @@ _$GetTransactionParamsImpl _$$GetTransactionParamsImplFromJson(
       txsHashes: (json['txs_hashes'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
-      decode: json['decode_as_json'] as int?,
+      decode: (json['decode_as_json'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GetTransactionParamsImplToJson(

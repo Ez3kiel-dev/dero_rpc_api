@@ -12,8 +12,8 @@ _$TransferImpl _$$TransferImplFromJson(Map<String, dynamic> json) =>
     _$TransferImpl(
       scid: json['scid'] as String?,
       destination: json['destination'] as String?,
-      amount: json['amount'] as int?,
-      burn: json['burn'] as int?,
+      amount: (json['amount'] as num?)?.toInt(),
+      burn: (json['burn'] as num?)?.toInt(),
       payloadRPC: (json['payload_rpc'] as List<dynamic>?)
           ?.map((e) => Argument.fromJson(e as Map<String, dynamic>))
           .toList(),

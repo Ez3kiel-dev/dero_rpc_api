@@ -11,7 +11,7 @@ part of 'get_block_count_result.dart';
 _$GetBlockCountResultImpl _$$GetBlockCountResultImplFromJson(
         Map<String, dynamic> json) =>
     _$GetBlockCountResultImpl(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       status: json['status'] as String?,
     );
 

@@ -12,12 +12,12 @@ _$TxRelatedInfoImpl _$$TxRelatedInfoImplFromJson(Map<String, dynamic> json) =>
     _$TxRelatedInfoImpl(
       asHex: json['as_hex'] as String?,
       asJson: json['as_json'] as String?,
-      blockHeight: json['block_height'] as int?,
-      reward: json['reward'] as int?,
+      blockHeight: (json['block_height'] as num?)?.toInt(),
+      reward: (json['reward'] as num?)?.toInt(),
       ignored: json['ignored'] as bool?,
       inPool: json['in_pool'] as bool?,
       outputIndices: (json['output_indices'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       txHash: json['tx_hash'] as String?,
       validBlock: json['valid_block'] as String?,
@@ -28,9 +28,9 @@ _$TxRelatedInfoImpl _$$TxRelatedInfoImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => (e as List<dynamic>).map((e) => e as String).toList())
           .toList(),
       signer: json['signer'] as String?,
-      balance: json['balance'] as int?,
+      balance: (json['balance'] as num?)?.toInt(),
       code: json['code'] as String?,
-      balanceNow: json['balancenow'] as int?,
+      balanceNow: (json['balancenow'] as num?)?.toInt(),
       codeNow: json['codenow'] as String?,
     );
 

@@ -11,7 +11,7 @@ part of 'get_block_params.dart';
 _$GetBlockParamsImpl _$$GetBlockParamsImplFromJson(Map<String, dynamic> json) =>
     _$GetBlockParamsImpl(
       hash: json['hash'] as String?,
-      height: json['height'] as int?,
+      height: (json['height'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GetBlockParamsImplToJson(

@@ -12,7 +12,7 @@ _$NameToAddressParamsImpl _$$NameToAddressParamsImplFromJson(
         Map<String, dynamic> json) =>
     _$NameToAddressParamsImpl(
       name: json['name'] as String,
-      topoHeight: json['topoheight'] as int?,
+      topoHeight: (json['topoheight'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$NameToAddressParamsImplToJson(

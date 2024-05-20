@@ -1,3 +1,7 @@
+## 0.12.4
+
+- fix: pubspec.
+
 ## 0.12.3
 
 - fix: Bump dependencies and format.
